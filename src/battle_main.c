@@ -4030,6 +4030,10 @@ u8 IsRunningFromBattleImpossible(u32 battler)
 {
     u32 holdEffect, i;
 
+    if (FlagGet(FLAG_ACTIVE_BOSS_BATTLE)) {
+        return BATTLE_RUN_SUCCESS;
+    }
+
     if (FlagGet(B_FLAG_NO_RUNNING))
     {
         gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_CANT_ESCAPE;

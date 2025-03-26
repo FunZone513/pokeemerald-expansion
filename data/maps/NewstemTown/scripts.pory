@@ -1,0 +1,46 @@
+mapscripts NewstemTown_MapScripts {}
+
+script NewstemTown_Sign_Town {
+    lockall
+    msgbox("Newstem Town\nA tranquil town by the sea", MSGBOX_SIGN)
+    releaseall
+}
+
+script NewstemTown_Sign_PlayersHouse {
+    lockall
+    msgbox("Your House", MSGBOX_SIGN)
+    releaseall
+}
+script NewstemTown_Sign_ProfLab {
+    lockall
+    msgbox("Professor's Laboratory", MSGBOX_SIGN)
+    releaseall
+}
+
+script NewstemTown_CheckStarter {
+    lockall
+    if (var(VAR_LITTLEROOT_INTRO_STATE) < 3) {
+        msgbox("You haven't picked up a Pokemon yet!")
+        applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_down * 2))
+        waitmovement(0)
+    }
+    releaseall 
+}
+
+script NewstemTown_Boy {
+    lockall
+    msgbox(format("I want to go in for a swim, but Mum said that there's something in the water that could take me..."), MSGBOX_NPC)
+    releaseall
+}
+
+script NewstemTown_Athlete {
+    lockall
+    msgbox(format("Nice Running Shoes! They look brand new!"), MSGBOX_NPC)
+    releaseall
+}
+
+script NewstemTown_Boy2 {
+    lockall
+    msgbox(format("I was told to go out and get some sun, but I just wanna play on my gameboy."), MSGBOX_NPC)
+    releaseall
+}

@@ -1,0 +1,25 @@
+mapscripts SpringwoodCity_Indoor_3_MapScripts {}
+
+script SpringwoodCity_Indoor_3_OldMan {
+    lockall
+    msgbox(format("Can't you see that Ghost is the superior type?"))
+    releaseall
+}
+
+script SpringwoodCity_Indoor_3_OldMan2 {
+    lockall
+    msgbox(format("You're wrong, Normal is better!"))
+    releaseall
+}
+
+script SpringwoodCity_Indoor_3_OldWoman {
+    lockall
+    msgbox(format("Those old fools keep arguing over which type is better. I don't think they've realised that the types can't even interact."), MSGBOX_NPC)
+    releaseall
+}
+
+script SpringwoodCity_Indoor_3_OldWoman2 {
+    lockall
+    msgbox(format("You would think they'd grow tired of it after 50 years..."), MSGBOX_NPC)
+    releaseall
+}

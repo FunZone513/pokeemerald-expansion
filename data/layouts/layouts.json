@@ -4410,6 +4410,256 @@
       "secondary_tileset": "gTileset_MysteryEventsHouse",
       "border_filepath": "data/layouts/SootopolisCity_MysteryEventsHouse_1F_StairsUnblocked/border.bin",
       "blockdata_filepath": "data/layouts/SootopolisCity_MysteryEventsHouse_1F_StairsUnblocked/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE1",
+      "name": "Route1_Layout",
+      "width": 45,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Route1/border.bin",
+      "blockdata_filepath": "data/layouts/Route1/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE2",
+      "name": "Route2_Layout",
+      "width": 27,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Route2/border.bin",
+      "blockdata_filepath": "data/layouts/Route2/map.bin"
+    },
+    {
+      "id": "LAYOUT_NEWSTEM_TOWN",
+      "name": "NewstemTown_Layout",
+      "width": 40,
+      "height": 50,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/NewstemTown/border.bin",
+      "blockdata_filepath": "data/layouts/NewstemTown/map.bin"
+    },
+    {
+      "id": "LAYOUT_NEWSTEM_TOWN_PLAYERS_HOUSE",
+      "name": "NewstemTown_PlayersHouse_Layout",
+      "width": 16,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/NewstemTown_PlayersHouse/border.bin",
+      "blockdata_filepath": "data/layouts/NewstemTown_PlayersHouse/map.bin"
+    },
+    {
+      "id": "LAYOUT_NEWSTEM_TOWN_PLAYERS_HOUSE_BEDROOM",
+      "name": "NewstemTown_PlayersHouse_Bedroom_Layout",
+      "width": 12,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/NewstemTown_PlayersHouse_Bedroom/border.bin",
+      "blockdata_filepath": "data/layouts/NewstemTown_PlayersHouse_Bedroom/map.bin"
+    },
+    {
+      "id": "LAYOUT_SPRINGWOOD_CITY",
+      "name": "SpringwoodCity_Layout",
+      "width": 50,
+      "height": 60,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/SpringwoodCity/border.bin",
+      "blockdata_filepath": "data/layouts/SpringwoodCity/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE3",
+      "name": "Route3_Layout",
+      "width": 40,
+      "height": 70,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/Route3/border.bin",
+      "blockdata_filepath": "data/layouts/Route3/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE5",
+      "name": "Route5_Layout",
+      "width": 60,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/Route5/border.bin",
+      "blockdata_filepath": "data/layouts/Route5/map.bin"
+    },
+    {
+      "id": "LAYOUT_NEWSTEM_TOWN_INDOOR1",
+      "name": "NewstemTown_Indoor1_Layout",
+      "width": 10,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/NewstemTown_Indoor1/border.bin",
+      "blockdata_filepath": "data/layouts/NewstemTown_Indoor1/map.bin"
+    },
+    {
+      "id": "LAYOUT_NEWSTEM_TOWN_INDOOR2",
+      "name": "NewstemTown_Indoor2_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/NewstemTown_Indoor2/border.bin",
+      "blockdata_filepath": "data/layouts/NewstemTown_Indoor2/map.bin"
+    },
+    {
+      "id": "LAYOUT_NEWSTEM_TOWN_PROF_LAB",
+      "name": "NewstemTown_ProfLab_Layout",
+      "width": 14,
+      "height": 13,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Lab",
+      "border_filepath": "data/layouts/NewstemTown_ProfLab/border.bin",
+      "blockdata_filepath": "data/layouts/NewstemTown_ProfLab/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE3_FISHING_HUT",
+      "name": "Route3_FishingHut_Layout",
+      "width": 12,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/Route3_FishingHut/border.bin",
+      "blockdata_filepath": "data/layouts/Route3_FishingHut/map.bin"
+    },
+    {
+      "id": "LAYOUT_SPRINGWOOD_CITY_POKE_CENTER",
+      "name": "SpringwoodCity_PokeCenter_Layout",
+      "width": 14,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/SpringwoodCity_PokeCenter/border.bin",
+      "blockdata_filepath": "data/layouts/SpringwoodCity_PokeCenter/map.bin"
+    },
+    {
+      "id": "LAYOUT_SPRINGWOOD_CITY_POKE_MART",
+      "name": "SpringwoodCity_PokeMart_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Shop",
+      "border_filepath": "data/layouts/SpringwoodCity_PokeMart/border.bin",
+      "blockdata_filepath": "data/layouts/SpringwoodCity_PokeMart/map.bin"
+    },
+    {
+      "id": "LAYOUT_SPRINGWOOD_CITY_GYM",
+      "name": "SpringwoodCity_Gym_Layout",
+      "width": 14,
+      "height": 20,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_MauvilleGym",
+      "border_filepath": "data/layouts/SpringwoodCity_Gym/border.bin",
+      "blockdata_filepath": "data/layouts/SpringwoodCity_Gym/map.bin"
+    },
+    {
+      "id": "LAYOUT_DRIPSTONE_CAVE",
+      "name": "DripstoneCave_Layout",
+      "width": 40,
+      "height": 24,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_MeteorFalls",
+      "border_filepath": "data/layouts/DripstoneCave/border.bin",
+      "blockdata_filepath": "data/layouts/DripstoneCave/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE4",
+      "name": "Route4_Layout",
+      "width": 30,
+      "height": 34,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Route4/border.bin",
+      "blockdata_filepath": "data/layouts/Route4/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE6",
+      "name": "Route6_Layout",
+      "width": 50,
+      "height": 94,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fortree",
+      "border_filepath": "data/layouts/Route6/border.bin",
+      "blockdata_filepath": "data/layouts/Route6/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE4_INDOOR_RESEARCHER_LAB",
+      "name": "Route4_Indoor_Researcher_Lab_Layout",
+      "width": 24,
+      "height": 16,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Lab",
+      "border_filepath": "data/layouts/Route4_Indoor_Researcher_Lab/border.bin",
+      "blockdata_filepath": "data/layouts/Route4_Indoor_Researcher_Lab/map.bin"
+    },
+    {
+      "id": "LAYOUT_SPRINGWOOD_CITY_INDOOR_1",
+      "name": "SpringwoodCity_Indoor_1_Layout",
+      "width": 20,
+      "height": 13,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/SpringwoodCity_Indoor_1/border.bin",
+      "blockdata_filepath": "data/layouts/SpringwoodCity_Indoor_1/map.bin"
+    },
+    {
+      "id": "LAYOUT_SPRINGWOOD_CITY_INDOOR_1_1F",
+      "name": "SpringwoodCity_Indoor_1_1F_Layout",
+      "width": 20,
+      "height": 13,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/SpringwoodCity_Indoor_1_1F/border.bin",
+      "blockdata_filepath": "data/layouts/SpringwoodCity_Indoor_1_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_SPRINGWOOD_CITY_INDOOR_1_2F",
+      "name": "SpringwoodCity_Indoor_1_2F_Layout",
+      "width": 20,
+      "height": 13,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/SpringwoodCity_Indoor_1_2F/border.bin",
+      "blockdata_filepath": "data/layouts/SpringwoodCity_Indoor_1_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_SPRINGWOOD_CITY_INDOOR_2",
+      "name": "SpringwoodCity_Indoor_2_Layout",
+      "width": 20,
+      "height": 13,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/SpringwoodCity_Indoor_2/border.bin",
+      "blockdata_filepath": "data/layouts/SpringwoodCity_Indoor_2/map.bin"
+    },
+    {
+      "id": "LAYOUT_SPRINGWOOD_CITY_INDOOR_3",
+      "name": "SpringwoodCity_Indoor_3_Layout",
+      "width": 20,
+      "height": 13,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/SpringwoodCity_Indoor_3/border.bin",
+      "blockdata_filepath": "data/layouts/SpringwoodCity_Indoor_3/map.bin"
+    },
+    {
+      "id": "LAYOUT_SPRINGWOOD_CITY_INSTITUTION",
+      "name": "SpringwoodCity_Institution_Layout",
+      "width": 25,
+      "height": 16,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/SpringwoodCity_Institution/border.bin",
+      "blockdata_filepath": "data/layouts/SpringwoodCity_Institution/map.bin"
     }
   ]
 }

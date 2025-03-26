@@ -55,6 +55,9 @@
 #include "list_menu.h"
 #include "malloc.h"
 #include "constants/event_objects.h"
+//#include "pokemon.c"
+#include "constants/pokemon.h"
+#include "constants/abilities.h"
 
 typedef u16 (*SpecialFunc)(void);
 typedef void (*NativeFunc)(struct ScriptContext *ctx);
@@ -3139,4 +3142,79 @@ void Script_EndTrainerCanSeeIf(struct ScriptContext *ctx)
     u8 condition = ScriptReadByte(ctx);
     if (ctx->breakOnTrainerBattle && sScriptConditionTable[condition][ctx->comparisonResult] == 1)
         StopScript(ctx);
+}
+
+//=======================================
+
+bool8 CheckPartyCon(u16 value, u8 condition) {
+    u8 i;
+    u16 species;
+    struct Pokemon *pokemon;
+    gSpecialVar_Result = FALSE;
+
+    for (i = 0; i < PARTY_SIZE; i++)
+    {
+        pokemon = &gPlayerParty[i];
+        if (GetMonData(pokemon, MON_DATA_SANITY_HAS_SPECIES) && !GetMonData(pokemon, MON_DATA_IS_EGG)) {
+            species = GetMonData(pokemon, MON_DATA_SPECIES);
+
+            switch(condition) {
+
+                // Getting the Type
+                case 0:
+                    if (gSpeciesInfo[species].types[0] == value || gSpeciesInfo[species].types[1] == value)
+                    {
+                        gSpecialVar_Result = i;
+                        gSpecialVar_0x8004 = species;
+                        return TRUE;
+                    }
+                
+                // Getting the Ability
+                case 1:
+                if (GetMonAbility(pokemon) == value) {
+                    gSpecialVar_Result = i;
+                    gSpecialVar_0x8004 = species;
+                    return TRUE;
+                }
+            }
+        }     
+    
+    }
+    gSpecialVar_Result = PARTY_SIZE;
+    return FALSE;
+}
+
+bool8 IsTypeInParty(struct ScriptContext *ctx)
+{
+    return CheckPartyCon(ScriptReadHalfword(ctx), 0);    
+}
+
+bool8 IsAbilityInParty(struct ScriptContext *ctx)
+{
+    return CheckPartyCon(ScriptReadHalfword(ctx), 1);    
+}
+
+bool8 CanUseFieldMove(struct ScriptContext *ctx)
+{
+    u16 moveID = ScriptReadHalfword(ctx);
+    
+    switch(moveID) {
+        case MOVE_CUT:
+            if (CheckPartyCon(TYPE_GRASS, 0)) { return TRUE; }
+            if (CheckPartyCon(TYPE_BUG, 0)) { return TRUE; }
+            if (CheckPartyCon(ABILITY_HYPER_CUTTER, 1)) { return TRUE; }
+            break;
+        
+        case MOVE_ROCK_SMASH:
+            if (CheckPartyCon(TYPE_FIGHTING, 0)) { return TRUE; }
+            if (CheckPartyCon(TYPE_ROCK, 0)) { return TRUE; }
+            if (CheckPartyCon(TYPE_GROUND, 0)) { return TRUE; }
+        
+        case MOVE_STRENGTH:
+            if (CheckPartyCon(TYPE_FIGHTING, 0)) { return TRUE; }
+            if (CheckPartyCon(TYPE_GROUND, 0)) { return TRUE; }
+            if (CheckPartyCon(ABILITY_PURE_POWER, 1)) { return TRUE; }
+    }
+
+    return FALSE;
 }

@@ -1,0 +1,31 @@
+mapscripts SpringwoodCity_Indoor_1_1F_MapScripts {}
+
+script SpringwoodCity_Indoor_1_1F_LittleGirl {
+    lockall
+    msgbox(format("I'm lucky that Mr and Mrs Beauloaf are here to look after me!"), MSGBOX_NPC)
+    releaseall
+}
+
+script SpringwoodCity_Indoor_1_1F_LittleBoy {
+    lockall
+    msgbox(format("My sister left saying she was going to be a cool Pokemon trainer! I hope I get to hear from her soon!"), MSGBOX_NPC)
+    releaseall
+}
+
+script SpringwoodCity_Indoor_1_1F_LittleBoy2 {
+    lockall
+    msgbox(format("We like it here, the Beauloafs give us heaps of food!"), MSGBOX_NPC)
+    releaseall
+}
+
+script SpringwoodCity_Indoor_1_1F_OldWoman {
+    lockall
+    msgbox(format("These poor kids don't have anyone to look after them, so my husband and I take in any we find."), MSGBOX_NPC)
+    releaseall
+}
+
+script SpringwoodCity_Indoor_1_1F_OldMan {
+    lockall
+    msgbox(format("Being a Pokemon Trainer isn't for everyone. Some folks end up leaving behind more than they should when they visit new places."), MSGBOX_NPC)
+    releaseall
+}

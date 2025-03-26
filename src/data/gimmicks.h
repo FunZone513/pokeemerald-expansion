@@ -12,7 +12,7 @@ const struct GimmickInfo gGimmicksInfo[GIMMICKS_COUNT] =
         .triggerTemplate = &sSpriteTemplate_GimmickTrigger,
         .indicatorSheet = &sSpriteSheet_MegaIndicator,
         .indicatorPal = &sSpritePalette_MegaIndicator,
-        .CanActivate = CanMegaEvolve,
+        .CanActivate = NULL, //CanMegaEvolve,
         .ActivateGimmick = ActivateMegaEvolution,
     },
     [GIMMICK_Z_MOVE] =
@@ -20,7 +20,7 @@ const struct GimmickInfo gGimmicksInfo[GIMMICKS_COUNT] =
         .triggerSheet = &sSpriteSheet_ZMoveTrigger,
         .triggerPal = &sSpritePalette_ZMoveTrigger,
         .triggerTemplate = &sSpriteTemplate_GimmickTrigger,
-        .CanActivate = CanUseZMove,
+        .CanActivate = NULL, //CanUseZMove,
         .ActivateGimmick = ActivateZMove,
     },
     [GIMMICK_ULTRA_BURST] =
@@ -28,7 +28,7 @@ const struct GimmickInfo gGimmicksInfo[GIMMICKS_COUNT] =
         .triggerSheet = &sSpriteSheet_BurstTrigger,
         .triggerPal = &sSpritePalette_BurstTrigger,
         .triggerTemplate = &sSpriteTemplate_GimmickTrigger,
-        .CanActivate = CanUltraBurst,
+        .CanActivate = NULL, //CanUltraBurst,
         .ActivateGimmick = ActivateUltraBurst,
     },
     [GIMMICK_DYNAMAX] =
@@ -38,7 +38,7 @@ const struct GimmickInfo gGimmicksInfo[GIMMICKS_COUNT] =
         .triggerTemplate = &sSpriteTemplate_GimmickTrigger,
         .indicatorSheet = &sSpriteSheet_DynamaxIndicator,
         .indicatorPal = &sSpritePalette_MiscIndicator,
-        .CanActivate = CanDynamax,
+        .CanActivate = NULL, //CanDynamax,
         .ActivateGimmick = ActivateDynamax,
     },
     [GIMMICK_TERA] =
@@ -48,7 +48,7 @@ const struct GimmickInfo gGimmicksInfo[GIMMICKS_COUNT] =
         .triggerTemplate = &sSpriteTemplate_GimmickTrigger,
         .indicatorSheet = NULL, // handled separately
         .indicatorPal = &sSpritePalette_TeraIndicator,
-        .CanActivate = CanTerastallize,
+        .CanActivate = NULL, //CanTerastallize,
         .ActivateGimmick = ActivateTera,
     }
 };

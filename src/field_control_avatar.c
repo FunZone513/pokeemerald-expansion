@@ -765,7 +765,7 @@ static bool8 UpdatePoisonStepCounter(void)
     {
         ptr = GetVarPointer(VAR_POISON_STEP_COUNTER);
         (*ptr)++;
-        (*ptr) %= 4;
+        (*ptr) %= 8;
         if (*ptr == 0)
         {
             switch (DoPoisonFieldEffect())

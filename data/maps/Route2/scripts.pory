@@ -1,0 +1,103 @@
+mapscripts Route2_MapScripts {}
+
+script Route2_Trigger_CamperL {
+    call(Route2_MoveCamper)
+}
+
+script Route2_Trigger_CamperR {
+    setvar(VAR_TEMP_0, 2)
+    call(Route2_MoveCamper)
+}
+
+script Route2_MoveCamper {
+    lockall
+    applymovement(1, moves(face_down))
+    playse(SE_PIN)
+    waitmovement(0)
+    applymovement(1, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    applymovement(1, Common_Movement_Delay48)
+	waitmovement(0)
+    if (var(VAR_TEMP_0) == 2) {
+        applymovement(1, moves(
+            walk_right*2
+            walk_down*2
+        ))
+    } else {
+        applymovement(1, moves(
+            walk_right
+            walk_down*2
+        ))
+    }
+    waitmovement(0)
+    msgbox(Route2_Camper_Warning_Text, MSGBOX_NPC)
+    if (var(VAR_TEMP_0) == 2) {
+        applymovement(1, moves(
+            walk_up*2
+            walk_left*2
+        ))
+    } else {
+        applymovement(1, moves(
+            walk_up*2
+            walk_left
+        ))
+    }
+    waitmovement(0)
+    applymovement(1, moves(face_down))
+    releaseall
+}
+
+text Route2_Camper_Warning_Text {
+    "Hey there, I see you've just come from\nNewstem Town.\p"
+    "I'm here to warn travellers about an\naggressive Pokemon just up ahead.\p"
+    "I'm not sure why it's so upset,\nbut I would recommend avoiding it.\p"
+    "I'd like to go and ask someone from\nSpringwood City to calm it down,\l"
+    "but I'm busy making sure no-one\lgoes near it.\p"
+    "Say, could you go and tell the Gym Leader\nin Springwood City about it?\p"
+    "It would be really helpful, as it is\ncurrently blocking access to\l"
+    "Quiet Grove, which is inconvenient.\p"
+    "Best of luck!"
+}
+
+script Route2_NPC_Camper {
+    lockall
+    faceplayer
+    msgbox("I hope you can let the Gym Leader\nknow soon, I'd like to go back home.", MSGBOX_NPC)
+    releaseall
+}
+
+script Route2_Miniboss {
+    lockall
+    applymovement(2, moves(face_player))
+    waitmovement(0)
+    playmoncry(SPECIES_PARASECT, CRY_MODE_ENCOUNTER)
+    msgbox("The Pokemon seems agitated!\nIt might attack if provoked!")
+    waitmoncry
+    msgbox("Will you leave it alone?", MSGBOX_YESNO)
+    if (var(VAR_RESULT)) {
+        msgbox("Probably for the best.")
+    } else {
+        msgbox("The Pokemon attacked!")
+        call(Route2_Miniboss_Battle)
+    }
+    releaseall
+}
+
+script Route2_Miniboss_Battle {
+    setwildbattle(SPECIES_PARASECT, 25, ITEM_OCCA_BERRY)
+    setflag(FLAG_ACTIVE_BOSS_BATTLE)
+    dowildbattle
+    clearflag(FLAG_ACTIVE_BOSS_BATTLE)
+    specialvar(VAR_RESULT, GetBattleOutcome)
+    if (var(VAR_RESULT) == B_OUTCOME_WON) {
+        setflag(FLAG_HIDE_ROUTE2_MINIBOSS)
+        setvar(VAR_LITTLEROOT_INTRO_STATE, 5)
+    } 
+    releaseall
+}
+
+script Route2_BlackBelt {
+    lockall
+    msgbox(format("I miss my girlfriend..."))
+    releaseall
+}

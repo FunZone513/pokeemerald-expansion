@@ -3,7 +3,32 @@
 
 #include "constants/battle_partner.h"
 
-#define TRAINER_NONE                          0
+
+#define TRAINER_NONE                        0
+#define TRAINER_RED                         1
+#define TRAINER_LEAF                        2
+#define TRAINER_BRENDAN_PLACEHOLDER         3
+#define TRAINER_MAY_PLACEHOLDER             4
+
+#define TRAINER_GYM_LEADER_MARTIN           5  
+
+#define TRAINERS_COUNT                      6
+
+#define MAX_TRAINERS_COUNT                  864
+#define TRAINER_PARTNER(partner)           (MAX_TRAINERS_COUNT + partner)
+
+
+
+
+
+
+
+
+
+
+
+
+// Goodbye
 #define TRAINER_SAWYER_1                      1
 #define TRAINER_GRUNT_AQUA_HIDEOUT_1          2
 #define TRAINER_GRUNT_AQUA_HIDEOUT_2          3
@@ -854,17 +879,9 @@
 #define TRAINER_MARIELA                     848
 #define TRAINER_ALVARO                      849
 #define TRAINER_EVERETT                     850
-#define TRAINER_RED                         851
+/* #define TRAINER_RED                         851
 #define TRAINER_LEAF                        852
 #define TRAINER_BRENDAN_PLACEHOLDER         853
-#define TRAINER_MAY_PLACEHOLDER             854
-
-// NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows
-//       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled
-//       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
-
-#define TRAINERS_COUNT                      855
-#define MAX_TRAINERS_COUNT                  864
-#define TRAINER_PARTNER(partner)           (MAX_TRAINERS_COUNT + partner)
+#define TRAINER_MAY_PLACEHOLDER             854 */
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_H

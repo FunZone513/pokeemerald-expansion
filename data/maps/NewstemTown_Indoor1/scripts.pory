@@ -1,0 +1,17 @@
+mapscripts NewstemTown_Indoor1_MapScripts {}
+
+script NewstemTown_Indoor1_Woman {
+    lockall
+    faceplayer
+    msgbox(NewstemTown_Indoor1_Woman_Text, MSGBOX_NPC)
+    releaseall
+}
+
+text NewstemTown_Indoor1_Woman_Text {
+    "My son really likes to swim in the ocean,\n"
+    "so I told him an old story about it.\p"
+    "The story is about ancient pokemon\n"
+    "that live in the depths of the seas.\p"
+    "I thought he would enjoy it, but it\n"
+    "seems like it scared him instead."
+}

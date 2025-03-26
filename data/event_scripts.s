@@ -1154,3 +1154,53 @@ EventScript_VsSeekerChargingDone::
 	.include "data/text/save.inc"
 	.include "data/text/birch_speech.inc"
 	.include "data/scripts/dexnav.inc"
+	
+	.include "data/maps/Route1/scripts.inc"
+
+	.include "data/maps/Route2/scripts.inc"
+
+	.include "data/maps/NewstemTown/scripts.inc"
+
+	.include "data/maps/NewstemTown_PlayersHouse/scripts.inc"
+
+	.include "data/maps/NewstemTown_PlayersHouse_Bedroom/scripts.inc"
+
+	.include "data/maps/SpringwoodCity/scripts.inc"
+
+	.include "data/maps/Route3/scripts.inc"
+
+	.include "data/maps/Route5/scripts.inc"
+
+	.include "data/maps/NewstemTown_Indoor1/scripts.inc"
+
+	.include "data/maps/NewstemTown_Indoor2/scripts.inc"
+
+	.include "data/maps/NewstemTown_ProfLab/scripts.inc"
+
+	.include "data/maps/Route3_FishingHut/scripts.inc"
+
+	.include "data/maps/SpringwoodCity_PokeCenter/scripts.inc"
+
+	.include "data/maps/SpringwoodCity_PokeMart/scripts.inc"
+
+	.include "data/maps/SpringwoodCity_Gym/scripts.inc"
+
+	.include "data/maps/DripstoneCave/scripts.inc"
+
+	.include "data/maps/Route4/scripts.inc"
+
+	.include "data/maps/Route6/scripts.inc"
+
+	.include "data/maps/Route4_Indoor_Researcher_Lab/scripts.inc"
+
+	.include "data/maps/SpringwoodCity_Indoor_1/scripts.inc"
+
+	.include "data/maps/SpringwoodCity_Indoor_1_1F/scripts.inc"
+
+	.include "data/maps/SpringwoodCity_Indoor_1_2F/scripts.inc"
+
+	.include "data/maps/SpringwoodCity_Indoor_2/scripts.inc"
+
+	.include "data/maps/SpringwoodCity_Indoor_3/scripts.inc"
+
+	.include "data/maps/SpringwoodCity_Institution/scripts.inc"

@@ -1,0 +1,19 @@
+mapscripts Route4_MapScripts {}
+
+script Route4_Sign_Researcher_Lab {
+    lockall
+    msgbox("Welcome to the wonderful world of\nPokemon Science!", MSGBOX_SIGN)
+    releaseall
+}
+
+script Route4_Sign_Researcher_Lab_Garden {
+    lockall
+    msgbox(Route4_Sign_Researcher_Lab_Garden_Text, MSGBOX_SIGN)
+    releaseall
+}
+
+text Route4_Sign_Researcher_Lab_Garden_Text {
+    "Remember to clean off your shoes\nbefore you go back into the Lab,\l"
+    "and don't overfeed the water Pokemon!\p"
+    "We keep having to call in Nurse Joy\nbecause they get so fat!"
+}

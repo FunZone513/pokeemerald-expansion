@@ -1,4 +1,16 @@
 // multichoice lists
+static const struct MenuAction MultichoiceList_QOLOptions[] = 
+{
+    {COMPOUND_STRING("Exp Share")},
+    {COMPOUND_STRING("Ice Changes")},
+};
+
+static const struct MenuAction MultichoiceList_GenericOnOff[] = 
+{
+    {COMPOUND_STRING("Exp Share")},
+    {COMPOUND_STRING("Ice Changes")},
+};
+
 static const struct MenuAction MultichoiceList_BrineyOnDewford[] =
 {
     {COMPOUND_STRING("PETALBURG")},
@@ -800,8 +812,8 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_BASE_PC_WITH_REGISTRY]      = MULTICHOICE(MultichoiceList_BasePCWithRegistry),
     [MULTI_REGISTER_MENU]              = MULTICHOICE(MultichoiceList_RegisterMenu),
     [MULTI_SSTIDAL_LILYCOVE]           = MULTICHOICE(MultichoiceList_Exit),
-    [MULTI_UNUSED_9]                   = MULTICHOICE(MultichoiceList_Exit),
-    [MULTI_UNUSED_10]                  = MULTICHOICE(MultichoiceList_Exit),
+    [MULTI_QOL_OPTIONS]                = MULTICHOICE(MultichoiceList_QOLOptions),
+    [MULTI_GENERIC_ONOFF]              = MULTICHOICE(MultichoiceList_GenericOnOff),
     [MULTI_FRONTIER_PASS_INFO]         = MULTICHOICE(MultichoiceList_FrontierPassInfo),
     [MULTI_BIKE]                       = MULTICHOICE(MultichoiceList_Bike),
     [MULTI_STATUS_INFO]                = MULTICHOICE(MultichoiceList_StatusInfo),

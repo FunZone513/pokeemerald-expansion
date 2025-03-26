@@ -1,0 +1,67 @@
+mapscripts NewstemTown_PlayersHouse_MapScripts {
+    MAP_SCRIPT_ON_FRAME_TABLE [ 
+        VAR_LITTLEROOT_INTRO_STATE, 0: NewstemTown_PlayersHouse_Intro
+    ]
+}
+
+text Mum_Intro {
+    "I heard that the Professor finally\ngot some Pokemon together.\p"
+    "You should go and pick one up, then you\ncan start on your Pokemon adventure!\p"
+    "Oh right,\ndon't forgot to check your PC!\p"
+    "Have fun!"
+}
+
+script NewstemTown_PlayersHouse_Intro {
+    lockall
+    playse(SE_PIN)
+    applymovement(1, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    applymovement(1, moves(face_right))
+    waitmovement(0)
+    applymovement(1, Common_Movement_Delay48)
+	waitmovement(0)
+    applymovement(1, Intro_Mum_WalkToPlayer)
+    msgbox("Hey {PLAYER}!")
+    waitmovement(0)
+    msgbox(Mum_Intro)
+    closemessage
+    applymovement(1, Intro_Mum_WalkBackToChair)
+    waitmovement(0)
+    setvar(VAR_LITTLEROOT_INTRO_STATE, 1)
+    releaseall
+}
+
+script NewstemTown_PlayersHouse_Mum {
+    lockall
+    faceplayer
+    if (var(VAR_LITTLEROOT_INTRO_STATE) == 1) {
+        msgbox("You'd better head over to the Lab,\nYou don't want to miss out!", MSGBOX_NPC)
+    } else {
+        getpartysize()
+        if (var(VAR_RESULT) > 0) {
+
+            msgbox("Would you like to take a break?", MSGBOX_YESNO)
+            if (var(VAR_RESULT) == YES) {
+                call(Common_EventScript_OutOfCenterPartyHeal)
+                setrespawn(HEAL_LOCATION_NEWSTEM_TOWN)
+                msgbox("Have fun out there!", MSGBOX_NPC)
+            } else {
+                msgbox("I'll be here if ever you need me!", MSGBOX_NPC)
+            }
+        } else {
+            msgbox("You should probably go get a Pokemon!", MSGBOX_NPC)
+        }
+    }
+    //applymovement(1, moves(face_left))
+    releaseall
+}
+
+movement Intro_Mum_WalkToPlayer {
+    walk_right * 3
+    walk_up * 2
+}
+
+movement Intro_Mum_WalkBackToChair {
+    walk_down * 2
+    walk_left * 3
+}

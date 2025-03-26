@@ -10816,9 +10816,15 @@ uq4_12_t GetOverworldTypeEffectiveness(struct Pokemon *mon, u8 moveType)
 
 uq4_12_t GetTypeModifier(u32 atkType, u32 defType)
 {
-    if (B_FLAG_INVERSE_BATTLE != 0 && FlagGet(B_FLAG_INVERSE_BATTLE))
-        return GetInverseTypeMultiplier(gTypeEffectivenessTable[atkType][defType]);
-    return gTypeEffectivenessTable[atkType][defType];
+    if (FlagGet(FLAG_USE_NEW_TYPE_CHART)) {
+        if (B_FLAG_INVERSE_BATTLE != 0 && FlagGet(B_FLAG_INVERSE_BATTLE))
+            return GetInverseTypeMultiplier(gTypeEffectivenessTableRebalanced[atkType][defType]);
+        return gTypeEffectivenessTableRebalanced[atkType][defType];
+    } else {
+        if (B_FLAG_INVERSE_BATTLE != 0 && FlagGet(B_FLAG_INVERSE_BATTLE))
+            return GetInverseTypeMultiplier(gTypeEffectivenessTable[atkType][defType]);
+        return gTypeEffectivenessTable[atkType][defType];
+    }
 }
 
 s32 GetStealthHazardDamageByTypesAndHP(enum TypeSideHazard hazardType, u8 type1, u8 type2, u32 maxHp)

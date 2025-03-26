@@ -1,0 +1,55 @@
+mapscripts NewstemTown_PlayersHouse_Bedroom_MapScripts {
+    MAP_SCRIPT_ON_FRAME_TABLE [ 
+        VAR_STARTED_GAME, 0: NewstemTown_DefaultSettings
+    ]
+}
+
+script NewstemTown_DefaultSettings {
+    setflag(FLAG_SYS_B_DASH)
+    setflag(FLAG_SHARED_EXP)
+    setflag(FLAG_USE_NEW_TYPE_CHART)
+    setvar(VAR_STARTED_GAME, 1)
+    setvar(VAR_WILD_BATTLE_CHANCE, 15)
+    releaseall
+}
+
+script NewstemTown_PlayersHouse_Bedroom_Settings {
+    lockall
+    message(format("This is where you edit the game's difficulty and QoL settings."))
+    multichoice(25, 5, MULTI_QOL_OPTIONS, 0)
+    closemessage
+    switch(var(VAR_RESULT)) {
+        case 0:
+            message(format("All Pokemon in the party gain exp, not just the ones used in battle."))
+            multichoice(25, 5, MULTI_GENERIC_ONOFF, 0)
+            closemessage
+            if (var(VAR_RESULT) == 0) { 
+                setflag(FLAG_SHARED_EXP)
+            } else { clearflag(FLAG_SHARED_EXP) }
+            goto(NewstemTown_PlayersHouse_Bedroom_Settings)
+            
+        case 1:
+            message(format("Use the new Ice Type interactions. Grants Water and Grass resist."))
+            multichoice(25, 5, MULTI_GENERIC_ONOFF, 0)
+            closemessage
+            if (var(VAR_RESULT) == 0) { 
+                setflag(FLAG_USE_NEW_TYPE_CHART)
+            } else { clearflag(FLAG_USE_NEW_TYPE_CHART) }
+            goto(NewstemTown_PlayersHouse_Bedroom_Settings)
+
+        default:
+            releaseall
+            end
+    }
+    releaseall
+}
+
+script NewstemTown_DEBUG {
+    lockall
+    givemon(SPECIES_TURTWIG, 1)
+    istypeinparty(TYPE_GRASS)
+    if (var(VAR_RESULT) == YES) {
+        msgbox("Yeah")
+    }
+    releaseall
+}

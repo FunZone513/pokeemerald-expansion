@@ -1,5 +1,11 @@
 {
   "group_order": [
+    "gMapGroup_Towns",
+    "gMapGroup_Routes",
+    "gMapGroup_Dungeons",
+    "gMapGroup_Indoor_Routes",
+    "gMapGroup_Indoor_NewstemTown",
+    "gMapGroup_Indoor_SpringwoodCity",
     "gMapGroup_TownsAndRoutes",
     "gMapGroup_IndoorLittleroot",
     "gMapGroup_IndoorOldale",
@@ -24,7 +30,7 @@
     "gMapGroup_IndoorRoute116",
     "gMapGroup_IndoorRoute117",
     "gMapGroup_IndoorRoute121",
-    "gMapGroup_Dungeons",
+    "gMapGroup_OldDungeons",
     "gMapGroup_IndoorDynamic",
     "gMapGroup_SpecialArea",
     "gMapGroup_IndoorRoute104Prototype",
@@ -34,6 +40,43 @@
     "gMapGroup_IndoorRoute123",
     "gMapGroup_IndoorRoute119",
     "gMapGroup_IndoorRoute124"
+  ],
+  "gMapGroup_Towns": [
+    "NewstemTown",
+    "SpringwoodCity"
+  ],
+  "gMapGroup_Routes": [
+    "Route1",
+    "Route2",
+    "Route3",
+    "Route4",
+    "Route5",
+    "Route6"
+  ],
+  "gMapGroup_Dungeons": [
+    "DripstoneCave"
+  ],
+  "gMapGroup_Indoor_Routes": [
+    "Route3_FishingHut",
+    "Route4_Indoor_Researcher_Lab"
+  ],
+  "gMapGroup_Indoor_NewstemTown": [
+    "NewstemTown_PlayersHouse",
+    "NewstemTown_PlayersHouse_Bedroom",
+    "NewstemTown_Indoor1",
+    "NewstemTown_Indoor2",
+    "NewstemTown_ProfLab"
+  ],
+  "gMapGroup_Indoor_SpringwoodCity": [
+    "SpringwoodCity_PokeCenter",
+    "SpringwoodCity_PokeMart",
+    "SpringwoodCity_Gym",
+    "SpringwoodCity_Indoor_1",
+    "SpringwoodCity_Indoor_1_1F",
+    "SpringwoodCity_Indoor_1_2F",
+    "SpringwoodCity_Indoor_2",
+    "SpringwoodCity_Indoor_3",
+    "SpringwoodCity_Institution"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -321,7 +364,7 @@
   "gMapGroup_IndoorRoute121": [
     "Route121_SafariZoneEntrance"
   ],
-  "gMapGroup_Dungeons": [
+  "gMapGroup_OldDungeons": [
     "MeteorFalls_1F_1R",
     "MeteorFalls_1F_2R",
     "MeteorFalls_B1F_1R",
@@ -620,72 +663,5 @@
   ],
   "gMapGroup_IndoorRoute124": [
     "Route124_DivingTreasureHuntersHouse"
-  ],
-  "connections_include_order": [
-    "LittlerootTown",
-    "OldaleTown",
-    "DewfordTown",
-    "LavaridgeTown",
-    "FallarborTown",
-    "VerdanturfTown",
-    "PacifidlogTown",
-    "PetalburgCity",
-    "SlateportCity",
-    "MauvilleCity",
-    "RustboroCity",
-    "FortreeCity",
-    "LilycoveCity",
-    "MossdeepCity",
-    "SootopolisCity",
-    "EverGrandeCity",
-    "Route101",
-    "Route102",
-    "Route103",
-    "Route104",
-    "Route105",
-    "Route106",
-    "Route107",
-    "Route108",
-    "Route109",
-    "Route110",
-    "Route111",
-    "Route112",
-    "Route113",
-    "Route114",
-    "Route115",
-    "Route116",
-    "Route117",
-    "Route118",
-    "Route119",
-    "Route120",
-    "Route121",
-    "Route122",
-    "Route123",
-    "Route124",
-    "Route125",
-    "Route126",
-    "Route127",
-    "Route128",
-    "Route129",
-    "Route130",
-    "Route131",
-    "Route132",
-    "Route133",
-    "Route134",
-    "Underwater_Route105",
-    "Underwater_Route124",
-    "Underwater_Route125",
-    "Underwater_Route126",
-    "Underwater_Route127",
-    "Underwater_Route128",
-    "Underwater_Route129",
-    "SafariZone_Northwest",
-    "SafariZone_North",
-    "SafariZone_Southwest",
-    "SafariZone_South",
-    "SafariZone_Northeast",
-    "SafariZone_Southeast",
-    "BattleFrontier_OutsideWest",
-    "BattleFrontier_OutsideEast"
   ]
 }

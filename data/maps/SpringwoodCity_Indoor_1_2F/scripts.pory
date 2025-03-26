@@ -1,0 +1,57 @@
+mapscripts SpringwoodCity_Indoor_1_2F_MapScripts {}
+
+script SpringwoodCity_Indoor_1_2F_Employee {
+    lockall
+    msgbox(format("Oh, I'm not supposed to talk to people like you."), MSGBOX_NPC)
+    releaseall
+}
+
+script SpringwoodCity_Indoor_1_2F_TriggerL {
+    setvar(VAR_TEMP_1, 2)
+    call(SpringwoodCity_Indoor_1_2F_PushPlayer)
+}
+
+script SpringwoodCity_Indoor_1_2F_TriggerR {
+    setvar(VAR_TEMP_1, 1)
+    call(SpringwoodCity_Indoor_1_2F_PushPlayer)
+}
+
+script SpringwoodCity_Indoor_1_2F_PushPlayer {
+    lockall
+    applymovement(3, moves(face_left))
+    playse(SE_PIN)
+    waitmovement(0)
+    applymovement(3, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    applymovement(3, Common_Movement_Delay48)
+	waitmovement(0)
+
+    if (var(VAR_TEMP_1) == 2) { 
+        applymovement(3, moves(walk_left*2)) 
+    } else { applymovement(3, moves(walk_left)) }
+    waitmovement(0)
+    applymovement(3, moves(face_up))
+    waitmovement(0)
+
+    message("Hey! You can't come in here!")
+    waitmessage
+    applymovement(3, moves(walk_up*2))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(
+        lock_facing_direction
+        walk_up*2
+        unlock_facing_direction
+    ))
+    waitmovement(0)
+    closemessage
+    applymovement(3, moves(walk_down*2))
+    waitmovement(0)
+
+    if (var(VAR_TEMP_1) == 2) { 
+        applymovement(3, moves(walk_right*2)) 
+    } else { applymovement(3, moves(walk_right)) }
+    waitmovement(0)
+
+    applymovement(3, moves(face_down))
+    waitmovement(0)
+    releaseall
+}

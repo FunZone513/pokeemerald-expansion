@@ -81,6 +81,242 @@ Gender: Male
 Music: Male
 Double Battle: No
 
+=== TRAINER_RED ===
+Name: RED
+Class: Rival
+Pic: Red
+Gender: Male
+Music: Male
+Double Battle: No
+
+Charmander
+Level: 5
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_LEAF ===
+Name: LEAF
+Class: Rival
+Pic: Leaf
+Gender: Female
+Music: Male
+Double Battle: No
+
+Bulbasaur
+Level: 5
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_BRENDAN_PLACEHOLDER ===
+Name: BRENDAN
+Class: RS Protag
+Pic: RS Brendan
+Gender: Male
+Music: Male
+Double Battle: No
+
+Groudon
+Level: 5
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_MAY_PLACEHOLDER ===
+Name: MAY
+Class: RS Protag
+Pic: RS May
+Gender: Female
+Music: Male
+Double Battle: No
+
+Kyogre
+Level: 5
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+
+=== TRAINER_GYM_LEADER_MARTIN ===
+Name: MARTIN
+Class: Leader
+Pic: Leader Brawly
+Gender: Male
+Music: Male
+Items: Potion / Super Potion
+Double Battle: No
+AI: Gym Leader
+
+Roggenrola  
+Ability: Sturdy  
+Level: 12  
+Tera Type: Rock  
+EVs: 236 HP / 236 Atk / 36 Def  
+Adamant Nature  
+IVs: 0 Spe  
+- Stealth Rock  
+- Tackle  
+- Rock Tomb  
+- Sand Attack  
+
+Yanma  
+Ability: Speed Boost  
+Level: 12  
+Tera Type: Bug  
+EVs: 236 SpA / 236 Spe  
+Mild Nature  
+- Struggle Bug  
+- Quick Attack  
+- Air Slash  
+- Detect  
+
+Sableye  
+Ability: Prankster  
+Level: 12  
+Tera Type: Dark  
+EVs: 12 HP / 244 Def / 224 SpD  
+Careful Nature  
+- Fake Out  
+- Shadow Sneak  
+- Will-O-Wisp  
+- Scratch  
+
+Electrike  
+Ability: Static  
+Level: 12  
+Tera Type: Electric  
+EVs: 52 Atk / 224 SpA / 224 Spe  
+Naive Nature  
+- Quick Attack  
+- Thunder Wave  
+- Shock Wave  
+- Bite  
+
+Beedrill @ Scope Lens  
+Ability: Sniper  
+Level: 14  
+Tera Type: Bug  
+EVs: 248 Atk / 8 SpD / 244 Spe  
+Adamant Nature  
+- Pin Missile  
+- Aerial Ace  
+- Leech Life  
+- Poison Jab  
+
+Munchlax @ Oran Berry  
+Ability: Gluttony  
+Level: 15  
+Shiny: Yes  
+Tera Type: Normal  
+EVs: 228 Atk / 244 Def / 28 SpD  
+Adamant Nature  
+- Lick  
+- Tackle  
+- Recycle  
+- Curse  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 === TRAINER_SAWYER_1 ===
 Name: SAWYER
 Class: Hiker
@@ -16826,50 +17062,4 @@ Wobbuffet
 Level: 41
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_RED ===
-Name: RED
-Class: Rival
-Pic: Red
-Gender: Male
-Music: Male
-Double Battle: No
-
-Charmander
-Level: 5
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_LEAF ===
-Name: LEAF
-Class: Rival
-Pic: Leaf
-Gender: Female
-Music: Male
-Double Battle: No
-
-Bulbasaur
-Level: 5
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_BRENDAN_PLACEHOLDER ===
-Name: BRENDAN
-Class: RS Protag
-Pic: RS Brendan
-Gender: Male
-Music: Male
-Double Battle: No
-
-Groudon
-Level: 5
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_MAY_PLACEHOLDER ===
-Name: MAY
-Class: RS Protag
-Pic: RS May
-Gender: Female
-Music: Male
-Double Battle: No
-
-Kyogre
-Level: 5
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+*/

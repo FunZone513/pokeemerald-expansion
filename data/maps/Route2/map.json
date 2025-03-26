@@ -1,0 +1,114 @@
+{
+  "id": "MAP_ROUTE2",
+  "name": "Route2",
+  "layout": "LAYOUT_ROUTE2",
+  "music": "MUS_ROUTE101",
+  "region_map_section": "MAPSEC_ROUTE_2",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_ROUTE1",
+      "offset": 28,
+      "direction": "left"
+    },
+    {
+      "map": "MAP_SPRINGWOOD_CITY",
+      "offset": -1,
+      "direction": "up"
+    }
+  ],
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_CAMPER",
+      "x": 15,
+      "y": 29,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route2_NPC_Camper",
+      "flag": "FLAG_HIDE_ROUTE2_MINIBOSS"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(PARASECT)",
+      "x": 22,
+      "y": 11,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_UP_AND_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route2_Miniboss",
+      "flag": "FLAG_HIDE_ROUTE2_MINIBOSS"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 22,
+      "y": 28,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_ESCAPE_ROPE",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_ROUTE_2_ESCAPE_ROPE"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT",
+      "x": 12,
+      "y": 17,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route2_BlackBelt",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+
+  ],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 17,
+      "y": 32,
+      "elevation": 0,
+      "var": "VAR_LITTLEROOT_INTRO_STATE",
+      "var_value": "3",
+      "script": "Route2_Trigger_CamperR"
+    },
+    {
+      "type": "trigger",
+      "x": 16,
+      "y": 32,
+      "elevation": 0,
+      "var": "VAR_LITTLEROOT_INTRO_STATE",
+      "var_value": "3",
+      "script": "Route2_Trigger_CamperL"
+    }
+  ],
+  "bg_events": [
+    {
+      "type": "hidden_item",
+      "x": 14,
+      "y": 13,
+      "elevation": 0,
+      "item": "ITEM_NET_BALL",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE_2_NET_BALL"
+    }
+  ]
+}

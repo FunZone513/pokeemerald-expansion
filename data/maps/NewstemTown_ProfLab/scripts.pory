@@ -1,0 +1,129 @@
+mapscripts NewstemTown_ProfLab_MapScripts {
+    MAP_SCRIPT_ON_FRAME_TABLE [ 
+        VAR_LITTLEROOT_INTRO_STATE, 1: NewstemTown_ProfLab_Intro
+    ]
+}
+
+script NewstemTown_ProfLab_Intro {
+    lockall
+    applymovement(OBJ_EVENT_ID_PLAYER, NewstemTown_WalkIntoLab)
+    waitmovement(0)
+    msgbox(NewstemTown_ProfLab_Text_Intro)
+    setvar(VAR_LITTLEROOT_INTRO_STATE, 2)
+    releaseall
+}
+
+movement NewstemTown_WalkIntoLab {
+    walk_up * 6
+    //face_up
+}
+
+script NewstemTown_ProfLab_Professor {
+    lockall
+    applymovement(4, moves(face_player))
+    if (var(VAR_LITTLEROOT_INTRO_STATE) == 2) {
+        msgbox("They're just there on the desk,\ngo ahead and take one.", MSGBOX_NPC)
+    } elif (!flag(FLAG_BIRCH_AIDE_MET) && (var(VAR_LITTLEROOT_INTRO_STATE) == 3)) {
+        msgbox(format("Oh right, while you're here, I have some items to help you get started."), MSGBOX_NPC)
+        giveitem(ITEM_POKE_BALL, 5)
+        giveitem(ITEM_POTION, 1)
+        setflag(FLAG_BIRCH_AIDE_MET)
+    } else {
+        msgbox("I'm glad to see you {PLAYER},\nbut I'm quite busy so I'll talk later.", MSGBOX_NPC)
+    }
+    releaseall
+}
+
+script NewstemTown_ProfLab_Starter1 {
+    lockall
+    setvar(VAR_TEMP_0, SPECIES_CROAGUNK)
+    bufferstring(STR_VAR_1, "CROAGUNK")
+    call(StarterSelection)
+    releaseall
+}
+
+script NewstemTown_ProfLab_Starter2 {
+    lockall
+    setvar(VAR_TEMP_0, SPECIES_ROCKRUFF)
+    bufferstring(STR_VAR_1, "ROCKRUFF")
+    call(StarterSelection)
+    releaseall
+}
+
+script NewstemTown_ProfLab_Starter3 {
+    lockall
+    setvar(VAR_TEMP_0, SPECIES_SWABLU)
+    bufferstring(STR_VAR_1, "SWABLU")
+    call(StarterSelection)
+    releaseall
+}
+
+script StarterSelection {
+    showmonpic(VAR_TEMP_0, 10, 3)
+    playmoncry(VAR_TEMP_0, CRY_MODE_NORMAL)
+    msgbox("Do you want to choose {STR_VAR_1}?", MSGBOX_YESNO)
+
+    if (var(VAR_RESULT) == YES) {
+        givemon(VAR_TEMP_0, 5, ITEM_NONE, ITEM_PREMIER_BALL)
+
+        if (var(VAR_RESULT) == MON_GIVEN_TO_PARTY) {
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("You recieved the {STR_VAR_1}!")
+            call(PickedStarter)
+            waitfanfare
+            call(NicknamePartyMon)
+        } 
+        //? I don't really need these, it's a starter
+        //elif(var(VAR_RESULT) == MON_GIVEN_TO_PC) {
+        //    playfanfare(MUS_OBTAIN_ITEM)
+        //    msgbox("You got your first Pokemon!")
+        //    call(PickedStarter)
+        //    call(NicknameBoxMon)
+        //} else {
+        //    hidemonpic
+        //    msgbox("No space in Party!")
+        //}
+    } else {
+        hidemonpic
+    }
+    waitmessage
+}
+
+script PickedStarter {
+    removeobject(1)
+    removeobject(2)
+    removeobject(3)
+    setvar(VAR_LITTLEROOT_INTRO_STATE, 3)
+    setflag(FLAG_SYS_POKEMON_GET)
+    setflag(FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG)
+    setflag(FLAG_SYS_POKEDEX_GET)
+	setflag(FLAG_ADVENTURE_STARTED)
+	special(SetUnlockedPokedexFlags)
+    setflag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH)
+	setvar(VAR_CABLE_CLUB_TUTORIAL_STATE, 1)
+    return
+}
+
+script NicknamePartyMon {
+    msgbox("Give it a nickname?", MSGBOX_YESNO)
+    hidemonpic
+    if(var(VAR_RESULT) == YES){
+        call(Common_EventScript_GetGiftMonPartySlot)
+        call(Common_EventScript_NameReceivedPartyMon)
+    }
+}
+
+script NicknameBoxMon{
+    msgbox("Give it a nickname?", MSGBOX_YESNO)
+    hidemonpic
+    if(var(VAR_RESULT) == YES){
+        call(Common_EventScript_NameReceivedBoxMon)
+    }
+    call(Common_EventScript_TransferredToPC)
+}
+
+text NewstemTown_ProfLab_Text_Intro {
+    "Glad to see you, {PLAYER}.\p"
+    "I've gotten my hands on a couple of\nPokemon.\p"
+    "Feel free to pick one you like."
+}

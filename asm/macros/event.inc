@@ -2510,3 +2510,24 @@
 	compare \a, \b
 	cant_see_if 5
 	.endm
+
+	@ --====================== custom
+
+	@ Checks if any Pokemon in the player's party has the given type.
+	.macro istypeinparty type:req
+    callnative IsTypeInParty
+    .2byte \type
+    .endm
+
+	@ Checks if any Pokemon in the player's party has the given ability.
+	.macro hasabilityinparty type:req
+    callnative HasAbilityInParty
+    .4byte \ability
+    .endm
+
+	@ Checks if the player is eligible to use the given field move (HM).
+	@ Checks the party pokemon's types and abilities.
+	.macro canusefieldmove move:req
+    callnative CanUseFieldMove
+    .2byte \move
+    .endm

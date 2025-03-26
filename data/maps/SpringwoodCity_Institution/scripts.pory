@@ -1,0 +1,131 @@
+mapscripts SpringwoodCity_Institution_MapScripts {}
+
+script SpringwoodCity_Institution_Receptionist {
+    lockall
+    msgbox(format("Welcome, I'm afraid that we're not currently accepting visitors. May I ask that you come back at a later date?"))
+    releaseall
+}
+
+script SpringwoodCity_Institution_Display {
+    lockall
+    msgbox(format("There seems to be a stone of some kind behind the glass."))
+    releaseall
+}
+
+script SpringwoodCity_Institution_Display2 {
+    lockall
+    msgbox(format("Whatever is behind that glass sure looks impressive."))
+    releaseall
+}
+
+script SpringwoodCity_Institution_Display3 {
+    lockall
+    msgbox(format("...isn't that just a stick?"))
+    releaseall
+}
+
+script SpringwoodCity_Institution_Scientist {
+    lockall
+    msgbox(format("I'm trying to determine what it is about evolutionary stones that causes Pokemon to evolve."), MSGBOX_NPC)
+    releaseall
+}
+
+script SpringwoodCity_Institution_Scientist2 {
+    lockall
+    msgbox("We collaborate with the Research Lab\non Route 4 sometimes.\pThey discover things, we refine them.", MSGBOX_NPC)
+    releaseall
+}
+
+script SpringwoodCity_Institution_Scientist3 {
+    lockall
+    msgbox(format("Trying to determine research budgets is always a pain."), MSGBOX_NPC)
+    releaseall
+}
+
+script SpringwoodCity_Institution_Employee {
+    lockall
+    msgbox(format("While the researchers do good work, do they really need that much money?"), MSGBOX_NPC)
+    releaseall
+}
+
+script SpringwoodCity_Institution_Employee2 {
+    lockall
+    msgbox(format("Honestly I'm just here to make sure these two don't fight."), MSGBOX_NPC)
+    releaseall
+}
+
+script SpringwoodCity_Institution_Grunt {
+    lockall
+    msgbox("The security guys keep looking at me\nlike I'm some suspicious individual.\pI just forgot to take of my PJs\nthis morning!", MSGBOX_NPC)
+    releaseall
+}
+
+script SpringwoodCity_Institution_StairBlocker1 {
+    setvar(VAR_TEMP_1, 1)
+    call(SpringwoodCity_Institution_StairBlocker)
+}
+
+script SpringwoodCity_Institution_StairBlocker2 {
+    setvar(VAR_TEMP_1, 2)
+    call(SpringwoodCity_Institution_StairBlocker)
+}
+
+script SpringwoodCity_Institution_StairBlocker3 {
+    setvar(VAR_TEMP_1, 3)
+    call(SpringwoodCity_Institution_StairBlocker)
+}
+
+script SpringwoodCity_Institution_StairBlocker4 {
+    setvar(VAR_TEMP_1, 4)
+    call(SpringwoodCity_Institution_StairBlocker)
+}
+
+script SpringwoodCity_Institution_StairBlocker5 {
+    setvar(VAR_TEMP_1, 5)
+    call(SpringwoodCity_Institution_StairBlocker)
+}
+
+script SpringwoodCity_Institution_StairBlocker6 {
+    setvar(VAR_TEMP_1, 6)
+    call(SpringwoodCity_Institution_StairBlocker)
+}
+
+script SpringwoodCity_Institution_StairBlocker {
+    lockall
+    switch(var(VAR_TEMP_1)) {
+        case 1: applymovement(2, moves(walk_left face_down))
+        case 2: applymovement(2, moves(face_down))
+        case 3: applymovement(2, moves(walk_right face_down))
+        case 4: applymovement(3, moves(walk_left face_down))
+        case 5: applymovement(3, moves(face_down))
+        case 6: applymovement(3, moves(walk_right face_down))
+    }
+    waitmovement(0)
+
+    msgbox("Sorry, but you're not allowed up here\nat the moment.")
+    if (var(VAR_TEMP_1) <= 3) {
+        applymovement(2, moves(walk_down))
+    } else { applymovement(3, moves(walk_down)) }
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(
+        lock_facing_direction
+        walk_down
+        unlock_facing_direction
+    ))
+    waitmovement(0)
+
+    if (var(VAR_TEMP_1) <= 3) {
+        applymovement(2, moves(walk_up))
+    } else { applymovement(3, moves(walk_up)) }
+    waitmovement(0)
+
+    switch(var(VAR_TEMP_1)) {
+        case 1: applymovement(2, moves(walk_right face_down))
+        case 2: applymovement(2, moves(face_down))
+        case 3: applymovement(2, moves(walk_left face_down))
+        case 4: applymovement(3, moves(walk_right face_down))
+        case 5: applymovement(3, moves(face_down))
+        case 6: applymovement(3, moves(walk_left face_down))
+    }
+    waitmovement(0)
+    releaseall
+}

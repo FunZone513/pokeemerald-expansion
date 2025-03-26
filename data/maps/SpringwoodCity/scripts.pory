@@ -1,0 +1,130 @@
+mapscripts SpringwoodCity_MapScripts {}
+
+script SpringwoodCity_Intro_Scientist {
+    lockall
+    if (var(VAR_LITTLEROOT_INTRO_STATE) == 3) {
+        msgbox(SpringwoodCity_Intro_Scientist_Text1)
+        playse(SE_PIN)
+        applymovement(2, Common_Movement_ExclamationMark)
+        waitmovement(0)
+        faceplayer
+        delay(24)
+        msgbox(SpringwoodCity_Intro_Scientist_Text2)
+        msgbox(SpringwoodCity_Intro_Scientist_Text3, MSGBOX_NPC)
+        setvar(VAR_LITTLEROOT_INTRO_STATE, 4)
+    } else {
+        faceplayer
+        msgbox("Route 4 is straight west from here,\njust past Route 3. Good Luck!", MSGBOX_NPC)
+    }
+    applymovement(2, moves(face_up))
+    releaseall
+}
+
+text SpringwoodCity_Intro_Scientist_Text1 {
+    "Oh man...\nI forgot to tell the director\l"
+    "that I left for Springwood Gym.\p"
+    "I don't want to get in trouble,\nbut I also can't afford to waste time.\p"
+    "I hope the current challenger doesn't\ntake too long."
+}
+
+text SpringwoodCity_Intro_Scientist_Text2 {
+    "Oh!\l"
+    "I'm sorry I didn't notice you were there.\p"
+    "I'm waiting to get into the Gym,\nbut someone is currently doing the\lGym Challenge.\p"
+    "So I'm stuck out here waiting\nfor them to finish because I need\lto speak to the Gym Leader."
+}
+
+text SpringwoodCity_Intro_Scientist_Text3 {
+    "...\p"
+    "What's that? You need to speak to\nhim about a Pokemon on Route 2?\p"
+    "What a coincidence!\nThat's also why I'm here.\p"
+    "He needed us to make a special potion\nto calm the Pokemon down, so I'm here\lto deliver it to him.\p"
+    "Tell you what, can you go and tell the\nDirector at the Research Lab on Route 4\lthat the potion has been delivered?\p"
+    "I'll make sure the Gym Leader\nclears out the Pokemon on Route 2\lafter the challenger leaves.\p"
+    "Thanks in advance!"
+}
+
+script SpringwoodCity_Sign_Name {
+    lockall
+    msgbox(format("Springwood City. A Bustling coastal beauty."))
+    releaseall
+}
+
+script SpringwoodCity_Sign_Park {
+    lockall
+    msgbox(format("A small piece of nature, nurtered by us."))
+    releaseall
+}
+
+script SpringwoodCity_Sign_Lookout {
+    lockall
+    msgbox(format("BEWARE THE DROP."))
+    releaseall
+}
+
+script SpringwoodCity_Sign_BigBuilding {
+    lockall
+    msgbox(format("Important building ahead."))
+    releaseall
+}
+
+script SpringwoodCity_Sign_Gym {
+    lockall
+    msgbox(format("Springwood Gym, home of the strong."))
+    releaseall
+}
+
+script SpringwoodCity_Archie {
+    lockall
+    msgbox("...")
+    releaseall
+}
+
+script SpringwoodCity_Sydney {
+    lockall
+    if (!flag(FLAG_ITEM_SPRINGWOOD_CITY_SILVER_POWDER)) {
+        faceplayer
+        msgbox("Psst, hey kid.")
+        msgbox("Have you heard?", MSGBOX_YESNO)
+        if (var(VAR_RESULT) == YES) {
+            msgbox("Yeah you sure have.", MSGBOX_NPC)
+            giveitem(ITEM_SILVER_POWDER, 1)
+            setflag(FLAG_ITEM_SPRINGWOOD_CITY_SILVER_POWDER)
+        } else { 
+            msgbox("Bah!\nWasting my time.", MSGBOX_NPC)
+        }
+    } else {
+        msgbox("You didn't get it from me.", MSGBOX_NPC)
+    }
+    releaseall
+}
+
+script SpringwoodCity_RichBoy {
+    lockall
+    msgbox(format("Springwood City might be on a seaside cliff, but that doesn't mean we get much salt spray. We must be too high up."), MSGBOX_NPC)
+    releaseall
+}
+
+script SpringwoodCity_Artist {
+    lockall
+    msgbox(format("When I get into a creative slump, I find it nice to come and chill at the park."), MSGBOX_NPC)
+    releaseall
+}
+
+script SpringwoodCity_Beauty {
+    lockall
+    msgbox(format("For such a large city there really isn't very much in the way of shopping is there?"), MSGBOX_NPC)
+    releaseall
+}
+
+script SpringwoodCity_Athlete {
+    lockall
+    msgbox("Running in the city is difficult,\nbut I'm scared of bug types so I can't\lrun on any of the nearby routes.", MSGBOX_NPC)
+    releaseall
+}
+
+script SpringwoodCity_Camper {
+    lockall
+    msgbox("This tree keep growing back no matter\nhow many times we cut it down.", MSGBOX_NPC)
+    releaseall
+}

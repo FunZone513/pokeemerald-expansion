@@ -1,0 +1,19 @@
+mapscripts Route1_MapScripts {}
+
+script Route1_Girl {
+    lockall
+    msgbox(format("I really want to get that item up there, but this ledge is blocking the way."), MSGBOX_NPC)
+    releaseall
+}
+
+script Route1_BugCatcher {
+    lockall
+    msgbox(format("I like wandering around early routes, they've always got a bunch of bug types!"), MSGBOX_NPC)
+    releaseall
+}
+
+script Route1_LittleBoy {
+    lockall
+    msgbox(format("My Dad used to be a Pokemon Trainer, and he always told me that people sometimes lose or hide items around the place."), MSGBOX_NPC)
+    releaseall
+}

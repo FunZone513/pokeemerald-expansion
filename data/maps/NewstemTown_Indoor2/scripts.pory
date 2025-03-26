@@ -1,0 +1,19 @@
+mapscripts NewstemTown_Indoor2_MapScripts {}
+
+script NewstemTown_Indoor2_Woman {
+    lockall
+    msgbox("Can't you see I'm busy?")
+    releaseall
+}
+
+script NewstemTown_Indoor2_Man {
+    lockall
+    faceplayer
+    msgbox("Are you admiring my gloriously\nshiny head?", MSGBOX_YESNO)
+    if (var(VAR_RESULT)) {
+        msgbox(format("Excellent, you know a good thing when you see it."), MSGBOX_NPC)
+    } else {
+        msgbox(format("Why must you lie not only to me but also yourself?"), MSGBOX_NPC)
+    }
+    releaseall
+}

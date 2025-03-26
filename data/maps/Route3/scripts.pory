@@ -1,0 +1,14 @@
+mapscripts Route3_MapScripts {}
+
+script Route3_Sign_FishingHut {
+    lockall
+    //canusefieldmove(MOVE_CUT)
+    msgbox("Fishing Hut,\nHome of the baiting master", MSGBOX_SIGN)
+    releaseall
+}
+
+script Route3_Sign_Forest {
+    lockall
+    msgbox("Forest Ahead", MSGBOX_SIGN)
+    releaseall
+}

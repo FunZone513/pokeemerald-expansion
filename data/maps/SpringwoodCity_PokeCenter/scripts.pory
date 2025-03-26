@@ -1,0 +1,53 @@
+mapscripts SpringwoodCity_PokeCenter_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: SpringwoodCity_PokemonCenter_OnTransition
+}
+
+script SpringwoodCity_PokemonCenter_OnTransition {
+    setrespawn(HEAL_LOCATION_SPRINGWOOD_CITY)
+}
+
+script SpringwoodCity_PokemonCenter_Nurse {
+    lockall
+	setvar(VAR_0x800B, 1)
+	call(Common_EventScript_PkmnCenterNurse)
+	waitmessage
+	waitbuttonpress
+	releaseall
+}
+
+script SpringwoodCity_PokemonCenter_Girl {
+    lockall
+    msgbox(SpringwoodCity_PokemonCenter_Girl_Text, MSGBOX_NPC)
+    releaseall
+}
+
+text SpringwoodCity_PokemonCenter_Girl_Text {
+    "I was going to go and play in the\nQuiet Grove like I normally do, but I\l"
+    "heard that there's a big scary Pokemon\lblocking people from getting in.\p"
+    "I guess I'll just have to wait until\nGym Leader Martin makes it safe."
+}
+
+script SpringwoodCity_PokemonCenter_Boy {
+    lockall
+    msgbox(SpringwoodCity_PokemonCenter_Boy_Text, MSGBOX_NPC)
+    releaseall
+}
+
+text SpringwoodCity_PokemonCenter_Boy_Text {
+    "Gym Leader Martin is really cool!\p"
+    "He only uses Pokemon he found in the\nRoutes next to the city.\p"
+    "He said that he does it so that he can\nprove that strength comes from how you\l"
+    "battle, not what you battle with!"
+}
+
+script SpringwoodCity_PokemonCenter_Woman {
+    lockall
+    msgbox("Woman voice woman voice\nwoman voice!", MSGBOX_NPC)
+    releaseall
+}
+
+script SpringwoodCity_PokemonCenter_Man {
+    lockall
+    msgbox("I come here nearly every day.\nI just like the vibe.", MSGBOX_NPC)
+    releaseall
+}

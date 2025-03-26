@@ -1,0 +1,45 @@
+mapscripts SpringwoodCity_Indoor_2_MapScripts {}
+
+script SpringwoodCity_Indoor_2_Man {
+    lockall
+    if (flag(FLAG_SPOKENTO_SPRINGWOOD_GARDEVOIR)) {
+        msgbox("Thank you for helping us reconnect.", MSGBOX_NPC)
+    } elif (flag(FLAG_TEMP_2)) {
+        msgbox(SpringwoodCity_Indoor_2_Man_Text2, MSGBOX_NPC)
+        giveitem(ITEM_TM27)
+    } else {
+        msgbox(SpringwoodCity_Indoor_2_Man_Text, MSGBOX_NPC)
+        setflag(FLAG_TEMP_1)
+    }
+    releaseall
+}
+
+text SpringwoodCity_Indoor_2_Man_Text {
+    "My Gardevoir and I have been together\n"
+    "for as long as I've been a\lPokemon Trainer.\p"
+    "As my body has gotten older, I've lost\nthe ability to hear her voice...\p"
+    "I sometimes wonder if she regrets being\nstuck with me now that I can't do\lanything for her."
+}
+
+text SpringwoodCity_Indoor_2_Man_Text2 {
+    "You spoke to her?\p"
+    "What did she have to say?\p"
+    "...\p"
+    "...Truely?\p"
+    "Thank you.\nI can't express how this means to me.\p"
+    "Please, take this.\nIt's the least I could do."
+}
+
+script SpringwoodCity_Indoor_2_Gardevoir {
+    lockall
+    playmoncry(SPECIES_GARDEVOIR, CRY_MODE_NORMAL)
+    getseenmon(SPECIES_GARDEVOIR)
+    if (var(VAR_RESULT) == NO) { setseenmon(SPECIES_GARDEVOIR) }
+    
+    if (flag(FLAG_TEMP_1) && !flag(FLAG_SPOKENTO_SPRINGWOOD_GARDEVOIR)) {
+        msgbox("...\p...please tell him I wish for nothing more\nthan to stay by his side.", MSGBOX_NPC)
+        setflag(FLAG_TEMP_2)
+    } else { msgbox("...", MSGBOX_NPC) }
+    waitmoncry
+    releaseall
+}
