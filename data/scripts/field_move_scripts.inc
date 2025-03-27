@@ -2,12 +2,14 @@
 EventScript_CutTree::
 	lockall
 	goto_if_unset FLAG_BADGE01_GET, EventScript_CheckTreeCantCut
-	checkpartymove MOVE_CUT
+	@ checkpartymove MOVE_CUT
+	canusefieldmove MOVE_CUT
 	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CheckTreeCantCut
 	setfieldeffectargument 0, VAR_RESULT
 	bufferpartymonnick STR_VAR_1, VAR_RESULT
-	buffermovename STR_VAR_2, MOVE_CUT
-	msgbox Text_WantToCut, MSGBOX_YESNO
+	bufferstring STR_VAR_2, Text_MonCutTree
+	msgbox Text_WantToCut, MSGBOX_DEFAULT
+	msgbox Text_AskMonHelp, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, EventScript_CancelCut
 	msgbox Text_MonUsedFieldMove, MSGBOX_DEFAULT
 	closemessage
@@ -35,7 +37,7 @@ Movement_CutTreeDown:
 	step_end
 
 EventScript_CheckTreeCantCut::
-	msgbox Text_CantCut, MSGBOX_DEFAULT
+	msgbox Text_WantToCut, MSGBOX_DEFAULT
 	releaseall
 	end
 
@@ -44,17 +46,17 @@ EventScript_CancelCut::
 	releaseall
 	end
 
-Text_WantToCut:
-	.string "This tree looks like it can be\n"
-	.string "CUT down!\p"
-	.string "Would you like to CUT it?$"
-
 Text_MonUsedFieldMove:
-	.string "{STR_VAR_1} used {STR_VAR_2}!$"
+	.string "{STR_VAR_1} {STR_VAR_2}!$"
 
-Text_CantCut:
-	.string "This tree looks like it can be\n"
-	.string "CUT down!$"
+Text_AskMonHelp:
+	.string "Would you like a Pokemon to help?$"
+
+Text_WantToCut:
+	.string "This tree looks like it can be cut down!$"
+
+Text_MonCutTree:
+	.string "cut down the tree$"
 
 @ Use rock smash from party menu
 EventScript_UseRockSmash::
@@ -64,13 +66,16 @@ EventScript_UseRockSmash::
 @ Interact with smashable rock
 EventScript_RockSmash::
 	lockall
-	goto_if_unset FLAG_BADGE03_GET, EventScript_CantSmashRock
-	checkpartymove MOVE_ROCK_SMASH
+	@ goto_if_unset FLAG_BADGE03_GET, EventScript_CantSmashRock
+	@ checkpartymove MOVE_ROCK_SMASH
+	canusefieldmove MOVE_ROCK_SMASH
 	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CantSmashRock
 	setfieldeffectargument 0, VAR_RESULT
 	bufferpartymonnick STR_VAR_1, VAR_RESULT
-	buffermovename STR_VAR_2, MOVE_ROCK_SMASH
-	msgbox Text_WantToSmash, MSGBOX_YESNO
+	bufferstring STR_VAR_2, Text_SmashedRock
+	bufferstring STR_VAR_3, Text_AskMonHelp
+	msgbox Text_WantToSmash, MSGBOX_DEFAULT
+	msgbox Text_AskMonHelp, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, EventScript_CancelSmash
 	msgbox Text_MonUsedFieldMove, MSGBOX_DEFAULT
 	closemessage
@@ -206,7 +211,7 @@ Movement_SmashRock:
 	step_end
 
 EventScript_CantSmashRock::
-	msgbox Text_CantSmash, MSGBOX_DEFAULT
+	msgbox Text_WantToSmash, MSGBOX_DEFAULT
 	releaseall
 	end
 
@@ -216,12 +221,10 @@ EventScript_CancelSmash::
 	end
 
 Text_WantToSmash:
-	.string "This rock appears to be breakable.\n"
-	.string "Would you like to use ROCK SMASH?$"
+	.string "This rock appears to be breakable!$"
 
-Text_CantSmash:
-	.string "It's a rugged rock, but a POKéMON\n"
-	.string "may be able to smash it.$"
+Text_SmashedRock:
+	.string "smashed the rock$"
 
 EventScript_StrengthBoulder::
 	lockall
