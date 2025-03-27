@@ -42,6 +42,7 @@ script Route2_MoveCamper {
             walk_left
         ))
     }
+    setvar(VAR_LITTLEROOT_INTRO_STATE, 4)
     waitmovement(0)
     applymovement(1, moves(face_down))
     releaseall
@@ -91,7 +92,7 @@ script Route2_Miniboss_Battle {
     specialvar(VAR_RESULT, GetBattleOutcome)
     if (var(VAR_RESULT) == B_OUTCOME_WON) {
         setflag(FLAG_HIDE_ROUTE2_MINIBOSS)
-        setvar(VAR_LITTLEROOT_INTRO_STATE, 5)
+        setvar(VAR_LITTLEROOT_INTRO_STATE, 6)
     } 
     releaseall
 }

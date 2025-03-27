@@ -130,6 +130,8 @@ Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 
+/* ================================================================================= */
+
 === TRAINER_GYM_LEADER_MARTIN ===
 Name: MARTIN
 Class: Leader
@@ -208,7 +210,70 @@ Adamant Nature
 - Recycle  
 - Curse  
 
+=== TRAINER_QUIET_GROVE_BUG_CATCHER ===
+Name: BERT
+Class: Bug Catcher
+Pic: Bug Catcher
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
 
+Spinarak
+Level: 7  
+
+Silcoon  
+Level: 7
+- Harden  
+- Tackle  
+- Poison Sting  
+- String Shot  
+
+Paras
+Level: 7
+
+=== TRAINER_QUIET_GROVE_GIRL ===
+Name: LOLA
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer
+
+Poochyena
+Level: 8
+
+Hoppip
+Level: 8
+
+=== TRAINER_ROUTE3_BOY ===
+Name: MARK
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+AI: Basic Trainer
+
+Poochyena
+Level: 5
+
+=== TRAINER_ROUTE3_GIRL ===
+Name: SUSIE
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer
+
+Hoppip
+Level: 4
+
+Surskit
+Level: 4
+- Water Gun
+- Quick Attack
 
 
 

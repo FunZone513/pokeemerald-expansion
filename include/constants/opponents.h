@@ -10,9 +10,14 @@
 #define TRAINER_BRENDAN_PLACEHOLDER         3
 #define TRAINER_MAY_PLACEHOLDER             4
 
-#define TRAINER_GYM_LEADER_MARTIN           5  
 
-#define TRAINERS_COUNT                      6
+#define TRAINER_GYM_LEADER_MARTIN           5
+#define TRAINER_QUIET_GROVE_BUG_CATCHER     6
+#define TRAINER_QUIET_GROVE_GIRL            7  
+#define TRAINER_ROUTE3_BOY                  8
+#define TRAINER_ROUTE3_GIRL                 9
+
+#define TRAINERS_COUNT                      10
 
 #define MAX_TRAINERS_COUNT                  864
 #define TRAINER_PARTNER(partner)           (MAX_TRAINERS_COUNT + partner)

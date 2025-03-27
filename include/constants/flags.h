@@ -664,7 +664,7 @@
 #define FLAG_USE_NEW_TYPE_CHART  0x269              // QoL flag for the new type chart
 #define FLAG_ACTIVE_BOSS_BATTLE  0x26A              // Toggles Boss Battle State
 #define FLAG_DISABLE_WILD_ENCOUNTERS  0x26B         // Disables wild encounters when on
-#define FLAG_FORCE_SHINY_ENCOUNTERS  0x26C // Unused Flag
+#define FLAG_FORCE_SHINY_ENCOUNTERS  0x26C          // Toggles shiny encounters
 
 #define FLAG_UNUSED_0x26D  0x26D // Unused Flag
 #define FLAG_UNUSED_0x26E  0x26E // Unused Flag
@@ -1062,7 +1062,7 @@
 #define FLAG_ITEM_SPRINGWOOD_CITY_RARE_CANDY                        0x3F0
 #define FLAG_ITEM_SPRINGWOOD_CITY_SILVER_POWDER                     0x3F1
 #define FLAG_ITEM_DRIPSTONE_CAVE_STAR_PIECE                         0x3F2
-#define FLAG_ITEM_UNUSED_0X3F3                                      0x3F3
+#define FLAG_ITEM_QUIET_GROVE_ANTIDOTE                              0x3F3
 #define FLAG_ITEM_UNUSED_0X3F4                                      0x3F4
 #define FLAG_ITEM_UNUSED_0X3F5                                      0x3F5
 #define FLAG_ITEM_UNUSED_0X3F6                                      0x3F6

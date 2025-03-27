@@ -3,12 +3,14 @@ static const struct MenuAction MultichoiceList_QOLOptions[] =
 {
     {COMPOUND_STRING("Exp Share")},
     {COMPOUND_STRING("Ice Changes")},
+    {COMPOUND_STRING("Boosted EXP")},
+    {COMPOUND_STRING("Double Wild")},
 };
 
 static const struct MenuAction MultichoiceList_GenericOnOff[] = 
 {
-    {COMPOUND_STRING("Exp Share")},
-    {COMPOUND_STRING("Ice Changes")},
+    {COMPOUND_STRING("On")},
+    {COMPOUND_STRING("Off")},
 };
 
 static const struct MenuAction MultichoiceList_BrineyOnDewford[] =

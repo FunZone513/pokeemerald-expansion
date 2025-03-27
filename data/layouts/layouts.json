@@ -4660,6 +4660,16 @@
       "secondary_tileset": "gTileset_Facility",
       "border_filepath": "data/layouts/SpringwoodCity_Institution/border.bin",
       "blockdata_filepath": "data/layouts/SpringwoodCity_Institution/map.bin"
+    },
+    {
+      "id": "LAYOUT_QUIET_GROVE",
+      "name": "QuietGrove_Layout",
+      "width": 24,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/QuietGrove/border.bin",
+      "blockdata_filepath": "data/layouts/QuietGrove/map.bin"
     }
   ]
 }

@@ -23,7 +23,7 @@ Route4_Indoor_Researcher_Lab_Director::
 # 12 "data/maps/Route4_Indoor_Researcher_Lab/scripts.pory"
 	msgbox Route4_Indoor_Researcher_Lab_Director_Text_0
 # 13 "data/maps/Route4_Indoor_Researcher_Lab/scripts.pory"
-	compare VAR_LITTLEROOT_INTRO_STATE, 4
+	compare VAR_LITTLEROOT_INTRO_STATE, 5
 	goto_if_eq Route4_Indoor_Researcher_Lab_Director_2
 Route4_Indoor_Researcher_Lab_Director_1:
 # 18 "data/maps/Route4_Indoor_Researcher_Lab/scripts.pory"
@@ -38,7 +38,7 @@ Route4_Indoor_Researcher_Lab_Director_2:
 # 14 "data/maps/Route4_Indoor_Researcher_Lab/scripts.pory"
 	msgbox Route4_Indoor_Researcher_Lab_Director_Intro
 # 15 "data/maps/Route4_Indoor_Researcher_Lab/scripts.pory"
-	setvar VAR_LITTLEROOT_INTRO_STATE, 5
+	setvar VAR_LITTLEROOT_INTRO_STATE, 6
 # 16 "data/maps/Route4_Indoor_Researcher_Lab/scripts.pory"
 	setflag FLAG_HIDE_ROUTE2_MINIBOSS
 	goto Route4_Indoor_Researcher_Lab_Director_1

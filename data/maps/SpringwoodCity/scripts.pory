@@ -2,7 +2,7 @@ mapscripts SpringwoodCity_MapScripts {}
 
 script SpringwoodCity_Intro_Scientist {
     lockall
-    if (var(VAR_LITTLEROOT_INTRO_STATE) == 3) {
+    if (var(VAR_LITTLEROOT_INTRO_STATE) == 4) {
         msgbox(SpringwoodCity_Intro_Scientist_Text1)
         playse(SE_PIN)
         applymovement(2, Common_Movement_ExclamationMark)
@@ -11,7 +11,7 @@ script SpringwoodCity_Intro_Scientist {
         delay(24)
         msgbox(SpringwoodCity_Intro_Scientist_Text2)
         msgbox(SpringwoodCity_Intro_Scientist_Text3, MSGBOX_NPC)
-        setvar(VAR_LITTLEROOT_INTRO_STATE, 4)
+        setvar(VAR_LITTLEROOT_INTRO_STATE, 5)
     } else {
         faceplayer
         msgbox("Route 4 is straight west from here,\njust past Route 3. Good Luck!", MSGBOX_NPC)

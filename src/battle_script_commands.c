@@ -16995,6 +16995,8 @@ void ApplyExperienceMultipliers(s32 *expAmount, u8 expGetterMonId, u8 faintedBat
 {
     u32 holdEffect = GetMonHoldEffect(&gPlayerParty[expGetterMonId]);
 
+    *expAmount = (*expAmount * VarGet(VAR_INCREASE_EXP_GAIN)) / 100;
+
     if (IsTradedMon(&gPlayerParty[expGetterMonId]))
         *expAmount = (*expAmount * 150) / 100;
     if (holdEffect == HOLD_EFFECT_LUCKY_EGG)

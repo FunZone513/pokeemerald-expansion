@@ -54,7 +54,8 @@
     "Route6"
   ],
   "gMapGroup_Dungeons": [
-    "DripstoneCave"
+    "DripstoneCave",
+    "QuietGrove"
   ],
   "gMapGroup_Indoor_Routes": [
     "Route3_FishingHut",

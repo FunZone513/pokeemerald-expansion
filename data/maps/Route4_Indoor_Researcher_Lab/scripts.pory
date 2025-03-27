@@ -10,9 +10,9 @@ script Route4_Indoor_Researcher_Lab_Director {
     lockall
     faceplayer
     msgbox("Hey there, welcome to the wonderful\nworld of Pokemon Science!")
-    if (var(VAR_LITTLEROOT_INTRO_STATE) == 4) {
+    if (var(VAR_LITTLEROOT_INTRO_STATE) == 5) {
         msgbox(Route4_Indoor_Researcher_Lab_Director_Intro)
-        setvar(VAR_LITTLEROOT_INTRO_STATE, 5)
+        setvar(VAR_LITTLEROOT_INTRO_STATE, 6)
         setflag(FLAG_HIDE_ROUTE2_MINIBOSS)
     }
     msgbox("Feel free to take a look around\nwhile you're here.")

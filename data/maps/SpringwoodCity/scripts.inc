@@ -6,7 +6,7 @@ SpringwoodCity_Intro_Scientist::
 # 4 "data/maps/SpringwoodCity/scripts.pory"
 	lockall
 # 5 "data/maps/SpringwoodCity/scripts.pory"
-	compare VAR_LITTLEROOT_INTRO_STATE, 3
+	compare VAR_LITTLEROOT_INTRO_STATE, 4
 	goto_if_eq SpringwoodCity_Intro_Scientist_2
 # 16 "data/maps/SpringwoodCity/scripts.pory"
 	faceplayer
@@ -37,7 +37,7 @@ SpringwoodCity_Intro_Scientist_2:
 # 13 "data/maps/SpringwoodCity/scripts.pory"
 	msgbox SpringwoodCity_Intro_Scientist_Text3, MSGBOX_NPC
 # 14 "data/maps/SpringwoodCity/scripts.pory"
-	setvar VAR_LITTLEROOT_INTRO_STATE, 4
+	setvar VAR_LITTLEROOT_INTRO_STATE, 5
 	goto SpringwoodCity_Intro_Scientist_1
 
 

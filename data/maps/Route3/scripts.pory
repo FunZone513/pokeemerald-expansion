@@ -9,6 +9,26 @@ script Route3_Sign_FishingHut {
 
 script Route3_Sign_Forest {
     lockall
-    msgbox("Forest Ahead", MSGBOX_SIGN)
+    msgbox("Forest Ahead,\nNot Implemented Yet.", MSGBOX_SIGN)
     releaseall
+}
+
+script Route3_Boy {
+    trainerbattle_single(
+        TRAINER_ROUTE3_BOY, 
+        format("Check out this Pokemon I found!"),
+        format("Did you actually check it out or did you just beat it up...")  
+    )
+    msgbox(format("Mum said she thought it was cute."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route3_Girl {
+    trainerbattle_single(
+        TRAINER_ROUTE3_GIRL, 
+        format("You look like a good target for my debut battle!"),
+        format("You could've let me win...")  
+    )
+    msgbox(format("Maybe being a trainer just isn't for me."), MSGBOX_AUTOCLOSE)
+    end
 }

@@ -1,0 +1,27 @@
+mapscripts QuietGrove_MapScripts {}
+
+script QuietGrove_Sign {
+    lockall
+    msgbox("Quiet Grove,\nWatch out for bugs!")
+    releaseall
+}
+
+script QuietGrove_BugCatcher {
+    trainerbattle_single(
+        TRAINER_QUIET_GROVE_BUG_CATCHER, 
+        format("This place is great for catching bug types!"),
+        format("Darn, I guess the ones here weren't as good as I thought.")  
+    )
+    msgbox(format("I thought there would be strong Pokemon here after hearing that there was a rowdy one."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script QuietGrove_Girl {
+    trainerbattle_single(
+        TRAINER_QUIET_GROVE_GIRL, 
+        format("I got lost! I hate it here! So many bugs!"),
+        format("Ew ew ew ew ew.")  
+    )
+    msgbox(format("I thought a battle would distract me but now I'm just stuck here without my Pokemon..."), MSGBOX_AUTOCLOSE)
+    end
+}

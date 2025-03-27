@@ -79,7 +79,20 @@
     }
   ],
   "warp_events": [
-
+    {
+      "x": 25,
+      "y": 13,
+      "elevation": 0,
+      "dest_map": "MAP_QUIET_GROVE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 26,
+      "y": 13,
+      "elevation": 0,
+      "dest_map": "MAP_QUIET_GROVE",
+      "dest_warp_id": "0"
+    }
   ],
   "coord_events": [
     {

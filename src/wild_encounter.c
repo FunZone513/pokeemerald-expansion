@@ -241,14 +241,16 @@ u8 ChooseWildMonIndex_WaterRock(void)
         wildMonIndex = 2;
     else if (rand >= ENCOUNTER_CHANCE_WATER_MONS_SLOT_2 && rand < ENCOUNTER_CHANCE_WATER_MONS_SLOT_3)
         wildMonIndex = 3;
-    else
+    else if (rand >= ENCOUNTER_CHANCE_WATER_MONS_SLOT_3 && rand < ENCOUNTER_CHANCE_WATER_MONS_SLOT_4)
         wildMonIndex = 4;
+    else 
+        wildMonIndex = 5;
 
     if (LURE_STEP_COUNT != 0 && (Random() % 10 < 2))
         swap = TRUE;
 
     if (swap)
-        wildMonIndex = 4 - wildMonIndex;
+        wildMonIndex = 5 - wildMonIndex;
 
     return wildMonIndex;
 }

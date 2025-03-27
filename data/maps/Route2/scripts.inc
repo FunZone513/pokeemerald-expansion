@@ -50,10 +50,12 @@ Route2_MoveCamper_1:
 	applymovement 1, Route2_MoveCamper_Movement_4
 Route2_MoveCamper_5:
 # 45 "data/maps/Route2/scripts.pory"
-	waitmovement 0
+	setvar VAR_LITTLEROOT_INTRO_STATE, 4
 # 46 "data/maps/Route2/scripts.pory"
-	applymovement 1, Route2_MoveCamper_Movement_0
+	waitmovement 0
 # 47 "data/maps/Route2/scripts.pory"
+	applymovement 1, Route2_MoveCamper_Movement_0
+# 48 "data/maps/Route2/scripts.pory"
 	releaseall
 	return
 
@@ -69,83 +71,83 @@ Route2_MoveCamper_6:
 
 
 Route2_NPC_Camper::
-# 63 "data/maps/Route2/scripts.pory"
-	lockall
 # 64 "data/maps/Route2/scripts.pory"
-	faceplayer
+	lockall
 # 65 "data/maps/Route2/scripts.pory"
-	msgbox Route2_NPC_Camper_Text_0, MSGBOX_NPC
+	faceplayer
 # 66 "data/maps/Route2/scripts.pory"
+	msgbox Route2_NPC_Camper_Text_0, MSGBOX_NPC
+# 67 "data/maps/Route2/scripts.pory"
 	releaseall
 	return
 
 
 Route2_Miniboss::
-# 70 "data/maps/Route2/scripts.pory"
-	lockall
 # 71 "data/maps/Route2/scripts.pory"
-	applymovement 2, Route2_Miniboss_Movement_0
+	lockall
 # 72 "data/maps/Route2/scripts.pory"
-	waitmovement 0
+	applymovement 2, Route2_Miniboss_Movement_0
 # 73 "data/maps/Route2/scripts.pory"
-	playmoncry SPECIES_PARASECT, CRY_MODE_ENCOUNTER
+	waitmovement 0
 # 74 "data/maps/Route2/scripts.pory"
-	msgbox Route2_Miniboss_Text_0
+	playmoncry SPECIES_PARASECT, CRY_MODE_ENCOUNTER
 # 75 "data/maps/Route2/scripts.pory"
-	waitmoncry
+	msgbox Route2_Miniboss_Text_0
 # 76 "data/maps/Route2/scripts.pory"
-	msgbox Route2_Miniboss_Text_1, MSGBOX_YESNO
+	waitmoncry
 # 77 "data/maps/Route2/scripts.pory"
+	msgbox Route2_Miniboss_Text_1, MSGBOX_YESNO
+# 78 "data/maps/Route2/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne Route2_Miniboss_2
-# 80 "data/maps/Route2/scripts.pory"
-	msgbox Route2_Miniboss_Text_3
 # 81 "data/maps/Route2/scripts.pory"
+	msgbox Route2_Miniboss_Text_3
+# 82 "data/maps/Route2/scripts.pory"
 	call Route2_Miniboss_Battle
 Route2_Miniboss_1:
-# 83 "data/maps/Route2/scripts.pory"
+# 84 "data/maps/Route2/scripts.pory"
 	releaseall
 	return
 
 Route2_Miniboss_2:
-# 78 "data/maps/Route2/scripts.pory"
+# 79 "data/maps/Route2/scripts.pory"
 	msgbox Route2_Miniboss_Text_2
 	goto Route2_Miniboss_1
 
 
 Route2_Miniboss_Battle::
-# 87 "data/maps/Route2/scripts.pory"
-	setwildbattle SPECIES_PARASECT, 25, ITEM_OCCA_BERRY
 # 88 "data/maps/Route2/scripts.pory"
-	setflag FLAG_ACTIVE_BOSS_BATTLE
+	setwildbattle SPECIES_PARASECT, 25, ITEM_OCCA_BERRY
 # 89 "data/maps/Route2/scripts.pory"
-	dowildbattle
+	setflag FLAG_ACTIVE_BOSS_BATTLE
 # 90 "data/maps/Route2/scripts.pory"
-	clearflag FLAG_ACTIVE_BOSS_BATTLE
+	dowildbattle
 # 91 "data/maps/Route2/scripts.pory"
-	specialvar VAR_RESULT, GetBattleOutcome
+	clearflag FLAG_ACTIVE_BOSS_BATTLE
 # 92 "data/maps/Route2/scripts.pory"
+	specialvar VAR_RESULT, GetBattleOutcome
+# 93 "data/maps/Route2/scripts.pory"
 	compare VAR_RESULT, B_OUTCOME_WON
 	goto_if_eq Route2_Miniboss_Battle_2
 Route2_Miniboss_Battle_1:
-# 96 "data/maps/Route2/scripts.pory"
+# 97 "data/maps/Route2/scripts.pory"
 	releaseall
 	return
 
 Route2_Miniboss_Battle_2:
-# 93 "data/maps/Route2/scripts.pory"
-	setflag FLAG_HIDE_ROUTE2_MINIBOSS
 # 94 "data/maps/Route2/scripts.pory"
-	setvar VAR_LITTLEROOT_INTRO_STATE, 5
+	setflag FLAG_HIDE_ROUTE2_MINIBOSS
+# 95 "data/maps/Route2/scripts.pory"
+	setvar VAR_LITTLEROOT_INTRO_STATE, 6
 	goto Route2_Miniboss_Battle_1
 
 
 Route2_BlackBelt::
-# 100 "data/maps/Route2/scripts.pory"
-	lockall
 # 101 "data/maps/Route2/scripts.pory"
-	msgbox Route2_BlackBelt_Text_0
+	lockall
 # 102 "data/maps/Route2/scripts.pory"
+	msgbox Route2_BlackBelt_Text_0
+# 103 "data/maps/Route2/scripts.pory"
 	releaseall
 	return
 
@@ -200,38 +202,38 @@ Route2_MoveCamper_Movement_4:
 	walk_left
 	step_end
 
-# 71 "data/maps/Route2/scripts.pory"
+# 72 "data/maps/Route2/scripts.pory"
 Route2_Miniboss_Movement_0:
-# 71 "data/maps/Route2/scripts.pory"
+# 72 "data/maps/Route2/scripts.pory"
 	face_player
 	step_end
 
 Route2_NPC_Camper_Text_0:
-# 65 "data/maps/Route2/scripts.pory"
+# 66 "data/maps/Route2/scripts.pory"
 	.string "I hope you can let the Gym Leader\nknow soon, I'd like to go back home.$"
 
 Route2_Miniboss_Text_0:
-# 74 "data/maps/Route2/scripts.pory"
+# 75 "data/maps/Route2/scripts.pory"
 	.string "The Pokemon seems agitated!\nIt might attack if provoked!$"
 
 Route2_Miniboss_Text_1:
-# 76 "data/maps/Route2/scripts.pory"
+# 77 "data/maps/Route2/scripts.pory"
 	.string "Will you leave it alone?$"
 
 Route2_Miniboss_Text_2:
-# 78 "data/maps/Route2/scripts.pory"
+# 79 "data/maps/Route2/scripts.pory"
 	.string "Probably for the best.$"
 
 Route2_Miniboss_Text_3:
-# 80 "data/maps/Route2/scripts.pory"
+# 81 "data/maps/Route2/scripts.pory"
 	.string "The Pokemon attacked!$"
 
 Route2_BlackBelt_Text_0:
-# 101 "data/maps/Route2/scripts.pory"
+# 102 "data/maps/Route2/scripts.pory"
 	.string "I miss my girlfriend...$"
 
 Route2_Camper_Warning_Text::
-# 50 "data/maps/Route2/scripts.pory"
+# 51 "data/maps/Route2/scripts.pory"
 	.string "Hey there, I see you've just come from\nNewstem Town.\p"
 	.string "I'm here to warn travellers about an\naggressive Pokemon just up ahead.\p"
 	.string "I'm not sure why it's so upset,\nbut I would recommend avoiding it.\p"

@@ -154,5 +154,5 @@ Mum_Intro::
 # 7 "data/maps/NewstemTown_PlayersHouse/scripts.pory"
 	.string "I heard that the Professor finally\ngot some Pokemon together.\p"
 	.string "You should go and pick one up, then you\ncan start on your Pokemon adventure!\p"
-	.string "Oh right,\ndon't forgot to check your PC!\p"
+	.string "Oh right, make sure to grab all\nyour things out of the box upstairs!\p"
 	.string "Have fun!$"
