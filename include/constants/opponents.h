@@ -5,13 +5,16 @@
 
 
 #define TRAINER_NONE                        0
-#define TRAINER_RED                         1
-#define TRAINER_LEAF                        2
-#define TRAINER_BRENDAN_PLACEHOLDER         3
-#define TRAINER_MAY_PLACEHOLDER             4
+//#define TRAINER_RED                         1
+//#define TRAINER_LEAF                        2
+//#define TRAINER_BRENDAN_PLACEHOLDER         3
+//#define TRAINER_MAY_PLACEHOLDER             4
 
-
-#define TRAINER_GYM_LEADER_MARTIN           5
+#define GYM_LEADER_MARTIN                   1
+#define SPRINGWOOD_GYM_TRAINER1             2
+#define SPRINGWOOD_GYM_TRAINER2             3
+#define SPRINGWOOD_GYM_TRAINER3             4
+#define SPRINGWOOD_GYM_TRAINER4             5
 #define TRAINER_QUIET_GROVE_BUG_CATCHER     6
 #define TRAINER_QUIET_GROVE_GIRL            7  
 #define TRAINER_ROUTE3_BOY                  8

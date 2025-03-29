@@ -81,6 +81,7 @@ Gender: Male
 Music: Male
 Double Battle: No
 
+/*
 === TRAINER_RED ===
 Name: RED
 Class: Rival
@@ -128,24 +129,41 @@ Double Battle: No
 Kyogre
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* ================================================================================= */
 
-=== TRAINER_GYM_LEADER_MARTIN ===
-Name: MARTIN
+=== GYM_LEADER_MARTIN ===
+Name: Martin
 Class: Leader
 Pic: Leader Brawly
 Gender: Male
-Music: Male
+Music: Intense
 Items: Potion / Super Potion
-Double Battle: No
 AI: Gym Leader
 
 Roggenrola  
 Ability: Sturdy  
-Level: 12  
-Tera Type: Rock  
+Level: 13
 EVs: 236 HP / 236 Atk / 36 Def  
 Adamant Nature  
 IVs: 0 Spe  
@@ -156,8 +174,7 @@ IVs: 0 Spe
 
 Yanma  
 Ability: Speed Boost  
-Level: 12  
-Tera Type: Bug  
+Level: 13
 EVs: 236 SpA / 236 Spe  
 Mild Nature  
 - Struggle Bug  
@@ -167,8 +184,7 @@ Mild Nature
 
 Sableye  
 Ability: Prankster  
-Level: 12  
-Tera Type: Dark  
+Level: 14
 EVs: 12 HP / 244 Def / 224 SpD  
 Careful Nature  
 - Fake Out  
@@ -176,47 +192,117 @@ Careful Nature
 - Will-O-Wisp  
 - Scratch  
 
-Electrike  
-Ability: Static  
-Level: 12  
-Tera Type: Electric  
-EVs: 52 Atk / 224 SpA / 224 Spe  
-Naive Nature  
-- Quick Attack  
-- Thunder Wave  
-- Shock Wave  
-- Bite  
+Clauncher  
+Level: 13
+EVs: 52 HP / 224 SpA / 224 Spe  
+Mild Nature  
+- Water Pulse  
+- Aqua Jet  
+- Flail
+
+Munchlax @ Oran Berry  
+Ability: Gluttony  
+Level: 15  
+Shiny: Yes
+EVs: 228 Atk / 244 Def / 28 SpD  
+Adamant Nature  
+- Lick  
+- Tackle  
+- Recycle  
+- Curse 
+
+=== SPRINGWOOD_GYM_TRAINER1 === 
+Name: Carlos
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+AI: Smart Trainer
+
+Ekans
+Ability: Intimidate
+Level: 12
+
+Rattata
+Ability: Hustle
+Level: 12
+- Fury Swipes
+- Quick Attack
+- Bite
+
+Poochyena
+Level: 12
+
+=== SPRINGWOOD_GYM_TRAINER2 === 
+Name: Cindy
+Class: Aroma Lady
+Pic: Aroma Lady
+Gender: Female
+Music: Female
+AI: Cheese Trainer
+
+Hoppip
+Level: 11
+- Tackle
+- Fairy Wind
+- Poison Powder
+- Bullet Seed
+
+Electrike
+Ability: Static
+Level: 11 
+- Tackle
+- Thunder Wave
+- Shock Wave
+- Quick Attack
+
+=== SPRINGWOOD_GYM_TRAINER3 === 
+Name: David
+Class: Black Belt
+Pic: Black Belt
+Gender: Male
+Music: Intense
+AI: Smart Trainer
+
+Roggenrola
+Ability: Weak Armor
+Level: 11
+- Tackle
+- Mud Slap
+- Rock Slide
+
+Dwebble
+Ability: Weak Armor
+Level: 11
+- Fury Cutter
+- Rock Slide
+- Bug Bite
+
+
+=== SPRINGWOOD_GYM_TRAINER4 === 
+Name: Samuel
+Class: Bug Catcher
+Pic: Bug Catcher
+Gender: Male
+Music: Male
+AI: Smart Trainer
 
 Beedrill @ Scope Lens  
 Ability: Sniper  
 Level: 14  
 Tera Type: Bug  
 EVs: 248 Atk / 8 SpD / 244 Spe  
-Adamant Nature  
-- Pin Missile  
-- Aerial Ace  
+Adamant Nature    
 - Leech Life  
-- Poison Jab  
+- Poison Jab 
 
-Munchlax @ Oran Berry  
-Ability: Gluttony  
-Level: 15  
-Shiny: Yes  
-Tera Type: Normal  
-EVs: 228 Atk / 244 Def / 28 SpD  
-Adamant Nature  
-- Lick  
-- Tackle  
-- Recycle  
-- Curse  
 
 === TRAINER_QUIET_GROVE_BUG_CATCHER ===
-Name: BERT
+Name: Bert
 Class: Bug Catcher
 Pic: Bug Catcher
 Gender: Male
 Music: Male
-Double Battle: No
 AI: Basic Trainer
 
 Spinarak
@@ -233,12 +319,11 @@ Paras
 Level: 7
 
 === TRAINER_QUIET_GROVE_GIRL ===
-Name: LOLA
+Name: Lola
 Class: Lass
 Pic: Lass
 Gender: Female
 Music: Female
-Double Battle: No
 AI: Basic Trainer
 
 Poochyena
@@ -248,7 +333,7 @@ Hoppip
 Level: 8
 
 === TRAINER_ROUTE3_BOY ===
-Name: MARK
+Name: Mark
 Class: Youngster
 Pic: Youngster
 Gender: Male
@@ -259,12 +344,11 @@ Poochyena
 Level: 5
 
 === TRAINER_ROUTE3_GIRL ===
-Name: SUSIE
+Name: Susie
 Class: Lass
 Pic: Lass
 Gender: Female
 Music: Female
-Double Battle: No
 AI: Basic Trainer
 
 Hoppip

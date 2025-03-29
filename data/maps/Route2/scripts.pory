@@ -93,6 +93,7 @@ script Route2_Miniboss_Battle {
     if (var(VAR_RESULT) == B_OUTCOME_WON) {
         setflag(FLAG_HIDE_ROUTE2_MINIBOSS)
         setvar(VAR_LITTLEROOT_INTRO_STATE, 6)
+        special(DrawWholeMapView)
     } 
     releaseall
 }

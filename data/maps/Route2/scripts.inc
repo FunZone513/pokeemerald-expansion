@@ -130,7 +130,7 @@ Route2_Miniboss_Battle::
 	compare VAR_RESULT, B_OUTCOME_WON
 	goto_if_eq Route2_Miniboss_Battle_2
 Route2_Miniboss_Battle_1:
-# 97 "data/maps/Route2/scripts.pory"
+# 98 "data/maps/Route2/scripts.pory"
 	releaseall
 	return
 
@@ -139,15 +139,17 @@ Route2_Miniboss_Battle_2:
 	setflag FLAG_HIDE_ROUTE2_MINIBOSS
 # 95 "data/maps/Route2/scripts.pory"
 	setvar VAR_LITTLEROOT_INTRO_STATE, 6
+# 96 "data/maps/Route2/scripts.pory"
+	special DrawWholeMapView
 	goto Route2_Miniboss_Battle_1
 
 
 Route2_BlackBelt::
-# 101 "data/maps/Route2/scripts.pory"
-	lockall
 # 102 "data/maps/Route2/scripts.pory"
-	msgbox Route2_BlackBelt_Text_0
+	lockall
 # 103 "data/maps/Route2/scripts.pory"
+	msgbox Route2_BlackBelt_Text_0
+# 104 "data/maps/Route2/scripts.pory"
 	releaseall
 	return
 
@@ -229,7 +231,7 @@ Route2_Miniboss_Text_3:
 	.string "The Pokemon attacked!$"
 
 Route2_BlackBelt_Text_0:
-# 102 "data/maps/Route2/scripts.pory"
+# 103 "data/maps/Route2/scripts.pory"
 	.string "I miss my girlfriend...$"
 
 Route2_Camper_Warning_Text::
