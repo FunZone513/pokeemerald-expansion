@@ -291,7 +291,10 @@ SpringwoodCity_Beauty_Text_0:
 
 SpringwoodCity_Athlete_Text_0:
 # 122 "data/maps/SpringwoodCity/scripts.pory"
-	.string "Running in the city is difficult,\nbut I'm scared of bug types so I can't\lrun on any of the nearby routes.$"
+	.string "Running in the city can be difficult\n"
+	.string "with all the people, but I'm scared of\l"
+	.string "bug types so I can't run on any of the\l"
+	.string "nearby routes...$"
 
 SpringwoodCity_Camper_Text_0:
 # 128 "data/maps/SpringwoodCity/scripts.pory"
@@ -307,7 +310,7 @@ SpringwoodCity_Sailor_Text_0:
 
 SpringwoodCity_Fisherman_Text_0:
 # 146 "data/maps/SpringwoodCity/scripts.pory"
-	.string "I'm sure that one of these days I'll\ncatch some super rare Pokemon that can\lonly be found in Springwood City's\nright-hand fountain!$"
+	.string "I'm sure that one of these days I'll\ncatch some super rare Pokemon that can\lonly be found in Springwood City's\lright-hand fountain!$"
 
 SpringwoodCity_Intro_Scientist_Text1::
 # 23 "data/maps/SpringwoodCity/scripts.pory"

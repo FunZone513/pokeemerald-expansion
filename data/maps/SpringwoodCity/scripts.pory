@@ -119,7 +119,7 @@ script SpringwoodCity_Beauty {
 
 script SpringwoodCity_Athlete {
     lockall
-    msgbox("Running in the city is difficult,\nbut I'm scared of bug types so I can't\lrun on any of the nearby routes.", MSGBOX_NPC)
+    msgbox(format("Running in the city can be difficult with all the people, but I'm scared of bug types so I can't run on any of the nearby routes..."), MSGBOX_NPC)
     releaseall
 }
 
@@ -143,6 +143,6 @@ script SpringwoodCity_Sailor {
 
 script SpringwoodCity_Fisherman {
     lockall
-    msgbox("I'm sure that one of these days I'll\ncatch some super rare Pokemon that can\lonly be found in Springwood City's\nright-hand fountain!", MSGBOX_NPC)
+    msgbox("I'm sure that one of these days I'll\ncatch some super rare Pokemon that can\lonly be found in Springwood City's\lright-hand fountain!", MSGBOX_NPC)
     releaseall
 }
