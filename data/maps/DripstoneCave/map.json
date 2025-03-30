@@ -3,7 +3,7 @@
   "name": "DripstoneCave",
   "layout": "LAYOUT_DRIPSTONE_CAVE",
   "music": "MUS_RG_MT_MOON",
-  "region_map_section": "MAPSEC_ROUTE_5",
+  "region_map_section": "MAPSEC_DRIPSTONE_CAVE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_UNDERGROUND",

@@ -5,6 +5,7 @@ static const struct MenuAction MultichoiceList_QOLOptions[] =
     {COMPOUND_STRING("Ice Changes")},
     {COMPOUND_STRING("Boosted EXP")},
     {COMPOUND_STRING("Double Wild")},
+    {COMPOUND_STRING("Level Cap")},
 };
 
 static const struct MenuAction MultichoiceList_GenericOnOff[] = 
