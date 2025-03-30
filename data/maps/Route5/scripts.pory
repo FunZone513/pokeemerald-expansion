@@ -1,1 +1,40 @@
-mapscripts Route5_MapScripts {}
+mapscripts Route5_MapScripts {
+    MAP_SCRIPT_ON_LOAD: Route5_CheckBoulderBlock
+}
+
+script Route5_CheckBoulderBlock {
+    if (flag(FLAG_BADGE01_GET)) {
+        setmetatile(33, 17, METATILE_General_Grass, FALSE)
+        setmetatile(34, 17, METATILE_General_Grass, FALSE)
+        setmetatile(33, 18, METATILE_General_Grass, FALSE)
+        setmetatile(34, 18, METATILE_General_Grass, FALSE)
+        setmetatile(35, 18, METATILE_General_Grass, FALSE)
+        setmetatile(35, 16, METATILE_General_Grass, FALSE)
+    }
+}
+
+script Route5_BoulderGuy {
+    lockall
+    msgbox(format("Watch your step, there was a rockslide earlier. We're trying to clear it out as soon as possible."), MSGBOX_NPC)
+    releaseall
+}
+
+script Route5_Picnicker {
+    trainerbattle_single(
+        TRAINER_ROUTE5_PICNICKER, 
+        format("Where you find rockey terrain, you'll find me!"),
+        format("Camping on a rocky outcropping is always fun.")  
+    )
+    msgbox(format("The terrain starts to get a little more hostile around here."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route5_BlackBelt {
+    trainerbattle_single(
+        TRAINER_ROUTE5_BLACKBELT, 
+        format("Punching rocks makes my fists HARD."),
+        format("Punching rocks makes my bones HURT.")  
+    )
+    msgbox(format("The pain in my fists distracts me from the pain of my exstance."), MSGBOX_AUTOCLOSE)
+    end
+}

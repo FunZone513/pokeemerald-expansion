@@ -187,6 +187,36 @@ SpringwoodCity_Camper::
 	return
 
 
+SpringwoodCity_Boy::
+# 133 "data/maps/SpringwoodCity/scripts.pory"
+	lockall
+# 134 "data/maps/SpringwoodCity/scripts.pory"
+	msgbox SpringwoodCity_Boy_Text_0, MSGBOX_NPC
+# 135 "data/maps/SpringwoodCity/scripts.pory"
+	releaseall
+	return
+
+
+SpringwoodCity_Sailor::
+# 139 "data/maps/SpringwoodCity/scripts.pory"
+	lockall
+# 140 "data/maps/SpringwoodCity/scripts.pory"
+	msgbox SpringwoodCity_Sailor_Text_0, MSGBOX_NPC
+# 141 "data/maps/SpringwoodCity/scripts.pory"
+	releaseall
+	return
+
+
+SpringwoodCity_Fisherman::
+# 145 "data/maps/SpringwoodCity/scripts.pory"
+	lockall
+# 146 "data/maps/SpringwoodCity/scripts.pory"
+	msgbox SpringwoodCity_Fisherman_Text_0, MSGBOX_NPC
+# 147 "data/maps/SpringwoodCity/scripts.pory"
+	releaseall
+	return
+
+
 # 19 "data/maps/SpringwoodCity/scripts.pory"
 SpringwoodCity_Intro_Scientist_Movement_0:
 # 19 "data/maps/SpringwoodCity/scripts.pory"
@@ -266,6 +296,18 @@ SpringwoodCity_Athlete_Text_0:
 SpringwoodCity_Camper_Text_0:
 # 128 "data/maps/SpringwoodCity/scripts.pory"
 	.string "This tree keep growing back no matter\nhow many times we cut it down.$"
+
+SpringwoodCity_Boy_Text_0:
+# 134 "data/maps/SpringwoodCity/scripts.pory"
+	.string "Did you know that some Routes have super\nrare Pokemon?\pI wonder what Pokemon live around\nhere that I've never seen before.$"
+
+SpringwoodCity_Sailor_Text_0:
+# 140 "data/maps/SpringwoodCity/scripts.pory"
+	.string "The bustle of Springwood City is real\ndifferent to the port town I'm from.$"
+
+SpringwoodCity_Fisherman_Text_0:
+# 146 "data/maps/SpringwoodCity/scripts.pory"
+	.string "I'm sure that one of these days I'll\ncatch some super rare Pokemon that can\lonly be found in Springwood City's\nright-hand fountain!$"
 
 SpringwoodCity_Intro_Scientist_Text1::
 # 23 "data/maps/SpringwoodCity/scripts.pory"

@@ -25,3 +25,17 @@ script QuietGrove_Girl {
     msgbox(format("I thought a battle would distract me but now I'm just stuck here without my Pokemon..."), MSGBOX_AUTOCLOSE)
     end
 }
+
+script QuietGrove_LittleGirl {
+    lockall
+    msgbox(QuietGrove_LittleGirl_Text, MSGBOX_NPC)
+    releaseall
+}
+
+text QuietGrove_LittleGirl_Text {
+    "My friend lives around here somewhere,\nthey always pop out of nowhere!\p"
+    "I don't see them every time,\nbut it's always fun when they come back!\p"
+    "Last time they brought a funny lady,\nshe looked a little sad when she saw me,\lbut we had played a whole bunch after!\p"
+    "I hope my friend didn't get scared off by\nangry Pokemon, they're only little,\llike me.\p"
+    "You should come play with us next\ntime they're here!"
+}

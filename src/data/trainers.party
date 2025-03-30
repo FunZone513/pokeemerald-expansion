@@ -278,11 +278,10 @@ Level: 11
 - Rock Slide
 - Bug Bite
 
-
 === SPRINGWOOD_GYM_TRAINER4 === 
 Name: Samuel
-Class: Bug Catcher
-Pic: Bug Catcher
+Class: Bug Maniac
+Pic: Bug Maniac
 Gender: Male
 Music: Male
 AI: Smart Trainer
@@ -295,7 +294,6 @@ EVs: 248 Atk / 8 SpD / 244 Spe
 Adamant Nature    
 - Leech Life  
 - Poison Jab 
-
 
 === TRAINER_QUIET_GROVE_BUG_CATCHER ===
 Name: Bert
@@ -340,7 +338,7 @@ Gender: Male
 Music: Male
 AI: Basic Trainer
 
-Poochyena
+Ekans
 Level: 5
 
 === TRAINER_ROUTE3_GIRL ===
@@ -354,15 +352,101 @@ AI: Basic Trainer
 Hoppip
 Level: 4
 
-Surskit
+Poochyena
 Level: 4
+
+=== TRAINER_ROUTE3_LITTLEGIRL ===
+Name: Mary
+Class: School Kid
+Pic: School Kid F
+Gender: Female
+Music: Girl
+AI: Basic Trainer
+
+Surskit
+Level: 5
 - Water Gun
 - Quick Attack
 
+=== TRAINER_ROUTE3_FISHERMAN ===
+Name: Jeff
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Hiker
+AI: Basic Trainer
+
+Corphish
+Level: 4
+
+Corphish
+Level: 5
+
+=== TRAINER_ROUTE4_SCIENTIST ===
+Name: Jeff
+Class: Collector
+Pic: Collector
+Gender: Male
+Music: Suspicious
+AI: Cheese Trainer
+
+Eevee
+Level: 6
+- Tickle
+- Yawn
+- Covet
+- Quick Attack
+
+=== TRAINER_ROUTE5_PICNICKER ===
+Name: Brittany
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Girl
+AI: Basic Trainer
+
+Hoppip
+Level: 5
+
+Dwebble
+Ability: Sturdy
+Level: 5
 
 
+=== TRAINER_DRIPSTONE_CAVE_FISHERMAN ===
+Name: Alan
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Hiker
+AI: Basic Trainer
 
+Barboach
+Level: 12
 
+Barboach
+Level: 12
+
+Corphish
+Level: 13
+
+=== TRAINER_ROUTE5_BLACKBELT ===
+Name: Lister
+Class: Black Belt
+Pic: Black Belt
+Gender: Male
+Music: Intense
+AI: Basic Trainer
+
+Golett
+Ability: Iron Fist
+EVs: 244 HP / 248 Atk / 8 SpD
+Adamant Nature
+Level: 15
+- Shadow Punch
+- Fire Punch
+- Thunder Punch
+- Ice Punch
 
 
 

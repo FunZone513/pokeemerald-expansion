@@ -1,1 +1,7 @@
 mapscripts SpringwoodCity_PokeMart_MapScripts {}
+
+script SpringwoodCity_PokeMart_Girl {
+    lockall
+    msgbox(format("I love the smell of new Pokeballs."), MSGBOX_NPC)
+    releaseall
+}

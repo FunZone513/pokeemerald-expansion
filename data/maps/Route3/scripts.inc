@@ -38,6 +38,22 @@ Route3_Girl::
 	end
 
 
+Route3_Fisherman::
+# 37 "data/maps/Route3/scripts.pory"
+	trainerbattle_single TRAINER_ROUTE3_FISHERMAN, Route3_Fisherman_Text_0, Route3_Fisherman_Text_1
+# 42 "data/maps/Route3/scripts.pory"
+	msgbox Route3_Fisherman_Text_2, MSGBOX_AUTOCLOSE
+	end
+
+
+Route3_LittleGirl::
+# 47 "data/maps/Route3/scripts.pory"
+	trainerbattle_single TRAINER_ROUTE3_LITTLEGIRL, Route3_LittleGirl_Text_0, Route3_LittleGirl_Text_1
+# 52 "data/maps/Route3/scripts.pory"
+	msgbox Route3_LittleGirl_Text_2, MSGBOX_AUTOCLOSE
+	end
+
+
 Route3_Sign_FishingHut_Text_0:
 # 6 "data/maps/Route3/scripts.pory"
 	.string "Fishing Hut,\nHome of the baiting master$"
@@ -71,3 +87,29 @@ Route3_Girl_Text_1:
 Route3_Girl_Text_2:
 # 32 "data/maps/Route3/scripts.pory"
 	.string "Maybe being a trainer just isn't for me.$"
+
+Route3_Fisherman_Text_0:
+# 39 "data/maps/Route3/scripts.pory"
+	.string "I've heard the fishing master trained\n"
+	.string "his skills on this very pond.$"
+
+Route3_Fisherman_Text_1:
+# 40 "data/maps/Route3/scripts.pory"
+	.string "I still have a long way to go.$"
+
+Route3_Fisherman_Text_2:
+# 42 "data/maps/Route3/scripts.pory"
+	.string "One day I too will go down as a master\n"
+	.string "fisherman, just wait and see.$"
+
+Route3_LittleGirl_Text_0:
+# 49 "data/maps/Route3/scripts.pory"
+	.string "I found this cute Pokemon!$"
+
+Route3_LittleGirl_Text_1:
+# 50 "data/maps/Route3/scripts.pory"
+	.string "Oh no... my cutie...$"
+
+Route3_LittleGirl_Text_2:
+# 52 "data/maps/Route3/scripts.pory"
+	.string "I like to play in the grass.$"

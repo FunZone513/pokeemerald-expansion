@@ -2,7 +2,7 @@
   "id": "MAP_DRIPSTONE_CAVE",
   "name": "DripstoneCave",
   "layout": "LAYOUT_DRIPSTONE_CAVE",
-  "music": "MUS_MT_CHIMNEY",
+  "music": "MUS_RG_MT_MOON",
   "region_map_section": "MAPSEC_ROUTE_5",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -24,7 +24,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "ITEM_STAR_PIECE",
-      "script": "FLAG_ITEM_DRIPSTONE_CAVE_STAR_PIECE",
+      "script": "FLAG_ITEM_DRIPSTONE_CAVE",
       "flag": "0"
     },
     {
@@ -35,9 +35,9 @@
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "DripstoneCave_Fisherman",
       "flag": "0"
     }
   ],

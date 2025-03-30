@@ -27,27 +27,27 @@ SpringwoodCity_Indoor_1_1F_LittleBoy2::
 	lockall
 # 17 "data/maps/SpringwoodCity_Indoor_1_1F/scripts.pory"
 	msgbox SpringwoodCity_Indoor_1_1F_LittleBoy2_Text_0, MSGBOX_NPC
-# 18 "data/maps/SpringwoodCity_Indoor_1_1F/scripts.pory"
+# 19 "data/maps/SpringwoodCity_Indoor_1_1F/scripts.pory"
 	releaseall
 	return
 
 
 SpringwoodCity_Indoor_1_1F_OldWoman::
-# 22 "data/maps/SpringwoodCity_Indoor_1_1F/scripts.pory"
-	lockall
 # 23 "data/maps/SpringwoodCity_Indoor_1_1F/scripts.pory"
-	msgbox SpringwoodCity_Indoor_1_1F_OldWoman_Text_0, MSGBOX_NPC
+	lockall
 # 24 "data/maps/SpringwoodCity_Indoor_1_1F/scripts.pory"
+	msgbox SpringwoodCity_Indoor_1_1F_OldWoman_Text_0, MSGBOX_NPC
+# 25 "data/maps/SpringwoodCity_Indoor_1_1F/scripts.pory"
 	releaseall
 	return
 
 
 SpringwoodCity_Indoor_1_1F_OldMan::
-# 28 "data/maps/SpringwoodCity_Indoor_1_1F/scripts.pory"
-	lockall
 # 29 "data/maps/SpringwoodCity_Indoor_1_1F/scripts.pory"
-	msgbox SpringwoodCity_Indoor_1_1F_OldMan_Text_0, MSGBOX_NPC
+	lockall
 # 30 "data/maps/SpringwoodCity_Indoor_1_1F/scripts.pory"
+	msgbox SpringwoodCity_Indoor_1_1F_OldMan_Text_0, MSGBOX_NPC
+# 31 "data/maps/SpringwoodCity_Indoor_1_1F/scripts.pory"
 	releaseall
 	return
 
@@ -69,13 +69,13 @@ SpringwoodCity_Indoor_1_1F_LittleBoy2_Text_0:
 	.string "heaps of food!$"
 
 SpringwoodCity_Indoor_1_1F_OldWoman_Text_0:
-# 23 "data/maps/SpringwoodCity_Indoor_1_1F/scripts.pory"
+# 24 "data/maps/SpringwoodCity_Indoor_1_1F/scripts.pory"
 	.string "These poor kids don't have anyone to\n"
 	.string "look after them, so my husband and I\l"
 	.string "take in any we find.$"
 
 SpringwoodCity_Indoor_1_1F_OldMan_Text_0:
-# 29 "data/maps/SpringwoodCity_Indoor_1_1F/scripts.pory"
+# 30 "data/maps/SpringwoodCity_Indoor_1_1F/scripts.pory"
 	.string "Being a Pokemon Trainer isn't for\n"
 	.string "everyone. Some folks end up leaving\l"
 	.string "behind more than they should when they\l"

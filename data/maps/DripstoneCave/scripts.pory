@@ -1,1 +1,11 @@
 mapscripts DripstoneCave_MapScripts {}
+
+script DripstoneCave_Fisherman {
+    trainerbattle_single(
+        TRAINER_DRIPSTONE_CAVE_FISHERMAN, 
+        format("I came here to try and fish up some rare Pokemon, but it doesn't seem like I can reach the water from here."),
+        format("I probably would've won if I could've fished some new Pokemon")  
+    )
+    msgbox(format("Do I need to get a longer pole?"), MSGBOX_AUTOCLOSE)
+    end
+}

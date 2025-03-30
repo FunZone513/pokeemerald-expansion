@@ -19,8 +19,14 @@
 #define TRAINER_QUIET_GROVE_GIRL            7  
 #define TRAINER_ROUTE3_BOY                  8
 #define TRAINER_ROUTE3_GIRL                 9
+#define TRAINER_ROUTE3_LITTLEGIRL           10
+#define TRAINER_ROUTE3_FISHERMAN            11
+#define TRAINER_ROUTE4_SCIENTIST            12
+#define TRAINER_ROUTE5_PICNICKER            13
+#define TRAINER_DRIPSTONE_CAVE_FISHERMAN    14
+#define TRAINER_ROUTE5_BLACKBELT            15
 
-#define TRAINERS_COUNT                      10
+#define TRAINERS_COUNT                      16
 
 #define MAX_TRAINERS_COUNT                  864
 #define TRAINER_PARTNER(partner)           (MAX_TRAINERS_COUNT + partner)

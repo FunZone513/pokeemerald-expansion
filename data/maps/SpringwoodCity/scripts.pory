@@ -128,3 +128,21 @@ script SpringwoodCity_Camper {
     msgbox("This tree keep growing back no matter\nhow many times we cut it down.", MSGBOX_NPC)
     releaseall
 }
+
+script SpringwoodCity_Boy {
+    lockall
+    msgbox("Did you know that some Routes have super\nrare Pokemon?\pI wonder what Pokemon live around\nhere that I've never seen before.", MSGBOX_NPC)
+    releaseall
+}
+
+script SpringwoodCity_Sailor {
+    lockall
+    msgbox("The bustle of Springwood City is real\ndifferent to the port town I'm from.", MSGBOX_NPC)
+    releaseall
+}
+
+script SpringwoodCity_Fisherman {
+    lockall
+    msgbox("I'm sure that one of these days I'll\ncatch some super rare Pokemon that can\lonly be found in Springwood City's\nright-hand fountain!", MSGBOX_NPC)
+    releaseall
+}

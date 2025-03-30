@@ -45,14 +45,13 @@ SpringwoodCity_Indoor_2_Gardevoir::
 	goto_if_eq SpringwoodCity_Indoor_2_Gardevoir_2
 SpringwoodCity_Indoor_2_Gardevoir_1:
 # 40 "data/maps/SpringwoodCity_Indoor_2/scripts.pory"
-	goto_if_set FLAG_TEMP_1, SpringwoodCity_Indoor_2_Gardevoir_7
-SpringwoodCity_Indoor_2_Gardevoir_6:
-# 43 "data/maps/SpringwoodCity_Indoor_2/scripts.pory"
-	msgbox SpringwoodCity_Indoor_2_Gardevoir_Text_1, MSGBOX_NPC
+	msgbox SpringwoodCity_Indoor_2_Gardevoir_Text_0, MSGBOX_NPC
+# 41 "data/maps/SpringwoodCity_Indoor_2/scripts.pory"
+	goto_if_set FLAG_HIDE_ROUTE2_MINIBOSS, SpringwoodCity_Indoor_2_Gardevoir_5
 SpringwoodCity_Indoor_2_Gardevoir_4:
-# 44 "data/maps/SpringwoodCity_Indoor_2/scripts.pory"
+# 47 "data/maps/SpringwoodCity_Indoor_2/scripts.pory"
 	waitmoncry
-# 45 "data/maps/SpringwoodCity_Indoor_2/scripts.pory"
+# 48 "data/maps/SpringwoodCity_Indoor_2/scripts.pory"
 	releaseall
 	return
 
@@ -62,16 +61,21 @@ SpringwoodCity_Indoor_2_Gardevoir_2:
 	goto SpringwoodCity_Indoor_2_Gardevoir_1
 
 SpringwoodCity_Indoor_2_Gardevoir_5:
-# 41 "data/maps/SpringwoodCity_Indoor_2/scripts.pory"
-	msgbox SpringwoodCity_Indoor_2_Gardevoir_Text_0, MSGBOX_NPC
 # 42 "data/maps/SpringwoodCity_Indoor_2/scripts.pory"
-	setflag FLAG_TEMP_2
+	goto_if_set FLAG_TEMP_1, SpringwoodCity_Indoor_2_Gardevoir_8
 	goto SpringwoodCity_Indoor_2_Gardevoir_4
 
 SpringwoodCity_Indoor_2_Gardevoir_7:
-# 40 "data/maps/SpringwoodCity_Indoor_2/scripts.pory"
-	goto_if_unset FLAG_RECEIVED_TM_RETURN, SpringwoodCity_Indoor_2_Gardevoir_5
-	goto SpringwoodCity_Indoor_2_Gardevoir_6
+# 43 "data/maps/SpringwoodCity_Indoor_2/scripts.pory"
+	msgbox SpringwoodCity_Indoor_2_Gardevoir_Text_1, MSGBOX_NPC
+# 44 "data/maps/SpringwoodCity_Indoor_2/scripts.pory"
+	setflag FLAG_TEMP_2
+	goto SpringwoodCity_Indoor_2_Gardevoir_4
+
+SpringwoodCity_Indoor_2_Gardevoir_8:
+# 42 "data/maps/SpringwoodCity_Indoor_2/scripts.pory"
+	goto_if_unset FLAG_RECEIVED_TM_RETURN, SpringwoodCity_Indoor_2_Gardevoir_7
+	goto SpringwoodCity_Indoor_2_Gardevoir_4
 
 
 SpringwoodCity_Indoor_2_Man_Text_0:
@@ -79,12 +83,12 @@ SpringwoodCity_Indoor_2_Man_Text_0:
 	.string "Thank you for helping us reconnect.$"
 
 SpringwoodCity_Indoor_2_Gardevoir_Text_0:
-# 41 "data/maps/SpringwoodCity_Indoor_2/scripts.pory"
-	.string "...\p...please tell him I wish for nothing more\nthan to stay by his side.$"
+# 40 "data/maps/SpringwoodCity_Indoor_2/scripts.pory"
+	.string "...$"
 
 SpringwoodCity_Indoor_2_Gardevoir_Text_1:
 # 43 "data/maps/SpringwoodCity_Indoor_2/scripts.pory"
-	.string "...$"
+	.string "...please tell him I wish for nothing more\nthan to stay by his side.$"
 
 SpringwoodCity_Indoor_2_Man_Text::
 # 18 "data/maps/SpringwoodCity_Indoor_2/scripts.pory"

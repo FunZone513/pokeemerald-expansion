@@ -17,3 +17,13 @@ text Route4_Sign_Researcher_Lab_Garden_Text {
     "and don't overfeed the water Pokemon!\p"
     "We keep having to call in Nurse Joy\nbecause they get so fat!"
 }
+
+script Route4_Scientist {
+    trainerbattle_single(
+        TRAINER_ROUTE4_SCIENTIST, 
+        format("Ah! You scared me!"),
+        format("You came out of nowhere...")  
+    )
+    msgbox(format("Being stuck in the lab all day really lets you appreciate being in nature on your break."), MSGBOX_AUTOCLOSE)
+    end
+}

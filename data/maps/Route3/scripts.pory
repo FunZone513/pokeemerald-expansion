@@ -32,3 +32,23 @@ script Route3_Girl {
     msgbox(format("Maybe being a trainer just isn't for me."), MSGBOX_AUTOCLOSE)
     end
 }
+
+script Route3_Fisherman {
+    trainerbattle_single(
+        TRAINER_ROUTE3_FISHERMAN, 
+        format("I've heard the fishing master trained his skills on this very pond."),
+        format("I still have a long way to go.")  
+    )
+    msgbox(format("One day I too will go down as a master fisherman, just wait and see."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route3_LittleGirl {
+    trainerbattle_single(
+        TRAINER_ROUTE3_LITTLEGIRL, 
+        format("I found this cute Pokemon!"),
+        format("Oh no... my cutie...")  
+    )
+    msgbox(format("I like to play in the grass."), MSGBOX_AUTOCLOSE)
+    end
+}

@@ -28,6 +28,16 @@ QuietGrove_Girl::
 	end
 
 
+QuietGrove_LittleGirl::
+# 30 "data/maps/QuietGrove/scripts.pory"
+	lockall
+# 31 "data/maps/QuietGrove/scripts.pory"
+	msgbox QuietGrove_LittleGirl_Text, MSGBOX_NPC
+# 32 "data/maps/QuietGrove/scripts.pory"
+	releaseall
+	return
+
+
 QuietGrove_Sign_Text_0:
 # 5 "data/maps/QuietGrove/scripts.pory"
 	.string "Quiet Grove,\nWatch out for bugs!$"
@@ -61,3 +71,11 @@ QuietGrove_Girl_Text_2:
 	.string "I thought a battle would distract me\n"
 	.string "but now I'm just stuck here without my\l"
 	.string "Pokemon...$"
+
+QuietGrove_LittleGirl_Text::
+# 35 "data/maps/QuietGrove/scripts.pory"
+	.string "My friend lives around here somewhere,\nthey always pop out of nowhere!\p"
+	.string "I don't see them every time,\nbut it's always fun when they come back!\p"
+	.string "Last time they brought a funny lady,\nshe looked a little sad when she saw me,\lbut we had played a whole bunch after!\p"
+	.string "I hope my friend didn't get scared off by\nangry Pokemon, they're only little,\llike me.\p"
+	.string "You should come play with us next\ntime they're here!$"

@@ -1049,18 +1049,18 @@
 #define FLAG_HIDE_RUSTBORO_CITY_POKEMON_SCHOOL_SCOTT                0x3E7
 
 // Item Ball Flags
-#define FLAG_ITEM_SPRINGWOOD_CITY_INDOOR_REVIVAL_HERB               0x3E8
-#define FLAG_ITEM_ROUTE_1_POKE_BALL                                 0x3E9
-#define FLAG_ITEM_ROUTE_2_ESCAPE_ROPE                               0x3EA
-#define FLAG_ITEM_ROUTE_3_SUPER_POTION                              0x3EB
-#define FLAG_ITEM_ROUTE_3_REPEL                                     0x3EC
-#define FLAG_ITEM_ROUTE_3_RARE_CANDY                                0x3ED
-#define FLAG_ITEM_ROUTE_5_SUPER_REPEL                               0x3EE
-#define FLAG_ITEM_ROUTE_5_NUGGET                                    0x3EF
-#define FLAG_ITEM_SPRINGWOOD_CITY_RARE_CANDY                        0x3F0
+#define FLAG_ITEM_SPRINGWOOD_CITY_INDOOR                            0x3E8
+#define FLAG_ITEM_ROUTE_1                                           0x3E9
+#define FLAG_ITEM_ROUTE_2                                           0x3EA
+#define FLAG_ITEM_ROUTE_3                                           0x3EB
+#define FLAG_ITEM_ROUTE_3_1                                         0x3EC
+#define FLAG_ITEM_ROUTE_3_2                                         0x3ED
+#define FLAG_ITEM_ROUTE_5                                           0x3EE
+#define FLAG_ITEM_ROUTE_5_1                                         0x3EF
+#define FLAG_ITEM_SPRINGWOOD_CITY                        0x3F0
 #define FLAG_ITEM_SPRINGWOOD_CITY_SILVER_POWDER                     0x3F1
-#define FLAG_ITEM_DRIPSTONE_CAVE_STAR_PIECE                         0x3F2
-#define FLAG_ITEM_QUIET_GROVE_ANTIDOTE                              0x3F3
+#define FLAG_ITEM_DRIPSTONE_CAVE                                    0x3F2
+#define FLAG_ITEM_QUIET_GROVE                                       0x3F3
 #define FLAG_ITEM_UNUSED_0X3F4                                      0x3F4
 #define FLAG_ITEM_UNUSED_0X3F5                                      0x3F5
 #define FLAG_ITEM_UNUSED_0X3F6                                      0x3F6
