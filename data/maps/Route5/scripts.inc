@@ -7,6 +7,12 @@ Route5_MapScripts::
 Route5_CheckBoulderBlock::
 # 6 "data/maps/Route5/scripts.pory"
 	goto_if_set FLAG_BADGE01_GET, Route5_CheckBoulderBlock_1
+# 19 "data/maps/Route5/scripts.pory"
+	setflag FLAG_TEMP_10
+# 20 "data/maps/Route5/scripts.pory"
+	setflag FLAG_TEMP_11
+# 21 "data/maps/Route5/scripts.pory"
+	setflag FLAG_TEMP_12
 	return
 
 Route5_CheckBoulderBlock_1:
@@ -22,65 +28,90 @@ Route5_CheckBoulderBlock_1:
 	setmetatile 35, 18, METATILE_General_Grass, FALSE
 # 12 "data/maps/Route5/scripts.pory"
 	setmetatile 35, 16, METATILE_General_Grass, FALSE
+# 13 "data/maps/Route5/scripts.pory"
+	setmetatile 37, 17, METATILE_General_Grass, FALSE
+# 14 "data/maps/Route5/scripts.pory"
+	setmetatile 38, 17, METATILE_General_Grass, FALSE
+# 15 "data/maps/Route5/scripts.pory"
+	setmetatile 37, 18, METATILE_General_Grass, FALSE
+# 16 "data/maps/Route5/scripts.pory"
+	setmetatile 38, 18, METATILE_General_Grass, FALSE
+# 17 "data/maps/Route5/scripts.pory"
+	setmetatile 39, 17, METATILE_General_Grass, FALSE
 	return
 
 
 Route5_BoulderGuy::
-# 17 "data/maps/Route5/scripts.pory"
+# 26 "data/maps/Route5/scripts.pory"
 	lockall
-# 18 "data/maps/Route5/scripts.pory"
-	msgbox Route5_BoulderGuy_Text_0, MSGBOX_NPC
-# 19 "data/maps/Route5/scripts.pory"
+# 27 "data/maps/Route5/scripts.pory"
+	goto_if_set FLAG_BADGE01_GET, Route5_BoulderGuy_2
+# 30 "data/maps/Route5/scripts.pory"
+	msgbox Route5_BoulderGuy_Text_1, MSGBOX_NPC
+Route5_BoulderGuy_1:
+# 32 "data/maps/Route5/scripts.pory"
 	releaseall
 	return
 
+Route5_BoulderGuy_2:
+# 28 "data/maps/Route5/scripts.pory"
+	msgbox Route5_BoulderGuy_Text_0, MSGBOX_NPC
+	goto Route5_BoulderGuy_1
+
 
 Route5_Picnicker::
-# 23 "data/maps/Route5/scripts.pory"
+# 36 "data/maps/Route5/scripts.pory"
 	trainerbattle_single TRAINER_ROUTE5_PICNICKER, Route5_Picnicker_Text_0, Route5_Picnicker_Text_1
-# 28 "data/maps/Route5/scripts.pory"
+# 41 "data/maps/Route5/scripts.pory"
 	msgbox Route5_Picnicker_Text_2, MSGBOX_AUTOCLOSE
 	end
 
 
 Route5_BlackBelt::
-# 33 "data/maps/Route5/scripts.pory"
+# 46 "data/maps/Route5/scripts.pory"
 	trainerbattle_single TRAINER_ROUTE5_BLACKBELT, Route5_BlackBelt_Text_0, Route5_BlackBelt_Text_1
-# 38 "data/maps/Route5/scripts.pory"
+# 51 "data/maps/Route5/scripts.pory"
 	msgbox Route5_BlackBelt_Text_2, MSGBOX_AUTOCLOSE
 	end
 
 
 Route5_BoulderGuy_Text_0:
-# 18 "data/maps/Route5/scripts.pory"
-	.string "Watch your step, there was a rockslide\n"
-	.string "earlier. We're trying to clear it out as\l"
-	.string "soon as possible.$"
+# 28 "data/maps/Route5/scripts.pory"
+	.string "We've cleared it out the major rockslide\n"
+	.string "as best as we can, but the rocks are\l"
+	.string "pretty unstable here so they still fall\l"
+	.string "onto the path occasionally.$"
+
+Route5_BoulderGuy_Text_1:
+# 30 "data/maps/Route5/scripts.pory"
+	.string "Watch your step! There was a major\n"
+	.string "rockslide earlier. We're trying to get it\l"
+	.string "cleared out as soon as possible.$"
 
 Route5_Picnicker_Text_0:
-# 25 "data/maps/Route5/scripts.pory"
-	.string "Where you find rockey terrain, you'll\n"
-	.string "find me!$"
+# 38 "data/maps/Route5/scripts.pory"
+	.string "Where you find rocky terrain, you'll find\n"
+	.string "me!$"
 
 Route5_Picnicker_Text_1:
-# 26 "data/maps/Route5/scripts.pory"
+# 39 "data/maps/Route5/scripts.pory"
 	.string "Camping on a rocky outcropping is\n"
 	.string "always fun.$"
 
 Route5_Picnicker_Text_2:
-# 28 "data/maps/Route5/scripts.pory"
+# 41 "data/maps/Route5/scripts.pory"
 	.string "The terrain starts to get a little more\n"
 	.string "hostile around here.$"
 
 Route5_BlackBelt_Text_0:
-# 35 "data/maps/Route5/scripts.pory"
+# 48 "data/maps/Route5/scripts.pory"
 	.string "Punching rocks makes my fists HARD.$"
 
 Route5_BlackBelt_Text_1:
-# 36 "data/maps/Route5/scripts.pory"
+# 49 "data/maps/Route5/scripts.pory"
 	.string "Punching rocks makes my bones HURT.$"
 
 Route5_BlackBelt_Text_2:
-# 38 "data/maps/Route5/scripts.pory"
+# 51 "data/maps/Route5/scripts.pory"
 	.string "The pain in my fists distracts me from\n"
 	.string "the pain of my exstance.$"

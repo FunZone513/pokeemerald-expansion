@@ -79,6 +79,10 @@ script NewstemTown_PlayersHouse_Bedroom_Settings {
     releaseall
 }
 
+script NewstemTown_PlayersHouse_Bedroom_PC {
+    call(LittlerootTown_BrendansHouse_2F_EventScript_CheckPlayersPC)
+}
+
 //script NewstemTown_DEBUG {
 //    lockall
 //    givemon(SPECIES_TURTWIG, 1)

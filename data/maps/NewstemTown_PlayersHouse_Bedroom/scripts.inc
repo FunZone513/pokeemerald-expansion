@@ -177,6 +177,12 @@ NewstemTown_PlayersHouse_Bedroom_Settings_29:
 	goto NewstemTown_PlayersHouse_Bedroom_Settings_25
 
 
+NewstemTown_PlayersHouse_Bedroom_PC::
+# 83 "data/maps/NewstemTown_PlayersHouse_Bedroom/scripts.pory"
+	call LittlerootTown_BrendansHouse_2F_EventScript_CheckPlayersPC
+	return
+
+
 NewstemTown_PlayersHouse_Bedroom_Settings_Text_0:
 # 24 "data/maps/NewstemTown_PlayersHouse_Bedroom/scripts.pory"
 	.string "This is where you edit the game's\n"

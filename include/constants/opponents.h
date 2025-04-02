@@ -25,8 +25,10 @@
 #define TRAINER_ROUTE5_PICNICKER            13
 #define TRAINER_DRIPSTONE_CAVE_FISHERMAN    14
 #define TRAINER_ROUTE5_BLACKBELT            15
+#define TRAINER_ROUTE6_HIKER                16
+#define TRAINER_ROUTE7_PICNICKER            17
 
-#define TRAINERS_COUNT                      16
+#define TRAINERS_COUNT                      18
 
 #define MAX_TRAINERS_COUNT                  864
 #define TRAINER_PARTNER(partner)           (MAX_TRAINERS_COUNT + partner)

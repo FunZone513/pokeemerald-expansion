@@ -304,17 +304,17 @@ Music: Male
 AI: Basic Trainer
 
 Spinarak
-Level: 7  
+Level: 6  
 
 Silcoon  
-Level: 7
+Level: 6
 - Harden  
 - Tackle  
 - Poison Sting  
 - String Shot  
 
 Paras
-Level: 7
+Level: 6
 
 === TRAINER_QUIET_GROVE_GIRL ===
 Name: Lola
@@ -325,10 +325,10 @@ Music: Female
 AI: Basic Trainer
 
 Poochyena
-Level: 8
+Level: 7
 
 Hoppip
-Level: 8
+Level: 7
 
 === TRAINER_ROUTE3_BOY ===
 Name: Mark
@@ -339,7 +339,7 @@ Music: Male
 AI: Basic Trainer
 
 Ekans
-Level: 5
+Level: 4
 
 === TRAINER_ROUTE3_GIRL ===
 Name: Susie
@@ -350,10 +350,10 @@ Music: Female
 AI: Basic Trainer
 
 Hoppip
-Level: 4
+Level: 3
 
 Poochyena
-Level: 4
+Level: 3
 
 === TRAINER_ROUTE3_LITTLEGIRL ===
 Name: Mary
@@ -377,10 +377,10 @@ Music: Hiker
 AI: Basic Trainer
 
 Corphish
-Level: 4
+Level: 3
 
 Corphish
-Level: 5
+Level: 4
 
 === TRAINER_ROUTE4_SCIENTIST ===
 Name: Jeff
@@ -391,7 +391,7 @@ Music: Suspicious
 AI: Cheese Trainer
 
 Eevee
-Level: 6
+Level: 5
 - Tickle
 - Yawn
 - Covet
@@ -406,11 +406,11 @@ Music: Girl
 AI: Basic Trainer
 
 Hoppip
-Level: 5
+Level: 4
 
 Dwebble
 Ability: Sturdy
-Level: 5
+Level: 4
 
 
 === TRAINER_DRIPSTONE_CAVE_FISHERMAN ===
@@ -422,13 +422,13 @@ Music: Hiker
 AI: Basic Trainer
 
 Barboach
-Level: 12
+Level: 10
 
 Barboach
-Level: 12
+Level: 10
 
 Corphish
-Level: 13
+Level: 11
 
 === TRAINER_ROUTE5_BLACKBELT ===
 Name: Lister
@@ -442,13 +442,36 @@ Golett
 Ability: Iron Fist
 EVs: 244 HP / 248 Atk / 8 SpD
 Adamant Nature
-Level: 15
+Level: 20
 - Shadow Punch
 - Fire Punch
 - Thunder Punch
 - Ice Punch
 
+=== TRAINER_ROUTE6_HIKER ===
+Name: Raymond
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Hiker
+AI: Basic Trainer
 
+Roggenrola
+Level: 6
+
+Paras
+Level: 6
+
+=== TRAINER_ROUTE7_PICNICKER ===
+Name: Chloe
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Girl
+AI: Basic Trainer
+
+Marill
+Level: 8
 
 
 

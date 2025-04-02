@@ -4585,7 +4585,7 @@
       "id": "LAYOUT_ROUTE6",
       "name": "Route6_Layout",
       "width": 50,
-      "height": 94,
+      "height": 104,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Fortree",
       "border_filepath": "data/layouts/Route6/border.bin",
@@ -4670,6 +4670,16 @@
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/QuietGrove/border.bin",
       "blockdata_filepath": "data/layouts/QuietGrove/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE7",
+      "name": "Route7_Layout",
+      "width": 60,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Route7/border.bin",
+      "blockdata_filepath": "data/layouts/Route7/map.bin"
     }
   ]
 }

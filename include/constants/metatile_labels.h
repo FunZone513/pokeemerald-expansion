@@ -224,6 +224,14 @@
 #define METATILE_General_MuddySlope_Frame1     0x0E9
 #define METATILE_General_MuddySlope_Frame2     0x0EA
 #define METATILE_General_MuddySlope_Frame3     0x0EB
+#define METATILE_General_Path_D                0x066
+#define METATILE_General_Path_L                0x05D
+#define METATILE_General_Path_LD               0x065
+#define METATILE_General_Path_LU               0x055
+#define METATILE_General_Path_R                0x05F
+#define METATILE_General_Path_RD               0x067
+#define METATILE_General_Path_RU               0x057
+#define METATILE_General_Path_U                0x056
 #define METATILE_General_RedCaveIndent         0x1A0
 #define METATILE_General_RedCaveOpen           0x1A1
 #define METATILE_General_ReflectiveWater       0x0A1

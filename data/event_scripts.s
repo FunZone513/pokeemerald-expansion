@@ -1206,3 +1206,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/SpringwoodCity_Institution/scripts.inc"
 
 	.include "data/maps/QuietGrove/scripts.inc"
+
+	.include "data/maps/Route7/scripts.inc"

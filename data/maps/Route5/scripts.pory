@@ -10,19 +10,32 @@ script Route5_CheckBoulderBlock {
         setmetatile(34, 18, METATILE_General_Grass, FALSE)
         setmetatile(35, 18, METATILE_General_Grass, FALSE)
         setmetatile(35, 16, METATILE_General_Grass, FALSE)
+        setmetatile(37, 17, METATILE_General_Grass, FALSE)
+        setmetatile(38, 17, METATILE_General_Grass, FALSE)
+        setmetatile(37, 18, METATILE_General_Grass, FALSE)
+        setmetatile(38, 18, METATILE_General_Grass, FALSE)
+        setmetatile(39, 17, METATILE_General_Grass, FALSE)
+    } else {
+        setflag(FLAG_TEMP_10)
+        setflag(FLAG_TEMP_11)
+        setflag(FLAG_TEMP_12)
     }
 }
 
 script Route5_BoulderGuy {
     lockall
-    msgbox(format("Watch your step, there was a rockslide earlier. We're trying to clear it out as soon as possible."), MSGBOX_NPC)
+    if (flag(FLAG_BADGE01_GET)) {
+        msgbox(format("We've cleared it out the major rockslide as best as we can, but the rocks are pretty unstable here so they still fall onto the path occasionally."), MSGBOX_NPC)
+    } else {
+        msgbox(format("Watch your step! There was a major rockslide earlier. We're trying to get it cleared out as soon as possible."), MSGBOX_NPC)
+    }
     releaseall
 }
 
 script Route5_Picnicker {
     trainerbattle_single(
         TRAINER_ROUTE5_PICNICKER, 
-        format("Where you find rockey terrain, you'll find me!"),
+        format("Where you find rocky terrain, you'll find me!"),
         format("Camping on a rocky outcropping is always fun.")  
     )
     msgbox(format("The terrain starts to get a little more hostile around here."), MSGBOX_AUTOCLOSE)

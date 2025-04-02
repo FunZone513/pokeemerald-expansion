@@ -550,9 +550,23 @@
 #define FLAG_HIDDEN_ITEM_ROUTE_3_HP_UP                       (FLAG_HIDDEN_ITEMS_START + 0x04)
 #define FLAG_HIDDEN_ITEM_ROUTE_4_CALCIUM                     (FLAG_HIDDEN_ITEMS_START + 0x05)
 #define FLAG_HIDDEN_ITEM_ROUTE_4_RARE_CANDY                  (FLAG_HIDDEN_ITEMS_START + 0x06)
-#define FLAG_HIDDEN_ITEM_ROUTE_123_SUPER_REPEL               (FLAG_HIDDEN_ITEMS_START + 0x07)
-#define FLAG_HIDDEN_ITEM_UNDERWATER_124_CARBOS               (FLAG_HIDDEN_ITEMS_START + 0x08)
-#define FLAG_HIDDEN_ITEM_UNDERWATER_124_GREEN_SHARD          (FLAG_HIDDEN_ITEMS_START + 0x09)
+#define FLAG_HIDDEN_ITEM_ROUTE_7                             (FLAG_HIDDEN_ITEMS_START + 0x07)
+#define FLAG_HIDDEN_ITEM_ROUTE_7_1                           (FLAG_HIDDEN_ITEMS_START + 0x08)
+#define FLAG_HIDDEN_ITEM_ROUTE_7_2                           (FLAG_HIDDEN_ITEMS_START + 0x09)
+
+
+
+
+
+
+
+
+
+
+// --============= old ones
+#define FLAG_HIDDEN_ITEM_ROUTE_123_SUPER_REPEL               (FLAG_HIDDEN_ITEMS_START + 0x07) //
+#define FLAG_HIDDEN_ITEM_UNDERWATER_124_CARBOS               (FLAG_HIDDEN_ITEMS_START + 0x08) //
+#define FLAG_HIDDEN_ITEM_UNDERWATER_124_GREEN_SHARD          (FLAG_HIDDEN_ITEMS_START + 0x09) //
 #define FLAG_HIDDEN_ITEM_UNDERWATER_124_PEARL                (FLAG_HIDDEN_ITEMS_START + 0x0A)
 #define FLAG_HIDDEN_ITEM_UNDERWATER_124_BIG_PEARL            (FLAG_HIDDEN_ITEMS_START + 0x0B)
 #define FLAG_HIDDEN_ITEM_UNDERWATER_126_BLUE_SHARD           (FLAG_HIDDEN_ITEMS_START + 0x0C)
@@ -655,6 +669,7 @@
 #define FLAG_HIDDEN_ITEM_NAVEL_ROCK_TOP_SACRED_ASH           (FLAG_HIDDEN_ITEMS_START + 0x6D)
 #define FLAG_HIDDEN_ITEM_ROUTE_123_RARE_CANDY                (FLAG_HIDDEN_ITEMS_START + 0x6E)
 #define FLAG_HIDDEN_ITEM_UNUSED_0X6F                         (FLAG_HIDDEN_ITEMS_START + 0x6F)
+// --============= old ones
 
 #define FLAG_FORCE_WILD_DOUBLE_BATTLE  0x264        // Used for toggling wild double battles
 #define FLAG_SHARED_EXP    0x265                    // Used for toggling shared exp
@@ -666,7 +681,9 @@
 #define FLAG_DISABLE_WILD_ENCOUNTERS  0x26B         // Disables wild encounters when on
 #define FLAG_FORCE_SHINY_ENCOUNTERS  0x26C          // Toggles shiny encounters
 
-#define FLAG_UNUSED_0x26D  0x26D // Unused Flag
+#define FLAG_ROUTE_7_SHOWN_POKEMON  0x26D // Unused Flag
+
+
 #define FLAG_UNUSED_0x26E  0x26E // Unused Flag
 #define FLAG_UNUSED_0x26F  0x26F // Unused Flag
 #define FLAG_UNUSED_0x270  0x270 // Unused Flag
@@ -1057,14 +1074,14 @@
 #define FLAG_ITEM_ROUTE_3_2                                         0x3ED
 #define FLAG_ITEM_ROUTE_5                                           0x3EE
 #define FLAG_ITEM_ROUTE_5_1                                         0x3EF
-#define FLAG_ITEM_SPRINGWOOD_CITY                        0x3F0
+#define FLAG_ITEM_SPRINGWOOD_CITY                                   0x3F0
 #define FLAG_ITEM_SPRINGWOOD_CITY_SILVER_POWDER                     0x3F1
 #define FLAG_ITEM_DRIPSTONE_CAVE                                    0x3F2
 #define FLAG_ITEM_QUIET_GROVE                                       0x3F3
-#define FLAG_ITEM_UNUSED_0X3F4                                      0x3F4
-#define FLAG_ITEM_UNUSED_0X3F5                                      0x3F5
-#define FLAG_ITEM_UNUSED_0X3F6                                      0x3F6
-#define FLAG_ITEM_UNUSED_0X3F7                                      0x3F7
+#define FLAG_ITEM_ROUTE_6                                           0x3F4
+#define FLAG_ITEM_ROUTE_6_1                                         0x3F5
+#define FLAG_ITEM_ROUTE_7                                           0x3F6
+#define FLAG_ITEM_ROUTE_7_1                                         0x3F7
 #define FLAG_ITEM_UNUSED_0X3F8                                      0x3F8
 #define FLAG_ITEM_UNUSED_0X3F9                                      0x3F9
 #define FLAG_ITEM_UNUSED_0X3FA                                      0x3FA
@@ -1152,6 +1169,7 @@
 #define FLAG_ITEM_ABANDONED_SHIP_CAPTAINS_OFFICE_STORAGE_KEY        0x44C
 #define FLAG_ITEM_ABANDONED_SHIP_HIDDEN_FLOOR_ROOM_3_WATER_STONE    0x44D
 #define FLAG_ITEM_ABANDONED_SHIP_HIDDEN_FLOOR_ROOM_1_TM_RAIN_DANCE  0x44E
+#define FLAG_ITEM_RAIN_DANCE FLAG_ITEM_ABANDONED_SHIP_HIDDEN_FLOOR_ROOM_1_TM_RAIN_DANCE // :)
 #define FLAG_ITEM_ROUTE_121_CARBOS                                  0x44F
 #define FLAG_ITEM_ROUTE_123_ULTRA_BALL                              0x450
 #define FLAG_ITEM_ROUTE_126_GREEN_SHARD                             0x451

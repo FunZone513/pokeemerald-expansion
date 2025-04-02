@@ -42,6 +42,31 @@ Route3_FishingHut_Doorway::
 	return
 
 
+Route3_FishingHut_Lombre::
+# 35 "data/maps/Route3_FishingHut/scripts.pory"
+	lockall
+# 36 "data/maps/Route3_FishingHut/scripts.pory"
+	playmoncry SPECIES_LOMBRE, CRY_MODE_NORMAL
+# 37 "data/maps/Route3_FishingHut/scripts.pory"
+	msgbox Route3_FishingHut_Lombre_Text_0, MSGBOX_NPC
+# 38 "data/maps/Route3_FishingHut/scripts.pory"
+	getseenmon SPECIES_LOMBRE
+# 39 "data/maps/Route3_FishingHut/scripts.pory"
+	compare VAR_RESULT, NO
+	goto_if_eq Route3_FishingHut_Lombre_2
+Route3_FishingHut_Lombre_1:
+# 40 "data/maps/Route3_FishingHut/scripts.pory"
+	waitmoncry
+# 41 "data/maps/Route3_FishingHut/scripts.pory"
+	releaseall
+	return
+
+Route3_FishingHut_Lombre_2:
+# 39 "data/maps/Route3_FishingHut/scripts.pory"
+	setseenmon SPECIES_LOMBRE
+	goto Route3_FishingHut_Lombre_1
+
+
 # 15 "data/maps/Route3_FishingHut/scripts.pory"
 Route3_FishingHut_Fisherman_Movement_0:
 # 15 "data/maps/Route3_FishingHut/scripts.pory"
@@ -65,6 +90,10 @@ Route3_FishingHut_Fisherman_Text_2:
 Route3_FishingHut_Doorway_Text_0:
 # 30 "data/maps/Route3_FishingHut/scripts.pory"
 	.string "I wonder what's back there...$"
+
+Route3_FishingHut_Lombre_Text_0:
+# 37 "data/maps/Route3_FishingHut/scripts.pory"
+	.string "?$"
 
 FishermanGive::
 # 19 "data/maps/Route3_FishingHut/scripts.pory"

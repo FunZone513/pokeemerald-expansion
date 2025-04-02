@@ -3836,12 +3836,16 @@ static u32 IncreaseStatUpScoreInternal(u32 battlerAtk, u32 battlerDef, u32 statI
     if (considerContrary && AI_DATA->abilities[battlerAtk] == ABILITY_CONTRARY)
         return NO_INCREASE;
 
-    // Don't increase stat if AI is at +4
-    if (gBattleMons[battlerAtk].statStages[statId] >= MAX_STAT_STAGE - 2)
+    // Don't increase stat if AI is at +3
+    if (gBattleMons[battlerAtk].statStages[statId] >= MAX_STAT_STAGE - 3)
         return NO_INCREASE;
 
     // Don't increase stat if AI has less then 70% HP and number of hits isn't known
     if (AI_DATA->hpPercents[battlerAtk] < 70 && noOfHitsToFaint == UNKNOWN_NO_OF_HITS)
+        return NO_INCREASE;
+
+    // Don't increase stat is AI has less than 45% HP
+    if (AI_DATA->hpPercents[battlerAtk] < 45)
         return NO_INCREASE;
 
     // Don't set up if AI is dead to residual damage from weather

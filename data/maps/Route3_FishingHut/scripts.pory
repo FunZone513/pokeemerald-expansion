@@ -30,3 +30,13 @@ script Route3_FishingHut_Doorway {
     msgbox(format("I wonder what's back there..."))
     releaseall
 }
+
+script Route3_FishingHut_Lombre {
+    lockall
+    playmoncry(SPECIES_LOMBRE, CRY_MODE_NORMAL)
+    msgbox("?", MSGBOX_NPC)
+    getseenmon(SPECIES_LOMBRE)
+    if (var(VAR_RESULT) == NO) { setseenmon(SPECIES_LOMBRE) }
+    waitmoncry
+    releaseall
+}
