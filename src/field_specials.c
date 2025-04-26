@@ -1510,7 +1510,10 @@ void ShakeCamera(void)
     gTasks[taskId].tDelay = gSpecialVar_0x8007;
     gTasks[taskId].tVerticalPan = gSpecialVar_0x8004;
     SetCameraPanningCallback(NULL);
-    PlaySE(SE_M_STRENGTH);
+
+    if (gSpecialVar_0x8008 == 0) {
+        PlaySE(SE_M_STRENGTH);
+    }
 }
 
 static void Task_ShakeCamera(u8 taskId)

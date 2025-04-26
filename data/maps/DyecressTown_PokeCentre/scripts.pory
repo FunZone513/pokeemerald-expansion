@@ -1,0 +1,84 @@
+mapscripts DyecressTown_PokeCentre_MapScripts {
+    MAP_SCRIPT_ON_LOAD: DyecressTown_PokeCentre_OnLoad
+}
+
+script DyecressTown_PokeCentre_OnLoad {
+    if (!flag(FLAG_DYECRESS_BULLSHIT)) {
+        setobjectmovementtype(2, MOVEMENT_TYPE_FACE_LEFT)
+        setobjectmovementtype(3, MOVEMENT_TYPE_FACE_LEFT)
+        setobjectmovementtype(4, MOVEMENT_TYPE_FACE_LEFT)
+    }
+}
+
+script DyecressTown_PokeCentre_OldWoman {
+    lockall
+    if (!flag(FLAG_DYECRESS_BULLSHIT)) {
+        msgbox("That girl...\nThere's something weird about her...", MSGBOX_NPC)
+    } else {
+        msgbox(format("You see all manner of things in old age."), MSGBOX_NPC)
+    }
+    releaseall
+}
+
+script DyecressTown_PokeCentre_Woman {
+    lockall
+    if (!flag(FLAG_DYECRESS_BULLSHIT)) {
+        msgbox(format("I get a chill when I go over there..."), MSGBOX_NPC)
+    } else {
+        msgbox(format("Huh? I didn't see anyone over there?"), MSGBOX_NPC)
+    }
+    releaseall
+}
+
+script DyecressTown_PokeCentre_Man {
+    lockall
+    if (!flag(FLAG_DYECRESS_BULLSHIT)) {
+        msgbox(format("Who is that?"), MSGBOX_NPC)
+    } else {
+        msgbox(format("Dyecress has a lot of history, which means that it has a lot of mysteries too."), MSGBOX_NPC)
+    }
+    releaseall
+}
+
+script DyecressTown_PokeCentre_Girl {
+    lockall
+    fadeoutbgm(1)
+    delay(60)
+    applymovement(5, moves(face_player))
+    waitmovement(0)
+    delay(120)
+    braillemessage(DyecressTown_PokeCentre_Girl_Text)
+    setvar(VAR_0x8004, 1)  // vertical pan
+	setvar(VAR_0x8005, 1)  // horizontal pan
+	setvar(VAR_0x8006, 12)  // num shakes
+	setvar(VAR_0x8007, 2)  // shake delay
+	setvar(VAR_0x8008, 8)  // remove sound
+    special(ShakeCamera)
+    waitstate
+	setvar(VAR_0x8008, 0)
+    delay(48)
+    closebraillemessage
+    playse(SE_M_LEER)
+    fadescreenspeed(FADE_TO_WHITE, 1)
+    setflag(FLAG_DYECRESS_BULLSHIT)
+    removeobject(5)
+    applymovement(2, moves(face_up))
+    applymovement(3, moves(face_down))
+    applymovement(4, moves(face_right))
+    waitmovement(0)
+    setobjectmovementtype(2, MOVEMENT_TYPE_FACE_UP)
+    setobjectmovementtype(3, MOVEMENT_TYPE_FACE_DOWN)
+    setobjectmovementtype(4, MOVEMENT_TYPE_FACE_RIGHT)
+    special(DrawWholeMapView)
+    fadescreenspeed(FADE_FROM_WHITE, 3)
+    delay(48)
+    fadeinbgm(2)
+    releaseall
+}
+
+raw `
+DyecressTown_PokeCentre_Girl_Text:
+    brailleformat 3, 0, 25, 19, 6, 3
+	.braille "THIS ISNT\n" @ idk why it's chopping off the first few characters
+	.braille "MY TIME?$"
+`

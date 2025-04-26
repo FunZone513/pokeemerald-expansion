@@ -1208,3 +1208,43 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/QuietGrove/scripts.inc"
 
 	.include "data/maps/Route7/scripts.inc"
+
+	.include "data/maps/SpringWoods/scripts.inc"
+
+	.include "data/maps/SpringWoodsInner/scripts.inc"
+
+	.include "data/maps/SpringHollow/scripts.inc"
+
+	.include "data/maps/OchreVale/scripts.inc"
+
+	.include "data/maps/OchreMineEntrance/scripts.inc"
+
+	.include "data/maps/OchreVale_PokeCentre/scripts.inc"
+
+	.include "data/maps/OchreVale_PokeMart/scripts.inc"
+
+	.include "data/maps/OchreVale_Indoor_House1/scripts.inc"
+
+	.include "data/maps/OchreVale_Gym/scripts.inc"
+
+	.include "data/maps/DyecressTown/scripts.inc"
+
+	.include "data/maps/DyecressTown_PokeCentre/scripts.inc"
+
+	.include "data/maps/DyecressTown_Indoor1/scripts.inc"
+
+	.include "data/maps/Dyecress_Indoor2/scripts.inc"
+
+	.include "data/maps/DyecressTown_Indoor2/scripts.inc"
+
+	.include "data/maps/SpringwoodCity_Institution_1F/scripts.inc"
+
+	.include "data/maps/OchreValeMine/scripts.inc"
+
+	.include "data/maps/OchreVale_Indoor_2/scripts.inc"
+
+	.include "data/maps/OchreVale_Indoor_3/scripts.inc"
+
+	.include "data/maps/OchreVale_Lab/scripts.inc"
+
+	.include "data/maps/Route8/scripts.inc"

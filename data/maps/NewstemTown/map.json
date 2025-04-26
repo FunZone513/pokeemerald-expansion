@@ -159,7 +159,7 @@
       "y": 16,
       "elevation": 0,
       "item": "ITEM_RARE_CANDY",
-      "flag": "FLAG_HIDDEN_ITEM_NEWSTEM_TOWN_RARE_CANDY"
+      "flag": "FLAG_HIDDEN_ITEM_NEWSTEM_TOWN"
     },
     {
       "type": "hidden_item",
@@ -167,7 +167,7 @@
       "y": 38,
       "elevation": 0,
       "item": "ITEM_ETHER",
-      "flag": "FLAG_HIDDEN_ITEM_NEWSTEM_TOWN_ETHER"
+      "flag": "FLAG_HIDDEN_ITEM_NEWSTEM_TOWN_1"
     }
   ]
 }

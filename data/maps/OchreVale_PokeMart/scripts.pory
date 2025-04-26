@@ -1,0 +1,19 @@
+mapscripts OchreVale_PokeMart_MapScripts {}
+
+script OchreVale_PokeMart_Youngster {
+    lockall
+    msgbox(format("Aw man, I'm 3 Poke-dollars short of a Lemonade..."), MSGBOX_NPC)
+    releaseall
+}
+
+script OchreVale_PokeMart_Scientist {
+    lockall
+    msgbox(format("Do you think Awakenings work on humans? I could really use one right about now."), MSGBOX_NPC)
+    releaseall
+}
+
+script OchreVale_PokeMart_AquaGrunt {
+    lockall
+    msgbox("Oh...\nuh...\pDon't mind me,\nI was just wondering what\lTeam Magma was up to.", MSGBOX_NPC)
+    releaseall
+}

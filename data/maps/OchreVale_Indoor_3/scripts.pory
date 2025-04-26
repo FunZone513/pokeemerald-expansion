@@ -1,0 +1,7 @@
+mapscripts OchreVale_Indoor_3_MapScripts {}
+
+script OchreVale_Indoor_3_Woman {
+    lockall
+    msgbox(format("My boyfriend is researching the dirt here. I don't really understand what he's saying when he talks about it, but he looks so excited so I feel happy for him."), MSGBOX_NPC)
+    releaseall
+}

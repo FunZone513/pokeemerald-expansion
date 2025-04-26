@@ -1,380 +1,434 @@
 SpringwoodCity_Institution_MapScripts::
+# 2 "data/maps/SpringwoodCity_Institution/scripts.pory"
+	map_script MAP_SCRIPT_ON_TRANSITION, SpringwoodCity_Institution_CheckState
 	.byte 0
 
 
-SpringwoodCity_Institution_Receptionist::
-# 4 "data/maps/SpringwoodCity_Institution/scripts.pory"
-	lockall
-# 5 "data/maps/SpringwoodCity_Institution/scripts.pory"
-	msgbox SpringwoodCity_Institution_Receptionist_Text_0
+SpringwoodCity_Institution_CheckState::
 # 6 "data/maps/SpringwoodCity_Institution/scripts.pory"
-	releaseall
+	compare VAR_DYECRESS_MYSTERY_STATE, 2
+	goto_if_ge SpringwoodCity_Institution_CheckState_1
+	return
+
+SpringwoodCity_Institution_CheckState_1:
+# 7 "data/maps/SpringwoodCity_Institution/scripts.pory"
+	setvar VAR_TEMP_A, 1
 	return
 
 
-SpringwoodCity_Institution_Display::
-# 10 "data/maps/SpringwoodCity_Institution/scripts.pory"
-	lockall
-# 11 "data/maps/SpringwoodCity_Institution/scripts.pory"
-	msgbox SpringwoodCity_Institution_Display_Text_0
+SpringwoodCity_Institution_Receptionist::
 # 12 "data/maps/SpringwoodCity_Institution/scripts.pory"
+	lockall
+# 13 "data/maps/SpringwoodCity_Institution/scripts.pory"
+	msgbox SpringwoodCity_Institution_Receptionist_Text_0
+# 14 "data/maps/SpringwoodCity_Institution/scripts.pory"
+	compare VAR_DYECRESS_MYSTERY_STATE, 1
+	goto_if_eq SpringwoodCity_Institution_Receptionist_2
+# 19 "data/maps/SpringwoodCity_Institution/scripts.pory"
+	compare VAR_DYECRESS_MYSTERY_STATE, 2
+	goto_if_eq SpringwoodCity_Institution_Receptionist_3
+SpringwoodCity_Institution_Receptionist_1:
+# 22 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	releaseall
 	return
+
+SpringwoodCity_Institution_Receptionist_2:
+# 15 "data/maps/SpringwoodCity_Institution/scripts.pory"
+	msgbox SpringwoodCity_Institution_Receptionist_Text_1
+# 16 "data/maps/SpringwoodCity_Institution/scripts.pory"
+	msgbox SpringwoodCity_Institution_Receptionist_Dyecress_Mystery1
+# 17 "data/maps/SpringwoodCity_Institution/scripts.pory"
+	setvar VAR_TEMP_A, 1
+# 18 "data/maps/SpringwoodCity_Institution/scripts.pory"
+	setvar VAR_DYECRESS_MYSTERY_STATE, 2
+	goto SpringwoodCity_Institution_Receptionist_1
+
+SpringwoodCity_Institution_Receptionist_3:
+# 20 "data/maps/SpringwoodCity_Institution/scripts.pory"
+	msgbox SpringwoodCity_Institution_Receptionist_Text_2
+	goto SpringwoodCity_Institution_Receptionist_1
 
 
 SpringwoodCity_Institution_Display2::
-# 16 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 35 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	lockall
-# 17 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 36 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	msgbox SpringwoodCity_Institution_Display2_Text_0
-# 18 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 37 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	releaseall
 	return
 
 
 SpringwoodCity_Institution_Display3::
-# 22 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 41 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	lockall
-# 23 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 42 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	msgbox SpringwoodCity_Institution_Display3_Text_0
-# 24 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 43 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	releaseall
 	return
 
 
 SpringwoodCity_Institution_Scientist::
-# 28 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 47 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	lockall
-# 29 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 48 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	msgbox SpringwoodCity_Institution_Scientist_Text_0, MSGBOX_NPC
-# 30 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 49 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	releaseall
 	return
 
 
 SpringwoodCity_Institution_Scientist2::
-# 34 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 53 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	lockall
-# 35 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 54 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	msgbox SpringwoodCity_Institution_Scientist2_Text_0, MSGBOX_NPC
-# 36 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 55 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	releaseall
 	return
 
 
 SpringwoodCity_Institution_Scientist3::
-# 40 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 59 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	lockall
-# 41 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 60 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	msgbox SpringwoodCity_Institution_Scientist3_Text_0, MSGBOX_NPC
-# 42 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 61 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	releaseall
 	return
 
 
 SpringwoodCity_Institution_Employee::
-# 46 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 65 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	lockall
-# 47 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 66 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	msgbox SpringwoodCity_Institution_Employee_Text_0, MSGBOX_NPC
-# 48 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 67 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	releaseall
 	return
 
 
 SpringwoodCity_Institution_Employee2::
-# 52 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 71 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	lockall
-# 53 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 72 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	msgbox SpringwoodCity_Institution_Employee2_Text_0, MSGBOX_NPC
-# 54 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 73 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	releaseall
 	return
 
 
 SpringwoodCity_Institution_Grunt::
-# 58 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 77 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	lockall
-# 59 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 78 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	msgbox SpringwoodCity_Institution_Grunt_Text_0, MSGBOX_NPC
-# 60 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 79 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	releaseall
 	return
 
 
 SpringwoodCity_Institution_StairBlocker1::
-# 64 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 83 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	setvar VAR_TEMP_1, 1
-# 65 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 84 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	call SpringwoodCity_Institution_StairBlocker
 	return
 
 
 SpringwoodCity_Institution_StairBlocker2::
-# 69 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 88 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	setvar VAR_TEMP_1, 2
-# 70 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 89 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	call SpringwoodCity_Institution_StairBlocker
 	return
 
 
 SpringwoodCity_Institution_StairBlocker3::
-# 74 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 93 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	setvar VAR_TEMP_1, 3
-# 75 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 94 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	call SpringwoodCity_Institution_StairBlocker
 	return
 
 
 SpringwoodCity_Institution_StairBlocker4::
-# 79 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 98 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	setvar VAR_TEMP_1, 4
-# 80 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 99 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	call SpringwoodCity_Institution_StairBlocker
 	return
 
 
 SpringwoodCity_Institution_StairBlocker5::
-# 84 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 103 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	setvar VAR_TEMP_1, 5
-# 85 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 104 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	call SpringwoodCity_Institution_StairBlocker
 	return
 
 
 SpringwoodCity_Institution_StairBlocker6::
-# 89 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 108 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	setvar VAR_TEMP_1, 6
-# 90 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 109 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	call SpringwoodCity_Institution_StairBlocker
 	return
 
 
 SpringwoodCity_Institution_StairBlocker::
-# 94 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 113 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	lockall
-# 95 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 114 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	switch VAR_TEMP_1
-# 96 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 115 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	case 1, SpringwoodCity_Institution_StairBlocker_3
-# 97 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 116 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	case 2, SpringwoodCity_Institution_StairBlocker_4
-# 98 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 117 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	case 3, SpringwoodCity_Institution_StairBlocker_5
-# 99 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 118 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	case 4, SpringwoodCity_Institution_StairBlocker_6
-# 100 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 119 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	case 5, SpringwoodCity_Institution_StairBlocker_7
-# 101 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 120 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	case 6, SpringwoodCity_Institution_StairBlocker_8
 SpringwoodCity_Institution_StairBlocker_1:
-# 103 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 122 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	waitmovement 0
-# 105 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 124 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	msgbox SpringwoodCity_Institution_StairBlocker_Text_0
-# 106 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 125 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	compare VAR_TEMP_1, 3
 	goto_if_le SpringwoodCity_Institution_StairBlocker_10
-# 108 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 127 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	applymovement 3, SpringwoodCity_Institution_StairBlocker_Movement_3
 SpringwoodCity_Institution_StairBlocker_9:
-# 109 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 128 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, SpringwoodCity_Institution_StairBlocker_Movement_4
-# 114 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 133 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	waitmovement 0
-# 116 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 135 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	compare VAR_TEMP_1, 3
 	goto_if_le SpringwoodCity_Institution_StairBlocker_14
-# 118 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 137 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	applymovement 3, SpringwoodCity_Institution_StairBlocker_Movement_5
 SpringwoodCity_Institution_StairBlocker_13:
-# 119 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 138 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	waitmovement 0
-# 121 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 140 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	switch VAR_TEMP_1
-# 122 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 141 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	case 1, SpringwoodCity_Institution_StairBlocker_19
-# 123 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 142 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	case 2, SpringwoodCity_Institution_StairBlocker_20
-# 124 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 143 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	case 3, SpringwoodCity_Institution_StairBlocker_21
-# 125 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 144 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	case 4, SpringwoodCity_Institution_StairBlocker_22
-# 126 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 145 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	case 5, SpringwoodCity_Institution_StairBlocker_23
-# 127 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 146 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	case 6, SpringwoodCity_Institution_StairBlocker_24
 SpringwoodCity_Institution_StairBlocker_17:
-# 129 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 148 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	waitmovement 0
-# 130 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 149 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	releaseall
 	return
 
 SpringwoodCity_Institution_StairBlocker_3:
-# 96 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 115 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	applymovement 2, SpringwoodCity_Institution_StairBlocker_Movement_0
 	goto SpringwoodCity_Institution_StairBlocker_1
 
 SpringwoodCity_Institution_StairBlocker_4:
-# 97 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 116 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	applymovement 2, SpringwoodCity_Institution_StairBlocker_Movement_1
 	goto SpringwoodCity_Institution_StairBlocker_1
 
 SpringwoodCity_Institution_StairBlocker_5:
-# 98 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 117 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	applymovement 2, SpringwoodCity_Institution_StairBlocker_Movement_2
 	goto SpringwoodCity_Institution_StairBlocker_1
 
 SpringwoodCity_Institution_StairBlocker_6:
-# 99 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 118 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	applymovement 3, SpringwoodCity_Institution_StairBlocker_Movement_0
 	goto SpringwoodCity_Institution_StairBlocker_1
 
 SpringwoodCity_Institution_StairBlocker_7:
-# 100 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 119 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	applymovement 3, SpringwoodCity_Institution_StairBlocker_Movement_1
 	goto SpringwoodCity_Institution_StairBlocker_1
 
 SpringwoodCity_Institution_StairBlocker_8:
-# 101 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 120 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	applymovement 3, SpringwoodCity_Institution_StairBlocker_Movement_2
 	goto SpringwoodCity_Institution_StairBlocker_1
 
 SpringwoodCity_Institution_StairBlocker_10:
-# 107 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 126 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	applymovement 2, SpringwoodCity_Institution_StairBlocker_Movement_3
 	goto SpringwoodCity_Institution_StairBlocker_9
 
 SpringwoodCity_Institution_StairBlocker_14:
-# 117 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 136 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	applymovement 2, SpringwoodCity_Institution_StairBlocker_Movement_5
 	goto SpringwoodCity_Institution_StairBlocker_13
 
 SpringwoodCity_Institution_StairBlocker_19:
-# 122 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 141 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	applymovement 2, SpringwoodCity_Institution_StairBlocker_Movement_2
 	goto SpringwoodCity_Institution_StairBlocker_17
 
 SpringwoodCity_Institution_StairBlocker_20:
-# 123 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 142 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	applymovement 2, SpringwoodCity_Institution_StairBlocker_Movement_1
 	goto SpringwoodCity_Institution_StairBlocker_17
 
 SpringwoodCity_Institution_StairBlocker_21:
-# 124 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 143 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	applymovement 2, SpringwoodCity_Institution_StairBlocker_Movement_0
 	goto SpringwoodCity_Institution_StairBlocker_17
 
 SpringwoodCity_Institution_StairBlocker_22:
-# 125 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 144 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	applymovement 3, SpringwoodCity_Institution_StairBlocker_Movement_2
 	goto SpringwoodCity_Institution_StairBlocker_17
 
 SpringwoodCity_Institution_StairBlocker_23:
-# 126 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 145 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	applymovement 3, SpringwoodCity_Institution_StairBlocker_Movement_1
 	goto SpringwoodCity_Institution_StairBlocker_17
 
 SpringwoodCity_Institution_StairBlocker_24:
-# 127 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 146 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	applymovement 3, SpringwoodCity_Institution_StairBlocker_Movement_0
 	goto SpringwoodCity_Institution_StairBlocker_17
 
 
-# 96 "data/maps/SpringwoodCity_Institution/scripts.pory"
+SpringwoodCity_Institution_Guard::
+# 153 "data/maps/SpringwoodCity_Institution/scripts.pory"
+	lockall
+# 154 "data/maps/SpringwoodCity_Institution/scripts.pory"
+	msgbox SpringwoodCity_Institution_Guard_Text_0, MSGBOX_NPC
+# 155 "data/maps/SpringwoodCity_Institution/scripts.pory"
+	releaseall
+	return
+
+
+# 115 "data/maps/SpringwoodCity_Institution/scripts.pory"
 SpringwoodCity_Institution_StairBlocker_Movement_0:
-# 96 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 115 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	walk_left
-# 96 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 115 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	face_down
 	step_end
 
-# 97 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 116 "data/maps/SpringwoodCity_Institution/scripts.pory"
 SpringwoodCity_Institution_StairBlocker_Movement_1:
-# 97 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 116 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	face_down
 	step_end
 
-# 98 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 117 "data/maps/SpringwoodCity_Institution/scripts.pory"
 SpringwoodCity_Institution_StairBlocker_Movement_2:
-# 98 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 117 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	walk_right
-# 98 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 117 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	face_down
 	step_end
 
-# 107 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 126 "data/maps/SpringwoodCity_Institution/scripts.pory"
 SpringwoodCity_Institution_StairBlocker_Movement_3:
-# 107 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 126 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	walk_down
 	step_end
 
-# 109 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 128 "data/maps/SpringwoodCity_Institution/scripts.pory"
 SpringwoodCity_Institution_StairBlocker_Movement_4:
-# 110 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 129 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	lock_facing_direction
-# 111 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 130 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	walk_down
-# 112 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 131 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	unlock_facing_direction
 	step_end
 
-# 117 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 136 "data/maps/SpringwoodCity_Institution/scripts.pory"
 SpringwoodCity_Institution_StairBlocker_Movement_5:
-# 117 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 136 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	walk_up
 	step_end
 
 SpringwoodCity_Institution_Receptionist_Text_0:
-# 5 "data/maps/SpringwoodCity_Institution/scripts.pory"
-	.string "Welcome, I'm afraid that we're not\n"
-	.string "currently accepting visitors. May I ask\l"
-	.string "that you come back at a later date?$"
+# 13 "data/maps/SpringwoodCity_Institution/scripts.pory"
+	.string "Welcome to the Libra Institute!\nWould you happen to have an appointment?$"
 
-SpringwoodCity_Institution_Display_Text_0:
-# 11 "data/maps/SpringwoodCity_Institution/scripts.pory"
-	.string "There seems to be a stone of some kind\n"
-	.string "behind the glass.$"
+SpringwoodCity_Institution_Receptionist_Text_1:
+# 15 "data/maps/SpringwoodCity_Institution/scripts.pory"
+	.string "...$"
+
+SpringwoodCity_Institution_Receptionist_Text_2:
+# 20 "data/maps/SpringwoodCity_Institution/scripts.pory"
+	.string "Oh you're the one helping out Spenser.\n"
+	.string "You'll find our researchers up the\l"
+	.string "stairs to the left.$"
 
 SpringwoodCity_Institution_Display2_Text_0:
-# 17 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 36 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	.string "Whatever is behind that glass sure\n"
 	.string "looks impressive.$"
 
 SpringwoodCity_Institution_Display3_Text_0:
-# 23 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 42 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	.string "...isn't that just a stick?$"
 
 SpringwoodCity_Institution_Scientist_Text_0:
-# 29 "data/maps/SpringwoodCity_Institution/scripts.pory"
-	.string "I'm trying to determine what it is about\n"
-	.string "evolutionary stones that causes\l"
-	.string "Pokemon to evolve.$"
+# 48 "data/maps/SpringwoodCity_Institution/scripts.pory"
+	.string "We don't have much of a breakroom in\n"
+	.string "the lab areas upstairs, so when we get\l"
+	.string "free time we sort of just hang out in\l"
+	.string "the lobby.$"
 
 SpringwoodCity_Institution_Scientist2_Text_0:
-# 35 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 54 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	.string "We collaborate with the Research Lab\non Route 4 sometimes.\pThey discover things, we refine them.$"
 
 SpringwoodCity_Institution_Scientist3_Text_0:
-# 41 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 60 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	.string "Trying to determine research budgets\n"
 	.string "is always a pain.$"
 
 SpringwoodCity_Institution_Employee_Text_0:
-# 47 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 66 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	.string "While the researchers do good work, do\n"
 	.string "they really need that much money?$"
 
 SpringwoodCity_Institution_Employee2_Text_0:
-# 53 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 72 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	.string "Honestly I'm just here to make sure\n"
 	.string "these two don't fight.$"
 
 SpringwoodCity_Institution_Grunt_Text_0:
-# 59 "data/maps/SpringwoodCity_Institution/scripts.pory"
-	.string "The security guys keep looking at me\nlike I'm some suspicious individual.\pI just forgot to take of my PJs\nthis morning!$"
+# 78 "data/maps/SpringwoodCity_Institution/scripts.pory"
+	.string "The security guys keep looking at me\nlike I'm some suspicious individual.\pI uhh...\nI just forgot to take off my PJs\lthis morning!$"
 
 SpringwoodCity_Institution_StairBlocker_Text_0:
-# 105 "data/maps/SpringwoodCity_Institution/scripts.pory"
-	.string "Sorry, but you're not allowed up here\nat the moment.$"
+# 124 "data/maps/SpringwoodCity_Institution/scripts.pory"
+	.string "I apologise,\nbut you don't have permission\lto acces the upper floors.$"
+
+SpringwoodCity_Institution_Guard_Text_0:
+# 154 "data/maps/SpringwoodCity_Institution/scripts.pory"
+	.string "Go right on ahead.$"
+
+SpringwoodCity_Institution_Receptionist_Dyecress_Mystery1::
+# 25 "data/maps/SpringwoodCity_Institution/scripts.pory"
+	.string "You have a message from a wordy Old Man\nin Dyecress Town?\p"
+	.string "I see!\p"
+	.string "Our insitute has had quite an interest\nin Dyecress for quite a while now,\l"
+	.string "but Old Spenser was reluctant to let us\linvestigate the town.\p"
+	.string "If he's sent you here as a request for\nhelp, then I can only imagine how stumped\lhe must be on his current task.\p"
+	.string "Please make your way up the stairs to\nthe left, our in-house researches would\lbe honoured to lend a hand.$"

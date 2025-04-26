@@ -1,4 +1,31 @@
-mapscripts Route4_MapScripts {}
+mapscripts Route4_MapScripts {
+    MAP_SCRIPT_ON_LOAD: Route4_LedgeBlocker
+}
+
+script Route4_LedgeBlocker {
+    if (var(VAR_DYECRESS_MYSTERY_STATE) <= 1) {
+        setmetatile(12, 25, METATILE_General_Ledge_East, TRUE)
+        setmetatile(12, 26, METATILE_Petalburg_Disabled_Ledge_East, TRUE)
+        setmetatile(12, 27, METATILE_General_Ledge_East, TRUE)
+        setflag(FLAG_TEMP_1)
+    } else {
+        setflag(FLAG_TEMP_2)
+    }
+}
+
+script Route4_LedgeBreaker {
+    lockall
+    msgbox("I'M SICK OF THIS LEDGE!\nI'M GONNA BREAK IT DOWN!!", MSGBOX_NPC)
+    applymovement(2, moves(face_left))
+    waitmovement(2)
+    releaseall
+}
+
+script Route4_LedgeBreaker2 {
+    lockall
+    msgbox(format("I often visit my grandmother in Dyecress Town, and the ledges always made the way difficult."), MSGBOX_NPC)
+    releaseall
+}
 
 script Route4_Sign_Researcher_Lab {
     lockall
@@ -18,12 +45,12 @@ text Route4_Sign_Researcher_Lab_Garden_Text {
     "We keep having to call in Nurse Joy\nbecause they get so fat!"
 }
 
-script Route4_Scientist {
+script Route4_SchoolKid {
     trainerbattle_single(
-        TRAINER_ROUTE4_SCIENTIST, 
+        TRAINER_ROUTE4_SCHOOLKID, 
         format("Ah! You scared me!"),
         format("You came out of nowhere...")  
     )
-    msgbox(format("Being stuck in the lab all day really lets you appreciate being in nature on your break."), MSGBOX_AUTOCLOSE)
+    msgbox(format("After being stuck in the lab all day with my Dad, I like to come out here and appreciate being in nature."), MSGBOX_AUTOCLOSE)
     end
 }

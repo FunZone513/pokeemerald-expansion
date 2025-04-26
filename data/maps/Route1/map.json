@@ -91,7 +91,7 @@
       "y": 18,
       "elevation": 0,
       "item": "ITEM_POTION",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE_1_POTION"
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE_1"
     }
   ]
 }

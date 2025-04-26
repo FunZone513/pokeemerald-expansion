@@ -1,0 +1,39 @@
+mapscripts OchreVale_Lab_MapScripts {}
+
+script OchreVale_Lab_Director {
+    lockall
+    if (var(VAR_ROUTE4_WATER_STONE_STATE) == 4) {
+        msgbox(OchreVale_Lab_Director_Text, MSGBOX_NPC)
+        setvar(VAR_ROUTE4_WATER_STONE_STATE, 5)
+    } elif (var(VAR_ROUTE4_WATER_STONE_STATE) == 5) {
+        msgbox(format("Those guys call themselves 'Team Magma'. I'm not sure why they've decided to start hindering our research all of a sudden."), MSGBOX_NPC)
+    } else {
+        msgbox(format("I thank you for getting rid of those guys getting in the way of our research, I hope they don't cause any further trouble to us or to you."), MSGBOX_NPC)
+    }
+    releaseall
+}
+
+text OchreVale_Lab_Director_Text {
+    "We're a group from the lab on Route 4,\nand we're supposed to be sending any\limportant looking stones their way,\l"
+    "but recently we've been having trouble\lwith a group in Ochre Vale Mine.\p"
+    "They're getting in the way of our\nmaterial collection, as well as\limpeding our transport methods.\p"
+    "I just wish someone would get them to\nleave us alone."
+}
+
+script OchreVale_Lab_Scientist {
+    lockall
+    msgbox(format("The data we're pulling from analysing the rock structures in Ochre Vale Mine is... interesting to say the least."), MSGBOX_NPC)
+    releaseall
+}
+
+script OchreVale_Lab_Scientist2 {
+    lockall
+    msgbox(format("This machine is used for molecular deconstruction of provided samples which help us analyse the lattice structres with an electron microscope. Fascinating stuff."), MSGBOX_NPC)
+    releaseall
+}
+
+script OchreVale_Lab_Scientist3 {
+    lockall
+    msgbox(format("I'm just here to give the guys some dirt every now and then. They insisted I wear a coat for some reason, I don't know what any of this stuff does."), MSGBOX_NPC)
+    releaseall
+}

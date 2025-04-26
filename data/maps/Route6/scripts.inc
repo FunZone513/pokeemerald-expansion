@@ -63,14 +63,13 @@ Route6_Pancham_Text_0:
 
 Route6_Hiker_Text_0:
 # 26 "data/maps/Route6/scripts.pory"
-	.string "I heard the bridge up ahead is being\n"
-	.string "renovated.$"
+	.string "Are you also out here for a hike?$"
 
 Route6_Hiker_Text_1:
 # 27 "data/maps/Route6/scripts.pory"
-	.string "They seem to be having some trouble,\n"
-	.string "much like me in this battle.$"
+	.string "Well that could've gone better.$"
 
 Route6_Hiker_Text_2:
 # 29 "data/maps/Route6/scripts.pory"
-	.string "insert text about next town here.$"
+	.string "Dyecress Town is just up ahead, the air\n"
+	.string "there is really nice.$"

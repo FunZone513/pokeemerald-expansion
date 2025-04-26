@@ -64,17 +64,22 @@ script SpringwoodCity_Gym_CheckState {
 
 script Springwood_Gym_Guide {
     lockall
-    if (flag(FLAG_TEMP_1)) {  
-        msgbox(Springwood_Gym_Guide_Text_Intro)
+    if (!flag(FLAG_BADGE01_GET)) { 
+        if (flag(FLAG_TEMP_1)) {  
+            msgbox(Springwood_Gym_Guide_Text_Intro)
+        }
+        msgbox(Springwood_Gym_Guide_Text, MSGBOX_NPC)
+    } else {
+        msgbox(format("Wow! You really showed your stuff! Defeating Martin is no easy task, but you definitely earned your Springwood Badge!"), MSGBOX_NPC)
     }
-    msgbox(Springwood_Gym_Guide_Text, MSGBOX_NPC)
     releaseall
 }
 
 text Springwood_Gym_Guide_Text_Intro {
     "A new face!\nI'm the guide here at Springwood Gym.\p"
     "My job is to make sure the challengers\nknow what it is they are up against.\p"
-    "Each Gym is assigned a guide to help\nout newcomers to the Gym Challenge."
+    "Each Gym is assigned a guide to help\nout newcomers to the Gym Challenge.\p"
+    "Also, make sure to check the\nRecommended Level on each Gym's statues."
 }
 
 text Springwood_Gym_Guide_Text {
@@ -83,7 +88,6 @@ text Springwood_Gym_Guide_Text {
 }
 
 script SpringwoodCity_Gym_Martin {
-    //lockall
     trainerbattle_single(
         GYM_LEADER_MARTIN,
         SpringwoodCity_Gym_Martin_Text_Intro,
@@ -100,9 +104,8 @@ script SpringwoodCity_Gym_Martin_Defeated {
 	waitmessage
 	call(Common_EventScript_PlayGymBadgeFanfare)
     msgbox(SpringwoodCity_Gym_Martin_Badge, MSGBOX_DEFAULT)
-	setflag(FLAG_DEFEATED_RUSTBORO_GYM)
 	setflag(FLAG_BADGE01_GET)
-    setvar(VAR_CURRENT_LEVEL_CAP, 100)
+    call(Generic_UPDATE_LEVELCAP)
     releaseall
 }
 
@@ -116,12 +119,12 @@ text SpringwoodCity_Gym_Martin_Text_Intro {
 text SpringwoodCity_Gym_Martin_Text_Defeated {
     "Outstanding.\p"
     "Even after all my training you still\nfound a way to best me at my own game.\p"
-    "I wouldn't have it any other way,\nI hope you continue to make good progress\ltogether with your Pokemon."
+    "I wouldn't have it any other way,\nI hope you continue to make good\lprogress with your Pokemon."
 }
 
 text SpringwoodCity_Gym_Martin_PostBattle {
     "Grass and Bug types, as well as\nPokemon that have an ability related to\lcutting are able to cut down trees.\p"
-    "Make sure to eep an eye out for any\ncool Pokemon for our next battle!\p"
+    "Make sure to keep an eye out for any\ncool Pokemon for our next battle!\p"
     "I'm excited to see just how much\nstronger your team can get!"
 }
 

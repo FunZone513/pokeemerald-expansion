@@ -23,9 +23,9 @@ script Route6_Pancham {
 script Route6_Hiker {
     trainerbattle_single(
         TRAINER_ROUTE6_HIKER, 
-        format("I heard the bridge up ahead is being renovated."),
-        format("They seem to be having some trouble, much like me in this battle.")  
+        format("Are you also out here for a hike?"),
+        format("Well that could've gone better.")  
     )
-    msgbox(format("insert text about next town here."), MSGBOX_AUTOCLOSE)
+    msgbox(format("Dyecress Town is just up ahead, the air there is really nice."), MSGBOX_AUTOCLOSE)
     end
 }

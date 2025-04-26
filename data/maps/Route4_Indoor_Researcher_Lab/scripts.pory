@@ -30,7 +30,7 @@ text Route4_Indoor_Researcher_Lab_Director_Intro {
 script Route4_Indoor_Researcher_Lab_Intro_R1 {
     lockall
     msgbox("I wonder if you can do a flip?\nGo on! Do a flip!")
-    playmoncry(SPECIES_EEVEE, CRY_MODE_NORMAL)
+    playmoncry(SPECIES_POOCHYENA, CRY_MODE_NORMAL)
     waitmoncry
     msgbox("No no, a FLIP.\n...this might take a while...")
     releaseall
@@ -44,22 +44,113 @@ script Route4_Indoor_Researcher_Lab_R1 {
 
 script Route4_Indoor_Researcher_Lab_R2 {
     lockall
-    msgbox("Being in the corner means I can\nplay minesweeper all I want,\land they can't see it!", MSGBOX_NPC)
+    msgbox(format("We've been hearing about some bizarre trees dotted around the region. We can't seem to replicate any strange happenings regarding them however."), MSGBOX_NPC)
     releaseall
 }
 
-// it would be really funny if this guy gives you a water stone at some point
+// 1 spoken to, 2 caught EEVEE check, 3 caught EEVEE, 4 talk to guy at ochre mine, 5 clear out ochre mine, 6 profit, 7 end
 script Route4_Indoor_Researcher_Lab_R3 {
     lockall
-    msgbox(Route4_Indoor_Researcher_Lab_R3_Text) 
+    if (var(VAR_ROUTE4_WATER_STONE_STATE) == 0) {
+        msgbox(Route4_Indoor_Researcher_Lab_R3_Text)
+        setvar(VAR_ROUTE4_WATER_STONE_STATE, 1)
+    }
+
+    switch(var(VAR_ROUTE4_WATER_STONE_STATE)) {
+        case 1:
+            playse(SE_PIN)
+            applymovement(6, Common_Movement_ExclamationMark)
+            waitmovement(0)
+            msgbox(Route4_Indoor_Researcher_Lab_R3_Text2, MSGBOX_NPC)
+            setvar(VAR_ROUTE4_WATER_STONE_STATE, 2)
+
+        case 2:
+            getseenmon(SPECIES_EEVEE)
+            if (!var(VAR_RESULT)) {
+                msgbox(format("You don't appear to have seen an Eevee. They are pretty rare after all, so I can't say I'm surprised."), MSGBOX_NPC)
+            } else {
+                setvar(VAR_ROUTE4_WATER_STONE_STATE, 3)
+                goto(Route4_Indoor_Researcher_Lab_R3)
+            }
+            break
+
+        case 3:
+            msgbox(Route4_Indoor_Researcher_Lab_R3_Text3, MSGBOX_NPC)
+            setvar(VAR_ROUTE4_WATER_STONE_STATE, 4)
+            break
+
+        case 4:
+        case 5:
+            msgbox(format("I hope you can check up on the group at Ochre Vale soon."), MSGBOX_NPC)
+            break
+
+        case 6:
+            msgbox(Route4_Indoor_Researcher_Lab_R3_Text4, MSGBOX_NPC)
+            giveitem(ITEM_WATER_STONE, 1)
+            msgbox(format("If I may ask for a personal favour, for my study, I'd like it if you could fill me in on any... details after you've used the stone."), MSGBOX_NPC)
+            setvar(VAR_ROUTE4_WATER_STONE_STATE, 7)
+            break
+
+        case 7:
+            msgbox(format("It's good to see you, I hope you've put that Water Stone to good use. I can't wait to hear all about it."), MSGBOX_NPC)
+            break
+
+        default:
+    }
     releaseall
 }
 
 text Route4_Indoor_Researcher_Lab_R3_Text {
     "Hmm...\nI don't think I've seen this book before.\p"
-    "'Did you know that in terms of...'\p"
+    "'Did you know that...'\p"
     "...\p"
     "Oh dear.\p"
     "...\p"
     "...this requires further study."
+}
+
+text Route4_Indoor_Researcher_Lab_R3_Text2 {
+    "Oh!\nI didn't see you there.\p"
+    "I was just having a look through our\ntexts to acquire some knowledge.\p"
+    "Say, you wouldn't happen to have seen an\nEevee would you?\p"
+    "Due to the nature of our study on\nevolution stones and their effects,\l"
+    "Eevee is an important part of the study."
+}
+
+text Route4_Indoor_Researcher_Lab_R3_Text3 {
+    "Aha!\nSo you have seen an Eevee.\p"
+    "I'm sure it was no simple task,\nlittle guys can be hard to find.\p"
+    "I'm impressed by your dedication!\p"
+    "Say, I'd like to ask for your help with\nsomething related to our work.\p"
+    "Some of our researchers are dispatched\nto Ochre Vale Mine, but we haven't heard\lfrom them in a little while.\p"
+    "They should have some stones from the\nMine that we need to look into.\p"
+    "Could I ask you to go and check on them?\p"
+    "The materials are too important to have\njust anyone transport them, so we have\lour own channel to transfer them.\p"
+    "I'd just like you to make sure they\nhaven't come upon any snags."
+}
+
+text Route4_Indoor_Researcher_Lab_R3_Text4 {
+    "Hello!\nWe've finally gotten the materials\lfrom the Ochre Vale group.\p"
+    "I'm glad you got it all sorted for them,\nI'm not sure why Magma is getting into\ltrouble with us now.\p"
+    "But anyway,\nsince you've been such a big help with\lour research, I have been given\lpermission to give you a gift."
+}
+
+script Route4_Indoor_Researcher_Lab_Machine {
+    lockall
+    msgbox(format("It's a complex looking machine, I wonder what they're using it for?"), MSGBOX_SIGN)
+    releaseall
+}
+
+script Route4_Indoor_Researcher_Lab_Computer {
+    lockall
+    msgbox(format("The graphs on the computer don't make much sense without knowing what they're measuring."), MSGBOX_SIGN)
+    releaseall
+}
+
+script Route4_Indoor_Researcher_Lab_Computer2 {
+    lockall
+    playmoncry(SPECIES_BARBOACH, CRY_MODE_NORMAL)
+    msgbox(format("It's a 3D render of a Barboach... and it appears to be spinning."), MSGBOX_SIGN)
+    waitmoncry
+    releaseall
 }

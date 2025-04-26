@@ -25,7 +25,7 @@ script Route5_CheckBoulderBlock {
 script Route5_BoulderGuy {
     lockall
     if (flag(FLAG_BADGE01_GET)) {
-        msgbox(format("We've cleared it out the major rockslide as best as we can, but the rocks are pretty unstable here so they still fall onto the path occasionally."), MSGBOX_NPC)
+        msgbox(format("We've cleared out the major rockslide as best as we can, but the rocks are pretty unstable here so they still fall onto the path occasionally."), MSGBOX_NPC)
     } else {
         msgbox(format("Watch your step! There was a major rockslide earlier. We're trying to get it cleared out as soon as possible."), MSGBOX_NPC)
     }

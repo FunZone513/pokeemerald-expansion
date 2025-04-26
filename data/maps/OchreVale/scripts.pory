@@ -1,0 +1,66 @@
+mapscripts OchreVale_MapScripts {}
+
+script OchreVale_OldWoman {
+    lockall
+    msgbox(format("Ochre Vale is home to a large quarry, not that much digging is done there anymore."), MSGBOX_NPC)
+    releaseall
+}
+
+script OchreVale_Scientist {
+    lockall
+    if (flag(FLAG_CLEARED_OCHRE_VALE_MINE)) {
+        msgbox(format("The entrance to the mine is just left of here, it might not be that easy to navigate inside but people still go there now that the main quarrying has stopped."), MSGBOX_NPC)
+    } else {
+        msgbox(format("We've been having a bit of trouble with Team Magma in Ochre Vale Mine recently, I'm not sure why they've decided to do this."), MSGBOX_NPC)
+    }
+    releaseall
+}
+
+script OchreVale_Man {
+    lockall
+    msgbox(format("While I'm glad the noise from the mining has ceased, I do miss the economic growth that came with it."), MSGBOX_NPC)
+    releaseall
+}
+
+script OchreVale_Youngster {
+    lockall
+    msgbox(format("The dirt down here is really brown!"), MSGBOX_NPC)
+    releaseall
+}
+
+script OchreVale_MagmaGrunt {
+    lockall
+    msgbox(format("Huh? I'm not doing anything suspicious! Shut up!"), MSGBOX_NPC)
+    applymovement(15, moves(face_up))
+    waitmovement(0)
+    releaseall
+}
+
+script OchreVale_MagmaGruntF {
+    lockall
+    msgbox(format("Awww! Who's a good little Numel?"))
+    playse(SE_PIN)
+    applymovement(13, moves(face_player))
+    waitmovement(0)
+    applymovement(13, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    applymovement(13, Common_Movement_Delay48)
+    waitmovement(0)
+    msgbox("Do you mind?\nI'm playing with my Numel!\pWhat?\pI'm not causing any trouble!\nCan't a girl hang out with her Numel\lin peace?")
+    applymovement(13, moves(face_left))
+    waitmovement(0)
+    releaseall
+}
+
+script OchreVale_Numel {
+    lockall
+    applymovement(14, moves(face_player))
+    waitmovement(0)
+    playmoncry(SPECIES_NUMEL, CRY_MODE_NORMAL)
+    waitmoncry
+    delay(48)
+    applymovement(14, moves(face_right))
+    setseenmon(SPECIES_NUMEL)
+    waitmovement(0)
+    releaseall
+}

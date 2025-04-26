@@ -163,165 +163,179 @@ Springwood_Gym_Guide::
 # 66 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	lockall
 # 67 "data/maps/SpringwoodCity_Gym/scripts.pory"
-	goto_if_set FLAG_TEMP_1, Springwood_Gym_Guide_2
+	goto_if_unset FLAG_BADGE01_GET, Springwood_Gym_Guide_2
+# 73 "data/maps/SpringwoodCity_Gym/scripts.pory"
+	msgbox Springwood_Gym_Guide_Text_0, MSGBOX_NPC
 Springwood_Gym_Guide_1:
-# 70 "data/maps/SpringwoodCity_Gym/scripts.pory"
-	msgbox Springwood_Gym_Guide_Text, MSGBOX_NPC
-# 71 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 75 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	releaseall
 	return
 
 Springwood_Gym_Guide_2:
 # 68 "data/maps/SpringwoodCity_Gym/scripts.pory"
-	msgbox Springwood_Gym_Guide_Text_Intro
+	goto_if_set FLAG_TEMP_1, Springwood_Gym_Guide_6
+Springwood_Gym_Guide_5:
+# 71 "data/maps/SpringwoodCity_Gym/scripts.pory"
+	msgbox Springwood_Gym_Guide_Text, MSGBOX_NPC
 	goto Springwood_Gym_Guide_1
+
+Springwood_Gym_Guide_6:
+# 69 "data/maps/SpringwoodCity_Gym/scripts.pory"
+	msgbox Springwood_Gym_Guide_Text_Intro
+	goto Springwood_Gym_Guide_5
 
 
 SpringwoodCity_Gym_Martin::
-# 87 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 91 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	trainerbattle_single GYM_LEADER_MARTIN, SpringwoodCity_Gym_Martin_Text_Intro, SpringwoodCity_Gym_Martin_Text_Defeated, SpringwoodCity_Gym_Martin_Defeated, NO_MUSIC
-# 94 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 98 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	msgbox SpringwoodCity_Gym_Martin_PostBattle, MSGBOX_NPC
-# 95 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 99 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	releaseall
 	return
 
 
 SpringwoodCity_Gym_Martin_Defeated::
-# 99 "data/maps/SpringwoodCity_Gym/scripts.pory"
-	message SpringwoodCity_Gym_Martin_Defeated_Text_0
-# 100 "data/maps/SpringwoodCity_Gym/scripts.pory"
-	waitmessage
-# 101 "data/maps/SpringwoodCity_Gym/scripts.pory"
-	call Common_EventScript_PlayGymBadgeFanfare
-# 102 "data/maps/SpringwoodCity_Gym/scripts.pory"
-	msgbox SpringwoodCity_Gym_Martin_Badge, MSGBOX_DEFAULT
 # 103 "data/maps/SpringwoodCity_Gym/scripts.pory"
-	setflag FLAG_DEFEATED_RUSTBORO_GYM
+	message SpringwoodCity_Gym_Martin_Defeated_Text_0
 # 104 "data/maps/SpringwoodCity_Gym/scripts.pory"
-	setflag FLAG_BADGE01_GET
+	waitmessage
 # 105 "data/maps/SpringwoodCity_Gym/scripts.pory"
-	setvar VAR_CURRENT_LEVEL_CAP, 100
+	call Common_EventScript_PlayGymBadgeFanfare
 # 106 "data/maps/SpringwoodCity_Gym/scripts.pory"
+	msgbox SpringwoodCity_Gym_Martin_Badge, MSGBOX_DEFAULT
+# 107 "data/maps/SpringwoodCity_Gym/scripts.pory"
+	setflag FLAG_BADGE01_GET
+# 108 "data/maps/SpringwoodCity_Gym/scripts.pory"
+	call Generic_UPDATE_LEVELCAP
+# 109 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	releaseall
 	return
 
 
 SpringwoodGym_Trainer1::
-# 134 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 137 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	trainerbattle_single SPRINGWOOD_GYM_TRAINER1, SpringwoodGym_Trainer1_Text_0, SpringwoodGym_Trainer1_Text_1, SpringwoodCity_Gym_CheckPlayerPos
-# 140 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 143 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	msgbox SpringwoodGym_Trainer1_Text_2, MSGBOX_AUTOCLOSE
 	end
 
 
 SpringwoodGym_Trainer2::
-# 145 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 148 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	trainerbattle_single SPRINGWOOD_GYM_TRAINER2, SpringwoodGym_Trainer2_Text_0, SpringwoodGym_Trainer2_Text_1, SpringwoodCity_Gym_CheckPlayerPos
-# 151 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 154 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	msgbox SpringwoodGym_Trainer2_Text_2, MSGBOX_AUTOCLOSE
 	end
 
 
 SpringwoodGym_Trainer3::
-# 156 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 159 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	trainerbattle_single SPRINGWOOD_GYM_TRAINER3, SpringwoodGym_Trainer3_Text_0, SpringwoodGym_Trainer3_Text_1, SpringwoodCity_Gym_CheckPlayerPos
-# 162 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 165 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	msgbox SpringwoodGym_Trainer3_Text_2, MSGBOX_AUTOCLOSE
 	end
 
 
 SpringwoodGym_Trainer4::
-# 167 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 170 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	trainerbattle_single SPRINGWOOD_GYM_TRAINER4, SpringwoodGym_Trainer4_Text_0, SpringwoodGym_Trainer4_Text_1, SpringwoodCity_Gym_CheckPlayerPos
-# 173 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 176 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	msgbox SpringwoodGym_Trainer4_Text_2, MSGBOX_AUTOCLOSE
 	end
 
 
+Springwood_Gym_Guide_Text_0:
+# 73 "data/maps/SpringwoodCity_Gym/scripts.pory"
+	.string "Wow! You really showed your stuff!\n"
+	.string "Defeating Martin is no easy task, but\l"
+	.string "you definitely earned your Springwood\l"
+	.string "Badge!$"
+
 SpringwoodCity_Gym_Martin_Defeated_Text_0:
-# 99 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 103 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	.string "Recieved the Springwood Badge!$"
 
 SpringwoodGym_Trainer1_Text_0:
-# 136 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 139 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	.string "Martin only lets us use Pokemon from\nnearby routes, let's see how your Pokemon\lcompare to ours.$"
 
 SpringwoodGym_Trainer1_Text_1:
-# 137 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 140 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	.string "You've certainly picked the good ones...$"
 
 SpringwoodGym_Trainer1_Text_2:
-# 140 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 143 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	.string "I just started here, so I haven't got\nthe skill of the other trainers yet.$"
 
 SpringwoodGym_Trainer2_Text_0:
-# 147 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 150 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	.string "There's not very many elegant Pokemon\nto be found around here.$"
 
 SpringwoodGym_Trainer2_Text_1:
-# 148 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 151 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	.string "At least theres a certain elegance to\nbe found in defeat.$"
 
 SpringwoodGym_Trainer2_Text_2:
-# 151 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 154 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	.string "While your looks may not be elegant,\nyour battle skill certainly is.$"
 
 SpringwoodGym_Trainer3_Text_0:
-# 158 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 161 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	.string "I TRAIN EXCLUSIVELY IN\nDRIPSTONE CAVE!$"
 
 SpringwoodGym_Trainer3_Text_1:
-# 159 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 162 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	.string "I'D BETTER GET BACK ON THE GRIND!$"
 
 SpringwoodGym_Trainer3_Text_2:
-# 162 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 165 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	.string "My therapist tells me I need to calm\ndown, but training Pokemon gets me HYPE!$"
 
 SpringwoodGym_Trainer4_Text_0:
-# 169 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 172 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	.string "Bug types are great for having strong\nPokemon at low levels.$"
 
 SpringwoodGym_Trainer4_Text_1:
-# 170 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 173 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	.string "...maybe they could do with a few more\nlevels...$"
 
 SpringwoodGym_Trainer4_Text_2:
-# 173 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 176 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	.string "Maybe I can re-use this net to catch\nmyself a girlfriend...$"
 
 Springwood_Gym_Guide_Text_Intro::
-# 74 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 78 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	.string "A new face!\nI'm the guide here at Springwood Gym.\p"
 	.string "My job is to make sure the challengers\nknow what it is they are up against.\p"
-	.string "Each Gym is assigned a guide to help\nout newcomers to the Gym Challenge.$"
+	.string "Each Gym is assigned a guide to help\nout newcomers to the Gym Challenge.\p"
+	.string "Also, make sure to check the\nRecommended Level on each Gym's statues.$"
 
 Springwood_Gym_Guide_Text::
-# 80 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 85 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	.string "Here at the Springwood Gym,\nGym Leader Martin likes to use Pokemon\lthat he found nearby.\p"
 	.string "He believes that after a bit of care,\nany Pokemon can become strong!$"
 
 SpringwoodCity_Gym_Martin_Text_Intro::
-# 109 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 112 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	.string "Ah, you must be {PLAYER}.\nI heard that you helped with the rowdy\lPokemon on Route 2.\p"
 	.string "I've been looking forward to meeting you,\nI hope you found some of the Pokemon\lnearby interesting like I have.\p"
 	.string "I've trained my Pokemon as much as\nI could without going beyond what's\lexpected of the first Gym Leader.\p"
 	.string "I hope you don't disappoint,\nI'm excited to see what you've found.$"
 
 SpringwoodCity_Gym_Martin_Text_Defeated::
-# 116 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 119 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	.string "Outstanding.\p"
 	.string "Even after all my training you still\nfound a way to best me at my own game.\p"
-	.string "I wouldn't have it any other way,\nI hope you continue to make good progress\ltogether with your Pokemon.$"
+	.string "I wouldn't have it any other way,\nI hope you continue to make good\lprogress with your Pokemon.$"
 
 SpringwoodCity_Gym_Martin_PostBattle::
-# 122 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 125 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	.string "Grass and Bug types, as well as\nPokemon that have an ability related to\lcutting are able to cut down trees.\p"
-	.string "Make sure to eep an eye out for any\ncool Pokemon for our next battle!\p"
+	.string "Make sure to keep an eye out for any\ncool Pokemon for our next battle!\p"
 	.string "I'm excited to see just how much\nstronger your team can get!$"
 
 SpringwoodCity_Gym_Martin_Badge::
-# 128 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 131 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	.string "Having the Springwood Badge means\nthat your Pokemon are able to cut down\lsmall trees that may block your path.\p"
 	.string "Grass and Bug types, as well as any\nPokemon that have an ability related to\lcutting are able to help you.$"

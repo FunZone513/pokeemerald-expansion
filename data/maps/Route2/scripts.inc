@@ -140,7 +140,7 @@ Route2_Miniboss_Battle_2:
 # 95 "data/maps/Route2/scripts.pory"
 	setvar VAR_LITTLEROOT_INTRO_STATE, 6
 # 96 "data/maps/Route2/scripts.pory"
-	special DrawWholeMapView
+	removeobject 2
 	goto Route2_Miniboss_Battle_1
 
 

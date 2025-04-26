@@ -9,7 +9,7 @@ script NewstemTown_DefaultSettings {
     setflag(FLAG_SHARED_EXP)
     setflag(FLAG_USE_NEW_TYPE_CHART)
     setvar(VAR_STARTED_GAME, 1)
-    setvar(VAR_CURRENT_LEVEL_CAP, 100)
+    call(Generic_UPDATE_LEVELCAP)
     
     // % chance
     setvar(VAR_WILD_BATTLE_CHANCE, 15)
@@ -66,9 +66,7 @@ script NewstemTown_PlayersHouse_Bedroom_Settings {
             multichoice(25, 5, MULTI_GENERIC_ONOFF, 0)
             closemessage
             if (var(VAR_RESULT) == 0) {
-                if (flag(FLAG_BADGE01_GET)) {
-                    setvar(VAR_CURRENT_LEVEL_CAP, 100)
-                } else { setvar(VAR_CURRENT_LEVEL_CAP, 15) }
+                call(Generic_UPDATE_LEVELCAP)
             } else { setvar(VAR_CURRENT_LEVEL_CAP, 100) }
             goto(NewstemTown_PlayersHouse_Bedroom_Settings)
 
@@ -81,6 +79,35 @@ script NewstemTown_PlayersHouse_Bedroom_Settings {
 
 script NewstemTown_PlayersHouse_Bedroom_PC {
     call(LittlerootTown_BrendansHouse_2F_EventScript_CheckPlayersPC)
+}
+
+// Goes through and updates the level cap based on milestone
+script Generic_UPDATE_LEVELCAP {
+    setvar(VAR_CURRENT_LEVEL_CAP, 15)
+
+    if (flag(FLAG_BADGE01_GET)) {
+        addvar(VAR_CURRENT_LEVEL_CAP, 7) // 22
+    }
+
+    if (flag(FLAG_BADGE02_GET)) {
+        addvar(VAR_CURRENT_LEVEL_CAP, 78) // 100
+    }
+
+    return
+}
+
+script Generic_GYM_LEVEL_GUIDE {
+    lockall
+    if (var(VAR_CURRENT_LEVEL_CAP) != 100) {
+        buffernumberstring(STR_VAR_1, VAR_CURRENT_LEVEL_CAP)
+        msgbox("Recommended Level:\n{STR_VAR_1}", MSGBOX_SIGN)
+    } else {
+        call(Generic_UPDATE_LEVELCAP)
+        buffernumberstring(STR_VAR_1, VAR_CURRENT_LEVEL_CAP)
+        msgbox("Recommended Level:\n{STR_VAR_1}", MSGBOX_SIGN)
+        setvar(VAR_CURRENT_LEVEL_CAP, 100)
+    }
+    releaseall
 }
 
 //script NewstemTown_DEBUG {

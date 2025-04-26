@@ -1,0 +1,142 @@
+mapscripts OchreVale_Gym_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: OchreVale_Gym_FlashSet
+}
+
+script OchreVale_Gym_FlashSet {
+    if (!flag(FLAG_BADGE02_GET)) {
+        setflashlevel(3)
+    } else { 
+        setflashlevel(1)
+    }
+}
+
+script OchreVale_Gym_Douglas {
+    trainerbattle_single(
+        GYM_LEADER_DOUGLAS,
+        OchreVale_Gym_Douglas_Text_Intro,
+        OchreVale_Gym_Douglas_Text_Defeated,
+        OchreVale_Gym_Douglas_Defeated,
+        NO_MUSIC
+    )
+    msgbox(SpringwoodCity_Gym_Martin_PostBattle, MSGBOX_NPC)
+    releaseall
+}
+
+script OchreVale_Gym_Douglas_Defeated {
+    message("Recieved the Ochre Badge!")
+    animateflash(1)
+    setflashlevel(1)
+	waitmessage
+	call(Common_EventScript_PlayGymBadgeFanfare)
+    msgbox(OchreVale_Gym_Douglas_Badge, MSGBOX_DEFAULT)
+	setflag(FLAG_BADGE02_GET)
+    releaseall
+}
+
+text OchreVale_Gym_Douglas_Text_Intro {
+    "Welcome!\p"
+    "What did you think of the indoor\ncave system I created for the Gym?\p"
+    "While managing the Mine is my job,\nmanaging the Mountain is my hobby.\p"
+    "Growing up around here was great,\nbeing at one with the soil,\llearning about the natural ecosystems\l"
+    "created by all the Pokemon that live\lin the caves and the Mountain.\p"
+    "But at the end of the day,\nI'm still just a human.\p"
+    "The best times of my life are when\nI'm diving deep into the earth,\ldigging up all manner of things.\p"
+    "The second best is when I'm in an intense\nbattle, alongside my Pokemon that\l"
+    "I've grown through the gruelling\lquarry work and hard labour.\p"
+    "Are you able to give me that kind of\nbattle?"
+}
+
+text OchreVale_Gym_Douglas_Text_Defeated {
+    "Hahaha! Yes!\p"
+    "Your determination shines through in\nyour battle prowess!\p"
+    "True hard work is the only thing that\nwill never betray you!"
+}
+
+text OchreVale_Gym_Douglas_PostBattle {
+    "A man is only really alive with dirt in\nhis hair and sweat on his back.\p"
+    "I may not be as young I used to be,\nbut I still work hard at what I love.\p"
+    "Never let anyone or anything stand in\nyour path, it's yours for a reason."
+}
+
+text OchreVale_Gym_Douglas_Badge {
+    "The Ochre Badge is a symbol of your\nstrong will, and that will is what\lenables you to destroy even boulders.\p"
+    "Rock, Ground, and Fighting types all\nhelp in the removal of rocks in the Mine,\land they'll help you outside of it too."
+}
+
+script OchreVale_Gym_Hiker {
+    trainerbattle_single(
+        TRAINER_OCHRE_VALE_GYM_HIKER, 
+        format("I feel at home in this cave-like Gym!"),
+        format("You're really going to come into my home and just defeat me like this?")  
+    )
+    msgbox(format("Caves are all my home."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script OchreVale_Gym_BattleGirl {
+    trainerbattle_single(
+        TRAINER_OCHRE_VALE_GYM_BATTLE_GIRL, 
+        format("My muscles are pretty big!"),
+        format("You should feel my abs!")  
+    )
+    msgbox(format("I love working out, you look like you could do with some more muscle too."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script OchreVale_Gym_Beauty {
+    trainerbattle_single(
+        TRAINER_OCHRE_VALE_GYM_BEAUTY, 
+        format("My Pokemon help me see in the dark."),
+        format("I guess I can see myself lose at least...")  
+    )
+    msgbox(format("My beauty doesn't show through enough in the dark, I should really go somewhere else."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script OchreVale_Gym_MagmaGrunt {
+    trainerbattle_single(
+        TRAINER_OCHRE_VALE_GYM_MAGMA_GRUNT, 
+        format("I got lost and ended up in the Gym..."),
+        format("I don't think I was supposed to be here...")  
+    )
+    msgbox(format("I'm meant to be in the Mine, but I somehow ended up in the Gym instead."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script OchreVale_Gym_Maniac {
+    trainerbattle_single(
+        TRAINER_OCHRE_VALE_GYM_MANIAC, 
+        format("There are some pretty neat Pokemon to be found around here..."),
+        format("You may win in terms of strength, but I win in prestige.")  
+    )
+    msgbox(format("What, you think I'm just going to tell you my secrets?"), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script OchreVale_Gym_Lass {
+    trainerbattle_single(
+        TRAINER_OCHRE_VALE_GYM_LASS, 
+        format("I'm one of the ace trainers at this here Gym!"),
+        format("What do you mean I'm still just a LASS?")  
+    )
+    msgbox(format("I'm glad I'm considered one of the Gym's ace trainers, but I wish I wasn't paired with this guy. He keeps bragging about his Pokemon."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script OchreVale_Gym_Guide {
+    lockall
+    if (!flag(FLAG_BADGE02_GET)) {
+        msgbox(OchreVale_Gym_Guide_Text, MSGBOX_NPC)
+    } else {
+        msgbox("Oh good,\nthe lights have come back on.\pOr well,\nthey're a little brighter now I suppose.", MSGBOX_NPC)
+    }
+    releaseall
+}
+
+text OchreVale_Gym_Guide_Text {
+    "Welcome to the Ochre Vale Gym!\nGym Leader Douglas designed the Gym\lafter the inside of the quarry.\p"
+    "The cave-like hallways and the dim\nlighting make it that much harder to\lfind your way around!\p"
+    "Make sure to keep an eye out for other\nTrainers as you make your way\lthrough the Gym!\p"
+    "Also, Doug likes to use Pokemon that are\nhelpful with the mining operation,\las he doubles as the Gym Leader and the\lquarry overseer.\p"
+    "Keep your wits about you!"
+}

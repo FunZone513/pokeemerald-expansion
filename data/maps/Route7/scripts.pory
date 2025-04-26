@@ -1,53 +1,4 @@
-mapscripts Route7_MapScripts {
-    MAP_SCRIPT_ON_LOAD: Route7_CheckBridgeState
-}
-
-script Route7_CheckBridgeState {
-    if (flag(FLAG_ROUTE_7_SHOWN_POKEMON)) {
-        // Hide the bricks on the ground
-        setmetatile(25, 5, METATILE_General_Grass, FALSE)
-        setmetatile(26, 5, METATILE_General_Grass, FALSE)
-        setmetatile(26, 6, METATILE_General_Grass, FALSE)
-        setmetatile(27, 5, METATILE_General_Grass, FALSE)
-        setmetatile(27, 6, METATILE_General_Grass, FALSE)
-        setmetatile(35, 8, METATILE_General_Grass, FALSE)
-        setmetatile(36, 7, METATILE_General_Grass, FALSE)
-        setmetatile(37, 7, METATILE_General_Grass, FALSE)
-        setmetatile(36, 8, METATILE_General_Grass, FALSE)
-        setmetatile(37, 8, METATILE_General_Grass, FALSE)
-    } else {
-        // Ends of the incomplete bridge
-        setmetatile(29, 5, METATILE_General_Path_RU, TRUE)
-        setmetatile(29, 6, METATILE_General_Path_R, TRUE)
-        setmetatile(29, 7, METATILE_General_Path_RD, TRUE)
-        setmetatile(33, 5, METATILE_General_Path_LU, TRUE)
-        setmetatile(33, 6, METATILE_General_Path_L, TRUE)
-        setmetatile(33, 7, METATILE_General_Path_LD, TRUE)
-
-        // Bridge to water
-        setmetatile(30, 5, METATILE_General_CalmWater, FALSE)
-        setmetatile(31, 5, METATILE_General_CalmWater, FALSE)
-        setmetatile(32, 5, METATILE_General_CalmWater, FALSE)
-        setmetatile(30, 6, METATILE_General_CalmWater, FALSE)
-        setmetatile(31, 6, METATILE_General_CalmWater, FALSE)
-        setmetatile(32, 6, METATILE_General_CalmWater, FALSE)
-        setmetatile(30, 7, METATILE_General_CalmWater, FALSE)
-        setmetatile(31, 7, METATILE_General_CalmWater, FALSE)
-        setmetatile(32, 7, METATILE_General_CalmWater, FALSE)
-    }
-}
-
-script Route7_Scientist {
-    lockall
-    msgbox(format("We're trying to rebuild the bridge, but the Water type pokemon that live here are halting our progress."), MSGBOX_NPC)
-    releaseall
-}
-
-script Route7_Worker {
-    lockall
-    msgbox(format("We're trying to rebuild the bridge, but the Water type pokemon that live here are halting our progress."), MSGBOX_NPC)
-    releaseall
-}
+mapscripts Route7_MapScripts {}
 
 script Route7_Picnicker {
     trainerbattle_single(
@@ -56,6 +7,26 @@ script Route7_Picnicker {
         format("I need to go cool off in the river.")  
     )
     msgbox(format("This river is fed by ice melting up on the mountain."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route7_SchoolKid {
+    trainerbattle_single(
+        TRAINER_ROUTE7_SCHOOL_KID, 
+        format("I'm trying to find something cool to show off to my friends at school."),
+        format("Woah your Pokemon are cool!")  
+    )
+    msgbox(format("I made a bet that I could find a cool Pokemon, but I haven't found one yet."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route7_Hiker {
+    trainerbattle_single(
+        TRAINER_ROUTE7_HIKER, 
+        format("Walking to the river counts as a hike!"),
+        format("Oh my knees just aren't what they used to be...")  
+    )
+    msgbox(format("I can't hike up the mountains anymore, so I keep active by walking to the river when I can."), MSGBOX_AUTOCLOSE)
     end
 }
 

@@ -223,6 +223,13 @@
 
   ],
   "bg_events": [
-
+    {
+      "type": "hidden_item",
+      "x": 21,
+      "y": 23,
+      "elevation": 0,
+      "item": "ITEM_SUPER_POTION",
+      "flag": "FLAG_TEMP_1"
+    }
   ]
 }

@@ -77,7 +77,7 @@ Route5_BlackBelt::
 
 Route5_BoulderGuy_Text_0:
 # 28 "data/maps/Route5/scripts.pory"
-	.string "We've cleared it out the major rockslide\n"
+	.string "We've cleared out the major rockslide\n"
 	.string "as best as we can, but the rocks are\l"
 	.string "pretty unstable here so they still fall\l"
 	.string "onto the path occasionally.$"

@@ -24,8 +24,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "ITEM_STAR_PIECE",
-      "script": "FLAG_ITEM_DRIPSTONE_CAVE",
-      "flag": "0"
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_DRIPSTONE_CAVE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
@@ -61,6 +61,21 @@
 
   ],
   "bg_events": [
-
+    {
+      "type": "hidden_item",
+      "x": 30,
+      "y": 14,
+      "elevation": 0,
+      "item": "ITEM_RARE_CANDY",
+      "flag": "FLAG_HIDDEN_ITEM_DRIPSTONE_CAVE"
+    },
+    {
+      "type": "hidden_item",
+      "x": 11,
+      "y": 8,
+      "elevation": 0,
+      "item": "ITEM_TINY_MUSHROOM",
+      "flag": "FLAG_HIDDEN_ITEM_DRIPSTONE_CAVE_1"
+    }
   ]
 }

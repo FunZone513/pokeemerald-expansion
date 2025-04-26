@@ -19,7 +19,7 @@ NewstemTown_DefaultSettings::
 # 11 "data/maps/NewstemTown_PlayersHouse_Bedroom/scripts.pory"
 	setvar VAR_STARTED_GAME, 1
 # 12 "data/maps/NewstemTown_PlayersHouse_Bedroom/scripts.pory"
-	setvar VAR_CURRENT_LEVEL_CAP, 100
+	call Generic_UPDATE_LEVELCAP
 # 15 "data/maps/NewstemTown_PlayersHouse_Bedroom/scripts.pory"
 	setvar VAR_WILD_BATTLE_CHANCE, 15
 # 18 "data/maps/NewstemTown_PlayersHouse_Bedroom/scripts.pory"
@@ -50,12 +50,12 @@ NewstemTown_PlayersHouse_Bedroom_Settings::
 	case 3, NewstemTown_PlayersHouse_Bedroom_Settings_6
 # 64 "data/maps/NewstemTown_PlayersHouse_Bedroom/scripts.pory"
 	case 4, NewstemTown_PlayersHouse_Bedroom_Settings_7
-# 76 "data/maps/NewstemTown_PlayersHouse_Bedroom/scripts.pory"
+# 74 "data/maps/NewstemTown_PlayersHouse_Bedroom/scripts.pory"
 	releaseall
 	end
 
 NewstemTown_PlayersHouse_Bedroom_Settings_1:
-# 79 "data/maps/NewstemTown_PlayersHouse_Bedroom/scripts.pory"
+# 77 "data/maps/NewstemTown_PlayersHouse_Bedroom/scripts.pory"
 	releaseall
 	return
 
@@ -137,10 +137,10 @@ NewstemTown_PlayersHouse_Bedroom_Settings_7:
 # 68 "data/maps/NewstemTown_PlayersHouse_Bedroom/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq NewstemTown_PlayersHouse_Bedroom_Settings_26
-# 72 "data/maps/NewstemTown_PlayersHouse_Bedroom/scripts.pory"
+# 70 "data/maps/NewstemTown_PlayersHouse_Bedroom/scripts.pory"
 	setvar VAR_CURRENT_LEVEL_CAP, 100
 NewstemTown_PlayersHouse_Bedroom_Settings_25:
-# 73 "data/maps/NewstemTown_PlayersHouse_Bedroom/scripts.pory"
+# 71 "data/maps/NewstemTown_PlayersHouse_Bedroom/scripts.pory"
 	goto NewstemTown_PlayersHouse_Bedroom_Settings
 	goto NewstemTown_PlayersHouse_Bedroom_Settings_1
 
@@ -166,21 +166,63 @@ NewstemTown_PlayersHouse_Bedroom_Settings_22:
 
 NewstemTown_PlayersHouse_Bedroom_Settings_26:
 # 69 "data/maps/NewstemTown_PlayersHouse_Bedroom/scripts.pory"
-	goto_if_set FLAG_BADGE01_GET, NewstemTown_PlayersHouse_Bedroom_Settings_29
-# 71 "data/maps/NewstemTown_PlayersHouse_Bedroom/scripts.pory"
-	setvar VAR_CURRENT_LEVEL_CAP, 15
-	goto NewstemTown_PlayersHouse_Bedroom_Settings_25
-
-NewstemTown_PlayersHouse_Bedroom_Settings_29:
-# 70 "data/maps/NewstemTown_PlayersHouse_Bedroom/scripts.pory"
-	setvar VAR_CURRENT_LEVEL_CAP, 100
+	call Generic_UPDATE_LEVELCAP
 	goto NewstemTown_PlayersHouse_Bedroom_Settings_25
 
 
 NewstemTown_PlayersHouse_Bedroom_PC::
-# 83 "data/maps/NewstemTown_PlayersHouse_Bedroom/scripts.pory"
+# 81 "data/maps/NewstemTown_PlayersHouse_Bedroom/scripts.pory"
 	call LittlerootTown_BrendansHouse_2F_EventScript_CheckPlayersPC
 	return
+
+
+Generic_UPDATE_LEVELCAP::
+# 86 "data/maps/NewstemTown_PlayersHouse_Bedroom/scripts.pory"
+	setvar VAR_CURRENT_LEVEL_CAP, 15
+# 88 "data/maps/NewstemTown_PlayersHouse_Bedroom/scripts.pory"
+	goto_if_set FLAG_BADGE01_GET, Generic_UPDATE_LEVELCAP_2
+Generic_UPDATE_LEVELCAP_1:
+# 92 "data/maps/NewstemTown_PlayersHouse_Bedroom/scripts.pory"
+	goto_if_set FLAG_BADGE02_GET, Generic_UPDATE_LEVELCAP_5
+Generic_UPDATE_LEVELCAP_4:
+	return
+
+Generic_UPDATE_LEVELCAP_2:
+# 89 "data/maps/NewstemTown_PlayersHouse_Bedroom/scripts.pory"
+	addvar VAR_CURRENT_LEVEL_CAP, 7
+	goto Generic_UPDATE_LEVELCAP_1
+
+Generic_UPDATE_LEVELCAP_5:
+# 93 "data/maps/NewstemTown_PlayersHouse_Bedroom/scripts.pory"
+	addvar VAR_CURRENT_LEVEL_CAP, 78
+	goto Generic_UPDATE_LEVELCAP_4
+
+
+Generic_GYM_LEVEL_GUIDE::
+# 100 "data/maps/NewstemTown_PlayersHouse_Bedroom/scripts.pory"
+	lockall
+# 101 "data/maps/NewstemTown_PlayersHouse_Bedroom/scripts.pory"
+	compare VAR_CURRENT_LEVEL_CAP, 100
+	goto_if_ne Generic_GYM_LEVEL_GUIDE_2
+# 105 "data/maps/NewstemTown_PlayersHouse_Bedroom/scripts.pory"
+	call Generic_UPDATE_LEVELCAP
+# 106 "data/maps/NewstemTown_PlayersHouse_Bedroom/scripts.pory"
+	buffernumberstring STR_VAR_1, VAR_CURRENT_LEVEL_CAP
+# 107 "data/maps/NewstemTown_PlayersHouse_Bedroom/scripts.pory"
+	msgbox Generic_GYM_LEVEL_GUIDE_Text_0, MSGBOX_SIGN
+# 108 "data/maps/NewstemTown_PlayersHouse_Bedroom/scripts.pory"
+	setvar VAR_CURRENT_LEVEL_CAP, 100
+Generic_GYM_LEVEL_GUIDE_1:
+# 110 "data/maps/NewstemTown_PlayersHouse_Bedroom/scripts.pory"
+	releaseall
+	return
+
+Generic_GYM_LEVEL_GUIDE_2:
+# 102 "data/maps/NewstemTown_PlayersHouse_Bedroom/scripts.pory"
+	buffernumberstring STR_VAR_1, VAR_CURRENT_LEVEL_CAP
+# 103 "data/maps/NewstemTown_PlayersHouse_Bedroom/scripts.pory"
+	msgbox Generic_GYM_LEVEL_GUIDE_Text_0, MSGBOX_SIGN
+	goto Generic_GYM_LEVEL_GUIDE_1
 
 
 NewstemTown_PlayersHouse_Bedroom_Settings_Text_0:
@@ -211,3 +253,7 @@ NewstemTown_PlayersHouse_Bedroom_Settings_Text_5:
 # 65 "data/maps/NewstemTown_PlayersHouse_Bedroom/scripts.pory"
 	.string "Pokemon cannot be levelled above the\n"
 	.string "next main 'boss encounter's level.$"
+
+Generic_GYM_LEVEL_GUIDE_Text_0:
+# 103 "data/maps/NewstemTown_PlayersHouse_Bedroom/scripts.pory"
+	.string "Recommended Level:\n{STR_VAR_1}$"

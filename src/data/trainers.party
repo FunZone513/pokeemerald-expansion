@@ -166,7 +166,6 @@ Ability: Sturdy
 Level: 13
 EVs: 236 HP / 236 Atk / 36 Def  
 Adamant Nature  
-IVs: 0 Spe  
 - Stealth Rock  
 - Tackle  
 - Rock Tomb  
@@ -242,7 +241,7 @@ Music: Female
 AI: Cheese Trainer
 
 Hoppip
-Level: 11
+Level: 13
 - Tackle
 - Fairy Wind
 - Poison Powder
@@ -250,7 +249,7 @@ Level: 11
 
 Electrike
 Ability: Static
-Level: 11 
+Level: 13 
 - Tackle
 - Thunder Wave
 - Shock Wave
@@ -266,14 +265,14 @@ AI: Smart Trainer
 
 Roggenrola
 Ability: Weak Armor
-Level: 11
+Level: 13
 - Tackle
 - Mud Slap
 - Rock Slide
 
 Dwebble
 Ability: Weak Armor
-Level: 11
+Level: 13
 - Fury Cutter
 - Rock Slide
 - Bug Bite
@@ -304,17 +303,17 @@ Music: Male
 AI: Basic Trainer
 
 Spinarak
-Level: 6  
+Level: 8  
 
 Silcoon  
-Level: 6
+Level: 8
 - Harden  
 - Tackle  
 - Poison Sting  
 - String Shot  
 
 Paras
-Level: 6
+Level: 8
 
 === TRAINER_QUIET_GROVE_GIRL ===
 Name: Lola
@@ -325,10 +324,10 @@ Music: Female
 AI: Basic Trainer
 
 Poochyena
-Level: 7
+Level: 8
 
 Hoppip
-Level: 7
+Level: 9
 
 === TRAINER_ROUTE3_BOY ===
 Name: Mark
@@ -339,7 +338,7 @@ Music: Male
 AI: Basic Trainer
 
 Ekans
-Level: 4
+Level: 5
 
 === TRAINER_ROUTE3_GIRL ===
 Name: Susie
@@ -350,10 +349,10 @@ Music: Female
 AI: Basic Trainer
 
 Hoppip
-Level: 3
+Level: 4
 
 Poochyena
-Level: 3
+Level: 4
 
 === TRAINER_ROUTE3_LITTLEGIRL ===
 Name: Mary
@@ -377,25 +376,24 @@ Music: Hiker
 AI: Basic Trainer
 
 Corphish
-Level: 3
-
-Corphish
 Level: 4
 
-=== TRAINER_ROUTE4_SCIENTIST ===
-Name: Jeff
-Class: Collector
-Pic: Collector
-Gender: Male
-Music: Suspicious
-AI: Cheese Trainer
-
-Eevee
+Corphish
 Level: 5
-- Tickle
-- Yawn
-- Covet
-- Quick Attack
+
+=== TRAINER_ROUTE4_SCHOOLKID ===
+Name: Timothy
+Class: School Kid
+Pic: School Kid M
+Gender: Male
+Music: Male
+AI: Basic Trainer
+
+Poliwag
+Level: 4
+
+Electrike
+Level: 4
 
 === TRAINER_ROUTE5_PICNICKER ===
 Name: Brittany
@@ -410,7 +408,7 @@ Level: 4
 
 Dwebble
 Ability: Sturdy
-Level: 4
+Level: 5
 
 
 === TRAINER_DRIPSTONE_CAVE_FISHERMAN ===
@@ -422,13 +420,13 @@ Music: Hiker
 AI: Basic Trainer
 
 Barboach
-Level: 10
+Level: 12
 
 Barboach
-Level: 10
+Level: 12
 
 Corphish
-Level: 11
+Level: 14
 
 === TRAINER_ROUTE5_BLACKBELT ===
 Name: Lister
@@ -457,10 +455,10 @@ Music: Hiker
 AI: Basic Trainer
 
 Roggenrola
-Level: 6
+Level: 14
 
 Paras
-Level: 6
+Level: 14
 
 === TRAINER_ROUTE7_PICNICKER ===
 Name: Chloe
@@ -471,41 +469,490 @@ Music: Girl
 AI: Basic Trainer
 
 Marill
-Level: 8
+Level: 14
 
+Eevee
+Level: 15
 
+=== TRAINER_ROUTE7_SCHOOL_KID ===
+Name: Jerry
+Class: School Kid
+Pic: School Kid M
+Gender: Male
+Music: Male
+AI: Basic Trainer
 
+Poochyena
+Level: 12
 
+Yanma
+Level: 12
 
+Rattata
+Level: 12
 
+Ekans
+Level: 12
 
+=== TRAINER_ROUTE7_HIKER ===
+Name: Daniel
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Hiker
+AI: Basic Trainer
 
+Aron
+Level: 15
 
+Barboach
+Level: 15
 
+=== TRAINER_SPRING_WOODS_BUG_CATCHER ===
+Name: Charlie
+Class: Bug Catcher
+Pic: Bug Catcher
+Gender: Male
+Music: Male
+AI: Basic Trainer
 
+Paras
+Level: 13
 
+Yanma
+Level: 13
 
+Venipede
+Level: 13
 
+=== TRAINER_SPRING_WOODS_WOMAN ===
+Name: Laurel
+Class: Aroma Lady
+Pic: Aroma Lady
+Gender: Female
+Music: Female
+AI: Basic Trainer
 
+Shroomish
+Level: 14
 
+Lotad
+Level: 14
 
+=== TRAINER_SPRING_WOODS_GIRL ===
+Name: Evelyn
+Class: Battle Girl
+Pic: Battle Girl
+Gender: Female
+Music: Intense
+AI: Basic Trainer
 
+Slakoth
+Level: 13
 
+Heracross
+Level: 15
 
+=== TRAINER_SPRING_WOODS_PICNICKER ===
+Name: Riley
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Girl
+AI: Basic Trainer
 
+Slakoth
+Level: 14
 
+Ekans
+Level: 14
 
+=== TRAINER_SPRING_WOODS_CAMPER ===
+Name: Arthur
+Class: Camper
+Pic: Camper
+Gender: Male
+Music: Male
+AI: Basic Trainer
 
+Mightyena
+Level: 25
 
+Heracross
+Level: 25
 
+=== TRAINER_OCHRE_VALE_MINE_BLACK_BELT ===
+Name: Mitchell
+Class: Black Belt
+Pic: Black Belt
+Gender: Male
+Music: Intense
+AI: Basic Trainer
 
+Roggenrola
+Level: 15
 
+Heracross
+Level: 16
 
+=== TRAINER_OCHRE_VALE_MINE_BATTLE_GIRL ===
+Name: Leanna
+Class: Battle Girl
+Pic: Battle Girl
+Gender: Female
+Music: Intense
+AI: Basic Trainer
 
+Poliwhirl
+Level: 17
 
+=== TRAINER_OCHRE_VALE_MINE_PICNICKER ===
+Name: Imogen
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Girl
+AI: Basic Trainer
 
+Shroomish
+Level: 15
 
+Lombre
+Level: 15
 
+Poochyena
+Level: 15
+
+=== TRAINER_OCHRE_VALE_MINE_HIKER ===
+Name: Aaron
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Hiker
+AI: Basic Trainer
+
+Aron
+Level: 14
+
+Aron
+Level: 14
+
+Aron
+Level: 14
+
+Aron
+Level: 14
+
+Aron
+Level: 14
+
+Aron
+Level: 14
+
+=== TRAINER_OCHRE_VALE_MINE_MAGMA_GRUNT1 ===
+Name: Ricky
+Class: Team Magma
+Pic: Magma Grunt M
+Gender: Male
+Music: Magma
+AI: Smart Trainer
+
+Numel
+Ability: Simple
+Modest Nature
+Level: 20
+- Ember
+- Amnesia
+- Tackle
+- Growl
+
+Slugma
+Ability: Flame Body
+Modest Nature
+Level: 20
+- Ember
+- Smog
+- Yawn 
+
+=== TRAINER_OCHRE_VALE_MINE_MAGMA_GRUNT2 ===
+Name: Bessa
+Class: Team Magma
+Pic: Magma Grunt F
+Gender: Female
+Music: Magma
+AI: Smart Trainer
+
+Onix
+Ability: Weak Armor
+Adamant Nature
+Level: 24
+- Rock Slide
+- Bind
+- Dragon Breath
+- Curse
+
+=== TRAINER_OCHRE_VALE_MINE_ENTRANCE_MAGMA_GRUNT ===
+Name: Corey
+Class: Team Magma
+Pic: Magma Grunt M
+Gender: Male
+Music: Magma
+AI: Basic Trainer
+
+Hippopotas
+Level: 18
+Ability: Sand Stream
+- Sand Attack
+- Yawn
+- Dig
+- Bite
+
+=== TRAINER_OCHRE_VALE_GYM_HIKER ===
+Name: Broden
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Hiker
+AI: Smart Trainer
+
+Roggenrola
+Level: 19
+
+Onix
+Level: 19
+
+=== TRAINER_OCHRE_VALE_GYM_BATTLE_GIRL ===
+Name: Angela
+Class: Battle Girl
+Pic: Battle Girl
+Gender: Female
+Music: Intense
+AI: Smart Trainer
+
+Makuhita
+Level: 18
+
+Azumarill
+Ability: Huge Power
+Adamant Nature
+Level: 20
+- Rollout
+- Slam
+- Tackle
+- Aqua Jet
+
+=== TRAINER_OCHRE_VALE_GYM_BEAUTY ===
+Name: Rachel
+Class: Beauty
+Pic: Beauty
+Gender: Female
+Music: Female
+AI: Smart Trainer
+
+Morelull
+Level: 17
+
+Beautifly
+Level: 17
+
+Carbink
+Level: 17
+
+Mawile
+Level: 18
+
+=== TRAINER_OCHRE_VALE_GYM_MAGMA_GRUNT ===
+Name: Joseph
+Class: Black Belt
+Pic: Magma Grunt M
+Gender: Male
+Music: Magma
+AI: Smart Trainer
+
+Slugma
+Level: 18
+
+Houndour
+Level: 20
+
+=== TRAINER_OCHRE_VALE_GYM_LASS ===
+Name: Rebecca
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Female
+AI: Smart Trainer
+
+Eevee
+Level: 19
+
+Zubat
+Level: 19
+
+Noctowl
+Level: 20
+
+=== TRAINER_OCHRE_VALE_GYM_MANIAC ===
+Name: Blake
+Class: Collector
+Pic: Collector
+Gender: Male
+Music: Suspicious
+AI: Smart Trainer
+
+Pancham
+Level: 20
+
+Larvitar
+Ability: Sand Veil
+Level: 21
+- Rock Slide
+- Stomping Tantrum
+- Sandstorm
+- Bite
+
+=== GYM_LEADER_DOUGLAS ===
+Name: Douglas
+Class: Leader
+Pic: Leader Wattson
+Gender: Male
+Music: Intense
+Items: Super Potion / Full Heal
+AI: Gym Leader
+
+Nacli (M) @ Eviolite 
+Ability: Sturdy  
+Level: 20  
+EVs: 236 HP / 36 Def / 236 SpD  
+Adamant Nature  
+- Iron Defense  
+- Stealth Rock  
+- Bulldoze  
+- Tackle  
+
+Vigoroth (M) @ Silk Scarf  
+Ability: Vital Spirit  
+Level: 20  
+EVs: 252 Atk / 4 SpD / 248 Spe  
+Adamant Nature  
+- Slash  
+- Night Slash  
+- Bulk Up  
+- Slack Off  
+
+Chinchou (F) @ Magnet  
+Ability: Water Absorb  
+Level: 20  
+EVs: 252 SpA / 252 SpD  
+Modest Nature  
+IVs: 0 Atk  
+- Thunder Wave  
+- Thunderbolt  
+- Bubble Beam  
+- Volt Switch  
+
+Solrock @ Wide Lens  
+Ability: Levitate  
+Level: 20  
+EVs: 236 HP / 236 Atk / 36 Spe  
+Adamant Nature  
+- Cosmic Power  
+- Rock Slide  
+- Zen Headbutt  
+- Morning Sun  
+
+Crobat (F) @ Life Orb  
+Ability: Inner Focus  
+Level: 22  
+Shiny: Yes  
+EVs: 252 HP / 248 Atk / 8 SpA  
+Naughty Nature  
+- Air Slash  
+- Poison Jab  
+- Leech Life  
+- Mean Look  
+
+=== TRAINER_ROUTE8_PICNICKER ===
+Name: Madeline
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Girl
+AI: Basic Trainer
+
+Lombre
+Level: 16
+
+Poochyena
+Level: 16
+
+Shroomish
+Level: 16
+
+=== TRAINER_ROUTE8_COLLECTOR ===
+Name: Johan
+Class: Collector
+Pic: Collector
+Gender: Male
+Music: Suspicious
+AI: Smart Trainer
+
+Nincada
+Level: 15
+
+Kirlia
+Level: 20
+
+=== TRAINER_ROUTE8_TWINS ===
+Name: Pibi & Jay
+Class: Twins
+Pic: Twins
+Gender: Female
+Music: Twins
+Double Battle: Yes
+AI: Cheese Trainer
+
+Skiploom
+Level: 18
+- Fairy Wind
+- Poison Powder
+- Sleep Powder
+- Leech Seed
+
+Minccino
+Ability: Technician
+Level: 18
+- Thief
+- Echoed Voice
+- Swift
+
+=== TRAINER_ROUTE8_BLACKBELT ===
+Name: Soho
+Class: Black Belt
+Pic: Black Belt
+Gender: Male
+Music: Intense
+AI: Basic Trainer
+
+Pancham
+Level: 20
+
+Nacli
+Level: 20
+
+=== TRAINER_OCHRE_VALE_POKECENTRE_MAGMA_GRUNT ===
+Name: Evan
+Class: Team Magma
+Pic: Magma Grunt M
+Gender: Male
+Music: Magma
+AI: Basic Trainer
+
+Houndour
+Level: 15
+
+Sandile
+Level: 15
 
 
 

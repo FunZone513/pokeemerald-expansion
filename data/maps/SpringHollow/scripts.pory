@@ -1,0 +1,13 @@
+mapscripts SpringHollow_MapScripts {}
+
+script SpringHollow_GemRed {
+    lockall
+    msgbox(format("It's a red crystal that seems to radiate heat."), MSGBOX_SIGN)
+    releaseall
+}
+
+script SpringHollow_GemBlue {
+    lockall
+    msgbox(format("It's a blue crystal that seems to leak water."), MSGBOX_SIGN)
+    releaseall
+}

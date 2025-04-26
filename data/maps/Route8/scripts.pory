@@ -1,0 +1,59 @@
+mapscripts Route8_MapScripts {}
+
+script Route8_Picnicker {
+    trainerbattle_single(
+        TRAINER_ROUTE8_PICNICKER, 
+        format("The ocean cliffs here are beautiful!"),
+        format("I shall look out over the sea and forget all about this.")  
+    )
+    msgbox(format("The trail gets a bit technical around here."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route8_Collector {
+    trainerbattle_single(
+        TRAINER_ROUTE8_COLLECTOR, 
+        format("The ocean cliffs here are beautiful!"),
+        format("I shall look out over the sea and forget all about this.")  
+    )
+    msgbox(format("The trail gets a bit technical around here."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route8_Twins1 {
+    trainerbattle_double(
+        TRAINER_ROUTE8_TWINS, 
+        "We like to play on the cliffs edge!", 
+        "We're careful to not fall...", 
+        "Huh? Do you only have one Pokemon? Lame!"
+    )
+    msgbox(format("It's fun to play here, but the grown ups don't like it when we get near the cliffs..."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route8_Twins2 {
+    trainerbattle_double(
+        TRAINER_ROUTE8_TWINS, 
+        "I beat our Pokemon are stronger than your Pokemon!", 
+        "I bet our Dad is stronger than your Dad...", 
+        "Huh? Do you only have one Pokemon? Cringe!"
+    )
+    msgbox(format("Mum says that we used to have a big brother."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route8_BlackBelt {
+    trainerbattle_single(
+        TRAINER_ROUTE8_BLACKBELT, 
+        format("THE SALT SPRAY ENCHANCES MY WORKOUT!"),
+        format("NO! MY MUSCLES! YOU CAN'T FAIL ME NOW!")  
+    )
+    msgbox(format("The pain from getting salt water in my scratches makes me feel like I'm a protagonist going through a struggle."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route8_Sign {
+    lockall
+    msgbox("Don't fall off.\nPlease.", MSGBOX_SIGN)
+    releaseall
+}

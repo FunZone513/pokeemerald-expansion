@@ -1,0 +1,41 @@
+mapscripts SpringWoods_MapScripts {}
+
+script SpringWoods_BugCatcher {
+    trainerbattle_single(
+        TRAINER_SPRING_WOODS_BUG_CATCHER, 
+        format("Spring Woods have a great vibe!"),
+        format("I can't even be mad, I'm enjoying the vibes here.")  
+    )
+    msgbox(format("The air is nice and cool in here, it's a really nice vibe."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script SpringWoods_Woman {
+    trainerbattle_single(
+        TRAINER_SPRING_WOODS_WOMAN, 
+        format("The Pokemon here are really cute."),
+        format("Not everyone can appreciate my tastes.")  
+    )
+    msgbox(format("Sometimes it's nice to just be in nature."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script SpringWoods_Girl {
+    trainerbattle_single(
+        TRAINER_SPRING_WOODS_GIRL, 
+        format("My Pokemon will be strong!"),
+        format("Strength is built up over time...")  
+    )
+    msgbox(format("I feel like I spend more time battling the desire to eat ice-cream than I do battling wild Pokemon."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script SpringWoods_Picnicker {
+    trainerbattle_single(
+        TRAINER_SPRING_WOODS_PICNICKER, 
+        format("Did you know that Springwood City is named after the Spring Woods?"),
+        format("My fun fact didn't distract you from winning.")  
+    )
+    msgbox(format("Spring Woods are named after the spring that provides the water for the woods to propsper."), MSGBOX_AUTOCLOSE)
+    end
+}
