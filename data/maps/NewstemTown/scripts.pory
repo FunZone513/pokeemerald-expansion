@@ -28,19 +28,34 @@ script NewstemTown_CheckStarter {
 }
 
 script NewstemTown_Boy {
-    lockall
     msgbox(format("I want to go in for a swim, but Mum said that there's something in the water that could take me..."), MSGBOX_NPC)
-    releaseall
 }
 
 script NewstemTown_Athlete {
-    lockall
     msgbox(format("Nice Running Shoes! They look brand new!"), MSGBOX_NPC)
-    releaseall
 }
 
 script NewstemTown_Boy2 {
-    lockall
     msgbox(format("I was told to go out and get some sun, but I just wanna play on my gameboy."), MSGBOX_NPC)
-    releaseall
+}
+
+script NewstemTown_Rattata {
+    playmoncry(SPECIES_RATTATA, CRY_MODE_NORMAL)
+    if(flag(FLAG_SYS_POKEDEX_GET)) {setseenmon(SPECIES_RATTATA)}
+    msgbox("!", MSGBOX_NPC)
+    waitmoncry
+}
+
+script NewstemTown_Hoppip {
+    playmoncry(SPECIES_HOPPIP, CRY_MODE_NORMAL)
+    if(flag(FLAG_SYS_POKEDEX_GET)) {setseenmon(SPECIES_HOPPIP)}
+    msgbox(":)", MSGBOX_NPC)
+    waitmoncry
+}
+
+script NewstemTown_Krabby {
+    playmoncry(SPECIES_SHELLOS, CRY_MODE_NORMAL)
+    if(flag(FLAG_SYS_POKEDEX_GET)) {setseenmon(SPECIES_SHELLOS)}
+    msgbox("?", MSGBOX_NPC)
+    waitmoncry
 }

@@ -6,7 +6,7 @@ Route5_MapScripts::
 
 Route5_CheckBoulderBlock::
 # 6 "data/maps/Route5/scripts.pory"
-	goto_if_set FLAG_BADGE01_GET, Route5_CheckBoulderBlock_1
+	goto_if_set FLAG_HIDE_ROUTE2_MINIBOSS, Route5_CheckBoulderBlock_1
 # 19 "data/maps/Route5/scripts.pory"
 	setflag FLAG_TEMP_10
 # 20 "data/maps/Route5/scripts.pory"
@@ -45,7 +45,7 @@ Route5_BoulderGuy::
 # 26 "data/maps/Route5/scripts.pory"
 	lockall
 # 27 "data/maps/Route5/scripts.pory"
-	goto_if_set FLAG_BADGE01_GET, Route5_BoulderGuy_2
+	goto_if_set FLAG_HIDE_ROUTE2_MINIBOSS, Route5_BoulderGuy_2
 # 30 "data/maps/Route5/scripts.pory"
 	msgbox Route5_BoulderGuy_Text_1, MSGBOX_NPC
 Route5_BoulderGuy_1:

@@ -55,32 +55,74 @@ NewstemTown_CheckStarter_2:
 
 NewstemTown_Boy::
 # 31 "data/maps/NewstemTown/scripts.pory"
-	lockall
-# 32 "data/maps/NewstemTown/scripts.pory"
 	msgbox NewstemTown_Boy_Text_0, MSGBOX_NPC
-# 33 "data/maps/NewstemTown/scripts.pory"
-	releaseall
 	return
 
 
 NewstemTown_Athlete::
-# 37 "data/maps/NewstemTown/scripts.pory"
-	lockall
-# 38 "data/maps/NewstemTown/scripts.pory"
+# 35 "data/maps/NewstemTown/scripts.pory"
 	msgbox NewstemTown_Athlete_Text_0, MSGBOX_NPC
-# 39 "data/maps/NewstemTown/scripts.pory"
-	releaseall
 	return
 
 
 NewstemTown_Boy2::
-# 43 "data/maps/NewstemTown/scripts.pory"
-	lockall
-# 44 "data/maps/NewstemTown/scripts.pory"
+# 39 "data/maps/NewstemTown/scripts.pory"
 	msgbox NewstemTown_Boy2_Text_0, MSGBOX_NPC
-# 45 "data/maps/NewstemTown/scripts.pory"
-	releaseall
 	return
+
+
+NewstemTown_Rattata::
+# 43 "data/maps/NewstemTown/scripts.pory"
+	playmoncry SPECIES_RATTATA, CRY_MODE_NORMAL
+# 44 "data/maps/NewstemTown/scripts.pory"
+	goto_if_set FLAG_SYS_POKEDEX_GET, NewstemTown_Rattata_2
+NewstemTown_Rattata_1:
+# 45 "data/maps/NewstemTown/scripts.pory"
+	msgbox NewstemTown_Rattata_Text_0, MSGBOX_NPC
+# 46 "data/maps/NewstemTown/scripts.pory"
+	waitmoncry
+	return
+
+NewstemTown_Rattata_2:
+# 44 "data/maps/NewstemTown/scripts.pory"
+	setseenmon SPECIES_RATTATA
+	goto NewstemTown_Rattata_1
+
+
+NewstemTown_Hoppip::
+# 50 "data/maps/NewstemTown/scripts.pory"
+	playmoncry SPECIES_HOPPIP, CRY_MODE_NORMAL
+# 51 "data/maps/NewstemTown/scripts.pory"
+	goto_if_set FLAG_SYS_POKEDEX_GET, NewstemTown_Hoppip_2
+NewstemTown_Hoppip_1:
+# 52 "data/maps/NewstemTown/scripts.pory"
+	msgbox NewstemTown_Hoppip_Text_0, MSGBOX_NPC
+# 53 "data/maps/NewstemTown/scripts.pory"
+	waitmoncry
+	return
+
+NewstemTown_Hoppip_2:
+# 51 "data/maps/NewstemTown/scripts.pory"
+	setseenmon SPECIES_HOPPIP
+	goto NewstemTown_Hoppip_1
+
+
+NewstemTown_Krabby::
+# 57 "data/maps/NewstemTown/scripts.pory"
+	playmoncry SPECIES_SHELLOS, CRY_MODE_NORMAL
+# 58 "data/maps/NewstemTown/scripts.pory"
+	goto_if_set FLAG_SYS_POKEDEX_GET, NewstemTown_Krabby_2
+NewstemTown_Krabby_1:
+# 59 "data/maps/NewstemTown/scripts.pory"
+	msgbox NewstemTown_Krabby_Text_0, MSGBOX_NPC
+# 60 "data/maps/NewstemTown/scripts.pory"
+	waitmoncry
+	return
+
+NewstemTown_Krabby_2:
+# 58 "data/maps/NewstemTown/scripts.pory"
+	setseenmon SPECIES_SHELLOS
+	goto NewstemTown_Krabby_1
 
 
 # 24 "data/maps/NewstemTown/scripts.pory"
@@ -108,17 +150,29 @@ NewstemTown_CheckStarter_Text_0:
 	.string "You haven't picked up a Pokemon yet!$"
 
 NewstemTown_Boy_Text_0:
-# 32 "data/maps/NewstemTown/scripts.pory"
+# 31 "data/maps/NewstemTown/scripts.pory"
 	.string "I want to go in for a swim, but Mum said\n"
 	.string "that there's something in the water\l"
 	.string "that could take me...$"
 
 NewstemTown_Athlete_Text_0:
-# 38 "data/maps/NewstemTown/scripts.pory"
+# 35 "data/maps/NewstemTown/scripts.pory"
 	.string "Nice Running Shoes! They look brand\n"
 	.string "new!$"
 
 NewstemTown_Boy2_Text_0:
-# 44 "data/maps/NewstemTown/scripts.pory"
+# 39 "data/maps/NewstemTown/scripts.pory"
 	.string "I was told to go out and get some sun,\n"
 	.string "but I just wanna play on my gameboy.$"
+
+NewstemTown_Rattata_Text_0:
+# 45 "data/maps/NewstemTown/scripts.pory"
+	.string "!$"
+
+NewstemTown_Hoppip_Text_0:
+# 52 "data/maps/NewstemTown/scripts.pory"
+	.string ":)$"
+
+NewstemTown_Krabby_Text_0:
+# 59 "data/maps/NewstemTown/scripts.pory"
+	.string "?$"

@@ -13193,63 +13193,63 @@
             "encounter_rate": 10,
             "mons": [
               {
-                "min_level": 9,
-                "max_level": 12,
+                "min_level": 6,
+                "max_level": 9,
                 "species": "SPECIES_ROGGENROLA"
               },
               {
-                "min_level": 9,
-                "max_level": 12,
+                "min_level": 6,
+                "max_level": 9,
                 "species": "SPECIES_ZUBAT"
               },
               {
-                "min_level": 9,
-                "max_level": 12,
+                "min_level": 6,
+                "max_level": 9,
                 "species": "SPECIES_DWEBBLE"
               },
               {
-                "min_level": 9,
-                "max_level": 12,
+                "min_level": 6,
+                "max_level": 9,
                 "species": "SPECIES_DWEBBLE"
               },
               {
-                "min_level": 9,
-                "max_level": 12,
+                "min_level": 6,
+                "max_level": 9,
                 "species": "SPECIES_ROGGENROLA"
               },
               {
-                "min_level": 9,
-                "max_level": 12,
+                "min_level": 6,
+                "max_level": 9,
                 "species": "SPECIES_DWEBBLE"
               },
               {
-                "min_level": 9,
-                "max_level": 12,
+                "min_level": 6,
+                "max_level": 9,
                 "species": "SPECIES_ZUBAT"
               },
               {
-                "min_level": 9,
-                "max_level": 12,
+                "min_level": 6,
+                "max_level": 9,
                 "species": "SPECIES_DWEBBLE"
               },
               {
-                "min_level": 9,
-                "max_level": 12,
+                "min_level": 6,
+                "max_level": 9,
                 "species": "SPECIES_MORELULL"
               },
               {
-                "min_level": 9,
-                "max_level": 12,
+                "min_level": 6,
+                "max_level": 9,
                 "species": "SPECIES_MORELULL"
               },
               {
-                "min_level": 9,
-                "max_level": 12,
+                "min_level": 6,
+                "max_level": 9,
                 "species": "SPECIES_SABLEYE"
               },
               {
-                "min_level": 9,
-                "max_level": 12,
+                "min_level": 6,
+                "max_level": 9,
                 "species": "SPECIES_SABLEYE"
               }
             ]

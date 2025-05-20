@@ -38,9 +38,10 @@ script SpringwoodCity_Indoor_2_Gardevoir {
     if (var(VAR_RESULT) == NO) { setseenmon(SPECIES_GARDEVOIR) }
     
     msgbox("...", MSGBOX_NPC)
+    waitmoncry
     if (flag(FLAG_HIDE_ROUTE2_MINIBOSS)) {
         if (flag(FLAG_TEMP_1) && !flag(FLAG_RECEIVED_TM_RETURN)) {
-            msgbox("...please tell him I wish for nothing more\nthan to stay by his side.", MSGBOX_NPC)
+            msgbox("...please tell him I simply wish to\nstay by his side.", MSGBOX_NPC)
             setflag(FLAG_TEMP_2)
         }
     }

@@ -163,7 +163,7 @@ AI: Gym Leader
 
 Roggenrola  
 Ability: Sturdy  
-Level: 13
+Level: 12
 EVs: 236 HP / 236 Atk / 36 Def  
 Adamant Nature  
 - Stealth Rock  
@@ -173,7 +173,7 @@ Adamant Nature
 
 Yanma  
 Ability: Speed Boost  
-Level: 13
+Level: 12
 EVs: 236 SpA / 236 Spe  
 Mild Nature  
 - Struggle Bug  
@@ -181,23 +181,23 @@ Mild Nature
 - Air Slash  
 - Detect  
 
+Clauncher  
+Level: 12
+EVs: 52 HP / 224 SpA / 224 Spe  
+Mild Nature  
+- Water Pulse  
+- Aqua Jet  
+- Flail
+
 Sableye  
 Ability: Prankster  
-Level: 14
+Level: 13
 EVs: 12 HP / 244 Def / 224 SpD  
 Careful Nature  
 - Fake Out  
 - Shadow Sneak  
 - Will-O-Wisp  
 - Scratch  
-
-Clauncher  
-Level: 13
-EVs: 52 HP / 224 SpA / 224 Spe  
-Mild Nature  
-- Water Pulse  
-- Aqua Jet  
-- Flail
 
 Munchlax @ Oran Berry  
 Ability: Gluttony  
@@ -220,17 +220,17 @@ AI: Smart Trainer
 
 Ekans
 Ability: Intimidate
-Level: 12
+Level: 11
 
 Rattata
 Ability: Hustle
-Level: 12
+Level: 11
 - Fury Swipes
 - Quick Attack
 - Bite
 
 Poochyena
-Level: 12
+Level: 11
 
 === SPRINGWOOD_GYM_TRAINER2 === 
 Name: Cindy
@@ -241,7 +241,7 @@ Music: Female
 AI: Cheese Trainer
 
 Hoppip
-Level: 13
+Level: 12
 - Tackle
 - Fairy Wind
 - Poison Powder
@@ -249,7 +249,7 @@ Level: 13
 
 Electrike
 Ability: Static
-Level: 13 
+Level: 12 
 - Tackle
 - Thunder Wave
 - Shock Wave
@@ -265,14 +265,14 @@ AI: Smart Trainer
 
 Roggenrola
 Ability: Weak Armor
-Level: 13
+Level: 12
 - Tackle
 - Mud Slap
 - Rock Slide
 
 Dwebble
 Ability: Weak Armor
-Level: 13
+Level: 12
 - Fury Cutter
 - Rock Slide
 - Bug Bite
@@ -287,7 +287,7 @@ AI: Smart Trainer
 
 Beedrill @ Scope Lens  
 Ability: Sniper  
-Level: 14  
+Level: 13  
 Tera Type: Bug  
 EVs: 248 Atk / 8 SpD / 244 Spe  
 Adamant Nature    
