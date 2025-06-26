@@ -47,27 +47,19 @@ text SpringwoodCity_Intro_Scientist_Text3 {
 }
 
 script SpringwoodCity_Sign_Name {
-    lockall
-    msgbox("Springwood City\nA bustling coastal beauty.")
-    releaseall
+    msgbox("Springwood City\nA bustling coastal beauty.", MSGBOX_SIGN)
 }
 
 script SpringwoodCity_Sign_Park {
-    lockall
-    msgbox(format("A small piece of nature, nurtered by us."))
-    releaseall
+    msgbox(format("A small piece of nature, nurtured by us."), MSGBOX_SIGN)
 }
 
 script SpringwoodCity_Sign_BigBuilding {
-    lockall
-    msgbox("Libra Institute\nBalancing science and nature.")
-    releaseall
+    msgbox("Libra Institute\nBalancing science and nature.", MSGBOX_SIGN)
 }
 
 script SpringwoodCity_Sign_Gym {
-    lockall
-    msgbox("Springwood Gym\nHome of the strong.")
-    releaseall
+    msgbox("Springwood Gym\nHome of the strong.", MSGBOX_SIGN)
 }
 
 script SpringwoodCity_Sydney {
@@ -90,49 +82,33 @@ script SpringwoodCity_Sydney {
 }
 
 script SpringwoodCity_RichBoy {
-    lockall
     msgbox(format("Springwood City might be on a seaside cliff, but that doesn't mean we get much salt spray. We must be too high up."), MSGBOX_NPC)
-    releaseall
 }
 
 script SpringwoodCity_Artist {
-    lockall
     msgbox(format("When I get into a creative slump, I find it nice to come and chill at the park."), MSGBOX_NPC)
-    releaseall
 }
 
 script SpringwoodCity_Beauty {
-    lockall
     msgbox(format("For such a large city there really isn't very much in the way of shopping is there?"), MSGBOX_NPC)
-    releaseall
 }
 
 script SpringwoodCity_Athlete {
-    lockall
     msgbox(format("Running in the city can be difficult with all the people, but I'm scared of bug types so I can't run on any of the nearby routes..."), MSGBOX_NPC)
-    releaseall
 }
 
 script SpringwoodCity_Camper {
-    lockall
     msgbox(format("Springwood City is just inland from a coastal cliffside, so make sure to watch your step!"), MSGBOX_NPC)
-    releaseall
 }
 
 script SpringwoodCity_Boy {
-    lockall
     msgbox("Did you know that some Routes have super\nrare Pokemon?\pI wonder what Pokemon live around\nhere that I've never seen before.", MSGBOX_NPC)
-    releaseall
 }
 
 script SpringwoodCity_Sailor {
-    lockall
     msgbox("The bustle of Springwood City is real\ndifferent to the port town I'm from.", MSGBOX_NPC)
-    releaseall
 }
 
 script SpringwoodCity_Fisherman {
-    lockall
     msgbox("I'm sure that one of these days I'll\ncatch some super rare Pokemon that can\lonly be found in Springwood City's\lright-hand fountain!", MSGBOX_NPC)
-    releaseall
 }

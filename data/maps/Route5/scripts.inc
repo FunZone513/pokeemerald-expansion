@@ -41,77 +41,110 @@ Route5_CheckBoulderBlock_1:
 	return
 
 
-Route5_BoulderGuy::
+Route5_Sign::
 # 26 "data/maps/Route5/scripts.pory"
-	lockall
-# 27 "data/maps/Route5/scripts.pory"
-	goto_if_set FLAG_HIDE_ROUTE2_MINIBOSS, Route5_BoulderGuy_2
+	msgbox Route5_Sign_Text_0, MSGBOX_SIGN
+	return
+
+
+Route5_BoulderGuy::
 # 30 "data/maps/Route5/scripts.pory"
+	lockall
+# 31 "data/maps/Route5/scripts.pory"
+	goto_if_set FLAG_HIDE_ROUTE2_MINIBOSS, Route5_BoulderGuy_2
+# 34 "data/maps/Route5/scripts.pory"
 	msgbox Route5_BoulderGuy_Text_1, MSGBOX_NPC
 Route5_BoulderGuy_1:
-# 32 "data/maps/Route5/scripts.pory"
+# 36 "data/maps/Route5/scripts.pory"
 	releaseall
 	return
 
 Route5_BoulderGuy_2:
-# 28 "data/maps/Route5/scripts.pory"
+# 32 "data/maps/Route5/scripts.pory"
 	msgbox Route5_BoulderGuy_Text_0, MSGBOX_NPC
 	goto Route5_BoulderGuy_1
 
 
 Route5_Picnicker::
-# 36 "data/maps/Route5/scripts.pory"
+# 40 "data/maps/Route5/scripts.pory"
 	trainerbattle_single TRAINER_ROUTE5_PICNICKER, Route5_Picnicker_Text_0, Route5_Picnicker_Text_1
-# 41 "data/maps/Route5/scripts.pory"
+# 45 "data/maps/Route5/scripts.pory"
 	msgbox Route5_Picnicker_Text_2, MSGBOX_AUTOCLOSE
 	end
 
 
 Route5_BlackBelt::
-# 46 "data/maps/Route5/scripts.pory"
+# 50 "data/maps/Route5/scripts.pory"
 	trainerbattle_single TRAINER_ROUTE5_BLACKBELT, Route5_BlackBelt_Text_0, Route5_BlackBelt_Text_1
-# 51 "data/maps/Route5/scripts.pory"
+# 55 "data/maps/Route5/scripts.pory"
 	msgbox Route5_BlackBelt_Text_2, MSGBOX_AUTOCLOSE
 	end
 
 
+Route5_Expert::
+# 60 "data/maps/Route5/scripts.pory"
+	trainerbattle_single TRAINER_ROUTE5_EXPERT, Route5_Expert_Text_0, Route5_Expert_Text_1
+# 65 "data/maps/Route5/scripts.pory"
+	msgbox Route5_Expert_Text_2, MSGBOX_AUTOCLOSE
+	end
+
+
+Route5_Sign_Text_0:
+# 26 "data/maps/Route5/scripts.pory"
+	.string "Soothing Sands Resort!\nKeep going straight!$"
+
 Route5_BoulderGuy_Text_0:
-# 28 "data/maps/Route5/scripts.pory"
+# 32 "data/maps/Route5/scripts.pory"
 	.string "We've cleared out the major rockslide\n"
 	.string "as best as we can, but the rocks are\l"
 	.string "pretty unstable here so they still fall\l"
 	.string "onto the path occasionally.$"
 
 Route5_BoulderGuy_Text_1:
-# 30 "data/maps/Route5/scripts.pory"
+# 34 "data/maps/Route5/scripts.pory"
 	.string "Watch your step! There was a major\n"
 	.string "rockslide earlier. We're trying to get it\l"
 	.string "cleared out as soon as possible.$"
 
 Route5_Picnicker_Text_0:
-# 38 "data/maps/Route5/scripts.pory"
+# 42 "data/maps/Route5/scripts.pory"
 	.string "Where you find rocky terrain, you'll find\n"
 	.string "me!$"
 
 Route5_Picnicker_Text_1:
-# 39 "data/maps/Route5/scripts.pory"
+# 43 "data/maps/Route5/scripts.pory"
 	.string "Camping on a rocky outcropping is\n"
 	.string "always fun.$"
 
 Route5_Picnicker_Text_2:
-# 41 "data/maps/Route5/scripts.pory"
+# 45 "data/maps/Route5/scripts.pory"
 	.string "The terrain starts to get a little more\n"
 	.string "hostile around here.$"
 
 Route5_BlackBelt_Text_0:
-# 48 "data/maps/Route5/scripts.pory"
+# 52 "data/maps/Route5/scripts.pory"
 	.string "Punching rocks makes my fists HARD.$"
 
 Route5_BlackBelt_Text_1:
-# 49 "data/maps/Route5/scripts.pory"
+# 53 "data/maps/Route5/scripts.pory"
 	.string "Punching rocks makes my bones HURT.$"
 
 Route5_BlackBelt_Text_2:
-# 51 "data/maps/Route5/scripts.pory"
+# 55 "data/maps/Route5/scripts.pory"
 	.string "The pain in my fists distracts me from\n"
 	.string "the pain of my exstance.$"
+
+Route5_Expert_Text_0:
+# 62 "data/maps/Route5/scripts.pory"
+	.string "There is a retreat up ahead, I hope\n"
+	.string "you'll help me get warmed up for it.$"
+
+Route5_Expert_Text_1:
+# 63 "data/maps/Route5/scripts.pory"
+	.string "I'll be sure to release all this tension\n"
+	.string "there.$"
+
+Route5_Expert_Text_2:
+# 65 "data/maps/Route5/scripts.pory"
+	.string "The retreat is nothing too fancy, but\n"
+	.string "it's nice for old folks like me.$"

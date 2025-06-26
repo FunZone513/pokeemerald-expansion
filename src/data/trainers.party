@@ -954,29 +954,188 @@ Level: 15
 Sandile
 Level: 15
 
+=== TRAINER_ROUTE9_YOUNGSTER ===
+Name: Taylor
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+AI: Basic Trainer
 
+Krabby
+Level: 18
 
+Poochyena
+Level: 18
 
+Yanma
+Level: 18
 
+=== TRAINER_ROUTE9_COUPLE ===
+Name: Amy & Luke
+Class: Young Couple
+Pic: Young Couple
+Gender: Male
+Music: Girl
+Double Battle: Yes
+AI: Basic Trainer
 
+Lombre
+Level: 20
 
+Electrike
+Level: 18
 
+Paras
+Level: 18
 
+Wingull
+Level: 20
 
+=== TRAINER_ROUTE9_RUNNERF ===
+Name: Leila
+Class: Triathlete
+Pic: Running Triathlete F
+Gender: Female
+Music: Female
+AI: Basic Trainer
 
+Mightyena
+Level: 20
 
+Rhyhorn
+Level: 20
 
+=== TRAINER_ROUTE9_RUNNERM ===
+Name: Matt
+Class: Triathlete
+Pic: Running Triathlete M
+Gender: Male
+Music: Male
+AI: Basic Trainer
 
+Houndour
+Level: 18
 
+Tauros
+Level: 18
 
+Staravia
+Level: 18
 
+=== TRAINER_ROUTE9_LADY ===
+Name: Cordelia
+Class: Lady
+Pic: Lady
+Gender: Female
+Music: Female
+Items: Full Restore
+AI: Basic Trainer
 
+Minccino
+Level: 16
 
+Beautifly
+Level: 16
 
+Hoothoot
+Level: 16
 
+Whismur
+Level: 16
 
+Skiploom
+Level: 18
 
+=== TRAINER_ROUTE9_TUBERM ===
+Name: Kyle
+Class: Tuber M
+Pic: Tuber M
+Gender: Male
+Music: Girl
+AI: Basic Trainer
 
+Shellos-East
+Level: 17
+
+Nidorino
+Level: 17
+
+=== TRAINER_ROUTE9_TUBERF ===
+Name: Kerry
+Class: Tuber F
+Pic: Tuber F
+Gender: Female
+Music: Girl
+AI: Basic Trainer
+
+Shellos
+Level: 17
+
+Nidorina
+Level: 17
+
+=== TRAINER_ROUTE9_FISHERMAN ===
+Name: Leonard
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Hiker
+AI: Basic Trainer
+
+Clamperl
+Level: 18
+
+Skrelp
+Level: 18
+
+Frillish
+Level: 18
+
+=== TRAINER_ROUTE5_EXPERT ===
+Name: Gergino
+Class: Expert
+Pic: Expert M
+Gender: Male
+Music: Intense
+AI: Basic Trainer
+
+Makuhita
+Level: 18
+
+Ninjask
+Level: 20
+
+=== TRAINER_ROUTE10_HIKER ===
+Name: Rictor
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Hiker
+AI: Basic Trainer
+
+Nacli
+Level: 18
+
+Onix
+Level: 20
+
+=== TRAINER_ROUTE10_YOUNGSTER ===
+Name: Henry
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+AI: Basic Trainer
+
+Krabby
+Level: 16
+
+Shroomish
+Level: 16
+
+Mightyena
+Level: 18
 
 
 

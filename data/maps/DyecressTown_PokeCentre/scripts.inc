@@ -150,9 +150,9 @@ DyecressTown_PokeCentre_Girl_Text:
 # 81 "data/maps/DyecressTown_PokeCentre/scripts.pory"
     brailleformat 3, 0, 25, 19, 6, 3
 # 82 "data/maps/DyecressTown_PokeCentre/scripts.pory"
-	.braille "THIS ISNT\n" @ idk why it's chopping off the first few characters
+	.braille "????\n"
 # 83 "data/maps/DyecressTown_PokeCentre/scripts.pory"
-	.braille "MY TIME?$"
+	.braille "????$"
 
 # 47 "data/maps/DyecressTown_PokeCentre/scripts.pory"
 DyecressTown_PokeCentre_Girl_Movement_0:

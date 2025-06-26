@@ -47,157 +47,109 @@ SpringwoodCity_Intro_Scientist_2:
 
 SpringwoodCity_Sign_Name::
 # 50 "data/maps/SpringwoodCity/scripts.pory"
-	lockall
-# 51 "data/maps/SpringwoodCity/scripts.pory"
-	msgbox SpringwoodCity_Sign_Name_Text_0
-# 52 "data/maps/SpringwoodCity/scripts.pory"
-	releaseall
+	msgbox SpringwoodCity_Sign_Name_Text_0, MSGBOX_SIGN
 	return
 
 
 SpringwoodCity_Sign_Park::
-# 56 "data/maps/SpringwoodCity/scripts.pory"
-	lockall
-# 57 "data/maps/SpringwoodCity/scripts.pory"
-	msgbox SpringwoodCity_Sign_Park_Text_0
-# 58 "data/maps/SpringwoodCity/scripts.pory"
-	releaseall
+# 54 "data/maps/SpringwoodCity/scripts.pory"
+	msgbox SpringwoodCity_Sign_Park_Text_0, MSGBOX_SIGN
 	return
 
 
 SpringwoodCity_Sign_BigBuilding::
-# 62 "data/maps/SpringwoodCity/scripts.pory"
-	lockall
-# 63 "data/maps/SpringwoodCity/scripts.pory"
-	msgbox SpringwoodCity_Sign_BigBuilding_Text_0
-# 64 "data/maps/SpringwoodCity/scripts.pory"
-	releaseall
+# 58 "data/maps/SpringwoodCity/scripts.pory"
+	msgbox SpringwoodCity_Sign_BigBuilding_Text_0, MSGBOX_SIGN
 	return
 
 
 SpringwoodCity_Sign_Gym::
-# 68 "data/maps/SpringwoodCity/scripts.pory"
-	lockall
-# 69 "data/maps/SpringwoodCity/scripts.pory"
-	msgbox SpringwoodCity_Sign_Gym_Text_0
-# 70 "data/maps/SpringwoodCity/scripts.pory"
-	releaseall
+# 62 "data/maps/SpringwoodCity/scripts.pory"
+	msgbox SpringwoodCity_Sign_Gym_Text_0, MSGBOX_SIGN
 	return
 
 
 SpringwoodCity_Sydney::
-# 74 "data/maps/SpringwoodCity/scripts.pory"
+# 66 "data/maps/SpringwoodCity/scripts.pory"
 	lockall
-# 75 "data/maps/SpringwoodCity/scripts.pory"
+# 67 "data/maps/SpringwoodCity/scripts.pory"
 	goto_if_unset FLAG_ITEM_SPRINGWOOD_CITY_SILVER_POWDER, SpringwoodCity_Sydney_2
-# 87 "data/maps/SpringwoodCity/scripts.pory"
+# 79 "data/maps/SpringwoodCity/scripts.pory"
 	msgbox SpringwoodCity_Sydney_Text_4, MSGBOX_NPC
 SpringwoodCity_Sydney_1:
-# 89 "data/maps/SpringwoodCity/scripts.pory"
+# 81 "data/maps/SpringwoodCity/scripts.pory"
 	releaseall
 	return
 
 SpringwoodCity_Sydney_2:
-# 76 "data/maps/SpringwoodCity/scripts.pory"
+# 68 "data/maps/SpringwoodCity/scripts.pory"
 	faceplayer
-# 77 "data/maps/SpringwoodCity/scripts.pory"
+# 69 "data/maps/SpringwoodCity/scripts.pory"
 	msgbox SpringwoodCity_Sydney_Text_0
-# 78 "data/maps/SpringwoodCity/scripts.pory"
+# 70 "data/maps/SpringwoodCity/scripts.pory"
 	msgbox SpringwoodCity_Sydney_Text_1, MSGBOX_YESNO
-# 79 "data/maps/SpringwoodCity/scripts.pory"
+# 71 "data/maps/SpringwoodCity/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq SpringwoodCity_Sydney_5
-# 84 "data/maps/SpringwoodCity/scripts.pory"
+# 76 "data/maps/SpringwoodCity/scripts.pory"
 	msgbox SpringwoodCity_Sydney_Text_3, MSGBOX_NPC
 	goto SpringwoodCity_Sydney_1
 
 SpringwoodCity_Sydney_5:
-# 80 "data/maps/SpringwoodCity/scripts.pory"
+# 72 "data/maps/SpringwoodCity/scripts.pory"
 	msgbox SpringwoodCity_Sydney_Text_2, MSGBOX_NPC
-# 81 "data/maps/SpringwoodCity/scripts.pory"
+# 73 "data/maps/SpringwoodCity/scripts.pory"
 	giveitem ITEM_SILVER_POWDER, 1
-# 82 "data/maps/SpringwoodCity/scripts.pory"
+# 74 "data/maps/SpringwoodCity/scripts.pory"
 	setflag FLAG_ITEM_SPRINGWOOD_CITY_SILVER_POWDER
 	goto SpringwoodCity_Sydney_1
 
 
 SpringwoodCity_RichBoy::
-# 93 "data/maps/SpringwoodCity/scripts.pory"
-	lockall
-# 94 "data/maps/SpringwoodCity/scripts.pory"
+# 85 "data/maps/SpringwoodCity/scripts.pory"
 	msgbox SpringwoodCity_RichBoy_Text_0, MSGBOX_NPC
-# 95 "data/maps/SpringwoodCity/scripts.pory"
-	releaseall
 	return
 
 
 SpringwoodCity_Artist::
-# 99 "data/maps/SpringwoodCity/scripts.pory"
-	lockall
-# 100 "data/maps/SpringwoodCity/scripts.pory"
+# 89 "data/maps/SpringwoodCity/scripts.pory"
 	msgbox SpringwoodCity_Artist_Text_0, MSGBOX_NPC
-# 101 "data/maps/SpringwoodCity/scripts.pory"
-	releaseall
 	return
 
 
 SpringwoodCity_Beauty::
-# 105 "data/maps/SpringwoodCity/scripts.pory"
-	lockall
-# 106 "data/maps/SpringwoodCity/scripts.pory"
+# 93 "data/maps/SpringwoodCity/scripts.pory"
 	msgbox SpringwoodCity_Beauty_Text_0, MSGBOX_NPC
-# 107 "data/maps/SpringwoodCity/scripts.pory"
-	releaseall
 	return
 
 
 SpringwoodCity_Athlete::
-# 111 "data/maps/SpringwoodCity/scripts.pory"
-	lockall
-# 112 "data/maps/SpringwoodCity/scripts.pory"
+# 97 "data/maps/SpringwoodCity/scripts.pory"
 	msgbox SpringwoodCity_Athlete_Text_0, MSGBOX_NPC
-# 113 "data/maps/SpringwoodCity/scripts.pory"
-	releaseall
 	return
 
 
 SpringwoodCity_Camper::
-# 117 "data/maps/SpringwoodCity/scripts.pory"
-	lockall
-# 118 "data/maps/SpringwoodCity/scripts.pory"
+# 101 "data/maps/SpringwoodCity/scripts.pory"
 	msgbox SpringwoodCity_Camper_Text_0, MSGBOX_NPC
-# 119 "data/maps/SpringwoodCity/scripts.pory"
-	releaseall
 	return
 
 
 SpringwoodCity_Boy::
-# 123 "data/maps/SpringwoodCity/scripts.pory"
-	lockall
-# 124 "data/maps/SpringwoodCity/scripts.pory"
+# 105 "data/maps/SpringwoodCity/scripts.pory"
 	msgbox SpringwoodCity_Boy_Text_0, MSGBOX_NPC
-# 125 "data/maps/SpringwoodCity/scripts.pory"
-	releaseall
 	return
 
 
 SpringwoodCity_Sailor::
-# 129 "data/maps/SpringwoodCity/scripts.pory"
-	lockall
-# 130 "data/maps/SpringwoodCity/scripts.pory"
+# 109 "data/maps/SpringwoodCity/scripts.pory"
 	msgbox SpringwoodCity_Sailor_Text_0, MSGBOX_NPC
-# 131 "data/maps/SpringwoodCity/scripts.pory"
-	releaseall
 	return
 
 
 SpringwoodCity_Fisherman::
-# 135 "data/maps/SpringwoodCity/scripts.pory"
-	lockall
-# 136 "data/maps/SpringwoodCity/scripts.pory"
+# 113 "data/maps/SpringwoodCity/scripts.pory"
 	msgbox SpringwoodCity_Fisherman_Text_0, MSGBOX_NPC
-# 137 "data/maps/SpringwoodCity/scripts.pory"
-	releaseall
 	return
 
 
@@ -212,81 +164,81 @@ SpringwoodCity_Intro_Scientist_Text_0:
 	.string "Route 4 is straight west from here,\njust past Route 3. Good Luck!$"
 
 SpringwoodCity_Sign_Name_Text_0:
-# 51 "data/maps/SpringwoodCity/scripts.pory"
+# 50 "data/maps/SpringwoodCity/scripts.pory"
 	.string "Springwood City\nA bustling coastal beauty.$"
 
 SpringwoodCity_Sign_Park_Text_0:
-# 57 "data/maps/SpringwoodCity/scripts.pory"
-	.string "A small piece of nature, nurtered by us.$"
+# 54 "data/maps/SpringwoodCity/scripts.pory"
+	.string "A small piece of nature, nurtured by us.$"
 
 SpringwoodCity_Sign_BigBuilding_Text_0:
-# 63 "data/maps/SpringwoodCity/scripts.pory"
+# 58 "data/maps/SpringwoodCity/scripts.pory"
 	.string "Libra Institute\nBalancing science and nature.$"
 
 SpringwoodCity_Sign_Gym_Text_0:
-# 69 "data/maps/SpringwoodCity/scripts.pory"
+# 62 "data/maps/SpringwoodCity/scripts.pory"
 	.string "Springwood Gym\nHome of the strong.$"
 
 SpringwoodCity_Sydney_Text_0:
-# 77 "data/maps/SpringwoodCity/scripts.pory"
+# 69 "data/maps/SpringwoodCity/scripts.pory"
 	.string "Psst, hey kid.$"
 
 SpringwoodCity_Sydney_Text_1:
-# 78 "data/maps/SpringwoodCity/scripts.pory"
+# 70 "data/maps/SpringwoodCity/scripts.pory"
 	.string "Have you heard?$"
 
 SpringwoodCity_Sydney_Text_2:
-# 80 "data/maps/SpringwoodCity/scripts.pory"
+# 72 "data/maps/SpringwoodCity/scripts.pory"
 	.string "Yeah you sure have.$"
 
 SpringwoodCity_Sydney_Text_3:
-# 84 "data/maps/SpringwoodCity/scripts.pory"
+# 76 "data/maps/SpringwoodCity/scripts.pory"
 	.string "Bah!\nWasting my time.$"
 
 SpringwoodCity_Sydney_Text_4:
-# 87 "data/maps/SpringwoodCity/scripts.pory"
+# 79 "data/maps/SpringwoodCity/scripts.pory"
 	.string "You didn't get it from me.$"
 
 SpringwoodCity_RichBoy_Text_0:
-# 94 "data/maps/SpringwoodCity/scripts.pory"
+# 85 "data/maps/SpringwoodCity/scripts.pory"
 	.string "Springwood City might be on a seaside\n"
 	.string "cliff, but that doesn't mean we get\l"
 	.string "much salt spray. We must be too high up.$"
 
 SpringwoodCity_Artist_Text_0:
-# 100 "data/maps/SpringwoodCity/scripts.pory"
+# 89 "data/maps/SpringwoodCity/scripts.pory"
 	.string "When I get into a creative slump, I find\n"
 	.string "it nice to come and chill at the park.$"
 
 SpringwoodCity_Beauty_Text_0:
-# 106 "data/maps/SpringwoodCity/scripts.pory"
+# 93 "data/maps/SpringwoodCity/scripts.pory"
 	.string "For such a large city there really isn't\n"
 	.string "very much in the way of shopping is\l"
 	.string "there?$"
 
 SpringwoodCity_Athlete_Text_0:
-# 112 "data/maps/SpringwoodCity/scripts.pory"
+# 97 "data/maps/SpringwoodCity/scripts.pory"
 	.string "Running in the city can be difficult\n"
 	.string "with all the people, but I'm scared of\l"
 	.string "bug types so I can't run on any of the\l"
 	.string "nearby routes...$"
 
 SpringwoodCity_Camper_Text_0:
-# 118 "data/maps/SpringwoodCity/scripts.pory"
+# 101 "data/maps/SpringwoodCity/scripts.pory"
 	.string "Springwood City is just inland from a\n"
 	.string "coastal cliffside, so make sure to\l"
 	.string "watch your step!$"
 
 SpringwoodCity_Boy_Text_0:
-# 124 "data/maps/SpringwoodCity/scripts.pory"
+# 105 "data/maps/SpringwoodCity/scripts.pory"
 	.string "Did you know that some Routes have super\nrare Pokemon?\pI wonder what Pokemon live around\nhere that I've never seen before.$"
 
 SpringwoodCity_Sailor_Text_0:
-# 130 "data/maps/SpringwoodCity/scripts.pory"
+# 109 "data/maps/SpringwoodCity/scripts.pory"
 	.string "The bustle of Springwood City is real\ndifferent to the port town I'm from.$"
 
 SpringwoodCity_Fisherman_Text_0:
-# 136 "data/maps/SpringwoodCity/scripts.pory"
+# 113 "data/maps/SpringwoodCity/scripts.pory"
 	.string "I'm sure that one of these days I'll\ncatch some super rare Pokemon that can\lonly be found in Springwood City's\lright-hand fountain!$"
 
 SpringwoodCity_Intro_Scientist_Text1::

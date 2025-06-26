@@ -21,9 +21,10 @@ script DyecressTown_Sign2 {
 }
 
 script DyecressTown_Sign_Temple {
-    lockall
-    msgbox(DyecressTown_Sign_Temple_Text, MSGBOX_SIGN)
-    releaseall
+    msgbox("The words seem to have\neroded over time...\pDo you want to try reading it anyway?", MSGBOX_YESNO)
+    if (var(VAR_RESULT) == YES) {
+        msgbox(DyecressTown_Sign_Temple_Text, MSGBOX_SIGN)
+    }
 }
 
 text DyecressTown_Sign_Temple_Text {
@@ -59,12 +60,9 @@ script DyecressTown_Woman {
 }
 
 script DyecressTown_Roselia {
-    lockall
     setseenmon(SPECIES_ROSELIA)
     playmoncry(SPECIES_ROSELIA, CRY_MODE_NORMAL)
     msgbox("Roooose-!", MSGBOX_NPC)
-    waitmoncry
-    releaseall
 }
 
 script DyecressTown_Scientist1 {

@@ -1,16 +1,11 @@
 mapscripts Route3_MapScripts {}
 
 script Route3_Sign_FishingHut {
-    lockall
-    //canusefieldmove(MOVE_CUT)
-    msgbox("Fishing Hut,\nHome of the baiting master", MSGBOX_SIGN)
-    releaseall
+    msgbox("Fishing Hut,\nHome of the baiting master.", MSGBOX_SIGN)
 }
 
 script Route3_Sign_Forest {
-    lockall
-    msgbox("Forest Ahead,\nNot Implemented Yet.", MSGBOX_SIGN)
-    releaseall
+    msgbox("Spring Woods,\nA forested sanctuary.", MSGBOX_SIGN)
 }
 
 script Route3_Boy {

@@ -1248,3 +1248,11 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/OchreVale_Lab/scripts.inc"
 
 	.include "data/maps/Route8/scripts.inc"
+
+	.include "data/maps/Route9/scripts.inc"
+
+	.include "data/maps/Route9_House/scripts.inc"
+
+	.include "data/maps/Route10/scripts.inc"
+
+	.include "data/maps/Route10_ResortHouse/scripts.inc"

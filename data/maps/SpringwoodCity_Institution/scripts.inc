@@ -311,11 +311,7 @@ SpringwoodCity_Institution_StairBlocker_24:
 
 SpringwoodCity_Institution_Guard::
 # 153 "data/maps/SpringwoodCity_Institution/scripts.pory"
-	lockall
-# 154 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	msgbox SpringwoodCity_Institution_Guard_Text_0, MSGBOX_NPC
-# 155 "data/maps/SpringwoodCity_Institution/scripts.pory"
-	releaseall
 	return
 
 
@@ -421,7 +417,7 @@ SpringwoodCity_Institution_StairBlocker_Text_0:
 	.string "I apologise,\nbut you don't have permission\lto acces the upper floors.$"
 
 SpringwoodCity_Institution_Guard_Text_0:
-# 154 "data/maps/SpringwoodCity_Institution/scripts.pory"
+# 153 "data/maps/SpringwoodCity_Institution/scripts.pory"
 	.string "Go right on ahead.$"
 
 SpringwoodCity_Institution_Receptionist_Dyecress_Mystery1::

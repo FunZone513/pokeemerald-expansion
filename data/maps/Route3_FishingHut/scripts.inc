@@ -4,7 +4,7 @@ Route3_FishingHut_MapScripts::
 
 Route3_FishingHut_Fisherman::
 # 4 "data/maps/Route3_FishingHut/scripts.pory"
-	lockall
+	lock
 # 5 "data/maps/Route3_FishingHut/scripts.pory"
 	msgbox Route3_FishingHut_Fisherman_Text_0
 # 6 "data/maps/Route3_FishingHut/scripts.pory"
@@ -12,12 +12,12 @@ Route3_FishingHut_Fisherman::
 # 7 "data/maps/Route3_FishingHut/scripts.pory"
 	goto_if_unset FLAG_RECEIVED_OLD_ROD, Route3_FishingHut_Fisherman_2
 # 13 "data/maps/Route3_FishingHut/scripts.pory"
-	msgbox Route3_FishingHut_Fisherman_Text_2
+	msgbox Route3_FishingHut_Fisherman_Text_2, MSGBOX_NPC
 Route3_FishingHut_Fisherman_1:
 # 15 "data/maps/Route3_FishingHut/scripts.pory"
 	applymovement 1, Route3_FishingHut_Fisherman_Movement_0
 # 16 "data/maps/Route3_FishingHut/scripts.pory"
-	releaseall
+	release
 	return
 
 Route3_FishingHut_Fisherman_2:
@@ -28,43 +28,26 @@ Route3_FishingHut_Fisherman_2:
 # 10 "data/maps/Route3_FishingHut/scripts.pory"
 	setflag FLAG_RECEIVED_OLD_ROD
 # 11 "data/maps/Route3_FishingHut/scripts.pory"
-	msgbox Route3_FishingHut_Fisherman_Text_1
+	msgbox Route3_FishingHut_Fisherman_Text_1, MSGBOX_NPC
 	goto Route3_FishingHut_Fisherman_1
 
 
 Route3_FishingHut_Doorway::
 # 29 "data/maps/Route3_FishingHut/scripts.pory"
-	lockall
-# 30 "data/maps/Route3_FishingHut/scripts.pory"
-	msgbox Route3_FishingHut_Doorway_Text_0
-# 31 "data/maps/Route3_FishingHut/scripts.pory"
-	releaseall
+	msgbox Route3_FishingHut_Doorway_Text_0, MSGBOX_SIGN
 	return
 
 
 Route3_FishingHut_Lombre::
-# 35 "data/maps/Route3_FishingHut/scripts.pory"
-	lockall
-# 36 "data/maps/Route3_FishingHut/scripts.pory"
-	playmoncry SPECIES_LOMBRE, CRY_MODE_NORMAL
-# 37 "data/maps/Route3_FishingHut/scripts.pory"
-	msgbox Route3_FishingHut_Lombre_Text_0, MSGBOX_NPC
-# 38 "data/maps/Route3_FishingHut/scripts.pory"
-	getseenmon SPECIES_LOMBRE
-# 39 "data/maps/Route3_FishingHut/scripts.pory"
-	compare VAR_RESULT, NO
-	goto_if_eq Route3_FishingHut_Lombre_2
-Route3_FishingHut_Lombre_1:
-# 40 "data/maps/Route3_FishingHut/scripts.pory"
-	waitmoncry
-# 41 "data/maps/Route3_FishingHut/scripts.pory"
-	releaseall
-	return
-
-Route3_FishingHut_Lombre_2:
-# 39 "data/maps/Route3_FishingHut/scripts.pory"
+# 33 "data/maps/Route3_FishingHut/scripts.pory"
 	setseenmon SPECIES_LOMBRE
-	goto Route3_FishingHut_Lombre_1
+# 34 "data/maps/Route3_FishingHut/scripts.pory"
+	playmoncry SPECIES_LOMBRE, CRY_MODE_NORMAL
+# 35 "data/maps/Route3_FishingHut/scripts.pory"
+	msgbox Route3_FishingHut_Lombre_Text_0, MSGBOX_NPC
+# 36 "data/maps/Route3_FishingHut/scripts.pory"
+	waitmoncry
+	return
 
 
 # 15 "data/maps/Route3_FishingHut/scripts.pory"
@@ -88,11 +71,11 @@ Route3_FishingHut_Fisherman_Text_2:
 	.string "a try.$"
 
 Route3_FishingHut_Doorway_Text_0:
-# 30 "data/maps/Route3_FishingHut/scripts.pory"
+# 29 "data/maps/Route3_FishingHut/scripts.pory"
 	.string "I wonder what's back there...$"
 
 Route3_FishingHut_Lombre_Text_0:
-# 37 "data/maps/Route3_FishingHut/scripts.pory"
+# 35 "data/maps/Route3_FishingHut/scripts.pory"
 	.string "?$"
 
 FishermanGive::

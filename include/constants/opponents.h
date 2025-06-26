@@ -53,8 +53,19 @@
 #define TRAINER_ROUTE8_TWINS                41
 #define TRAINER_ROUTE8_BLACKBELT            42
 #define TRAINER_OCHRE_VALE_POKECENTRE_MAGMA_GRUNT 43
+#define TRAINER_ROUTE9_YOUNGSTER            44
+#define TRAINER_ROUTE9_COUPLE               45
+#define TRAINER_ROUTE9_RUNNERF              46
+#define TRAINER_ROUTE9_RUNNERM              47
+#define TRAINER_ROUTE9_LADY                 48
+#define TRAINER_ROUTE9_TUBERM               49
+#define TRAINER_ROUTE9_TUBERF               50
+#define TRAINER_ROUTE9_FISHERMAN            51
+#define TRAINER_ROUTE5_EXPERT               52
+#define TRAINER_ROUTE10_HIKER               53
+#define TRAINER_ROUTE10_YOUNGSTER           54
 
-#define TRAINERS_COUNT                      44
+#define TRAINERS_COUNT                      55
 
 #define MAX_TRAINERS_COUNT                  864
 #define TRAINER_PARTNER(partner)           (MAX_TRAINERS_COUNT + partner)

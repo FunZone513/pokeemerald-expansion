@@ -150,7 +150,5 @@ script SpringwoodCity_Institution_StairBlocker {
 }
 
 script SpringwoodCity_Institution_Guard {
-    lockall
     msgbox("Go right on ahead.", MSGBOX_NPC)
-    releaseall
 }

@@ -79,6 +79,6 @@ script DyecressTown_PokeCentre_Girl {
 raw `
 DyecressTown_PokeCentre_Girl_Text:
     brailleformat 3, 0, 25, 19, 6, 3
-	.braille "THIS ISNT\n" @ idk why it's chopping off the first few characters
-	.braille "MY TIME?$"
+	.braille "????\n"
+	.braille "????$"
 `

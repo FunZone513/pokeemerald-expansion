@@ -22,6 +22,10 @@ script Route5_CheckBoulderBlock {
     }
 }
 
+script Route5_Sign {
+    msgbox("Soothing Sands Resort!\nKeep going straight!", MSGBOX_SIGN)
+}
+
 script Route5_BoulderGuy {
     lockall
     if (flag(FLAG_HIDE_ROUTE2_MINIBOSS)) {
@@ -49,5 +53,15 @@ script Route5_BlackBelt {
         format("Punching rocks makes my bones HURT.")  
     )
     msgbox(format("The pain in my fists distracts me from the pain of my exstance."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route5_Expert {
+    trainerbattle_single(
+        TRAINER_ROUTE5_EXPERT, 
+        format("There is a retreat up ahead, I hope you'll help me get warmed up for it."),
+        format("I'll be sure to release all this tension there.")  
+    )
+    msgbox(format("The retreat is nothing too fancy, but it's nice for old folks like me."), MSGBOX_AUTOCLOSE)
     end
 }

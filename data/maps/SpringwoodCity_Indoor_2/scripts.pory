@@ -34,8 +34,7 @@ text SpringwoodCity_Indoor_2_Man_Text2 {
 script SpringwoodCity_Indoor_2_Gardevoir {
     lockall
     playmoncry(SPECIES_GARDEVOIR, CRY_MODE_NORMAL)
-    getseenmon(SPECIES_GARDEVOIR)
-    if (var(VAR_RESULT) == NO) { setseenmon(SPECIES_GARDEVOIR) }
+    setseenmon(SPECIES_GARDEVOIR)
     
     msgbox("...", MSGBOX_NPC)
     waitmoncry

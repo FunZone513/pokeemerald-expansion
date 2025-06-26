@@ -57,7 +57,9 @@
     "Route5",
     "Route6",
     "Route7",
-    "Route8"
+    "Route8",
+    "Route9",
+    "Route10"
   ],
   "gMapGroup_Dungeons": [
     "DripstoneCave",
@@ -70,7 +72,9 @@
   ],
   "gMapGroup_Indoor_Routes": [
     "Route3_FishingHut",
-    "Route4_Indoor_Researcher_Lab"
+    "Route4_Indoor_Researcher_Lab",
+    "Route9_House",
+    "Route10_ResortHouse"
   ],
   "gMapGroup_Indoor_NewstemTown": [
     "NewstemTown_PlayersHouse",

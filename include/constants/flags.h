@@ -43,6 +43,7 @@
 #define TEMP_FLAGS_END   FLAG_TEMP_1F
 #define NUM_TEMP_FLAGS   (TEMP_FLAGS_END - TEMP_FLAGS_START + 1)
 
+//MARK: Story Flags
 #define FLAG_CLEARED_OCHRE_VALE_MINE    0x20
 #define FLAG_HIDE_ROUTE2_MINIBOSS    0x21
 #define FLAG_DYECRESS_BULLSHIT    0x22
@@ -564,8 +565,13 @@
 #define FLAG_HIDDEN_ITEM_OCHRE_MINE_ENTRANCE                 (FLAG_HIDDEN_ITEMS_START + 0x11)
 #define FLAG_HIDDEN_ITEM_OCHRE_VALE                          (FLAG_HIDDEN_ITEMS_START + 0x12)
 #define FLAG_HIDDEN_ITEM_ROUTE_3_1                           (FLAG_HIDDEN_ITEMS_START + 0x13)
+#define FLAG_HIDDEN_ITEM_ROUTE_9                             (FLAG_HIDDEN_ITEMS_START + 0x14)
+#define FLAG_HIDDEN_ITEM_ROUTE_9_1                           (FLAG_HIDDEN_ITEMS_START + 0x15)
+#define FLAG_HIDDEN_ITEM_ROUTE_9_2                           (FLAG_HIDDEN_ITEMS_START + 0x16)
+#define FLAG_HIDDEN_ITEM_ROUTE_10                            (FLAG_HIDDEN_ITEMS_START + 0x17)
+#define FLAG_HIDDEN_ITEM_ROUTE_10_1                          (FLAG_HIDDEN_ITEMS_START + 0x18)
 
-// --============= old ones
+// --============= old ones ( put // after ones I'm reusing )
 #define FLAG_HIDDEN_ITEM_ROUTE_123_SUPER_REPEL               (FLAG_HIDDEN_ITEMS_START + 0x07) //
 #define FLAG_HIDDEN_ITEM_UNDERWATER_124_CARBOS               (FLAG_HIDDEN_ITEMS_START + 0x08) //
 #define FLAG_HIDDEN_ITEM_UNDERWATER_124_GREEN_SHARD          (FLAG_HIDDEN_ITEMS_START + 0x09) //
@@ -579,11 +585,11 @@
 #define FLAG_HIDDEN_ITEM_UNDERWATER_126_PEARL                (FLAG_HIDDEN_ITEMS_START + 0x11) //
 #define FLAG_HIDDEN_ITEM_UNDERWATER_126_YELLOW_SHARD         (FLAG_HIDDEN_ITEMS_START + 0x12) //
 #define FLAG_HIDDEN_ITEM_UNDERWATER_126_IRON                 (FLAG_HIDDEN_ITEMS_START + 0x13) //
-#define FLAG_HIDDEN_ITEM_UNDERWATER_126_BIG_PEARL            (FLAG_HIDDEN_ITEMS_START + 0x14)
-#define FLAG_HIDDEN_ITEM_UNDERWATER_127_STAR_PIECE           (FLAG_HIDDEN_ITEMS_START + 0x15)
-#define FLAG_HIDDEN_ITEM_UNDERWATER_127_HP_UP                (FLAG_HIDDEN_ITEMS_START + 0x16)
-#define FLAG_HIDDEN_ITEM_UNDERWATER_127_HEART_SCALE          (FLAG_HIDDEN_ITEMS_START + 0x17)
-#define FLAG_HIDDEN_ITEM_UNDERWATER_127_RED_SHARD            (FLAG_HIDDEN_ITEMS_START + 0x18)
+#define FLAG_HIDDEN_ITEM_UNDERWATER_126_BIG_PEARL            (FLAG_HIDDEN_ITEMS_START + 0x14) //
+#define FLAG_HIDDEN_ITEM_UNDERWATER_127_STAR_PIECE           (FLAG_HIDDEN_ITEMS_START + 0x15) //
+#define FLAG_HIDDEN_ITEM_UNDERWATER_127_HP_UP                (FLAG_HIDDEN_ITEMS_START + 0x16) //
+#define FLAG_HIDDEN_ITEM_UNDERWATER_127_HEART_SCALE          (FLAG_HIDDEN_ITEMS_START + 0x17) //
+#define FLAG_HIDDEN_ITEM_UNDERWATER_127_RED_SHARD            (FLAG_HIDDEN_ITEMS_START + 0x18) //
 #define FLAG_HIDDEN_ITEM_UNDERWATER_128_PROTEIN              (FLAG_HIDDEN_ITEMS_START + 0x19)
 #define FLAG_HIDDEN_ITEM_UNDERWATER_128_PEARL                (FLAG_HIDDEN_ITEMS_START + 0x1A)
 #define FLAG_HIDDEN_ITEM_LILYCOVE_CITY_HEART_SCALE           (FLAG_HIDDEN_ITEMS_START + 0x1B)
@@ -673,6 +679,7 @@
 #define FLAG_HIDDEN_ITEM_UNUSED_0X6F                         (FLAG_HIDDEN_ITEMS_START + 0x6F)
 // --============= old ones
 
+//MARK: Utility Flags
 #define FLAG_FORCE_WILD_DOUBLE_BATTLE  0x264        // Used for toggling wild double battles
 #define FLAG_SHARED_EXP    0x265                    // Used for toggling shared exp
 #define FLAG_ENABLE_VS_SEEKER  0x266                // Used for Vs. Seeker
@@ -685,7 +692,7 @@
 
 #define FLAG_ROUTE_7_SHOWN_POKEMON  0x26D // Unused Flag
 
-
+// MARK: Unused
 #define FLAG_UNUSED_0x26E  0x26E // Unused Flag
 #define FLAG_UNUSED_0x26F  0x26F // Unused Flag
 #define FLAG_UNUSED_0x270  0x270 // Unused Flag
@@ -1094,8 +1101,8 @@
 #define FLAG_ITEM_OCHRE_VALE_2                                      0x3FE
 #define FLAG_ITEM_ROUTE_8                                           0x3FF
 #define FLAG_ITEM_DYECRESS_TOWN                                     0x400
-#define FLAG_ITEM_UNUSED_0X401                                      0x401
-#define FLAG_ITEM_UNUSED_0X402                                      0x402
+#define FLAG_ITEM_ROUTE_9                                           0x401
+#define FLAG_ITEM_ROUTE_9_1                                         0x402
 #define FLAG_ITEM_UNUSED_0X403                                      0x403
 #define FLAG_ITEM_UNUSED_0X404                                      0x404
 #define FLAG_ITEM_UNUSED_0X405                                      0x405

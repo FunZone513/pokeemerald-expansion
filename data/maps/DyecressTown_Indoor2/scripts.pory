@@ -1,7 +1,5 @@
 mapscripts DyecressTown_Indoor2_MapScripts {}
 
 script DyecressTown_Indoor2_OldWoman {
-    lockall
     msgbox(format("My grandson likes to visit occasionally, but it can be pretty cumbersome getting through those pesky ledges."), MSGBOX_NPC)
-    releaseall
 }

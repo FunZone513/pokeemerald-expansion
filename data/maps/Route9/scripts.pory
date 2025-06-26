@@ -1,0 +1,93 @@
+mapscripts Route9_MapScripts {}
+
+script Route9_Youngster {
+    trainerbattle_single(
+        TRAINER_ROUTE9_YOUNGSTER, 
+        format("Hey! This is my cool Pokemon spot! Find your own!"),
+        format("Well... Mum always said I should share...")  
+    )
+    msgbox(format("You better not find any cool Pokemon here before I do!"), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route9_Woman {
+    trainerbattle_double(
+        TRAINER_ROUTE9_COUPLE, 
+        format("The beach here is a nice place to unwind."), 
+        format("My Boyfriend and I will wash away this loss in the sea."), 
+        format("You only have one Pokemon? That's sad.")
+    )
+    msgbox(format("I like the ocean, but I don't like the salt."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route9_Man {
+    trainerbattle_double(
+        TRAINER_ROUTE9_COUPLE, 
+        format("My Girlfriend loves being at the beach!"), 
+        format("I'm happy if she's happy."), 
+        format("You only have one Pokemon? That's sad.")
+    )
+    msgbox(format("It's a shame she's not in a bikini today."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route9_RunnerF {
+    trainerbattle_single(
+        TRAINER_ROUTE9_RUNNERF, 
+        format("The sand really gets my calves pumping!"),
+        format("Can't make any gains without a few losses along the way.")  
+    )
+    msgbox(format("My legs are on fire!"), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route9_RunnerM {
+    trainerbattle_single(
+        TRAINER_ROUTE9_RUNNERM, 
+        format("Feel the cardio burn!"),
+        format("Yeah okay just ruin my workout why don't you...")  
+    )
+    msgbox(format("There's this cute girl I'm trying to impress by getting fit."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route9_Lady {
+    trainerbattle_single(
+        TRAINER_ROUTE9_LADY, 
+        format("I can smell the sea from here."),
+        format("My tears taste salty like the sea...")  
+    )
+    msgbox(format("I used to come to the beach with my mother, I miss her."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route9_TuberM {
+    trainerbattle_single(
+        TRAINER_ROUTE9_TUBERM, 
+        format("SURPRISE!"),
+        format("You weren't shocked enough!")  
+    )
+    msgbox(format("We like to hide and jump out to scare people."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route9_TuberF {
+    trainerbattle_single(
+        TRAINER_ROUTE9_TUBERF, 
+        format("GOTCHA!"),
+        format("Aw man I thought I got you...")  
+    )
+    msgbox(format("My hiding spot is better than his!"), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route9_Fisherman {
+    trainerbattle_single(
+        TRAINER_ROUTE9_FISHERMAN, 
+        format("Ocean fishing always brings new encounters!"),
+        format("New doesn't necessarily mean good.")  
+    )
+    msgbox(format("The Pokemon you find when fishing in the ocean is very different to those found in rivers."), MSGBOX_AUTOCLOSE)
+    end
+}
