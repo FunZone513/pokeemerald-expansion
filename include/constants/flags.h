@@ -570,6 +570,7 @@
 #define FLAG_HIDDEN_ITEM_ROUTE_9_2                           (FLAG_HIDDEN_ITEMS_START + 0x16)
 #define FLAG_HIDDEN_ITEM_ROUTE_10                            (FLAG_HIDDEN_ITEMS_START + 0x17)
 #define FLAG_HIDDEN_ITEM_ROUTE_10_1                          (FLAG_HIDDEN_ITEMS_START + 0x18)
+#define FLAG_HIDDEN_ITEM_DRIPSTONE_CHANNEL                   (FLAG_HIDDEN_ITEMS_START + 0x19)
 
 // --============= old ones ( put // after ones I'm reusing )
 #define FLAG_HIDDEN_ITEM_ROUTE_123_SUPER_REPEL               (FLAG_HIDDEN_ITEMS_START + 0x07) //
@@ -590,7 +591,7 @@
 #define FLAG_HIDDEN_ITEM_UNDERWATER_127_HP_UP                (FLAG_HIDDEN_ITEMS_START + 0x16) //
 #define FLAG_HIDDEN_ITEM_UNDERWATER_127_HEART_SCALE          (FLAG_HIDDEN_ITEMS_START + 0x17) //
 #define FLAG_HIDDEN_ITEM_UNDERWATER_127_RED_SHARD            (FLAG_HIDDEN_ITEMS_START + 0x18) //
-#define FLAG_HIDDEN_ITEM_UNDERWATER_128_PROTEIN              (FLAG_HIDDEN_ITEMS_START + 0x19)
+#define FLAG_HIDDEN_ITEM_UNDERWATER_128_PROTEIN              (FLAG_HIDDEN_ITEMS_START + 0x19) //
 #define FLAG_HIDDEN_ITEM_UNDERWATER_128_PEARL                (FLAG_HIDDEN_ITEMS_START + 0x1A)
 #define FLAG_HIDDEN_ITEM_LILYCOVE_CITY_HEART_SCALE           (FLAG_HIDDEN_ITEMS_START + 0x1B)
 #define FLAG_HIDDEN_ITEM_FALLARBOR_TOWN_NUGGET               (FLAG_HIDDEN_ITEMS_START + 0x1C)
@@ -1103,12 +1104,12 @@
 #define FLAG_ITEM_DYECRESS_TOWN                                     0x400
 #define FLAG_ITEM_ROUTE_9                                           0x401
 #define FLAG_ITEM_ROUTE_9_1                                         0x402
-#define FLAG_ITEM_UNUSED_0X403                                      0x403
-#define FLAG_ITEM_UNUSED_0X404                                      0x404
-#define FLAG_ITEM_UNUSED_0X405                                      0x405
-#define FLAG_ITEM_ROUTE_120_NUGGET                                  0x406
-#define FLAG_ITEM_ROUTE_120_FULL_HEAL                               0x407
-#define FLAG_ITEM_ROUTE_123_CALCIUM                                 0x408
+#define FLAG_ITEM_ROUTE_10                                          0x403
+#define FLAG_ITEM_ROUTE_10_1                                        0x404
+#define FLAG_ITEM_SCORCHED_CHAMBERS                                 0x405
+#define FLAG_ITEM_SCORCHED_CHAMBERS_1                               0x406
+#define FLAG_ITEM_DRIPSTONE_CAVE_1                                  0x407
+#define FLAG_ITEM_SCORCHED_CHAMBERS_2                               0x408
 #define FLAG_ITEM_ROUTE_123_RARE_CANDY                              0x409 // Unused Flag, leftover from R/S. In Emerald this is a hidden item and uses a different flag
 #define FLAG_ITEM_ROUTE_127_ZINC                                    0x40A
 #define FLAG_ITEM_ROUTE_127_CARBOS                                  0x40B

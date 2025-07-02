@@ -1256,3 +1256,7 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Route10/scripts.inc"
 
 	.include "data/maps/Route10_ResortHouse/scripts.inc"
+
+	.include "data/maps/ScorchedChambers/scripts.inc"
+
+	.include "data/maps/DripstoneChannel/scripts.inc"

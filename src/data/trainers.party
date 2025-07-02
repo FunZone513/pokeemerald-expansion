@@ -540,7 +540,7 @@ Lotad
 Level: 14
 
 === TRAINER_SPRING_WOODS_GIRL ===
-Name: Evelyn
+Name: Grace
 Class: Battle Girl
 Pic: Battle Girl
 Gender: Female
@@ -1137,18 +1137,148 @@ Level: 16
 Mightyena
 Level: 18
 
+=== TRAINER_SCORCHED_CHAMBERS_HIKER ===
+Name: Hugh
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Hiker
+AI: Basic Trainer
 
+Slugma
+Level: 18
 
+Aron
+Level: 18
 
+Barboach
+Level: 18
 
+=== TRAINER_SCORCHED_CHAMBERS_PICNICKER ===
+Name: Rayleigh
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Girl
+AI: Basic Trainer
 
+Lombre
+Level: 19
 
+Numel
+Level: 19
 
+=== TRAINER_SCORCHED_CHAMBERS_GUITARIST ===
+Name: Kurt
+Class: Guitarist
+Pic: Guitarist
+Gender: Male
+Music: Intense
+AI: Basic Trainer
 
+Flaaffy
+Level: 18
 
+Loudred
+Level: 20
 
+=== TRAINER_SCORCHED_CHAMBERS_BUG_CATCHER ===
+Name: Bryan
+Class: Bug Catcher
+Pic: Bug Catcher
+Gender: Male
+Music: Male
+AI: Basic Trainer
 
+Dwebble
+Level: 16
 
+Dustox
+Level: 16
+
+Sizzlipede
+Level: 16
+
+Masquerain
+Level: 22
+
+=== TRAINER_SCORCHED_CHAMBERS_FISHERMAN ===
+Name: Oscar
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Hiker
+AI: Basic Trainer
+
+Octillery
+Level: 25
+
+=== TRAINER_SCORCHED_CHAMBERS_BLACKBELT ===
+Name: Ian
+Class: Black Belt
+Pic: Black Belt
+Gender: Male
+Music: Intense
+AI: Basic Trainer
+
+Makuhita
+Level: 18
+
+Bergmite
+Level: 18
+
+=== TRAINER_SCORCHED_CHAMBERS_BATTLEGIRL ===
+Name: Elise
+Class: Battle Girl
+Pic: Battle Girl
+Gender: Female
+Music: Intense
+AI: Basic Trainer
+
+Meditite
+Level: 18
+
+Staravia
+Level: 18
+
+=== TRAINER_SCORCHED_CHAMBERS_EXPERTF ===
+Name: Deborah
+Class: Expert
+Pic: Expert F
+Gender: Female
+Music: Intense
+AI: Smart Trainer
+
+Chansey  
+Ability: Healer  
+Level: 24  
+Tera Type: Normal  
+EVs: 228 HP / 236 Def / 32 SpA / 12 Spe  
+Bold Nature  
+IVs: 0 Atk  
+- Soft-Boiled  
+- Heal Pulse  
+- Icy Wind  
+- Dazzling Gleam
+
+=== TRAINER_SCORCHED_CHAMBERS_EXPERTM ===
+Name: Dale
+Class: Expert
+Pic: Expert M
+Gender: Male
+Music: Intense
+AI: Smart Trainer
+
+Snorlax  
+Ability: Thick Fat  
+Level: 24  
+Tera Type: Normal  
+EVs: 248 HP / 248 Atk / 4 Spe  
+Adamant Nature  
+- Heavy Slam  
+- Crunch  
+- Fire Punch  
+- Ice Punch
 
 
 

@@ -4485,7 +4485,7 @@
       "id": "LAYOUT_ROUTE5",
       "name": "Route5_Layout",
       "width": 70,
-      "height": 30,
+      "height": 40,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/Route5/border.bin",
@@ -4920,6 +4920,26 @@
       "secondary_tileset": "gTileset_Facility",
       "border_filepath": "data/layouts/Route10_ResortHouse/border.bin",
       "blockdata_filepath": "data/layouts/Route10_ResortHouse/map.bin"
+    },
+    {
+      "id": "LAYOUT_SCORCHED_CHAMBERS",
+      "name": "ScorchedChambers_Layout",
+      "width": 60,
+      "height": 60,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/ScorchedChambers/border.bin",
+      "blockdata_filepath": "data/layouts/ScorchedChambers/map.bin"
+    },
+    {
+      "id": "LAYOUT_DRIPSTONE_CHANNEL",
+      "name": "DripstoneChannel_Layout",
+      "width": 42,
+      "height": 16,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_MeteorFalls",
+      "border_filepath": "data/layouts/DripstoneChannel/border.bin",
+      "blockdata_filepath": "data/layouts/DripstoneChannel/map.bin"
     }
   ]
 }

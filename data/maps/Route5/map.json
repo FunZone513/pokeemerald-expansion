@@ -235,6 +235,13 @@
       "elevation": 0,
       "dest_map": "MAP_DRIPSTONE_CAVE",
       "dest_warp_id": "1"
+    },
+    {
+      "x": 47,
+      "y": 29,
+      "elevation": 0,
+      "dest_map": "MAP_DRIPSTONE_CHANNEL",
+      "dest_warp_id": "1"
     }
   ],
   "coord_events": [

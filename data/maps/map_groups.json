@@ -68,7 +68,9 @@
     "SpringWoodsInner",
     "SpringHollow",
     "OchreMineEntrance",
-    "OchreValeMine"
+    "OchreValeMine",
+    "ScorchedChambers",
+    "DripstoneChannel"
   ],
   "gMapGroup_Indoor_Routes": [
     "Route3_FishingHut",

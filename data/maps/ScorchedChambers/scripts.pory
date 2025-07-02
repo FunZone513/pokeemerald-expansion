@@ -1,0 +1,95 @@
+mapscripts ScorchedChambers_MapScripts {}
+
+script ScorchedChambers_Hiker {
+    trainerbattle_single(
+        TRAINER_SCORCHED_CHAMBERS_HIKER, 
+        format("I like caves, but boy this one is hard to be in."),
+        format("I think I need to get fresh air...")  
+    )
+    msgbox(format("The heat in here is something else..."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script ScorchedChambers_Picnicker {
+    trainerbattle_single(
+        TRAINER_SCORCHED_CHAMBERS_PICNICKER, 
+        format("I regret coming in here with such thick clothing."),
+        format("I think my Pokemon have heatstroke...")  
+    )
+    msgbox(format("I wish I could stick my head into a fridge right now."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script ScorchedChambers_Guitarist {
+    trainerbattle_single(
+        TRAINER_SCORCHED_CHAMBERS_GUITARIST, 
+        format("We find our greatest tunes in the face of adversity."),
+        format("That's not very rock of you...")  
+    )
+    msgbox(format("My sweat is making it hard to play the notes I want."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script ScorchedChambers_BugCatcher {
+    trainerbattle_single(
+        TRAINER_SCORCHED_CHAMBERS_BUG_CATCHER, 
+        format("I think I came to the wrong place."),
+        format("Bugs and lava, not a great mix.")  
+    )
+    msgbox(format("I thought training here would be a good test for my bugs..."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script ScorchedChambers_Fisherman {
+    trainerbattle_single(
+        TRAINER_SCORCHED_CHAMBERS_FISHERMAN, 
+        format("..."),
+        format("Well.")  
+    )
+    msgbox(format("I don't seem to be catching very much, not sure why."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script ScorchedChambers_BlackBelt {
+    trainerbattle_single(
+        TRAINER_SCORCHED_CHAMBERS_BLACKBELT, 
+        format("SUFFERING BUILDS CHARACTER!"),
+        format("I GOT SWEAT IN MY EYES AHHHHH!!!")  
+    )
+    msgbox(format("I think the intense heat might be impacting my mental faculties."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script ScorchedChambers_BattleGirl {
+    trainerbattle_single(
+        TRAINER_SCORCHED_CHAMBERS_BATTLEGIRL, 
+        format("What is that guy yelling about?"),
+        format("...is he okay?")  
+    )
+    msgbox(format("...oh man I'm so sticky with sweat..."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script ScorchedChambers_ExpertF {
+    trainerbattle_single(
+        TRAINER_SCORCHED_CHAMBERS_EXPERTF, 
+        format("Ah, you also fell down."),
+        format("Well, you sure are energetic.")  
+    )
+    msgbox(format("I fell down this hole a while ago, but it's like a sauna in here so it's alright."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script ScorchedChambers_ExpertM {
+    trainerbattle_single(
+        TRAINER_SCORCHED_CHAMBERS_EXPERTM, 
+        format("Oh dear I think I put my back out."),
+        format("I'm much too old to be falling into caves...")  
+    )
+    msgbox(format("I might be too sore to make my way out..."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script ScorchedChambers_Camper {
+    msgbox("Apparently you can jump down from here,\nbut it looks a little high for me...", MSGBOX_NPC)
+}
