@@ -7,10 +7,3 @@ script Route9_House_Camper {
 script Route9_House_Picnicker {
     msgbox(format("I've heard that there is a secret alcove near here, but since I can't swim I've never found it."), MSGBOX_NPC)
 }
-
-script Route9_House_Kingler {
-    playmoncry(SPECIES_KINGLER, CRY_MODE_NORMAL)
-    setseenmon(SPECIES_KINGLER)
-    msgbox("!", MSGBOX_NPC)
-    waitmoncry
-}

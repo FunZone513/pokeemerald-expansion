@@ -1,31 +1,23 @@
 mapscripts OchreVale_MapScripts {}
 
 script OchreVale_OldWoman {
-    lockall
     msgbox(format("Ochre Vale is home to a large quarry, not that much digging is done there anymore."), MSGBOX_NPC)
-    releaseall
 }
 
 script OchreVale_Scientist {
-    lockall
     if (flag(FLAG_CLEARED_OCHRE_VALE_MINE)) {
         msgbox(format("The entrance to the mine is just left of here, it might not be that easy to navigate inside but people still go there now that the main quarrying has stopped."), MSGBOX_NPC)
     } else {
         msgbox(format("We've been having a bit of trouble with Team Magma in Ochre Vale Mine recently, I'm not sure why they've decided to do this."), MSGBOX_NPC)
     }
-    releaseall
 }
 
 script OchreVale_Man {
-    lockall
     msgbox(format("While I'm glad the noise from the mining has ceased, I do miss the economic growth that came with it."), MSGBOX_NPC)
-    releaseall
 }
 
 script OchreVale_Youngster {
-    lockall
     msgbox(format("The dirt down here is really brown!"), MSGBOX_NPC)
-    releaseall
 }
 
 script OchreVale_MagmaGrunt {

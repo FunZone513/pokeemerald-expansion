@@ -1,23 +1,11 @@
 mapscripts Route6_MapScripts {}
 
 script Route6_Camper {
-    lockall
     msgbox(format("We found this guy wandering around on the path. It's dangerous for him to leave the route area so we're keeping an eye on him."), MSGBOX_NPC)
-    releaseall
 }
 
 script Route6_Lass {
-    lockall
     msgbox(format("I don't want to tell him that the Pancham keeps coming out because I give him food sometimes..."), MSGBOX_NPC)
-    releaseall
-}
-
-script Route6_Pancham {
-    lockall
-    playmoncry(SPECIES_PANCHAM, CRY_MODE_NORMAL)
-    msgbox("!", MSGBOX_NPC)
-    waitmoncry
-    releaseall
 }
 
 script Route6_Hiker {

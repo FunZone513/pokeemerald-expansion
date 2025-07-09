@@ -1,20 +1,34 @@
-mapscripts Route10_MapScripts {}
+mapscripts Route10_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: Route10_OnTransition
+}
+
+script Route10_OnTransition {
+    if (!flag(FLAG_CLEARED_SCORCHED_CHAMBERS)) {
+        setflag(FLAG_TEMP_A)
+
+        // consolidate seperate story beats
+        if (flag(FLAG_CLEARED_OCHRE_VALE_MINE) && defeated(TRAINER_ROUTE10_MAGMA_GRUNT) && var(VAR_EVELYNN_STATE) == 4) {
+            setflag(FLAG_TEMP_B)
+        }
+
+    } else {
+        setvar(VAR_TEMP_A, 1)
+    }
+}
 
 script Route10_Sign {
     msgbox("Soothing Sands Resort.", MSGBOX_SIGN)
 }
 
-//TODO make a quest for in the cave?
 script Route10_ResortOwner {
     msgbox(Route10_ResortOwner_Text, MSGBOX_NPC)
 }
 
 text Route10_ResortOwner_Text {
-    "Hey there,\nI'm the owner of the resort here.\p"
-    "I created this resort years ago\nby getting sand from the desert,\l"
-    "and using underground magma to warm it.\p"
-    "I'm constantly trying to improve the\nquality of the experience here,\l"
-    "so do let me know if you see anything."
+    "Hey there!\nI'm the owner of the resort here.\p"
+    "Thank you for clearing out Team Magma,\nthose guys made business really awkward.\p"
+    "But thanks to you, I no longer have to\nworry about my customers being harassed!\p"
+    "You're free to go wherever in the\nresort you please, thanks again!"
 }
 
 script Route10_SandEnjoyer1 {
@@ -43,6 +57,34 @@ script Route10_SandEnjoyer6 {
 
 script Route10_SandEnjoyer7 {
     msgbox(format("I'm not sure these sand beds are designed for someone of my stature."), MSGBOX_NPC)
+}
+
+script Route10_SandMagmaGrunt {
+    msgbox("Can't a girl enjoy the warm sand here!?\nI'd never be able to otherwise!", MSGBOX_NPC)
+}
+
+script Route10_Numel {
+    setseenmon(SPECIES_NUMEL)
+    playmoncry(SPECIES_NUMEL, CRY_MODE_NORMAL)
+    msgbox("?", MSGBOX_NPC)
+}
+
+script Route10_MagmaGrunt {
+    lockall
+    msgbox(format("We dropped our pokeballs and one of our numels escaped, but we can't remember who's it is since we have so many..."))
+    applymovement(24, moves(face_up))
+    waitmovement(0)
+    if (!defeated(TRAINER_ROUTE10_MAGMA_GRUNT)) {
+        delay(60)
+        applymovement(24, moves(face_player))
+        waitmovement(0)
+        trainerbattle_single(
+            TRAINER_ROUTE10_MAGMA_GRUNT, 
+            format("Wait a second, who are you!?"),
+            format("Darn, if only I wasn't under contract to battle people.")  
+        )
+    }
+    releaseall
 }
 
 script Route10_Hiker {

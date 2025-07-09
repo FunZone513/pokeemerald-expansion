@@ -1,4 +1,54 @@
-mapscripts SpringWoods_MapScripts {}
+mapscripts SpringWoods_MapScripts {
+    MAP_SCRIPT_ON_LOAD: SpringWoods_OnLoad
+}
+
+script SpringWoods_OnLoad {
+    if (var(VAR_EVELYNN_STATE) != 3) {
+        setflag(FLAG_TEMP_A)
+    }
+}
+
+script SpringWoods_Evelynn {
+    lock
+    hidefollower
+    delay(16)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_left*2 walk_up*3))
+    waitmovement(0)
+    msgbox(SpringWoods_Evelynn_Text)
+    applymovement(6, moves(face_right))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_left))
+    msgbox(SpringWoods_Evelynn_Text2)
+    playbgm(MUS_ENCOUNTER_ELITE_FOUR, FALSE)
+    msgbox("I hope you have what it takes.")
+    trainerbattle_no_intro(RIVAL_EVELYNN_1, "Hah, you really are something.")
+	fadedefaultbgm
+    delay(48)
+    msgbox(SpringWoods_Evelynn_Text3)
+    applymovement(6, moves(walk_down walk_left*7))
+    waitmovement(0)
+    removeobject(6)
+    setvar(VAR_EVELYNN_STATE, 4)
+    release
+}
+
+text SpringWoods_Evelynn_Text {
+    "...\p"
+    "This forest is a beautiful place.\p"
+    "The warm water that flows out of the\nspring that is its namesake carries\labundant minerals to enrich the soil.\p"
+    "It's a perfect harmony of nature."
+}
+
+text SpringWoods_Evelynn_Text2 {
+    "Yet, there are groups of people that\nwish to stop this type of harmony.\p"
+    "I'm not sure where they came from,\nand I certainly don't understand why\lthey feel the need to do it.\p"
+    "That's why I'm trying to find a way\nto stop them.\p"
+    "I'm always looking for allies,\nbut I need to know if you have what\lit takes for me to trust you."
+}
+
+text SpringWoods_Evelynn_Text3 {
+    "I can't say I trust you yet,\nbut I can say you have some backbone.\p"
+    "I'll keep an eye out for you from now on,\nhopefully next time we meet we won't\lbe on opposing sides."
+}
 
 script SpringWoods_BugCatcher {
     trainerbattle_single(

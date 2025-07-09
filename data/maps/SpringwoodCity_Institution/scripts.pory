@@ -32,51 +32,39 @@ text SpringwoodCity_Institution_Receptionist_Dyecress_Mystery1 {
 }
 
 script SpringwoodCity_Institution_Display2 {
-    lockall
-    msgbox(format("Whatever is behind that glass sure looks impressive."))
-    releaseall
+    msgbox(format("Whatever is behind that glass sure looks impressive."), MSGBOX_SIGN)
 }
 
 script SpringwoodCity_Institution_Display3 {
-    lockall
-    msgbox(format("...isn't that just a stick?"))
-    releaseall
+    msgbox(format("...isn't that just a stick?"), MSGBOX_SIGN)
 }
 
 script SpringwoodCity_Institution_Scientist {
-    lockall
     msgbox(format("We don't have much of a breakroom in the lab areas upstairs, so when we get free time we sort of just hang out in the lobby."), MSGBOX_NPC)
-    releaseall
 }
 
 script SpringwoodCity_Institution_Scientist2 {
-    lockall
     msgbox("We collaborate with the Research Lab\non Route 4 sometimes.\pThey discover things, we refine them.", MSGBOX_NPC)
-    releaseall
 }
 
 script SpringwoodCity_Institution_Scientist3 {
-    lockall
     msgbox(format("Trying to determine research budgets is always a pain."), MSGBOX_NPC)
-    releaseall
 }
 
 script SpringwoodCity_Institution_Employee {
-    lockall
     msgbox(format("While the researchers do good work, do they really need that much money?"), MSGBOX_NPC)
-    releaseall
 }
 
 script SpringwoodCity_Institution_Employee2 {
-    lockall
     msgbox(format("Honestly I'm just here to make sure these two don't fight."), MSGBOX_NPC)
-    releaseall
 }
 
 script SpringwoodCity_Institution_Grunt {
-    lockall
-    msgbox("The security guys keep looking at me\nlike I'm some suspicious individual.\pI uhh...\nI just forgot to take off my PJs\lthis morning!", MSGBOX_NPC)
-    releaseall
+    if (flag(FLAG_CLEARED_QUIET_GROVE)) {
+        msgbox("Huh? What do you mean\nwhat am I still doing here?\pI told you, these are PJs!", MSGBOX_NPC)
+    } else {
+        msgbox("The security guys keep looking at me\nlike I'm some suspicious individual.\pI uhh...\nI just forgot to take off my PJs\lthis morning!", MSGBOX_NPC)
+    } 
 }
 
 script SpringwoodCity_Institution_StairBlocker1 {

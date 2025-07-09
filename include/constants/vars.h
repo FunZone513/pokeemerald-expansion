@@ -96,7 +96,7 @@
 #define VAR_POKELOT_RND2                                 0x404C
 #define VAR_POKELOT_PRIZE_PLACE                          0x404D
 
-
+// MARK: :)
 #define VAR_STARTED_GAME                                 0x404E // I'm using this
 
 #define VAR_LOTAD_SIZE_RECORD                            0x404F
@@ -112,8 +112,10 @@
 #define VAR_ROUTE4_WATER_STONE_STATE                     VAR_DEWFORD_TOWN_STATE
 
 #define VAR_LAVARIDGE_TOWN_STATE                         0x4053
+#define VAR_EVELYNN_STATE                                VAR_LAVARIDGE_TOWN_STATE
 
 #define VAR_CURRENT_SECRET_BASE                          0x4054 // was probably allocated for VAR_FALLARBOR_TOWN_STATE at one point
+#define VAR_DYECRESS_HERB_SHOP_QUEST                     VAR_CURRENT_SECRET_BASE
 
 #define VAR_VERDANTURF_TOWN_STATE                        0x4055 // Unused Var
 
@@ -306,7 +308,7 @@
 #define VARS_COUNT                                       (VARS_END - VARS_START + 1)
 
 #define SPECIAL_VARS_START            0x8000
-// special vars
+//MARK: special vars
 // They are commonly used as parameters to commands, or return values from commands.
 #define VAR_0x8000                    0x8000
 #define VAR_0x8001                    0x8001

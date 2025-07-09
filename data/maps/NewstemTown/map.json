@@ -68,8 +68,8 @@
       "movement_range_x": 2,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "NewstemTown_Rattata",
+      "trainer_sight_or_berry_tree_id": "SPECIES_RATTATA",
+      "script": "Generic_POKEMON_INTERACT",
       "flag": "0"
     },
     {
@@ -81,8 +81,8 @@
       "movement_range_x": 1,
       "movement_range_y": 2,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "NewstemTown_Hoppip",
+      "trainer_sight_or_berry_tree_id": "SPECIES_HOPPIP",
+      "script": "Generic_POKEMON_INTERACT",
       "flag": "0"
     },
     {
@@ -94,8 +94,8 @@
       "movement_range_x": 3,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "NewstemTown_Krabby",
+      "trainer_sight_or_berry_tree_id": "SPECIES_SHELLOS_EAST",
+      "script": "Generic_POKEMON_INTERACT",
       "flag": "0"
     }
   ],

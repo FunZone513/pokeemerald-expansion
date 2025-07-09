@@ -1,23 +1,19 @@
 mapscripts OchreVale_PokeCentre_MapScripts {}
 
 script OchreVale_PokeCentre_Hiker {
-    lockall
     msgbox(format("Ochre Vale is a great place to stock up on supplies before I continue on to Springwood City."), MSGBOX_NPC)
-    releaseall
 }
 
 script OchreVale_PokeCentre_Lass {
-    lockall
+    lock
     msgbox(format("My sister and I grew up around here, we're inseparable!"), MSGBOX_NPC)
     applymovement(4, moves(face_right))
     waitmovement(0)
-    releaseall
+    release
 }
 
 script OchreVale_PokeCentre_Scientist {
-    lockall
     msgbox(format("There's only so much dirt you can study before it becomes tedious..."), MSGBOX_NPC)
-    releaseall
 }
 
 script OchreVale_PokeCentre_MagmaGrunt {
@@ -28,7 +24,7 @@ script OchreVale_PokeCentre_MagmaGrunt {
             format("THAT'S IT! YOU ASKED FOR IT!"),
             format("Well at least it'll be easy to heal my Pokemon...")  
         )
-        msgbox(format("I was waiting to see when the other guys needed my help, but I guess I'll have to wait a bit longer now..."), MSGBOX_AUTOCLOSE)
+        msgbox(format("I was waiting to see if the other guys needed my help, but I guess I'll have to wait a bit longer now..."), MSGBOX_AUTOCLOSE)
         end
 
     } else {

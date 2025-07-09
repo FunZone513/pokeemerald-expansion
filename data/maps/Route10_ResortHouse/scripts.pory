@@ -1,6 +1,11 @@
 mapscripts Route10_ResortHouse_MapScripts {}
 
+script Route10_ResortHouse_Owner {
+    msgbox("That blasted Team Magma has taken over\nthe lava chambers below here.\pI don't know what they're after,\nbut they're not letting anyone in.", MSGBOX_NPC)
+}
+
 script Route10_ResortHouse_Receptionist {
+    applymovement(1, moves(face_down))
     msgbox(Route10_ResortHouse_Receptionist_Text, MSGBOX_SIGN)
 }
 
@@ -10,6 +15,7 @@ text Route10_ResortHouse_Receptionist_Text {
     "About 3 Months!\p"
     "Would you like to make a reservation?"
 }
+
 script Route10_ResortHouse_Receptionist_NPC {
     msgbox("Huh?\nYou're not supposed to be back here.", MSGBOX_NPC)
 }

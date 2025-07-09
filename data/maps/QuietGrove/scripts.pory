@@ -1,9 +1,90 @@
-mapscripts QuietGrove_MapScripts {}
+mapscripts QuietGrove_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: QuietGrove_OnTransition
+}
+
+script QuietGrove_OnTransition {
+    if (!flag(FLAG_CLEARED_QUIET_GROVE)) {
+        setflag(FLAG_TEMP_A)
+        setvar(VAR_TEMP_A, 1)
+    }
+}
+
+script QuietGrove_AquaGrunt1 {
+    trainerbattle_single(
+        TRAINER_QUIET_GROVE_AQUA_GRUNT1, 
+        format("Yo these little trees are harshing my vibes man!"),
+        format("Curse these tiny arboreal terrors...")  
+    )
+    msgbox(format("These little trees just keep coming back, even after we cut them down!"), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script QuietGrove_AquaGrunt2 {
+    trainerbattle_single(
+        TRAINER_QUIET_GROVE_AQUA_GRUNT2, 
+        format("Yeah! Team Aqua!"),
+        format("No! Team Aquan't!")  
+    )
+    msgbox(format("If we were in water I would've won..."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script QuietGrove_AquaGrunt3 {
+    trainerbattle_single(
+        TRAINER_QUIET_GROVE_AQUA_GRUNT3, 
+        format("...Why are we in a forest?"),
+        format("No really, aren't we the ocean guys?")  
+    )
+    msgbox(format("I don't understand what we're doing with all these... trees."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script QuietGrove_Admin {
+    lockall
+    setvar(VAR_TEMP_A, 0)
+    getobjectxy(OBJ_EVENT_ID_PLAYER, CURRENT_POSITION, VAR_TEMP_1, VAR_TEMP_2)
+    if (var(VAR_TEMP_1) == 20) {
+        applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_left face_up))
+        waitmovement(0)
+    }
+    delay(30)
+    msgbox(QuietGrove_Admin_Text)
+    applymovement(11, moves(face_down))
+    playbgm(MUS_ENCOUNTER_AQUA, FALSE)
+    msgbox("They've sent a child to stop us.")
+    trainerbattle_no_intro(TRAINER_QUIET_GROVE_ADMIN, "Oho!")
+	fadedefaultbgm
+    msgbox(QuietGrove_Admin_Text2)
+    fadescreen(FADE_TO_BLACK)
+    delay(10)
+    playse(SE_EXIT)
+    setflag(FLAG_CLEARED_QUIET_GROVE)
+    removeobject(11)
+    removeobject(10)
+    removeobject(9)
+    removeobject(8)
+    waitse
+    fadescreen(FADE_FROM_BLACK)
+    releaseall
+}
+
+text QuietGrove_Admin_Text {
+    "I was hoping we would've bought enough\ntime with the Parasect and the rockslide,\l"
+    "but they sure reacted quickly to it.\p"
+    "Even after all that hard work\nbehind the scenes...\p" 
+    "Such a let down, we had only just\nstarted getting the info we wanted."
+    "And to cap off this colossal failure,"
+}
+
+text QuietGrove_Admin_Text2 {
+    "You're not quite the pushover\nI thought you would be.\p"
+    "Alright, I guess we'll retreat for now.\p"
+    "I'll be seeing you later though,\nwe have unfinished business.\p"
+    "I won't back down so easily next time."
+}
 
 script QuietGrove_Sign {
-    lockall
-    msgbox("Quiet Grove,\nWatch out for bugs!")
-    releaseall
+    msgbox("Quiet Grove,\nWatch out for bugs!", MSGBOX_SIGN)
 }
 
 script QuietGrove_BugCatcher {
@@ -27,9 +108,7 @@ script QuietGrove_Girl {
 }
 
 script QuietGrove_LittleGirl {
-    lockall
     msgbox(QuietGrove_LittleGirl_Text, MSGBOX_NPC)
-    releaseall
 }
 
 text QuietGrove_LittleGirl_Text {

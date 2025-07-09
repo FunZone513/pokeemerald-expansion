@@ -13124,43 +13124,43 @@
             "encounter_rate": 10,
             "mons": [
               {
-                "min_level": 5,
-                "max_level": 7,
-                "species": "SPECIES_SPINARAK"
-              },
-              {
-                "min_level": 5,
-                "max_level": 7,
-                "species": "SPECIES_PARAS"
-              },
-              {
-                "min_level": 5,
+                "min_level": 4,
                 "max_level": 6,
-                "species": "SPECIES_WEEDLE"
-              },
-              {
-                "min_level": 5,
-                "max_level": 9,
-                "species": "SPECIES_HOOTHOOT"
-              },
-              {
-                "min_level": 5,
-                "max_level": 9,
                 "species": "SPECIES_SPINARAK"
-              },
-              {
-                "min_level": 5,
-                "max_level": 9,
-                "species": "SPECIES_PARAS"
-              },
-              {
-                "min_level": 5,
-                "max_level": 9,
-                "species": "SPECIES_HOOTHOOT"
               },
               {
                 "min_level": 4,
                 "max_level": 6,
+                "species": "SPECIES_PARAS"
+              },
+              {
+                "min_level": 4,
+                "max_level": 6,
+                "species": "SPECIES_WEEDLE"
+              },
+              {
+                "min_level": 4,
+                "max_level": 8,
+                "species": "SPECIES_HOOTHOOT"
+              },
+              {
+                "min_level": 4,
+                "max_level": 8,
+                "species": "SPECIES_SPINARAK"
+              },
+              {
+                "min_level": 4,
+                "max_level": 8,
+                "species": "SPECIES_PARAS"
+              },
+              {
+                "min_level": 4,
+                "max_level": 8,
+                "species": "SPECIES_HOOTHOOT"
+              },
+              {
+                "min_level": 4,
+                "max_level": 8,
                 "species": "SPECIES_WEEDLE"
               },
               {
@@ -13600,64 +13600,64 @@
             "encounter_rate": 10,
             "mons": [
               {
-                "min_level": 15,
-                "max_level": 20,
+                "min_level": 12,
+                "max_level": 16,
                 "species": "SPECIES_POOCHYENA"
               },
               {
-                "min_level": 15,
-                "max_level": 20,
+                "min_level": 12,
+                "max_level": 16,
                 "species": "SPECIES_YANMA"
               },
               {
-                "min_level": 15,
-                "max_level": 20,
+                "min_level": 12,
+                "max_level": 16,
                 "species": "SPECIES_LOTAD"
               },
               {
-                "min_level": 15,
-                "max_level": 20,
+                "min_level": 12,
+                "max_level": 16,
                 "species": "SPECIES_YANMA"
               },
               {
-                "min_level": 15,
-                "max_level": 20,
+                "min_level": 12,
+                "max_level": 16,
                 "species": "SPECIES_PANCHAM"
               },
               {
-                "min_level": 15,
-                "max_level": 20,
+                "min_level": 12,
+                "max_level": 16,
                 "species": "SPECIES_POOCHYENA"
               },
               {
-                "min_level": 15,
-                "max_level": 20,
+                "min_level": 12,
+                "max_level": 16,
                 "species": "SPECIES_SURSKIT"
               },
               {
-                "min_level": 15,
-                "max_level": 20,
-                "species": "SPECIES_LOMBRE"
+                "min_level": 12,
+                "max_level": 16,
+                "species": "SPECIES_LOTAD"
               },
               {
-                "min_level": 15,
-                "max_level": 20,
+                "min_level": 12,
+                "max_level": 16,
                 "species": "SPECIES_YANMA"
               },
               {
-                "min_level": 15,
-                "max_level": 20,
+                "min_level": 12,
+                "max_level": 16,
                 "species": "SPECIES_PANCHAM"
               },
               {
-                "min_level": 15,
-                "max_level": 20,
-                "species": "SPECIES_SCYTHER"
+                "min_level": 14,
+                "max_level": 16,
+                "species": "SPECIES_LOMBRE"
               },
               {
-                "min_level": 15,
-                "max_level": 20,
-                "species": "SPECIES_SCYTHER"
+                "min_level": 14,
+                "max_level": 16,
+                "species": "SPECIES_LOMBRE"
               }
             ]
           },
@@ -14493,6 +14493,71 @@
         {
           "map": "MAP_DYECRESS_TOWN",
           "base_label": "gDyecressTown",
+          "land_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 7,
+                "species": "SPECIES_BUDEW"
+              },
+              {
+                "min_level": 5,
+                "max_level": 7,
+                "species": "SPECIES_HOPPIP"
+              },
+              {
+                "min_level": 5,
+                "max_level": 7,
+                "species": "SPECIES_BUDEW"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_HOPPIP"
+              },
+              {
+                "min_level": 5,
+                "max_level": 7,
+                "species": "SPECIES_SHROOMISH"
+              },
+              {
+                "min_level": 5,
+                "max_level": 7,
+                "species": "SPECIES_BUDEW"
+              },
+              {
+                "min_level": 6,
+                "max_level": 8,
+                "species": "SPECIES_ROSELIA"
+              },
+              {
+                "min_level": 5,
+                "max_level": 7,
+                "species": "SPECIES_HOPPIP"
+              },
+              {
+                "min_level": 5,
+                "max_level": 7,
+                "species": "SPECIES_BUDEW"
+              },
+              {
+                "min_level": 5,
+                "max_level": 7,
+                "species": "SPECIES_COTTONEE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 7,
+                "species": "SPECIES_COTTONEE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 7,
+                "species": "SPECIES_COTTONEE"
+              }
+            ]
+          },
           "fishing_mons": {
             "encounter_rate": 30,
             "mons": [

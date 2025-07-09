@@ -4424,7 +4424,7 @@
     {
       "id": "LAYOUT_ROUTE2",
       "name": "Route2_Layout",
-      "width": 27,
+      "width": 33,
       "height": 40,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
@@ -4940,6 +4940,16 @@
       "secondary_tileset": "gTileset_MeteorFalls",
       "border_filepath": "data/layouts/DripstoneChannel/border.bin",
       "blockdata_filepath": "data/layouts/DripstoneChannel/map.bin"
+    },
+    {
+      "id": "LAYOUT_DYECRESS_TOWN_HERB_SHOP",
+      "name": "DyecressTown_HerbShop_Layout",
+      "width": 12,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Shop",
+      "border_filepath": "data/layouts/DyecressTown_HerbShop/border.bin",
+      "blockdata_filepath": "data/layouts/DyecressTown_HerbShop/map.bin"
     }
   ]
 }

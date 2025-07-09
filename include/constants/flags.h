@@ -45,12 +45,12 @@
 
 //MARK: Story Flags
 #define FLAG_CLEARED_OCHRE_VALE_MINE    0x20
-#define FLAG_HIDE_ROUTE2_MINIBOSS    0x21
-#define FLAG_DYECRESS_BULLSHIT    0x22
-#define FLAG_UNUSED_0x023    0x23 // Unused Flag
-#define FLAG_UNUSED_0x024    0x24 // Unused Flag
-#define FLAG_UNUSED_0x025    0x25 // Unused Flag
-#define FLAG_UNUSED_0x026    0x26 // Unused Flag
+#define FLAG_HIDE_ROUTE2_MINIBOSS       0x21
+#define FLAG_DYECRESS_BULLSHIT          0x22
+#define FLAG_CLEARED_QUIET_GROVE        0x23
+#define FLAG_UPGRADE_HERBSHOP           0x24 //TODO make a quest or something?
+#define FLAG_CLEARED_SCORCHED_CHAMBERS  0x25
+#define FLAG_SCORCHED_CHAMBERS_BRIDGE_SEEN    0x26
 #define FLAG_UNUSED_0x027    0x27 // Unused Flag
 #define FLAG_UNUSED_0x028    0x28 // Unused Flag
 #define FLAG_UNUSED_0x029    0x29 // Unused Flag
@@ -1110,8 +1110,8 @@
 #define FLAG_ITEM_SCORCHED_CHAMBERS_1                               0x406
 #define FLAG_ITEM_DRIPSTONE_CAVE_1                                  0x407
 #define FLAG_ITEM_SCORCHED_CHAMBERS_2                               0x408
-#define FLAG_ITEM_ROUTE_123_RARE_CANDY                              0x409 // Unused Flag, leftover from R/S. In Emerald this is a hidden item and uses a different flag
-#define FLAG_ITEM_ROUTE_127_ZINC                                    0x40A
+#define FLAG_ITEM_ROUTE_2_1                                         0x409
+#define FLAG_ITEM_ROUTE_4                                           0x40A
 #define FLAG_ITEM_ROUTE_127_CARBOS                                  0x40B
 #define FLAG_ITEM_ROUTE_132_RARE_CANDY                              0x40C
 #define FLAG_ITEM_ROUTE_133_BIG_PEARL                               0x40D

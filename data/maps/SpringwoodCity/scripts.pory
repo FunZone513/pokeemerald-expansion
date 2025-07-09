@@ -1,4 +1,66 @@
-mapscripts SpringwoodCity_MapScripts {}
+mapscripts SpringwoodCity_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: SpringwoodCity_OnTransition
+}
+
+script SpringwoodCity_OnTransition {
+    if (flag(FLAG_CLEARED_QUIET_GROVE) && var(VAR_EVELYNN_STATE) == 2 && flag(FLAG_BADGE01_GET)) {
+        setvar(VAR_TEMP_A, 1)
+    }
+}
+
+script SpringwoodCity_LibraEvelynnTriggerL {
+    addobject(14)
+    setobjectxy(14, 35, 21)
+    call(SpringwoodCity_LibraEvelynnTrigger)
+}
+
+script SpringwoodCity_LibraEvelynnTriggerR {
+    addobject(14)
+    setobjectxy(14, 36, 21)
+    call(SpringwoodCity_LibraEvelynnTrigger)
+}
+
+script SpringwoodCity_LibraEvelynnTrigger {
+    lock
+    hidefollower
+    setvar(VAR_TEMP_A, 0)
+    applymovement(14, moves(walk_down))
+    playse(SE_WALL_HIT)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(lock_facing_direction walk_down unlock_facing_direction))
+    waitmovement(0)
+    playse(SE_PIN)
+    waitmovement(0)
+    applymovement(14, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    applymovement(14, moves(face_down))
+    waitmovement(0)
+    msgbox("What the-\nSo you're following me now?\p...\pNot a very talkative one are you?")
+    applymovement(14, moves(face_left))
+    waitmovement(0)
+    applymovement(14, moves(delay_16 delay_16))
+    waitmovement(0)
+    applymovement(14, moves(face_right))
+    waitmovement(0)
+    applymovement(14, moves(delay_16 delay_16))
+    waitmovement(0)
+    applymovement(14, moves(face_down))
+    waitmovement(0)
+    msgbox(SpringwoodCity_LibraEvelynn_Text)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right lock_facing_direction walk_left unlock_facing_direction))
+    applymovement(14, moves(walk_down*7))
+    waitmovement(0)
+    removeobject(14)
+    setvar(VAR_EVELYNN_STATE, 3)
+    release
+}
+
+text SpringwoodCity_LibraEvelynn_Text {
+    "Wait... Are you the one that\ncleared out Quiet Grove?\p"
+    "Hmmm...\p"
+    "I'm not sure what you're after,\nbut if you're against Team Aqua then\lyou can't be all bad.\p"
+    "Tell you what, I'll be in Spring Woods\nto check something.\p"
+    "Be there."
+}
 
 script SpringwoodCity_Intro_Scientist {
     lockall
@@ -111,4 +173,24 @@ script SpringwoodCity_Sailor {
 
 script SpringwoodCity_Fisherman {
     msgbox("I'm sure that one of these days I'll\ncatch some super rare Pokemon that can\lonly be found in Springwood City's\lright-hand fountain!", MSGBOX_NPC)
+}
+
+script SpringwoodCity_AquaGrunt1 {
+    msgbox(format("What? Do you mind?"), MSGBOX_NPC)
+}
+
+script SpringwoodCity_AquaGrunt2 {
+    msgbox(format("You can't just barge into people's conversations like that, very rude."), MSGBOX_NPC)
+}
+
+script SpringwoodCity_AquaGrunt3 {
+    msgbox(format("I'm not doing anything weird, just hangin' out."), MSGBOX_NPC)
+}
+
+script SpringwoodCity_AquaGrunt4 {
+    msgbox(format("You haven't seen anyone wearing red anywhere nearby have you?"), MSGBOX_NPC)
+}
+
+script SpringwoodCity_AquaGrunt5 {
+    msgbox(format("Buh?"), MSGBOX_NPC)
 }

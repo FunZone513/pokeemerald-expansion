@@ -1260,3 +1260,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/ScorchedChambers/scripts.inc"
 
 	.include "data/maps/DripstoneChannel/scripts.inc"
+
+	.include "data/maps/DyecressTown_HerbShop/scripts.inc"

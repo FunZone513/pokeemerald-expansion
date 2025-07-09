@@ -3146,6 +3146,12 @@ void Script_EndTrainerCanSeeIf(struct ScriptContext *ctx)
 
 //=======================================
 
+void GetInteractedPokemon(void) {
+    u32 pokemonObjID = (gSpecialVar_LastTalked - 1); // get the map object number
+    u32 speciesIndex = gMapHeader.events->objectEvents[pokemonObjID].trainerRange_berryTreeId; // grab the species from sight range    
+    gSpecialVar_0x8004 = speciesIndex; // put the SPECIES_PKMN value into VAR_0x8004
+}
+
 bool8 CheckPartyCon(u16 value, u8 condition) {
     u8 i;
     u16 species;

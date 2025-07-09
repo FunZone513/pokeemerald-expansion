@@ -28,10 +28,3 @@ text FishermanGive {
 script Route3_FishingHut_Doorway {
     msgbox(format("I wonder what's back there..."), MSGBOX_SIGN)
 }
-
-script Route3_FishingHut_Lombre {
-    setseenmon(SPECIES_LOMBRE)
-    playmoncry(SPECIES_LOMBRE, CRY_MODE_NORMAL)
-    msgbox("?", MSGBOX_NPC)
-    waitmoncry
-}

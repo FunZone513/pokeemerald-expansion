@@ -18,21 +18,19 @@ DyecressTown_OnLoad_1:
 
 DyecressTown_Sign::
 # 12 "data/maps/DyecressTown/scripts.pory"
-	lockall
-# 13 "data/maps/DyecressTown/scripts.pory"
 	msgbox DyecressTown_Sign_Text_0, MSGBOX_SIGN
-# 14 "data/maps/DyecressTown/scripts.pory"
-	releaseall
 	return
 
 
 DyecressTown_Sign2::
-# 18 "data/maps/DyecressTown/scripts.pory"
-	lockall
-# 19 "data/maps/DyecressTown/scripts.pory"
+# 16 "data/maps/DyecressTown/scripts.pory"
 	msgbox DyecressTown_Sign2_Text_0, MSGBOX_SIGN
+	return
+
+
+DyecressTown_Sign3::
 # 20 "data/maps/DyecressTown/scripts.pory"
-	releaseall
+	msgbox DyecressTown_Sign3_Text_0, MSGBOX_SIGN
 	return
 
 
@@ -52,155 +50,113 @@ DyecressTown_Sign_Temple_1:
 
 DyecressTown_OldMan::
 # 45 "data/maps/DyecressTown/scripts.pory"
-	lockall
-# 46 "data/maps/DyecressTown/scripts.pory"
 	msgbox DyecressTown_OldMan_Text_0, MSGBOX_NPC
-# 47 "data/maps/DyecressTown/scripts.pory"
-	releaseall
 	return
 
 
 DyecressTown_OldWoman::
-# 51 "data/maps/DyecressTown/scripts.pory"
-	lockall
-# 52 "data/maps/DyecressTown/scripts.pory"
+# 49 "data/maps/DyecressTown/scripts.pory"
 	msgbox DyecressTown_OldWoman_Text_0, MSGBOX_NPC
-# 53 "data/maps/DyecressTown/scripts.pory"
-	releaseall
 	return
 
 
 DyecressTown_Woman::
-# 57 "data/maps/DyecressTown/scripts.pory"
-	lockall
-# 58 "data/maps/DyecressTown/scripts.pory"
+# 53 "data/maps/DyecressTown/scripts.pory"
 	msgbox DyecressTown_Woman_Text_0, MSGBOX_NPC
-# 59 "data/maps/DyecressTown/scripts.pory"
-	releaseall
-	return
-
-
-DyecressTown_Roselia::
-# 63 "data/maps/DyecressTown/scripts.pory"
-	setseenmon SPECIES_ROSELIA
-# 64 "data/maps/DyecressTown/scripts.pory"
-	playmoncry SPECIES_ROSELIA, CRY_MODE_NORMAL
-# 65 "data/maps/DyecressTown/scripts.pory"
-	msgbox DyecressTown_Roselia_Text_0, MSGBOX_NPC
 	return
 
 
 DyecressTown_Scientist1::
-# 69 "data/maps/DyecressTown/scripts.pory"
-	lockall
-# 70 "data/maps/DyecressTown/scripts.pory"
+# 57 "data/maps/DyecressTown/scripts.pory"
 	msgbox DyecressTown_Scientist1_Text_0, MSGBOX_NPC
-# 71 "data/maps/DyecressTown/scripts.pory"
-	releaseall
 	return
 
 
 DyecressTown_Scientist2::
-# 75 "data/maps/DyecressTown/scripts.pory"
-	lockall
-# 76 "data/maps/DyecressTown/scripts.pory"
+# 61 "data/maps/DyecressTown/scripts.pory"
 	msgbox DyecressTown_Scientist2_Text_0, MSGBOX_NPC
-# 77 "data/maps/DyecressTown/scripts.pory"
-	releaseall
 	return
 
 
 DyecressTown_Scientist3::
-# 81 "data/maps/DyecressTown/scripts.pory"
-	lockall
-# 82 "data/maps/DyecressTown/scripts.pory"
+# 65 "data/maps/DyecressTown/scripts.pory"
 	msgbox DyecressTown_Scientist3_Text_0, MSGBOX_NPC
-# 83 "data/maps/DyecressTown/scripts.pory"
-	releaseall
 	return
 
 
 DyecressTown_Scientist4::
-# 87 "data/maps/DyecressTown/scripts.pory"
-	lockall
-# 88 "data/maps/DyecressTown/scripts.pory"
+# 69 "data/maps/DyecressTown/scripts.pory"
 	msgbox DyecressTown_Scientist4_Text_0, MSGBOX_NPC
-# 89 "data/maps/DyecressTown/scripts.pory"
-	releaseall
 	return
 
 
 DyecressTown_Spenser_Temple::
-# 93 "data/maps/DyecressTown/scripts.pory"
-	lockall
-# 94 "data/maps/DyecressTown/scripts.pory"
+# 73 "data/maps/DyecressTown/scripts.pory"
 	msgbox DyecressTown_Spenser_Temple_Text_0, MSGBOX_NPC
-# 95 "data/maps/DyecressTown/scripts.pory"
-	releaseall
 	return
 
 
 DyecressTown_Sign_Text_0:
-# 13 "data/maps/DyecressTown/scripts.pory"
+# 12 "data/maps/DyecressTown/scripts.pory"
 	.string "Dyecress Town\nA heritage overlooking the sea.$"
 
 DyecressTown_Sign2_Text_0:
-# 19 "data/maps/DyecressTown/scripts.pory"
+# 16 "data/maps/DyecressTown/scripts.pory"
 	.string "Spenser's House.$"
+
+DyecressTown_Sign3_Text_0:
+# 20 "data/maps/DyecressTown/scripts.pory"
+	.string "Herb Shop.\nA healthy alternative!$"
 
 DyecressTown_Sign_Temple_Text_0:
 # 24 "data/maps/DyecressTown/scripts.pory"
 	.string "The words seem to have\neroded over time...\pDo you want to try reading it anyway?$"
 
 DyecressTown_OldMan_Text_0:
-# 46 "data/maps/DyecressTown/scripts.pory"
+# 45 "data/maps/DyecressTown/scripts.pory"
 	.string "Dyecress Town used to be a medical hub\n"
 	.string "for the region. While many of its roots\l"
 	.string "have been lost to time, the culture of\l"
 	.string "growing medicinal plants remains.$"
 
 DyecressTown_OldWoman_Text_0:
-# 52 "data/maps/DyecressTown/scripts.pory"
+# 49 "data/maps/DyecressTown/scripts.pory"
 	.string "While these days many travel looking\n"
 	.string "for the big city, this town and its\l"
 	.string "residents have remained faithful to\l"
 	.string "their long history.$"
 
 DyecressTown_Woman_Text_0:
-# 58 "data/maps/DyecressTown/scripts.pory"
+# 53 "data/maps/DyecressTown/scripts.pory"
 	.string "Most of the flowering plants here can\n"
 	.string "be used for medicine, and the petals\l"
 	.string "can also make wonderful pigments.$"
 
-DyecressTown_Roselia_Text_0:
-# 65 "data/maps/DyecressTown/scripts.pory"
-	.string "Roooose-!$"
-
 DyecressTown_Scientist1_Text_0:
-# 70 "data/maps/DyecressTown/scripts.pory"
+# 57 "data/maps/DyecressTown/scripts.pory"
 	.string "I'm wondering if these bizarre pillars\n"
 	.string "have some sort of purpose.$"
 
 DyecressTown_Scientist2_Text_0:
-# 76 "data/maps/DyecressTown/scripts.pory"
+# 61 "data/maps/DyecressTown/scripts.pory"
 	.string "You can really feel the town's history\n"
 	.string "just by being here.$"
 
 DyecressTown_Scientist3_Text_0:
-# 82 "data/maps/DyecressTown/scripts.pory"
+# 65 "data/maps/DyecressTown/scripts.pory"
 	.string "The archway seems quite old, yet it's\n"
 	.string "like it hasn't aged a day since it was\l"
 	.string "built.$"
 
 DyecressTown_Scientist4_Text_0:
-# 88 "data/maps/DyecressTown/scripts.pory"
+# 69 "data/maps/DyecressTown/scripts.pory"
 	.string "The text on this sign is much too\n"
 	.string "degraded to be read, so we're using a\l"
 	.string "new method to try and gather more\l"
 	.string "clues.$"
 
 DyecressTown_Spenser_Temple_Text_0:
-# 94 "data/maps/DyecressTown/scripts.pory"
+# 73 "data/maps/DyecressTown/scripts.pory"
 	.string "As much as it pains me to have these\n"
 	.string "coats scrutinise our wonderful history,\l"
 	.string "I must admit that they are at least\l"

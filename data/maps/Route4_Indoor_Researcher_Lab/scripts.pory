@@ -1,51 +1,58 @@
-mapscripts Route4_Indoor_Researcher_Lab_MapScripts {
-    MAP_SCRIPT_ON_LOAD: Route4_Indoor_Researcher_Lab_IntroCheck
+mapscripts Route4_Indoor_Researcher_Lab_MapScripts {}
+
+script Route4_Indoor_Researcher_Lab_Director {    
+    msgbox(Route4_Indoor_Researcher_Lab_Director_Text, MSGBOX_NPC)
 }
 
-script Route4_Indoor_Researcher_Lab_IntroCheck {
-    if (flag(FLAG_HIDE_ROUTE2_MINIBOSS)) { setflag(FLAG_TEMP_1) }
+text Route4_Indoor_Researcher_Lab_Director_Text {
+    "Feel free to take a look around\nwhile you're here.\p"
+    "The worst that could happen\nis that you learn something new!"
 }
 
-script Route4_Indoor_Researcher_Lab_Director {
-    lockall
-    faceplayer
-    msgbox("Hey there, welcome to the wonderful\nworld of Pokemon Science!")
-    if (var(VAR_LITTLEROOT_INTRO_STATE) == 5) {
-        msgbox(Route4_Indoor_Researcher_Lab_Director_Intro)
-        setvar(VAR_LITTLEROOT_INTRO_STATE, 6)
-        setflag(FLAG_HIDE_ROUTE2_MINIBOSS)
+script Route4_Indoor_Researcher_Lab_Intro {
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_up*3))
+    waitmovement(0)
+    getobjectxy(OBJ_EVENT_ID_PLAYER, CURRENT_POSITION, VAR_TEMP_1, VAR_TEMP_2)
+    if (var(VAR_TEMP_1) == 15) {
+        applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_left face_up))
+        waitmovement(0)
     }
-    msgbox("Feel free to take a look around\nwhile you're here.")
-    msgbox("The worst that could happen\nis that you learn something new!", MSGBOX_NPC)
-    releaseall
+    applymovement(3, moves(face_player))
+    message("Welcome!\p")
+    waitmessage
+    message("I'm the lab's director,\nis there anything in particular\lthat we can help you with?\p")
+    waitmessage
+    addobject(5)
+    setobjectxy(5, 15, 13)
+    applymovement(5, Route4_Indoor_Researcher_Lab_EvelynnWalkPast)
+    message("What's that? George already\nleft for Springwood Gym?\p")
+    waitmessage
+    message("Well I'm glad someone told me,\nI was just starting to wonder\lwhere he had gone off to.\p")
+    waitmessage
+    message("Thank you for letting me know.\p")
+    waitmessage
+    message("Hmm...\pThey must've helped calm down\nthe Parasect by now, so I'm sure you\lcan go back to exploring all you like!\p")
+    waitmessage
+    waitmovement(5)
+    removeobject(5)
+    setvar(VAR_LITTLEROOT_INTRO_STATE, 6)
+    setflag(FLAG_HIDE_ROUTE2_MINIBOSS)
+    release
 }
 
-text Route4_Indoor_Researcher_Lab_Director_Intro {
-    "I'm the Director here,\nis there anything in particular\lthat you would like to learn today?\p"
-    "What's that?\nGeorge already left for Springwood Gym?\p"
-    "Well I'm glad someone told me,\nI was just starting to wonder\lwhere he had gone off to."
-    
-}
-
-script Route4_Indoor_Researcher_Lab_Intro_R1 {
-    lockall
-    msgbox("I wonder if you can do a flip?\nGo on! Do a flip!")
-    playmoncry(SPECIES_POOCHYENA, CRY_MODE_NORMAL)
-    waitmoncry
-    msgbox("No no, a FLIP.\n...this might take a while...")
-    releaseall
+movement Route4_Indoor_Researcher_Lab_EvelynnWalkPast {
+    walk_up*4 
+    walk_right*3 
+    walk_up*4 
+    walk_right*4
 }
 
 script Route4_Indoor_Researcher_Lab_R1 {
-    lockall
     msgbox("I'm so close to a breakthrough...\nI just need a little more something...", MSGBOX_NPC)
-    releaseall
 }
 
 script Route4_Indoor_Researcher_Lab_R2 {
-    lockall
-    msgbox(format("We've been hearing about some bizarre trees dotted around the region. We can't seem to replicate any strange happenings regarding them however."), MSGBOX_NPC)
-    releaseall
+    msgbox(format("We've been hearing about some bizarre trees dotted around the region. We can't seem to replicate any of the strange happenings regarding them however."), MSGBOX_NPC)
 }
 
 // 1 spoken to, 2 caught EEVEE check, 3 caught EEVEE, 4 talk to guy at ochre mine, 5 clear out ochre mine, 6 profit, 7 end

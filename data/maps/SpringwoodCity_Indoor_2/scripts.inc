@@ -27,7 +27,7 @@ SpringwoodCity_Indoor_2_Man_3:
 # 8 "data/maps/SpringwoodCity_Indoor_2/scripts.pory"
 	msgbox SpringwoodCity_Indoor_2_Man_Text2, MSGBOX_NPC
 # 9 "data/maps/SpringwoodCity_Indoor_2/scripts.pory"
-	giveitem ITEM_TM27
+	giveitem ITEM_TM_RETURN
 # 10 "data/maps/SpringwoodCity_Indoor_2/scripts.pory"
 	setflag FLAG_RECEIVED_TM_RETURN
 	goto SpringwoodCity_Indoor_2_Man_1
@@ -45,29 +45,24 @@ SpringwoodCity_Indoor_2_Gardevoir::
 # 40 "data/maps/SpringwoodCity_Indoor_2/scripts.pory"
 	waitmoncry
 # 41 "data/maps/SpringwoodCity_Indoor_2/scripts.pory"
-	goto_if_set FLAG_HIDE_ROUTE2_MINIBOSS, SpringwoodCity_Indoor_2_Gardevoir_2
+	goto_if_set FLAG_TEMP_1, SpringwoodCity_Indoor_2_Gardevoir_3
 SpringwoodCity_Indoor_2_Gardevoir_1:
-# 47 "data/maps/SpringwoodCity_Indoor_2/scripts.pory"
+# 45 "data/maps/SpringwoodCity_Indoor_2/scripts.pory"
 	waitmoncry
-# 48 "data/maps/SpringwoodCity_Indoor_2/scripts.pory"
+# 46 "data/maps/SpringwoodCity_Indoor_2/scripts.pory"
 	releaseall
 	return
 
 SpringwoodCity_Indoor_2_Gardevoir_2:
 # 42 "data/maps/SpringwoodCity_Indoor_2/scripts.pory"
-	goto_if_set FLAG_TEMP_1, SpringwoodCity_Indoor_2_Gardevoir_5
-	goto SpringwoodCity_Indoor_2_Gardevoir_1
-
-SpringwoodCity_Indoor_2_Gardevoir_4:
-# 43 "data/maps/SpringwoodCity_Indoor_2/scripts.pory"
 	msgbox SpringwoodCity_Indoor_2_Gardevoir_Text_1, MSGBOX_NPC
-# 44 "data/maps/SpringwoodCity_Indoor_2/scripts.pory"
+# 43 "data/maps/SpringwoodCity_Indoor_2/scripts.pory"
 	setflag FLAG_TEMP_2
 	goto SpringwoodCity_Indoor_2_Gardevoir_1
 
-SpringwoodCity_Indoor_2_Gardevoir_5:
-# 42 "data/maps/SpringwoodCity_Indoor_2/scripts.pory"
-	goto_if_unset FLAG_RECEIVED_TM_RETURN, SpringwoodCity_Indoor_2_Gardevoir_4
+SpringwoodCity_Indoor_2_Gardevoir_3:
+# 41 "data/maps/SpringwoodCity_Indoor_2/scripts.pory"
+	goto_if_unset FLAG_RECEIVED_TM_RETURN, SpringwoodCity_Indoor_2_Gardevoir_2
 	goto SpringwoodCity_Indoor_2_Gardevoir_1
 
 
@@ -80,7 +75,7 @@ SpringwoodCity_Indoor_2_Gardevoir_Text_0:
 	.string "...$"
 
 SpringwoodCity_Indoor_2_Gardevoir_Text_1:
-# 43 "data/maps/SpringwoodCity_Indoor_2/scripts.pory"
+# 42 "data/maps/SpringwoodCity_Indoor_2/scripts.pory"
 	.string "...please tell him I simply wish to\nstay by his side.$"
 
 SpringwoodCity_Indoor_2_Man_Text::

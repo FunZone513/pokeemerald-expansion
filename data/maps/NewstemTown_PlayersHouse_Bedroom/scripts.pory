@@ -110,6 +110,25 @@ script Generic_GYM_LEVEL_GUIDE {
     releaseall
 }
 
+script Generic_POKEMON_INTERACT {
+    lockall
+    callnative(GetInteractedPokemon)
+    if (flag(FLAG_SYS_POKEDEX_GET)) {setseenmon(VAR_0x8004)}
+    playmoncry(VAR_0x8004, CRY_MODE_NORMAL)
+    
+    random(5)
+    switch(var(VAR_RESULT)) {
+        case 0: msgbox("?", MSGBOX_NPC)
+        case 1: msgbox("?", MSGBOX_NPC)
+        case 2: msgbox("!", MSGBOX_NPC)
+        case 3: msgbox("...", MSGBOX_NPC)
+        case 4: msgbox("!?", MSGBOX_NPC)
+        default: msgbox("?", MSGBOX_NPC)
+    }    
+    waitmoncry
+    releaseall
+}
+
 //script NewstemTown_DEBUG {
 //    lockall
 //    givemon(SPECIES_TURTWIG, 1)

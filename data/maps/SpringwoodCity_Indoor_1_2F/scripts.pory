@@ -1,9 +1,7 @@
 mapscripts SpringwoodCity_Indoor_1_2F_MapScripts {}
 
 script SpringwoodCity_Indoor_1_2F_Employee {
-    lockall
     msgbox(format("Oh, I'm not supposed to talk to people like you."), MSGBOX_NPC)
-    releaseall
 }
 
 script SpringwoodCity_Indoor_1_2F_TriggerL {

@@ -5,6 +5,52 @@ Pic: Brendan
 Gender: Male
 Music: Male
 
+=== PARTNER_SCORCHED_CHAMBERS_EVELYNN ===
+Name: Evelynn
+Class: Rival
+Pic: May
+Gender: Female
+Music: Female
+
+Carbink
+Level: 22
+Ability: Clear Body  
+EVs: 4 HP / 252 Def / 252 SpD  
+Modest Nature
+- Smack Down
+- Stealth Rock
+- Light Screen
+- Tackle
+
+Whirlipede (F)
+Level: 22
+Ability: Poison Point
+- Rollout
+- Protect
+- Bug Bite
+- Poison Tail
+
+Mawile (F)
+Level: 24
+Ability: Intimidate
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Bite 
+- Sucker Punch  
+- Fairy Wind
+- Protect
+
+
+
+
+
+
+
+
+
+
+/*
+
 === PARTNER_STEVEN ===
 Name: STEVEN
 Class: Rival
@@ -41,3 +87,4 @@ EVs: 252 Atk / 252 SpA / 6 SpD
 - Protect
 - Solar Beam
 - Dragon Claw
+*/

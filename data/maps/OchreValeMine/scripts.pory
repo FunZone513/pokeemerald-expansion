@@ -34,8 +34,10 @@ script OchreValeMine_MagmaEncounter {
     applymovement(24, Common_Movement_Delay48)
     waitmovement(0)
     msgbox(format("Hey! You over there! Can you please help me out here?"))
+    waitse
     playse(SE_PIN)
     delay(8)
+    waitse
     playse(SE_PIN)
     applymovement(22, Common_Movement_ExclamationMark)
     applymovement(23, Common_Movement_ExclamationMark)
@@ -48,7 +50,8 @@ script OchreValeMine_MagmaEncounter {
     msgbox(format("Who are you to try and get in our way? We're just here to stop them from doing something foolish!"))
     trainerbattle_two_trainers(TRAINER_OCHRE_VALE_MINE_MAGMA_GRUNT2, format("You don't understand what you're doing here!"), TRAINER_OCHRE_VALE_MINE_MAGMA_GRUNT1, format("Look at the bigger picture!"))
     applymovement(OBJ_EVENT_ID_CAMERA, moves(walk_left*2))
-    removeobject(OBJ_EVENT_ID_CAMERA)
+    waitmovement(0)
+    special(RemoveCameraObject)
     specialvar(VAR_RESULT, GetBattleOutcome)
     if (var(VAR_RESULT) == B_OUTCOME_WON) {
         msgbox(format("We'll retreat for now, but we'll keep an eye on you."))

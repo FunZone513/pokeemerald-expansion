@@ -6,7 +6,7 @@ script SpringwoodCity_Indoor_2_Man {
         msgbox("Thank you for helping us reconnect.", MSGBOX_NPC)
     } elif (flag(FLAG_TEMP_2)) {
         msgbox(SpringwoodCity_Indoor_2_Man_Text2, MSGBOX_NPC)
-        giveitem(ITEM_TM27)
+        giveitem(ITEM_TM_RETURN)
         setflag(FLAG_RECEIVED_TM_RETURN)
     } else {
         msgbox(SpringwoodCity_Indoor_2_Man_Text, MSGBOX_NPC)
@@ -38,11 +38,9 @@ script SpringwoodCity_Indoor_2_Gardevoir {
     
     msgbox("...", MSGBOX_NPC)
     waitmoncry
-    if (flag(FLAG_HIDE_ROUTE2_MINIBOSS)) {
-        if (flag(FLAG_TEMP_1) && !flag(FLAG_RECEIVED_TM_RETURN)) {
-            msgbox("...please tell him I simply wish to\nstay by his side.", MSGBOX_NPC)
-            setflag(FLAG_TEMP_2)
-        }
+    if (flag(FLAG_TEMP_1) && !flag(FLAG_RECEIVED_TM_RETURN)) {
+        msgbox("...please tell him I simply wish to\nstay by his side.", MSGBOX_NPC)
+        setflag(FLAG_TEMP_2)
     }
     waitmoncry
     releaseall

@@ -225,6 +225,70 @@ Generic_GYM_LEVEL_GUIDE_2:
 	goto Generic_GYM_LEVEL_GUIDE_1
 
 
+Generic_POKEMON_INTERACT::
+# 114 "data/maps/NewstemTown_PlayersHouse_Bedroom/scripts.pory"
+	lockall
+# 115 "data/maps/NewstemTown_PlayersHouse_Bedroom/scripts.pory"
+	callnative GetInteractedPokemon
+# 116 "data/maps/NewstemTown_PlayersHouse_Bedroom/scripts.pory"
+	goto_if_set FLAG_SYS_POKEDEX_GET, Generic_POKEMON_INTERACT_2
+Generic_POKEMON_INTERACT_1:
+# 117 "data/maps/NewstemTown_PlayersHouse_Bedroom/scripts.pory"
+	playmoncry VAR_0x8004, CRY_MODE_NORMAL
+# 119 "data/maps/NewstemTown_PlayersHouse_Bedroom/scripts.pory"
+	random 5
+# 120 "data/maps/NewstemTown_PlayersHouse_Bedroom/scripts.pory"
+	switch VAR_RESULT
+# 121 "data/maps/NewstemTown_PlayersHouse_Bedroom/scripts.pory"
+	case 0, Generic_POKEMON_INTERACT_6
+# 122 "data/maps/NewstemTown_PlayersHouse_Bedroom/scripts.pory"
+	case 1, Generic_POKEMON_INTERACT_7
+# 123 "data/maps/NewstemTown_PlayersHouse_Bedroom/scripts.pory"
+	case 2, Generic_POKEMON_INTERACT_8
+# 124 "data/maps/NewstemTown_PlayersHouse_Bedroom/scripts.pory"
+	case 3, Generic_POKEMON_INTERACT_9
+# 125 "data/maps/NewstemTown_PlayersHouse_Bedroom/scripts.pory"
+	case 4, Generic_POKEMON_INTERACT_10
+# 126 "data/maps/NewstemTown_PlayersHouse_Bedroom/scripts.pory"
+	msgbox Generic_POKEMON_INTERACT_Text_0, MSGBOX_NPC
+Generic_POKEMON_INTERACT_4:
+# 128 "data/maps/NewstemTown_PlayersHouse_Bedroom/scripts.pory"
+	waitmoncry
+# 129 "data/maps/NewstemTown_PlayersHouse_Bedroom/scripts.pory"
+	releaseall
+	return
+
+Generic_POKEMON_INTERACT_2:
+# 116 "data/maps/NewstemTown_PlayersHouse_Bedroom/scripts.pory"
+	setseenmon VAR_0x8004
+	goto Generic_POKEMON_INTERACT_1
+
+Generic_POKEMON_INTERACT_6:
+# 121 "data/maps/NewstemTown_PlayersHouse_Bedroom/scripts.pory"
+	msgbox Generic_POKEMON_INTERACT_Text_0, MSGBOX_NPC
+	goto Generic_POKEMON_INTERACT_4
+
+Generic_POKEMON_INTERACT_7:
+# 122 "data/maps/NewstemTown_PlayersHouse_Bedroom/scripts.pory"
+	msgbox Generic_POKEMON_INTERACT_Text_0, MSGBOX_NPC
+	goto Generic_POKEMON_INTERACT_4
+
+Generic_POKEMON_INTERACT_8:
+# 123 "data/maps/NewstemTown_PlayersHouse_Bedroom/scripts.pory"
+	msgbox Generic_POKEMON_INTERACT_Text_1, MSGBOX_NPC
+	goto Generic_POKEMON_INTERACT_4
+
+Generic_POKEMON_INTERACT_9:
+# 124 "data/maps/NewstemTown_PlayersHouse_Bedroom/scripts.pory"
+	msgbox Generic_POKEMON_INTERACT_Text_2, MSGBOX_NPC
+	goto Generic_POKEMON_INTERACT_4
+
+Generic_POKEMON_INTERACT_10:
+# 125 "data/maps/NewstemTown_PlayersHouse_Bedroom/scripts.pory"
+	msgbox Generic_POKEMON_INTERACT_Text_3, MSGBOX_NPC
+	goto Generic_POKEMON_INTERACT_4
+
+
 NewstemTown_PlayersHouse_Bedroom_Settings_Text_0:
 # 24 "data/maps/NewstemTown_PlayersHouse_Bedroom/scripts.pory"
 	.string "This is where you edit the game's\n"
@@ -257,3 +321,19 @@ NewstemTown_PlayersHouse_Bedroom_Settings_Text_5:
 Generic_GYM_LEVEL_GUIDE_Text_0:
 # 103 "data/maps/NewstemTown_PlayersHouse_Bedroom/scripts.pory"
 	.string "Recommended Level:\n{STR_VAR_1}$"
+
+Generic_POKEMON_INTERACT_Text_0:
+# 121 "data/maps/NewstemTown_PlayersHouse_Bedroom/scripts.pory"
+	.string "?$"
+
+Generic_POKEMON_INTERACT_Text_1:
+# 123 "data/maps/NewstemTown_PlayersHouse_Bedroom/scripts.pory"
+	.string "!$"
+
+Generic_POKEMON_INTERACT_Text_2:
+# 124 "data/maps/NewstemTown_PlayersHouse_Bedroom/scripts.pory"
+	.string "...$"
+
+Generic_POKEMON_INTERACT_Text_3:
+# 125 "data/maps/NewstemTown_PlayersHouse_Bedroom/scripts.pory"
+	.string "!?$"

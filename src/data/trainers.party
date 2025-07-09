@@ -201,8 +201,7 @@ Careful Nature
 
 Munchlax @ Oran Berry  
 Ability: Gluttony  
-Level: 15  
-Shiny: Yes
+Level: 15
 EVs: 228 Atk / 244 Def / 28 SpD  
 Adamant Nature  
 - Lick  
@@ -420,13 +419,13 @@ Music: Hiker
 AI: Basic Trainer
 
 Barboach
-Level: 12
+Level: 9
 
 Barboach
-Level: 12
+Level: 9
 
 Corphish
-Level: 14
+Level: 10
 
 === TRAINER_ROUTE5_BLACKBELT ===
 Name: Lister
@@ -551,7 +550,7 @@ Slakoth
 Level: 13
 
 Heracross
-Level: 15
+Level: 13
 
 === TRAINER_SPRING_WOODS_PICNICKER ===
 Name: Riley
@@ -660,7 +659,7 @@ AI: Smart Trainer
 Numel
 Ability: Simple
 Modest Nature
-Level: 20
+Level: 18
 - Ember
 - Amnesia
 - Tackle
@@ -669,7 +668,7 @@ Level: 20
 Slugma
 Ability: Flame Body
 Modest Nature
-Level: 20
+Level: 18
 - Ember
 - Smog
 - Yawn 
@@ -685,14 +684,14 @@ AI: Smart Trainer
 Onix
 Ability: Weak Armor
 Adamant Nature
-Level: 24
+Level: 20
 - Rock Slide
 - Bind
 - Dragon Breath
 - Curse
 
 === TRAINER_OCHRE_VALE_MINE_ENTRANCE_MAGMA_GRUNT ===
-Name: Corey
+Name: Harry
 Class: Team Magma
 Pic: Magma Grunt M
 Gender: Male
@@ -863,8 +862,7 @@ Adamant Nature
 
 Crobat (F) @ Life Orb  
 Ability: Inner Focus  
-Level: 22  
-Shiny: Yes  
+Level: 22
 EVs: 252 HP / 248 Atk / 8 SpA  
 Naughty Nature  
 - Air Slash  
@@ -1280,10 +1278,283 @@ Adamant Nature
 - Fire Punch  
 - Ice Punch
 
+=== TRAINER_QUIET_GROVE_AQUA_GRUNT1 ===
+Name: Jeremy
+Class: Team Aqua
+Pic: Aqua Grunt M
+Gender: Male
+Music: Aqua
+AI: Basic Trainer
+
+Krabby
+Level: 8
+
+Shellos-East
+Level: 8
+
+=== TRAINER_QUIET_GROVE_AQUA_GRUNT2 ===
+Name: Charles
+Class: Team Aqua
+Pic: Aqua Grunt M
+Gender: Male
+Music: Aqua
+AI: Smart Trainer
+
+Carvanha
+Level: 9
+
+Shellder
+Level: 9
+
+=== TRAINER_QUIET_GROVE_AQUA_GRUNT3 ===
+Name: Liam
+Class: Team Aqua
+Pic: Aqua Grunt M
+Gender: Male
+Music: Aqua
+AI: Smart Trainer
+
+Marill
+Level: 9
+
+Barboach
+Level: 9
+
+=== TRAINER_QUIET_GROVE_ADMIN ===
+Name: Sayla
+Class: Aqua Admin
+Pic: Aqua Admin F
+Gender: Female
+Music: Aqua
+AI: Rival
+
+Clamperl (F)
+Level: 11
+- Whirlpool
+- Supersonic
+
+Frillish (F)
+Level: 11
+Ability: Cursed Body
+- Absorb
+- Poison Sting
+- Water Pulse
+
+Seel (F)
+Level: 13
+- Headbutt
+- Icy Wind
+- Ice Shard
+- Lick
+
+=== TRAINER_ROUTE10_MAGMA_GRUNT ===
+Name: Malcolm
+Class: Team Magma
+Pic: Magma Grunt M
+Gender: Male
+Music: Magma
+AI: Basic Trainer
+
+Slugma
+Level: 16
+
+Numel
+Level: 16
+
+Trapinch
+Level: 16
+
+Numel
+Level: 17
+
+=== TRAINER_SCORCHED_CHAMBERS_MAGMA_GRUNT1 ===
+Name: Fred
+Class: Team Magma
+Pic: Magma Grunt M
+Gender: Male
+Music: Magma
+AI: Basic Trainer
+
+Slugma
+Level: 19
+
+=== TRAINER_SCORCHED_CHAMBERS_MAGMA_GRUNT2 ===
+Name: Stacy
+Class: Team Magma
+Pic: Magma Grunt F
+Gender: Female
+Music: Magma
+AI: Basic Trainer
+
+Vulpix
+Level: 18
+
+Poochyena
+Level: 18
+
+=== TRAINER_SCORCHED_CHAMBERS_MAGMA_GRUNT3 ===
+Name: Alec
+Class: Team Magma
+Pic: Magma Grunt M
+Gender: Male
+Music: Magma
+AI: Basic Trainer
+
+Sizzlipede
+Level: 18
+
+Numel
+Level: 18
+
+=== TRAINER_SCORCHED_CHAMBERS_MAGMA_GRUNT4 ===
+Name: Harold
+Class: Team Magma
+Pic: Magma Grunt M
+Gender: Male
+Music: Magma
+AI: Basic Trainer
+
+Zubat
+Level: 18
+
+Poochyena
+Level: 18
+
+Slugma
+Level: 18
+
+=== TRAINER_SCORCHED_CHAMBERS_MAGMA_GRUNT5 ===
+Name: Ricky
+Class: Team Magma
+Pic: Magma Grunt M
+Gender: Male
+Music: Magma
+AI: Smart Trainer
+
+Numel
+Ability: Simple
+Modest Nature
+Level: 21
+- Heat Wave
+- Tackle
+- Stockpile
+
+Slugma
+Ability: Flame Body
+Modest Nature
+Level: 21
+- Flamethrower
+- Smog
+- Yawn 
+
+=== TRAINER_SCORCHED_CHAMBERS_MAGMA_GRUNT6 ===
+Name: Bessa
+Class: Team Magma
+Pic: Magma Grunt F
+Gender: Female
+Music: Magma
+AI: Smart Trainer
+
+Onix
+Ability: Weak Armor
+Adamant Nature
+Level: 24
+- Rock Slide
+- Bind
+- Dragon Breath
+- Curse
+
+=== TRAINER_SCORCHED_CHAMBERS_MAGMA_GRUNT7 ===
+Name: Carla
+Class: Team Magma
+Pic: Magma Grunt F
+Gender: Female
+Music: Magma
+AI: Smart Trainer
+
+Numel
+Level: 22
+
+Vulpix
+Level: 22
+- Will O Wisp
+- Ember
+- Quick Attack
+- Disable
+
+Golbat
+Level: 23
 
 
+=== TRAINER_SCORCHED_CHAMBERS_MAGMA_ADMIN ===
+Name: Terrance
+Class: Magma Admin
+Pic: Magma Admin
+Gender: Male
+Music: Magma
+AI: Smart Trainer
+
+Torkoal
+Level: 23
+Ability: Drought
+- Protect
+- Lava Plume
+- Smokescreen
+- Body Slam
+
+Slugma
+Level: 23
+- Rock Slide
+- Flamethrower
+- Yawn
+
+Lampent
+Level: 25
+Ability: Flame Body
+- Confuse Ray
+- Hex
+- Heat Wave
+- Smog
 
 
+/* ------ !! KEEP AT THE BOTTOM !! ------ */
+=== RIVAL_EVELYNN_1 ===
+Name: Evelynn
+Class: Rival
+Pic: Pike Queen Lucy
+Gender: Female
+Music: Female
+Items: Super Potion
+AI: Rival
+
+Roselia (F)
+Level: 16
+Ability: Poison Point
+EVs: 4 Atk / 252 SpA / 252 Spe  
+Hasty Nature  
+- Magical Leaf
+- Poison Sting
+- Mega Drain
+- Leech Seed
+
+Venipede (F)
+Level: 16
+Ability: Speed Boost  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- Rollout
+- Poison Tail
+- Bug Bite
+- Protect
+
+Mawile (F)
+Level: 18
+Ability: Intimidate
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Bite 
+- Sucker Punch  
+- Fairy Wind
 
 
 

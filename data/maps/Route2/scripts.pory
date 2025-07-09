@@ -1,4 +1,12 @@
-mapscripts Route2_MapScripts {}
+mapscripts Route2_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: Route2_StoryCheck
+}
+
+script Route2_StoryCheck {
+    if (var(VAR_EVELYNN_STATE) > 0) {
+        setflag(FLAG_TEMP_A)
+    }
+}
 
 script Route2_Trigger_CamperL {
     call(Route2_MoveCamper)
@@ -52,19 +60,16 @@ text Route2_Camper_Warning_Text {
     "Hey there, I see you've just come from\nNewstem Town.\p"
     "I'm here to warn travellers about an\naggressive Pokemon just up ahead.\p"
     "I'm not sure why it's so upset,\nbut I would recommend avoiding it.\p"
-    "I'd like to go and ask someone from\nSpringwood City to calm it down,\l"
-    "but I'm busy making sure no-one\lgoes near it.\p"
-    "Say, could you go and tell the Gym Leader\nin Springwood City about it?\p"
-    "It would be really helpful, as it is\ncurrently blocking access to\l"
-    "Quiet Grove, which is inconvenient.\p"
+    "Gym Leader Martin is supposed to be\ncoming to help calm it down,\l"
+    "but I haven't heard from him in a bit.\p"
+    "Say, could you go and\n find out where he is?\p"
+    "It would be really helpful,\nas I'm stuck here making sure it\l"
+    "doesn't hurt anyone.\p"
     "Best of luck!"
 }
 
-script Route2_NPC_Camper {
-    lockall
-    faceplayer
-    msgbox("I hope you can let the Gym Leader\nknow soon, I'd like to go back home.", MSGBOX_NPC)
-    releaseall
+script Route2_Camper {
+    msgbox("I hope you can get the Gym Leader to\n come soon, I'd like to go back home.", MSGBOX_NPC)
 }
 
 script Route2_Miniboss {
@@ -72,6 +77,7 @@ script Route2_Miniboss {
     applymovement(2, moves(face_player))
     waitmovement(0)
     playmoncry(SPECIES_PARASECT, CRY_MODE_ENCOUNTER)
+    setseenmon(SPECIES_PARASECT)
     msgbox("The Pokemon seems agitated!\nIt might attack if provoked!")
     waitmoncry
     msgbox("Will you leave it alone?", MSGBOX_YESNO)
@@ -99,7 +105,24 @@ script Route2_Miniboss_Battle {
 }
 
 script Route2_BlackBelt {
-    lockall
-    msgbox(format("I miss my girlfriend..."))
-    releaseall
+    msgbox("I WISH I KNEW HOW TO SWIM!", MSGBOX_NPC)
+}
+
+script Route2_Evelynn {
+    lock
+    msgbox("You poor thing,\nwhat did those idiots do to you?")
+    playse(SE_PIN)
+    applymovement(6, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    applymovement(6, moves(face_down))
+    waitmovement(0)
+    applymovement(6, Common_Movement_Delay48)
+	waitmovement(0)
+    msgbox("Can I help you?\p...\pOh wait,\nI don't care.")
+    applymovement(6, moves(walk_up*5))
+    waitmovement(0)
+    removeobject(6)
+    setflag(FLAG_TEMP_A)
+    setvar(VAR_EVELYNN_STATE, 1)
+    release
 }

@@ -3,7 +3,7 @@ mapscripts Route5_MapScripts {
 }
 
 script Route5_CheckBoulderBlock {
-    if (flag(FLAG_HIDE_ROUTE2_MINIBOSS)) {
+    if (flag(FLAG_CLEARED_QUIET_GROVE)) {
         setmetatile(33, 17, METATILE_General_Grass, FALSE)
         setmetatile(34, 17, METATILE_General_Grass, FALSE)
         setmetatile(33, 18, METATILE_General_Grass, FALSE)
@@ -28,7 +28,7 @@ script Route5_Sign {
 
 script Route5_BoulderGuy {
     lockall
-    if (flag(FLAG_HIDE_ROUTE2_MINIBOSS)) {
+    if (flag(FLAG_CLEARED_QUIET_GROVE)) {
         msgbox(format("We've cleared out the major rockslide as best as we can, but the rocks are pretty unstable here so they still fall onto the path occasionally."), MSGBOX_NPC)
     } else {
         msgbox(format("Watch your step! There was a major rockslide earlier. We're trying to get it cleared out as soon as possible."), MSGBOX_NPC)

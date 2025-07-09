@@ -1,20 +1,14 @@
 mapscripts SpringwoodCity_Indoor_1_MapScripts {}
 
 script SpringwoodCity_Indoor_1_FatMan {
-    lockall
     msgbox(format("I booked a room on a high floor, but I forgot I was fat and now I don't want to have to walk up all the stairs..."), MSGBOX_NPC)
-    releaseall
 }
 
 script SpringwoodCity_Indoor_1_Man {
-    lockall
     msgbox(format("I came to Springwood City hoping to become a pokemon trainer, but my girlfriend followed me here so now I can't."), MSGBOX_NPC)
-    releaseall
 }
 
 script SpringwoodCity_Indoor_1_Woman {
-    lockall
     msgbox(format("My boyfriend planned us a surprise trip to the city! It was such a surprise he didn't even tell me he was going!"), MSGBOX_NPC)
-    releaseall
 }
 

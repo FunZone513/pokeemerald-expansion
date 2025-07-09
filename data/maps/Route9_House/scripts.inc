@@ -14,18 +14,6 @@ Route9_House_Picnicker::
 	return
 
 
-Route9_House_Kingler::
-# 12 "data/maps/Route9_House/scripts.pory"
-	playmoncry SPECIES_KINGLER, CRY_MODE_NORMAL
-# 13 "data/maps/Route9_House/scripts.pory"
-	setseenmon SPECIES_KINGLER
-# 14 "data/maps/Route9_House/scripts.pory"
-	msgbox Route9_House_Kingler_Text_0, MSGBOX_NPC
-# 15 "data/maps/Route9_House/scripts.pory"
-	waitmoncry
-	return
-
-
 Route9_House_Camper_Text_0:
 # 4 "data/maps/Route9_House/scripts.pory"
 	.string "The beach is really nice here, make sure\n"
@@ -37,7 +25,3 @@ Route9_House_Picnicker_Text_0:
 	.string "I've heard that there is a secret\n"
 	.string "alcove near here, but since I can't swim\l"
 	.string "I've never found it.$"
-
-Route9_House_Kingler_Text_0:
-# 14 "data/maps/Route9_House/scripts.pory"
-	.string "!$"
