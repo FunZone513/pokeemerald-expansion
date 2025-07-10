@@ -5004,9 +5004,9 @@ u16 ModifyStatByNature(u8 nature, u16 stat, u8 statIndex)
     if (statIndex <= STAT_HP || statIndex > NUM_NATURE_STATS || gNaturesInfo[nature].statUp == gNaturesInfo[nature].statDown)
         return stat;
     else if (statIndex == gNaturesInfo[nature].statUp)
-        return stat * 110 / 100;
+        return stat * (100 + AMOUNT_NATURE_INCREASE) / 100;
     else if (statIndex == gNaturesInfo[nature].statDown)
-        return stat * 90 / 100;
+        return stat * (100 - AMOUNT_NATURE_DECREASE) / 100;
     else
         return stat;
 }

@@ -199,7 +199,7 @@ Careful Nature
 - Will-O-Wisp  
 - Scratch  
 
-Munchlax @ Oran Berry  
+Munchlax @ Sitrus Berry  
 Ability: Gluttony  
 Level: 15
 EVs: 228 Atk / 244 Def / 28 SpD  
@@ -282,16 +282,27 @@ Class: Bug Maniac
 Pic: Bug Maniac
 Gender: Male
 Music: Male
+Double Battle: Yes
 AI: Smart Trainer
 
-Beedrill @ Scope Lens  
-Ability: Sniper  
+Dustox
+Ability: Compound Eyes  
 Level: 13  
-Tera Type: Bug  
-EVs: 248 Atk / 8 SpD / 244 Spe  
-Adamant Nature    
-- Leech Life  
-- Poison Jab 
+EVs: 248 HP / 8 Atk / 252 SpA  
+Quiet Nature     
+- Poison Powder 
+- Venoshock
+- Gust
+- Bug Bite 
+
+Beautifly (F)
+Ability: Swarm
+EVs: 4 Atk / 252 SpA / 252 Spe  
+Rash Nature
+- Gust
+- Mega Drain
+- Attract
+- Bug Bite
 
 === TRAINER_QUIET_GROVE_BUG_CATCHER ===
 Name: Bert
