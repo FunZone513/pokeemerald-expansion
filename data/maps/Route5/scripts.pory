@@ -1,1 +1,67 @@
-mapscripts Route5_MapScripts {}
+mapscripts Route5_MapScripts {
+    MAP_SCRIPT_ON_LOAD: Route5_CheckBoulderBlock
+}
+
+script Route5_CheckBoulderBlock {
+    if (flag(FLAG_CLEARED_QUIET_GROVE)) {
+        setmetatile(33, 17, METATILE_General_Grass, FALSE)
+        setmetatile(34, 17, METATILE_General_Grass, FALSE)
+        setmetatile(33, 18, METATILE_General_Grass, FALSE)
+        setmetatile(34, 18, METATILE_General_Grass, FALSE)
+        setmetatile(35, 18, METATILE_General_Grass, FALSE)
+        setmetatile(35, 16, METATILE_General_Grass, FALSE)
+        setmetatile(37, 17, METATILE_General_Grass, FALSE)
+        setmetatile(38, 17, METATILE_General_Grass, FALSE)
+        setmetatile(37, 18, METATILE_General_Grass, FALSE)
+        setmetatile(38, 18, METATILE_General_Grass, FALSE)
+        setmetatile(39, 17, METATILE_General_Grass, FALSE)
+    } else {
+        setflag(FLAG_TEMP_10)
+        setflag(FLAG_TEMP_11)
+        setflag(FLAG_TEMP_12)
+    }
+}
+
+script Route5_Sign {
+    msgbox("Soothing Sands Resort!\nKeep going straight!", MSGBOX_SIGN)
+}
+
+script Route5_BoulderGuy {
+    lockall
+    if (flag(FLAG_CLEARED_QUIET_GROVE)) {
+        msgbox(format("We've cleared out the major rockslide as best as we can, but the rocks are pretty unstable here so they still fall onto the path occasionally."), MSGBOX_NPC)
+    } else {
+        msgbox(format("Watch your step! There was a major rockslide earlier. We're trying to get it cleared out as soon as possible."), MSGBOX_NPC)
+    }
+    releaseall
+}
+
+script Route5_Picnicker {
+    trainerbattle_single(
+        TRAINER_ROUTE5_PICNICKER, 
+        format("Where you find rocky terrain, you'll find me!"),
+        format("Camping on a rocky outcropping is always fun.")  
+    )
+    msgbox(format("The terrain starts to get a little more hostile around here."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route5_BlackBelt {
+    trainerbattle_single(
+        TRAINER_ROUTE5_BLACKBELT, 
+        format("Punching rocks makes my fists HARD."),
+        format("Punching rocks makes my bones HURT.")  
+    )
+    msgbox(format("The pain in my fists distracts me from the pain of my exstance."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route5_Expert {
+    trainerbattle_single(
+        TRAINER_ROUTE5_EXPERT, 
+        format("There is a retreat up ahead, I hope you'll help me get warmed up for it."),
+        format("I'll be sure to release all this tension there.")  
+    )
+    msgbox(format("The retreat is nothing too fancy, but it's nice for old folks like me."), MSGBOX_AUTOCLOSE)
+    end
+}

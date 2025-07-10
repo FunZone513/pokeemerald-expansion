@@ -219,11 +219,19 @@
 #define METATILE_General_Grass_TreeLeft        0x1CE
 #define METATILE_General_Grass_TreeRight       0x1CF
 #define METATILE_General_Grass_TreeUp          0x00E
+#define METATILE_General_Ledge_East            0x086
 #define METATILE_General_LongGrass             0x015
 #define METATILE_General_MuddySlope_Frame0     0x0E8
 #define METATILE_General_MuddySlope_Frame1     0x0E9
 #define METATILE_General_MuddySlope_Frame2     0x0EA
 #define METATILE_General_MuddySlope_Frame3     0x0EB
+#define METATILE_General_Path_L                0x05D
+#define METATILE_General_Path_LD               0x065
+#define METATILE_General_Path_LU               0x055
+#define METATILE_General_Path_R                0x05F
+#define METATILE_General_Path_RD               0x067
+#define METATILE_General_Path_RU               0x057
+#define METATILE_General_Path_U                0x056
 #define METATILE_General_RedCaveIndent         0x1A0
 #define METATILE_General_RedCaveOpen           0x1A1
 #define METATILE_General_ReflectiveWater       0x0A1
@@ -389,9 +397,11 @@
 #define METATILE_Pacifidlog_SubmergedLogs_VerticalTop          0x25A
 
 // gTileset_Petalburg
-#define METATILE_Petalburg_Door_BirchsLab   0x249
-#define METATILE_Petalburg_Door_Littleroot  0x248
-#define METATILE_Petalburg_Door_Oldale      0x287
+#define METATILE_Petalburg_Disabled_Ledge_East  0x273
+#define METATILE_Petalburg_Door_BirchsLab       0x249
+#define METATILE_Petalburg_Door_Littleroot      0x248
+#define METATILE_Petalburg_Door_Oldale          0x287
+#define METATILE_Petalburg_Path_D               0x277
 
 // gTileset_PetalburgGym
 #define METATILE_PetalburgGym_Door                0x224
@@ -432,8 +442,9 @@
 #define METATILE_PokemonCenter_Floor_ShadowTop_Alt       0x2DC
 
 // gTileset_Rustboro
-#define METATILE_Rustboro_Door_Gray  0x21F
-#define METATILE_Rustboro_Door_Tan   0x22F
+#define METATILE_Rustboro_Door_Gray       0x21F
+#define METATILE_Rustboro_Door_Tan        0x22F
+#define METATILE_Rustboro_Fountain_Water  0x340
 
 // gTileset_SecretBase
 #define METATILE_SecretBase_AttractMat_BottomLeft       0x313

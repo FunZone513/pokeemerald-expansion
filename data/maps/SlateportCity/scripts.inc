@@ -1125,9 +1125,9 @@ SlateportCity_EventScript_PowerTMClerk::
 # 563 "data/maps/SlateportCity/scripts.pory"
 SlateportCity_Pokemart_PowerTMs:
 # 564 "data/maps/SlateportCity/scripts.pory"
-	.2byte ITEM_TM_HIDDEN_POWER
+	.2byte ITEM_TM_REST
 # 565 "data/maps/SlateportCity/scripts.pory"
-	.2byte ITEM_TM_SECRET_POWER
+	.2byte ITEM_TM_REST
 # 566 "data/maps/SlateportCity/scripts.pory"
 	pokemartlistend
 # 567 "data/maps/SlateportCity/scripts.pory"

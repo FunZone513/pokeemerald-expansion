@@ -96,30 +96,57 @@
 #define VAR_POKELOT_RND2                                 0x404C
 #define VAR_POKELOT_PRIZE_PLACE                          0x404D
 
-
+// MARK: :)
 #define VAR_STARTED_GAME                                 0x404E // I'm using this
+
 #define VAR_LOTAD_SIZE_RECORD                            0x404F
 #define VAR_INCREASE_EXP_GAIN                            VAR_LOTAD_SIZE_RECORD
+
 #define VAR_LITTLEROOT_TOWN_STATE                        0x4050
+#define VAR_CURRENT_LEVEL_CAP                            VAR_LITTLEROOT_TOWN_STATE
+
 #define VAR_OLDALE_TOWN_STATE                            0x4051
+#define VAR_DYECRESS_MYSTERY_STATE                       VAR_OLDALE_TOWN_STATE
+
 #define VAR_DEWFORD_TOWN_STATE                           0x4052 // Unused Var
+#define VAR_ROUTE4_WATER_STONE_STATE                     VAR_DEWFORD_TOWN_STATE
+
 #define VAR_LAVARIDGE_TOWN_STATE                         0x4053
+#define VAR_EVELYNN_STATE                                VAR_LAVARIDGE_TOWN_STATE
+
 #define VAR_CURRENT_SECRET_BASE                          0x4054 // was probably allocated for VAR_FALLARBOR_TOWN_STATE at one point
+#define VAR_DYECRESS_HERB_SHOP_QUEST                     VAR_CURRENT_SECRET_BASE
+
 #define VAR_VERDANTURF_TOWN_STATE                        0x4055 // Unused Var
+
 #define VAR_PACIFIDLOG_TOWN_STATE                        0x4056 // Unused Var
+
 #define VAR_PETALBURG_CITY_STATE                         0x4057
+
 #define VAR_SLATEPORT_CITY_STATE                         0x4058
+
 #define VAR_MAUVILLE_CITY_STATE                          0x4059 // Unused Var
+
 #define VAR_RUSTBORO_CITY_STATE                          0x405A
+
 #define VAR_FORTREE_CITY_STATE                           0x405B // Unused Var
+
 #define VAR_LILYCOVE_CITY_STATE                          0x405C // Unused Var
+
 #define VAR_MOSSDEEP_CITY_STATE                          0x405D
+
 #define VAR_SOOTOPOLIS_CITY_STATE                        0x405E
+
 #define VAR_EVER_GRANDE_CITY_STATE                       0x405F // Unused Var
+
 #define VAR_ROUTE101_STATE                               0x4060
+
 #define VAR_WILD_BATTLE_CHANCE                           0x4061 // Unused Var
+
 #define VAR_REPEL_TRACKER                                0x4062 // Unused Var
+
 #define VAR_ROUTE104_STATE                               0x4063
+
 #define VAR_ROUTE105_STATE                               0x4064 // Unused Var
 #define VAR_ROUTE106_STATE                               0x4065 // Unused Var
 #define VAR_ROUTE107_STATE                               0x4066 // Unused Var
@@ -281,7 +308,7 @@
 #define VARS_COUNT                                       (VARS_END - VARS_START + 1)
 
 #define SPECIAL_VARS_START            0x8000
-// special vars
+//MARK: special vars
 // They are commonly used as parameters to commands, or return values from commands.
 #define VAR_0x8000                    0x8000
 #define VAR_0x8001                    0x8001

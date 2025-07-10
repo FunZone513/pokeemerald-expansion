@@ -1,0 +1,44 @@
+mapscripts Route7_MapScripts {}
+
+script Route7_Picnicker {
+    trainerbattle_single(
+        TRAINER_ROUTE7_PICNICKER, 
+        format("This spot is great for camping, the water is really fresh!"),
+        format("I need to go cool off in the river.")  
+    )
+    msgbox(format("This river is fed by ice melting up on the mountain."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route7_SchoolKid {
+    trainerbattle_single(
+        TRAINER_ROUTE7_SCHOOL_KID, 
+        format("I'm trying to find something cool to show off to my friends at school."),
+        format("Woah your Pokemon are cool!")  
+    )
+    msgbox(format("I made a bet that I could find a cool Pokemon, but I haven't found one yet."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route7_Hiker {
+    trainerbattle_single(
+        TRAINER_ROUTE7_HIKER, 
+        format("Walking to the river counts as a hike!"),
+        format("Oh my knees just aren't what they used to be...")  
+    )
+    msgbox(format("I can't hike up the mountains anymore, so I keep active by walking to the river when I can."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route7_LittleBoy {
+    lockall
+    msgbox(format("I like to swim, but the lake is too deep, so I swim in the shallows like this."), MSGBOX_NPC)
+    releaseall
+}
+
+script Route7_LittleGirl {
+    lockall
+    msgbox(format("How is he doing that?"), MSGBOX_NPC)
+    releaseall
+}
+

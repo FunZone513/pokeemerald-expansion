@@ -1,0 +1,11 @@
+mapscripts SpringWoodsInner_MapScripts {}
+
+script SpringWoods_Camper {
+    trainerbattle_single(
+        TRAINER_SPRING_WOODS_CAMPER, 
+        format("The Spring is a protected area."),
+        format("Please me mindful of where you step.")  
+    )
+    msgbox(format("The Spring of Spring Woods is a protected space, please be careful to not damage the ecosystem."), MSGBOX_AUTOCLOSE)
+    end
+}

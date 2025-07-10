@@ -3,7 +3,7 @@
   "name": "NewstemTown",
   "layout": "LAYOUT_NEWSTEM_TOWN",
   "music": "MUS_LITTLEROOT",
-  "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
+  "region_map_section": "MAPSEC_NEWSTEM_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_TOWN",
@@ -57,6 +57,45 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NewstemTown_Boy2",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(RATTATA)",
+      "x": 22,
+      "y": 27,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 2,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "SPECIES_RATTATA",
+      "script": "Generic_POKEMON_INTERACT",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(HOPPIP)",
+      "x": 33,
+      "y": 17,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 2,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "SPECIES_HOPPIP",
+      "script": "Generic_POKEMON_INTERACT",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(SHELLOS_EAST)",
+      "x": 16,
+      "y": 41,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_RIGHT_AND_LEFT",
+      "movement_range_x": 3,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "SPECIES_SHELLOS_EAST",
+      "script": "Generic_POKEMON_INTERACT",
       "flag": "0"
     }
   ],
@@ -159,7 +198,7 @@
       "y": 16,
       "elevation": 0,
       "item": "ITEM_RARE_CANDY",
-      "flag": "FLAG_HIDDEN_ITEM_NEWSTEM_TOWN_RARE_CANDY"
+      "flag": "FLAG_HIDDEN_ITEM_NEWSTEM_TOWN"
     },
     {
       "type": "hidden_item",
@@ -167,7 +206,7 @@
       "y": 38,
       "elevation": 0,
       "item": "ITEM_ETHER",
-      "flag": "FLAG_HIDDEN_ITEM_NEWSTEM_TOWN_ETHER"
+      "flag": "FLAG_HIDDEN_ITEM_NEWSTEM_TOWN_1"
     }
   ]
 }

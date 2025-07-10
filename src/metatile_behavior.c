@@ -1166,7 +1166,6 @@ bool8 MetatileBehavior_IsMossdeepGymWarp(u8 metatileBehavior)
         return FALSE;
 }
 
-
 bool8 MetatileBehavior_IsSurfableFishableWater(u8 metatileBehavior)
 {
     if (metatileBehavior == MB_POND_WATER

@@ -1,0 +1,74 @@
+mapscripts DyecressTown_MapScripts {
+    MAP_SCRIPT_ON_LOAD: DyecressTown_OnLoad
+}
+
+script DyecressTown_OnLoad {
+    if (var(VAR_DYECRESS_MYSTERY_STATE) <= 2) {
+        setflag(FLAG_TEMP_A)
+    }
+}
+
+script DyecressTown_Sign {
+    msgbox("Dyecress Town\nA heritage overlooking the sea.", MSGBOX_SIGN)
+}
+
+script DyecressTown_Sign2 {
+    msgbox("Spenser's House.", MSGBOX_SIGN)
+}
+
+script DyecressTown_Sign3 {
+    msgbox("Herb Shop.\nA healthy alternative!", MSGBOX_SIGN)
+}
+
+script DyecressTown_Sign_Temple {
+    msgbox("The words seem to have\neroded over time...\pDo you want to try reading it anyway?", MSGBOX_YESNO)
+    if (var(VAR_RESULT) == YES) {
+        msgbox(DyecressTown_Sign_Temple_Text, MSGBOX_SIGN)
+    }
+}
+
+text DyecressTown_Sign_Temple_Text {
+    "_e =_o -e_-=an,\ns_-_l r-__=_er __-=e w-- __=_.\p"
+    "=__ _e w-o p_o_p-=,\n__ -_ =n =-_i- _-c__.\p"
+    "F__ a-= _-_t =e -o,\n-nd __- t=-= -_ l__k,\p"
+    "w_'_- =_-__s re__-n;\nFa_t__-."
+}
+
+text DyecressTown_Sign_Temple_TextFixed {
+    "We who remain,\nshall remember those who came.\p"
+    "For we who prosper,\ndo so on their backs.\p"
+    "For all that we do,\nand all that we lack,\p"
+    "we'll always remain;\nFaithful."
+}
+
+script DyecressTown_OldMan {
+    msgbox(format("Dyecress Town used to be a medical hub for the region. While many of its roots have been lost to time, the culture of growing medicinal plants remains."), MSGBOX_NPC)
+}
+
+script DyecressTown_OldWoman {
+    msgbox(format("While these days many travel looking for the big city, this town and its residents have remained faithful to their long history."), MSGBOX_NPC)
+}
+
+script DyecressTown_Woman {
+    msgbox(format("Most of the flowering plants here can be used for medicine, and the petals can also make wonderful pigments."), MSGBOX_NPC)
+}
+
+script DyecressTown_Scientist1 {
+    msgbox(format("I'm wondering if these bizarre pillars have some sort of purpose."), MSGBOX_NPC)
+}
+
+script DyecressTown_Scientist2 {
+    msgbox(format("You can really feel the town's history just by being here."), MSGBOX_NPC)
+}
+
+script DyecressTown_Scientist3 {
+    msgbox(format("The archway seems quite old, yet it's like it hasn't aged a day since it was built."), MSGBOX_NPC)
+}
+
+script DyecressTown_Scientist4 {
+    msgbox(format("The text on this sign is much too degraded to be read, so we're using a new method to try and gather more clues."), MSGBOX_NPC)
+}
+
+script DyecressTown_Spenser_Temple {
+    msgbox(format("As much as it pains me to have these coats scrutinise our wonderful history, I must admit that they are at least careful not to damage anything."), MSGBOX_NPC)
+}

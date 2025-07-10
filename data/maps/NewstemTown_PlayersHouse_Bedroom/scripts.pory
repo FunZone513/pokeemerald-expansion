@@ -9,19 +9,20 @@ script NewstemTown_DefaultSettings {
     setflag(FLAG_SHARED_EXP)
     setflag(FLAG_USE_NEW_TYPE_CHART)
     setvar(VAR_STARTED_GAME, 1)
+    call(Generic_UPDATE_LEVELCAP)
     
     // % chance
     setvar(VAR_WILD_BATTLE_CHANCE, 15)
     
     // % increase. EG: 20 = 1.2x experience. Set to 0 for no bonus.
-    setvar(VAR_INCREASE_EXP_GAIN, 150) 
+    setvar(VAR_INCREASE_EXP_GAIN, 50) 
     releaseall
 }
 
 script NewstemTown_PlayersHouse_Bedroom_Settings {
     lockall
     message(format("This is where you edit the game's difficulty and QoL settings."))
-    multichoice(25, 5, MULTI_QOL_OPTIONS, 0)
+    multichoice(25, 0, MULTI_QOL_OPTIONS, 0)
     closemessage
     switch(var(VAR_RESULT)) {
         case 0:
@@ -43,11 +44,11 @@ script NewstemTown_PlayersHouse_Bedroom_Settings {
             goto(NewstemTown_PlayersHouse_Bedroom_Settings)
 
         case 2:
-            message(format("Experience is boosted 2.5x."))
+            message(format("Experience is boosted 1.5x.")) 
             multichoice(25, 5, MULTI_GENERIC_ONOFF, 0)
             closemessage
             if (var(VAR_RESULT) == 0) { 
-                setvar(VAR_INCREASE_EXP_GAIN, 150)
+                setvar(VAR_INCREASE_EXP_GAIN, 150) //! this is actually 2.5x for playtesting
             } else { setvar(VAR_INCREASE_EXP_GAIN, 0) }
             goto(NewstemTown_PlayersHouse_Bedroom_Settings)
         
@@ -60,10 +61,71 @@ script NewstemTown_PlayersHouse_Bedroom_Settings {
             } else { setvar(VAR_WILD_BATTLE_CHANCE, 0) }
             goto(NewstemTown_PlayersHouse_Bedroom_Settings)
 
+        case 4:
+            message(format("Pokemon cannot be levelled above the next main 'boss encounter's level."))
+            multichoice(25, 5, MULTI_GENERIC_ONOFF, 0)
+            closemessage
+            if (var(VAR_RESULT) == 0) {
+                call(Generic_UPDATE_LEVELCAP)
+            } else { setvar(VAR_CURRENT_LEVEL_CAP, 100) }
+            goto(NewstemTown_PlayersHouse_Bedroom_Settings)
+
         default:
             releaseall
             end
     }
+    releaseall
+}
+
+script NewstemTown_PlayersHouse_Bedroom_PC {
+    call(LittlerootTown_BrendansHouse_2F_EventScript_CheckPlayersPC)
+}
+
+// Goes through and updates the level cap based on milestone
+script Generic_UPDATE_LEVELCAP {
+    setvar(VAR_CURRENT_LEVEL_CAP, 15)
+
+    if (flag(FLAG_BADGE01_GET)) {
+        addvar(VAR_CURRENT_LEVEL_CAP, 7) // 22
+    }
+
+    if (flag(FLAG_BADGE02_GET)) {
+        addvar(VAR_CURRENT_LEVEL_CAP, 78) // 100
+    }
+
+    return
+}
+
+script Generic_GYM_LEVEL_GUIDE {
+    lockall
+    if (var(VAR_CURRENT_LEVEL_CAP) != 100) {
+        buffernumberstring(STR_VAR_1, VAR_CURRENT_LEVEL_CAP)
+        msgbox("Recommended Level:\n{STR_VAR_1}", MSGBOX_SIGN)
+    } else {
+        call(Generic_UPDATE_LEVELCAP)
+        buffernumberstring(STR_VAR_1, VAR_CURRENT_LEVEL_CAP)
+        msgbox("Recommended Level:\n{STR_VAR_1}", MSGBOX_SIGN)
+        setvar(VAR_CURRENT_LEVEL_CAP, 100)
+    }
+    releaseall
+}
+
+script Generic_POKEMON_INTERACT {
+    lockall
+    callnative(GetInteractedPokemon)
+    if (flag(FLAG_SYS_POKEDEX_GET)) {setseenmon(VAR_0x8004)}
+    playmoncry(VAR_0x8004, CRY_MODE_NORMAL)
+    
+    random(5)
+    switch(var(VAR_RESULT)) {
+        case 0: msgbox("?", MSGBOX_NPC)
+        case 1: msgbox("?", MSGBOX_NPC)
+        case 2: msgbox("!", MSGBOX_NPC)
+        case 3: msgbox("...", MSGBOX_NPC)
+        case 4: msgbox("!?", MSGBOX_NPC)
+        default: msgbox("?", MSGBOX_NPC)
+    }    
+    waitmoncry
     releaseall
 }
 

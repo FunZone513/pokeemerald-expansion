@@ -1,0 +1,147 @@
+mapscripts OchreValeMine_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: OchreValeMine_OnTransition
+}
+
+script OchreValeMine_OnTransition {
+    setflashlevel(2)
+    if (!flag(FLAG_CLEARED_OCHRE_VALE_MINE)) {
+        setvar(VAR_TEMP_1, 1)
+    }
+}
+
+script OchreValeMine_MagmaEncounter {
+    lockall
+    setvar(VAR_TEMP_1, 0)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
+    special(SpawnCameraObject)
+    applymovement(OBJ_EVENT_ID_CAMERA, moves(walk_right*2))
+    waitmovement(0)
+    msgbox(format("We told you to stop looking into it!"))
+    applymovement(OBJ_EVENT_ID_CAMERA, moves(walk_right*2))
+    waitmovement(0)
+    msgbox(format("Theres something weird about it though! We have to figure out what the readings mean, don't you understand?!"))
+    applymovement(OBJ_EVENT_ID_CAMERA, moves(walk_left*2))
+    waitmovement(0)
+    msgbox(format("It's not our job to understand, our job is just to stop people like you from doing what you're doing."))
+    applymovement(22, moves(walk_right))
+    applymovement(23, moves(walk_right))
+    applymovement(OBJ_EVENT_ID_CAMERA, moves(walk_right))
+    waitmovement(0)
+    delay(48)
+    playse(SE_PIN)
+    applymovement(24, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    applymovement(24, Common_Movement_Delay48)
+    waitmovement(0)
+    msgbox(format("Hey! You over there! Can you please help me out here?"))
+    waitse
+    playse(SE_PIN)
+    delay(8)
+    waitse
+    playse(SE_PIN)
+    applymovement(22, Common_Movement_ExclamationMark)
+    applymovement(23, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    applymovement(22, moves(face_left))
+    applymovement(23, moves(face_left))
+    waitmovement(0)
+    delay(48)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_right*2))
+    msgbox(format("Who are you to try and get in our way? We're just here to stop them from doing something foolish!"))
+    trainerbattle_two_trainers(TRAINER_OCHRE_VALE_MINE_MAGMA_GRUNT2, format("You don't understand what you're doing here!"), TRAINER_OCHRE_VALE_MINE_MAGMA_GRUNT1, format("Look at the bigger picture!"))
+    applymovement(OBJ_EVENT_ID_CAMERA, moves(walk_left*2))
+    waitmovement(0)
+    special(RemoveCameraObject)
+    specialvar(VAR_RESULT, GetBattleOutcome)
+    if (var(VAR_RESULT) == B_OUTCOME_WON) {
+        msgbox(format("We'll retreat for now, but we'll keep an eye on you."))
+        setvar(VAR_ROUTE4_WATER_STONE_STATE, 6)
+        fadescreen(FADE_TO_BLACK)
+        removeobject(22)
+        removeobject(23)
+        playse(SE_FLEE)
+        delay(60)
+        special(DrawWholeMapView)
+        fadescreen(FADE_FROM_BLACK)
+        delay(16)
+        applymovement(24, moves(walk_left))
+        waitmovement(0)
+        msgbox(OchreValeMine_MagmaEncounter_EndText)
+        delay(16)
+        applymovement(24, moves(walk_right))
+        waitmovement(0)
+        setvar(VAR_TEMP_2, 0)
+    }
+    releaseall
+}
+
+text OchreValeMine_MagmaEncounter_EndText {
+    "Thank you for your assistance,\nI'm not sure why they were so riled up.\p"
+    "They never used to be this bad before,\nsomething must've happened for them to\lgo off the rails like this.\p"
+    "They should stop interfering with our\nresearch now, so we can finally get\lthe materials sent to the lab."
+}
+
+script OchreValeMine_ScientistGuy {
+    lockall
+    msgbox(format("I'm going to finish collecting the samples I need then I'll report back to the Lab. Feel free to go on ahead."), MSGBOX_NPC)
+    releaseall
+}
+
+script OchreValeMine_MagmaEncounterClear {
+    if (!flag(FLAG_CLEARED_OCHRE_VALE_MINE)) {
+        setflag(FLAG_CLEARED_OCHRE_VALE_MINE)
+    }
+    setvar(VAR_TEMP_2, 0)
+}
+
+script OchreValeMine_BlackBelt {
+    trainerbattle_single(
+        TRAINER_OCHRE_VALE_MINE_BLACK_BELT, 
+        format("THIS IS A GREAT PLACE TO TEST THE POWER OF MY FISTS!"),
+        format("I NEED TO PUNCH MORE ROCKS!")  
+    )
+    msgbox(format("Destroying rocks here benefits both myself and the miners as it helps quarry for materials."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script OchreValeMine_BattleGirl {
+    trainerbattle_single(
+        TRAINER_OCHRE_VALE_MINE_BATTLE_GIRL, 
+        format("I heard this was a great place to train, but I'm scared of the dark..."),
+        format("Can you please point me to the entrance?")  
+    )
+    msgbox(format("I knew I shouldn't have come here, I thought training in the dark would help me get over my fears, but the noises of rocks breaking is just making it worse."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script OchreValeMine_Picnicker {
+    trainerbattle_single(
+        TRAINER_OCHRE_VALE_MINE_PICNICKER, 
+        format("Isn't it weird that its spelled 'Picnic'?"),
+        format("'Picknick'? No?")  
+    )
+    msgbox(format("Picnic, Picnicker, Picknic, Picknicker, Picknick, Picknicer... I don't even know anymore..."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script OchreValeMine_Hiker {
+    trainerbattle_single(
+        TRAINER_OCHRE_VALE_MINE_HIKER, 
+        format("The view of the cave would be great with a light."),
+        format("Have flashlights been invented?")  
+    )
+    msgbox(format("I wish I could just light up the entire cave somehow, but I don't think it's possible."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script OchreValeMine_GemstoneRed {
+    lockall
+    msgbox(format("There appears to be a strange red crystal hidden amongst the rocks."), MSGBOX_SIGN)
+    releaseall
+}
+
+script OchreValeMine_GemstoneBlue {
+    lockall
+    msgbox(format("There appears to be a strange blue crystal hidden amongst the rocks."), MSGBOX_SIGN)
+    releaseall
+}

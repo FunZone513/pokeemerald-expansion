@@ -61,7 +61,7 @@ LilycoveCity_DepartmentStore_4F_Pokemart_AttackTMs:
 # 31 "data/maps/LilycoveCity_DepartmentStore_4F/scripts.pory"
 	.2byte ITEM_TM_BLIZZARD
 # 32 "data/maps/LilycoveCity_DepartmentStore_4F/scripts.pory"
-	.2byte ITEM_TM_HYPER_BEAM
+	.2byte ITEM_TM_REST
 # 33 "data/maps/LilycoveCity_DepartmentStore_4F/scripts.pory"
 	pokemartlistend
 # 34 "data/maps/LilycoveCity_DepartmentStore_4F/scripts.pory"

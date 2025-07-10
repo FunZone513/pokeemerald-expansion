@@ -6,6 +6,8 @@
     "gMapGroup_Indoor_Routes",
     "gMapGroup_Indoor_NewstemTown",
     "gMapGroup_Indoor_SpringwoodCity",
+    "gMapGroup_Indoor_OchreVale",
+    "gMapGroup_Indoor_DyecressTown",
     "gMapGroup_TownsAndRoutes",
     "gMapGroup_IndoorLittleroot",
     "gMapGroup_IndoorOldale",
@@ -43,7 +45,9 @@
   ],
   "gMapGroup_Towns": [
     "NewstemTown",
-    "SpringwoodCity"
+    "SpringwoodCity",
+    "OchreVale",
+    "DyecressTown"
   ],
   "gMapGroup_Routes": [
     "Route1",
@@ -51,15 +55,28 @@
     "Route3",
     "Route4",
     "Route5",
-    "Route6"
+    "Route6",
+    "Route7",
+    "Route8",
+    "Route9",
+    "Route10"
   ],
   "gMapGroup_Dungeons": [
     "DripstoneCave",
-    "QuietGrove"
+    "QuietGrove",
+    "SpringWoods",
+    "SpringWoodsInner",
+    "SpringHollow",
+    "OchreMineEntrance",
+    "OchreValeMine",
+    "ScorchedChambers",
+    "DripstoneChannel"
   ],
   "gMapGroup_Indoor_Routes": [
     "Route3_FishingHut",
-    "Route4_Indoor_Researcher_Lab"
+    "Route4_Indoor_Researcher_Lab",
+    "Route9_House",
+    "Route10_ResortHouse"
   ],
   "gMapGroup_Indoor_NewstemTown": [
     "NewstemTown_PlayersHouse",
@@ -77,7 +94,24 @@
     "SpringwoodCity_Indoor_1_2F",
     "SpringwoodCity_Indoor_2",
     "SpringwoodCity_Indoor_3",
-    "SpringwoodCity_Institution"
+    "SpringwoodCity_Institution",
+    "SpringwoodCity_Institution_1F"
+  ],
+  "gMapGroup_Indoor_OchreVale": [
+    "OchreVale_PokeCentre",
+    "OchreVale_PokeMart",
+    "OchreVale_Indoor_House1",
+    "OchreVale_Gym",
+    "OchreVale_Indoor_2",
+    "OchreVale_Indoor_3",
+    "OchreVale_Lab"
+  ],
+  "gMapGroup_Indoor_DyecressTown": [
+    "DyecressTown_PokeCentre",
+    "DyecressTown_Indoor1",
+    "Dyecress_Indoor2",
+    "DyecressTown_Indoor2",
+    "DyecressTown_HerbShop"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",

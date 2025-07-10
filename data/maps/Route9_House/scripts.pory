@@ -1,0 +1,9 @@
+mapscripts Route9_House_MapScripts {}
+
+script Route9_House_Camper {
+    msgbox(format("The beach is really nice here, make sure you don't leave any rubbish when you leave otherwise I WILL find you."), MSGBOX_NPC)
+}
+
+script Route9_House_Picnicker {
+    msgbox(format("I've heard that there is a secret alcove near here, but since I can't swim I've never found it."), MSGBOX_NPC)
+}

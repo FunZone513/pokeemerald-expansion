@@ -1,63 +1,70 @@
-mapscripts SpringwoodCity_Institution_MapScripts {}
+mapscripts SpringwoodCity_Institution_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: SpringwoodCity_Institution_CheckState
+}
+
+script SpringwoodCity_Institution_CheckState {
+    if (var(VAR_DYECRESS_MYSTERY_STATE) >= 2) {
+        setvar(VAR_TEMP_A, 1)
+    }
+}
 
 script SpringwoodCity_Institution_Receptionist {
     lockall
-    msgbox(format("Welcome, I'm afraid that we're not currently accepting visitors. May I ask that you come back at a later date?"))
+    msgbox("Welcome to the Libra Institute!\nWould you happen to have an appointment?")
+    if (var(VAR_DYECRESS_MYSTERY_STATE) == 1) {
+        msgbox("...")
+        msgbox(SpringwoodCity_Institution_Receptionist_Dyecress_Mystery1)
+        setvar(VAR_TEMP_A, 1)
+        setvar(VAR_DYECRESS_MYSTERY_STATE, 2)
+    } elif (var(VAR_DYECRESS_MYSTERY_STATE) == 2) {
+        msgbox(format("Oh you're the one helping out Spenser. You'll find our researchers up the stairs to the left."))
+    }
     releaseall
 }
 
-script SpringwoodCity_Institution_Display {
-    lockall
-    msgbox(format("There seems to be a stone of some kind behind the glass."))
-    releaseall
+text SpringwoodCity_Institution_Receptionist_Dyecress_Mystery1 {
+    "You have a message from a wordy Old Man\nin Dyecress Town?\p"
+    "I see!\p"
+    "Our insitute has had quite an interest\nin Dyecress for quite a while now,\l"
+    "but Old Spenser was reluctant to let us\linvestigate the town.\p"
+    "If he's sent you here as a request for\nhelp, then I can only imagine how stumped\lhe must be on his current task.\p"
+    "Please make your way up the stairs to\nthe left, our in-house researches would\lbe honoured to lend a hand."
 }
 
 script SpringwoodCity_Institution_Display2 {
-    lockall
-    msgbox(format("Whatever is behind that glass sure looks impressive."))
-    releaseall
+    msgbox(format("Whatever is behind that glass sure looks impressive."), MSGBOX_SIGN)
 }
 
 script SpringwoodCity_Institution_Display3 {
-    lockall
-    msgbox(format("...isn't that just a stick?"))
-    releaseall
+    msgbox(format("...isn't that just a stick?"), MSGBOX_SIGN)
 }
 
 script SpringwoodCity_Institution_Scientist {
-    lockall
-    msgbox(format("I'm trying to determine what it is about evolutionary stones that causes Pokemon to evolve."), MSGBOX_NPC)
-    releaseall
+    msgbox(format("We don't have much of a breakroom in the lab areas upstairs, so when we get free time we sort of just hang out in the lobby."), MSGBOX_NPC)
 }
 
 script SpringwoodCity_Institution_Scientist2 {
-    lockall
     msgbox("We collaborate with the Research Lab\non Route 4 sometimes.\pThey discover things, we refine them.", MSGBOX_NPC)
-    releaseall
 }
 
 script SpringwoodCity_Institution_Scientist3 {
-    lockall
     msgbox(format("Trying to determine research budgets is always a pain."), MSGBOX_NPC)
-    releaseall
 }
 
 script SpringwoodCity_Institution_Employee {
-    lockall
     msgbox(format("While the researchers do good work, do they really need that much money?"), MSGBOX_NPC)
-    releaseall
 }
 
 script SpringwoodCity_Institution_Employee2 {
-    lockall
     msgbox(format("Honestly I'm just here to make sure these two don't fight."), MSGBOX_NPC)
-    releaseall
 }
 
 script SpringwoodCity_Institution_Grunt {
-    lockall
-    msgbox("The security guys keep looking at me\nlike I'm some suspicious individual.\pI just forgot to take of my PJs\nthis morning!", MSGBOX_NPC)
-    releaseall
+    if (flag(FLAG_CLEARED_QUIET_GROVE)) {
+        msgbox("Huh? What do you mean\nwhat am I still doing here?\pI told you, these are PJs!", MSGBOX_NPC)
+    } else {
+        msgbox("The security guys keep looking at me\nlike I'm some suspicious individual.\pI uhh...\nI just forgot to take off my PJs\lthis morning!", MSGBOX_NPC)
+    } 
 }
 
 script SpringwoodCity_Institution_StairBlocker1 {
@@ -102,7 +109,7 @@ script SpringwoodCity_Institution_StairBlocker {
     }
     waitmovement(0)
 
-    msgbox("Sorry, but you're not allowed up here\nat the moment.")
+    msgbox("I apologise,\nbut you don't have permission\lto acces the upper floors.")
     if (var(VAR_TEMP_1) <= 3) {
         applymovement(2, moves(walk_down))
     } else { applymovement(3, moves(walk_down)) }
@@ -128,4 +135,8 @@ script SpringwoodCity_Institution_StairBlocker {
     }
     waitmovement(0)
     releaseall
+}
+
+script SpringwoodCity_Institution_Guard {
+    msgbox("Go right on ahead.", MSGBOX_NPC)
 }

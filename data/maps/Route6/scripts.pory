@@ -1,1 +1,19 @@
 mapscripts Route6_MapScripts {}
+
+script Route6_Camper {
+    msgbox(format("We found this guy wandering around on the path. It's dangerous for him to leave the route area so we're keeping an eye on him."), MSGBOX_NPC)
+}
+
+script Route6_Lass {
+    msgbox(format("I don't want to tell him that the Pancham keeps coming out because I give him food sometimes..."), MSGBOX_NPC)
+}
+
+script Route6_Hiker {
+    trainerbattle_single(
+        TRAINER_ROUTE6_HIKER, 
+        format("Are you also out here for a hike?"),
+        format("Well that could've gone better.")  
+    )
+    msgbox(format("Dyecress Town is just up ahead, the air there is really nice."), MSGBOX_AUTOCLOSE)
+    end
+}

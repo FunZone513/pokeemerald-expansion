@@ -1,0 +1,13 @@
+mapscripts OchreVale_Indoor_2_MapScripts {}
+
+script OcherVale_Indoor_2_Camper {
+    lockall
+    msgbox(format("The quarry used to be a lot more active, but ever since the research started the actual excavation has taken a back seat."), MSGBOX_NPC)
+    releaseall
+}
+
+script OcherVale_Indoor_2_Picnicker {
+    lockall
+    msgbox(format("My husband used to be one of the miners here, but since the mining has slowed right down he's gotten a lot more time to spend with me, which is nice."), MSGBOX_NPC)
+    releaseall
+}

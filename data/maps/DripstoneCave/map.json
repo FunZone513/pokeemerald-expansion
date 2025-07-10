@@ -2,8 +2,8 @@
   "id": "MAP_DRIPSTONE_CAVE",
   "name": "DripstoneCave",
   "layout": "LAYOUT_DRIPSTONE_CAVE",
-  "music": "MUS_MT_CHIMNEY",
-  "region_map_section": "MAPSEC_ROUTE_5",
+  "music": "MUS_RG_MT_MOON",
+  "region_map_section": "MAPSEC_DRIPSTONE_CAVE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_UNDERGROUND",
@@ -24,8 +24,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "ITEM_STAR_PIECE",
-      "script": "FLAG_ITEM_DRIPSTONE_CAVE_STAR_PIECE",
-      "flag": "0"
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_DRIPSTONE_CAVE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
@@ -35,10 +35,23 @@
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "DripstoneCave_Fisherman",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 32,
+      "y": 9,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_BRIGHT_POWDER",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_DRIPSTONE_CAVE_1"
     }
   ],
   "warp_events": [
@@ -55,12 +68,34 @@
       "elevation": 0,
       "dest_map": "MAP_ROUTE5",
       "dest_warp_id": "1"
+    },
+    {
+      "x": 37,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_DRIPSTONE_CHANNEL",
+      "dest_warp_id": "2"
     }
   ],
   "coord_events": [
 
   ],
   "bg_events": [
-
+    {
+      "type": "hidden_item",
+      "x": 30,
+      "y": 14,
+      "elevation": 0,
+      "item": "ITEM_RARE_CANDY",
+      "flag": "FLAG_HIDDEN_ITEM_DRIPSTONE_CAVE"
+    },
+    {
+      "type": "hidden_item",
+      "x": 11,
+      "y": 8,
+      "elevation": 0,
+      "item": "ITEM_TINY_MUSHROOM",
+      "flag": "FLAG_HIDDEN_ITEM_DRIPSTONE_CAVE_1"
+    }
   ]
 }

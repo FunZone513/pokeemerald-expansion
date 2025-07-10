@@ -22,176 +22,320 @@ SpringwoodCity_Gym_Reset::
 	return
 
 
-SpringwoodCity_Gym_PressSwitch1::
+SpringwoodCity_Gym_CheckPlayerPos::
 # 18 "data/maps/SpringwoodCity_Gym/scripts.pory"
+	getobjectxy OBJ_EVENT_ID_PLAYER, CURRENT_POSITION, VAR_TEMP_A, VAR_TEMP_B
+# 19 "data/maps/SpringwoodCity_Gym/scripts.pory"
+	compare VAR_TEMP_A, 3
+	goto_if_eq SpringwoodCity_Gym_CheckPlayerPos_10
+SpringwoodCity_Gym_CheckPlayerPos_8:
+# 21 "data/maps/SpringwoodCity_Gym/scripts.pory"
+	compare VAR_TEMP_A, 2
+	goto_if_eq SpringwoodCity_Gym_CheckPlayerPos_7
+SpringwoodCity_Gym_CheckPlayerPos_5:
+# 23 "data/maps/SpringwoodCity_Gym/scripts.pory"
+	compare VAR_TEMP_A, 10
+	goto_if_eq SpringwoodCity_Gym_CheckPlayerPos_4
+	return
+
+SpringwoodCity_Gym_CheckPlayerPos_1:
+# 20 "data/maps/SpringwoodCity_Gym/scripts.pory"
+	call SpringwoodCity_Gym_PressSwitch1
+	return
+
+SpringwoodCity_Gym_CheckPlayerPos_2:
+# 22 "data/maps/SpringwoodCity_Gym/scripts.pory"
+	call SpringwoodCity_Gym_PressSwitch2
+	return
+
+SpringwoodCity_Gym_CheckPlayerPos_3:
+# 24 "data/maps/SpringwoodCity_Gym/scripts.pory"
+	call SpringwoodCity_Gym_PressSwitch3
+	return
+
+SpringwoodCity_Gym_CheckPlayerPos_4:
+# 23 "data/maps/SpringwoodCity_Gym/scripts.pory"
+	compare VAR_TEMP_B, 7
+	goto_if_eq SpringwoodCity_Gym_CheckPlayerPos_3
+	return
+
+SpringwoodCity_Gym_CheckPlayerPos_7:
+# 21 "data/maps/SpringwoodCity_Gym/scripts.pory"
+	compare VAR_TEMP_B, 10
+	goto_if_eq SpringwoodCity_Gym_CheckPlayerPos_2
+	goto SpringwoodCity_Gym_CheckPlayerPos_5
+
+SpringwoodCity_Gym_CheckPlayerPos_10:
+# 19 "data/maps/SpringwoodCity_Gym/scripts.pory"
+	compare VAR_TEMP_B, 15
+	goto_if_eq SpringwoodCity_Gym_CheckPlayerPos_1
+	goto SpringwoodCity_Gym_CheckPlayerPos_8
+
+
+SpringwoodCity_Gym_PressSwitch1::
+# 29 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	compare VAR_TEMP_1, 0
 	goto_if_eq SpringwoodCity_Gym_PressSwitch1_1
 	return
 
 SpringwoodCity_Gym_PressSwitch1_1:
-# 19 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 30 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	playse SE_UNLOCK
-# 20 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 31 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	setvar VAR_TEMP_1, TRUE
-# 21 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 32 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	setmetatile 3, 15, METATILE_MauvilleGym_PressedSwitch, FALSE
-# 22 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 33 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	call SpringwoodCity_Gym_CheckState
 	return
 
 
 SpringwoodCity_Gym_PressSwitch2::
-# 27 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 38 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	compare VAR_TEMP_2, 0
 	goto_if_eq SpringwoodCity_Gym_PressSwitch2_1
 	return
 
 SpringwoodCity_Gym_PressSwitch2_1:
-# 28 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 39 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	playse SE_UNLOCK
-# 29 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 40 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	setvar VAR_TEMP_2, TRUE
-# 30 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 41 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	setmetatile 2, 10, METATILE_MauvilleGym_PressedSwitch, FALSE
-# 31 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 42 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	call SpringwoodCity_Gym_CheckState
 	return
 
 
 SpringwoodCity_Gym_PressSwitch3::
-# 36 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 47 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	compare VAR_TEMP_3, 0
 	goto_if_eq SpringwoodCity_Gym_PressSwitch3_1
 	return
 
 SpringwoodCity_Gym_PressSwitch3_1:
-# 37 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 48 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	playse SE_UNLOCK
-# 38 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 49 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	setvar VAR_TEMP_3, TRUE
-# 39 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 50 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	setmetatile 10, 7, METATILE_MauvilleGym_PressedSwitch, FALSE
-# 40 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 51 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	call SpringwoodCity_Gym_CheckState
 	return
 
 
 SpringwoodCity_Gym_CheckState::
-# 45 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 56 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	compare VAR_TEMP_1, 0
 	goto_if_ne SpringwoodCity_Gym_CheckState_4
 SpringwoodCity_Gym_CheckState_1:
-# 51 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 62 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	special DrawWholeMapView
 	return
 
 SpringwoodCity_Gym_CheckState_2:
-# 46 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 57 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	setmetatile 6, 5, METATILE_MauvilleGym_GreenBeamH1_Off, FALSE
-# 47 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 58 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	setmetatile 7, 5, METATILE_MauvilleGym_GreenBeamH2_Off, FALSE
-# 48 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 59 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	setmetatile 6, 6, METATILE_MauvilleGym_GreenBeamH3_Off, FALSE
-# 49 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 60 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	setmetatile 7, 6, METATILE_MauvilleGym_GreenBeamH4_Off, FALSE
 	goto SpringwoodCity_Gym_CheckState_1
 
 SpringwoodCity_Gym_CheckState_3:
-# 45 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 56 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	compare VAR_TEMP_3, 0
 	goto_if_ne SpringwoodCity_Gym_CheckState_2
 	goto SpringwoodCity_Gym_CheckState_1
 
 SpringwoodCity_Gym_CheckState_4:
-# 45 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 56 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	compare VAR_TEMP_2, 0
 	goto_if_ne SpringwoodCity_Gym_CheckState_3
 	goto SpringwoodCity_Gym_CheckState_1
 
 
 Springwood_Gym_Guide::
-# 55 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 66 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	lockall
-# 56 "data/maps/SpringwoodCity_Gym/scripts.pory"
-	goto_if_set FLAG_TEMP_1, Springwood_Gym_Guide_2
+# 67 "data/maps/SpringwoodCity_Gym/scripts.pory"
+	goto_if_unset FLAG_BADGE01_GET, Springwood_Gym_Guide_2
+# 73 "data/maps/SpringwoodCity_Gym/scripts.pory"
+	msgbox Springwood_Gym_Guide_Text_0, MSGBOX_NPC
 Springwood_Gym_Guide_1:
-# 59 "data/maps/SpringwoodCity_Gym/scripts.pory"
-	msgbox Springwood_Gym_Guide_Text, MSGBOX_NPC
-# 60 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 75 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	releaseall
 	return
 
 Springwood_Gym_Guide_2:
-# 57 "data/maps/SpringwoodCity_Gym/scripts.pory"
-	msgbox Springwood_Gym_Guide_Text_Intro
+# 68 "data/maps/SpringwoodCity_Gym/scripts.pory"
+	goto_if_set FLAG_TEMP_1, Springwood_Gym_Guide_6
+Springwood_Gym_Guide_5:
+# 71 "data/maps/SpringwoodCity_Gym/scripts.pory"
+	msgbox Springwood_Gym_Guide_Text, MSGBOX_NPC
 	goto Springwood_Gym_Guide_1
+
+Springwood_Gym_Guide_6:
+# 69 "data/maps/SpringwoodCity_Gym/scripts.pory"
+	msgbox Springwood_Gym_Guide_Text_Intro
+	goto Springwood_Gym_Guide_5
 
 
 SpringwoodCity_Gym_Martin::
-# 75 "data/maps/SpringwoodCity_Gym/scripts.pory"
-	lockall
-# 76 "data/maps/SpringwoodCity_Gym/scripts.pory"
-	trainerbattle_single TRAINER_GYM_LEADER_MARTIN, SpringwoodCity_Gym_Martin_Text_Intro, SpringwoodCity_Gym_Martin_Text_Defeated, SpringwoodCity_Gym_Martin_Defeated, NO_MUSIC
-# 83 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 91 "data/maps/SpringwoodCity_Gym/scripts.pory"
+	trainerbattle_single GYM_LEADER_MARTIN, SpringwoodCity_Gym_Martin_Text_Intro, SpringwoodCity_Gym_Martin_Text_Defeated, SpringwoodCity_Gym_Martin_Defeated, NO_MUSIC
+# 98 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	msgbox SpringwoodCity_Gym_Martin_PostBattle, MSGBOX_NPC
-# 84 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 99 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	releaseall
 	return
 
 
 SpringwoodCity_Gym_Martin_Defeated::
-# 88 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 103 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	message SpringwoodCity_Gym_Martin_Defeated_Text_0
-# 89 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 104 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	waitmessage
-# 90 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 105 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	call Common_EventScript_PlayGymBadgeFanfare
-# 91 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 106 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	msgbox SpringwoodCity_Gym_Martin_Badge, MSGBOX_DEFAULT
-# 92 "data/maps/SpringwoodCity_Gym/scripts.pory"
-	setflag FLAG_DEFEATED_RUSTBORO_GYM
-# 93 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 107 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	setflag FLAG_BADGE01_GET
-# 94 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 108 "data/maps/SpringwoodCity_Gym/scripts.pory"
+	call Generic_UPDATE_LEVELCAP
+# 109 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	releaseall
 	return
 
 
+SpringwoodGym_Trainer1::
+# 137 "data/maps/SpringwoodCity_Gym/scripts.pory"
+	trainerbattle_single SPRINGWOOD_GYM_TRAINER1, SpringwoodGym_Trainer1_Text_0, SpringwoodGym_Trainer1_Text_1, SpringwoodCity_Gym_CheckPlayerPos
+# 143 "data/maps/SpringwoodCity_Gym/scripts.pory"
+	msgbox SpringwoodGym_Trainer1_Text_2, MSGBOX_AUTOCLOSE
+	end
+
+
+SpringwoodGym_Trainer2::
+# 148 "data/maps/SpringwoodCity_Gym/scripts.pory"
+	trainerbattle_single SPRINGWOOD_GYM_TRAINER2, SpringwoodGym_Trainer2_Text_0, SpringwoodGym_Trainer2_Text_1, SpringwoodCity_Gym_CheckPlayerPos
+# 154 "data/maps/SpringwoodCity_Gym/scripts.pory"
+	msgbox SpringwoodGym_Trainer2_Text_2, MSGBOX_AUTOCLOSE
+	end
+
+
+SpringwoodGym_Trainer3::
+# 159 "data/maps/SpringwoodCity_Gym/scripts.pory"
+	trainerbattle_single SPRINGWOOD_GYM_TRAINER3, SpringwoodGym_Trainer3_Text_0, SpringwoodGym_Trainer3_Text_1, SpringwoodCity_Gym_CheckPlayerPos
+# 165 "data/maps/SpringwoodCity_Gym/scripts.pory"
+	msgbox SpringwoodGym_Trainer3_Text_2, MSGBOX_AUTOCLOSE
+	end
+
+
+SpringwoodGym_Trainer4::
+# 170 "data/maps/SpringwoodCity_Gym/scripts.pory"
+	trainerbattle_single SPRINGWOOD_GYM_TRAINER4, SpringwoodGym_Trainer4_Text_0, SpringwoodGym_Trainer4_Text_1, SpringwoodCity_Gym_CheckPlayerPos
+# 176 "data/maps/SpringwoodCity_Gym/scripts.pory"
+	msgbox SpringwoodGym_Trainer4_Text_2, MSGBOX_AUTOCLOSE
+	end
+
+
+Springwood_Gym_Guide_Text_0:
+# 73 "data/maps/SpringwoodCity_Gym/scripts.pory"
+	.string "Wow! You really showed your stuff!\n"
+	.string "Defeating Martin is no easy task, but\l"
+	.string "you definitely earned your Springwood\l"
+	.string "Badge!$"
+
 SpringwoodCity_Gym_Martin_Defeated_Text_0:
-# 88 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 103 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	.string "Recieved the Springwood Badge!$"
 
+SpringwoodGym_Trainer1_Text_0:
+# 139 "data/maps/SpringwoodCity_Gym/scripts.pory"
+	.string "Martin only lets us use Pokemon from\nnearby routes, let's see how your Pokemon\lcompare to ours.$"
+
+SpringwoodGym_Trainer1_Text_1:
+# 140 "data/maps/SpringwoodCity_Gym/scripts.pory"
+	.string "You've certainly picked the good ones...$"
+
+SpringwoodGym_Trainer1_Text_2:
+# 143 "data/maps/SpringwoodCity_Gym/scripts.pory"
+	.string "I just started here, so I haven't got\nthe skill of the other trainers yet.$"
+
+SpringwoodGym_Trainer2_Text_0:
+# 150 "data/maps/SpringwoodCity_Gym/scripts.pory"
+	.string "There's not very many elegant Pokemon\nto be found around here.$"
+
+SpringwoodGym_Trainer2_Text_1:
+# 151 "data/maps/SpringwoodCity_Gym/scripts.pory"
+	.string "At least theres a certain elegance to\nbe found in defeat.$"
+
+SpringwoodGym_Trainer2_Text_2:
+# 154 "data/maps/SpringwoodCity_Gym/scripts.pory"
+	.string "While your looks may not be elegant,\nyour battle skill certainly is.$"
+
+SpringwoodGym_Trainer3_Text_0:
+# 161 "data/maps/SpringwoodCity_Gym/scripts.pory"
+	.string "I TRAIN EXCLUSIVELY IN\nDRIPSTONE CAVE!$"
+
+SpringwoodGym_Trainer3_Text_1:
+# 162 "data/maps/SpringwoodCity_Gym/scripts.pory"
+	.string "I'D BETTER GET BACK ON THE GRIND!$"
+
+SpringwoodGym_Trainer3_Text_2:
+# 165 "data/maps/SpringwoodCity_Gym/scripts.pory"
+	.string "My therapist tells me I need to calm\ndown, but training Pokemon gets me HYPE!$"
+
+SpringwoodGym_Trainer4_Text_0:
+# 172 "data/maps/SpringwoodCity_Gym/scripts.pory"
+	.string "Bug types are great for having strong\nPokemon at low levels.$"
+
+SpringwoodGym_Trainer4_Text_1:
+# 173 "data/maps/SpringwoodCity_Gym/scripts.pory"
+	.string "...maybe they could do with a few more\nlevels...$"
+
+SpringwoodGym_Trainer4_Text_2:
+# 176 "data/maps/SpringwoodCity_Gym/scripts.pory"
+	.string "Maybe I can re-use this net to catch\nmyself a girlfriend...$"
+
 Springwood_Gym_Guide_Text_Intro::
-# 63 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 78 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	.string "A new face!\nI'm the guide here at Springwood Gym.\p"
 	.string "My job is to make sure the challengers\nknow what it is they are up against.\p"
-	.string "Each Gym is assigned a guide to help\nout newcomers to the Gym Challenge.$"
+	.string "Each Gym is assigned a guide to help\nout newcomers to the Gym Challenge.\p"
+	.string "Also, make sure to check the\nRecommended Level on each Gym's statues.$"
 
 Springwood_Gym_Guide_Text::
-# 69 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 85 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	.string "Here at the Springwood Gym,\nGym Leader Martin likes to use Pokemon\lthat he found nearby.\p"
 	.string "He believes that after a bit of care,\nany Pokemon can become strong!$"
 
 SpringwoodCity_Gym_Martin_Text_Intro::
-# 97 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 112 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	.string "Ah, you must be {PLAYER}.\nI heard that you helped with the rowdy\lPokemon on Route 2.\p"
 	.string "I've been looking forward to meeting you,\nI hope you found some of the Pokemon\lnearby interesting like I have.\p"
 	.string "I've trained my Pokemon as much as\nI could without going beyond what's\lexpected of the first Gym Leader.\p"
 	.string "I hope you don't disappoint,\nI'm excited to see what you've found.$"
 
 SpringwoodCity_Gym_Martin_Text_Defeated::
-# 104 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 119 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	.string "Outstanding.\p"
 	.string "Even after all my training you still\nfound a way to best me at my own game.\p"
-	.string "I wouldn't have it any other way,\nI hope you continue to make good progress\ltogether with your Pokemon.$"
+	.string "I wouldn't have it any other way,\nI hope you continue to make good\lprogress with your Pokemon.$"
 
 SpringwoodCity_Gym_Martin_PostBattle::
-# 110 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 125 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	.string "Grass and Bug types, as well as\nPokemon that have an ability related to\lcutting are able to cut down trees.\p"
-	.string "Make sure to eep an eye out for any\ncool Pokemon for our next battle!\p"
+	.string "Make sure to keep an eye out for any\ncool Pokemon for our next battle!\p"
 	.string "I'm excited to see just how much\nstronger your team can get!$"
 
 SpringwoodCity_Gym_Martin_Badge::
-# 116 "data/maps/SpringwoodCity_Gym/scripts.pory"
+# 131 "data/maps/SpringwoodCity_Gym/scripts.pory"
 	.string "Having the Springwood Badge means\nthat your Pokemon are able to cut down\lsmall trees that may block your path.\p"
 	.string "Grass and Bug types, as well as any\nPokemon that have an ability related to\lcutting are able to help you.$"

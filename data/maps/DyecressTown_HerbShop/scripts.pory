@@ -1,0 +1,179 @@
+mapscripts DyecressTown_HerbShop_MapScripts {}
+
+script DyecressTown_HerbShop_Clerk {
+    lock
+    applymovement(0, moves(face_player))
+    message("Welcome to the Herb Shop!")
+    waitmessage
+    if (var(VAR_DYECRESS_HERB_SHOP_QUEST) == 3 && !flag(FLAG_UPGRADE_HERBSHOP)) {
+        message("Thanks to you, we now have a selection\nof nature altering mints for sale!")
+        waitmessage
+        setflag(FLAG_UPGRADE_HERBSHOP)
+    }
+    if (flag(FLAG_UPGRADE_HERBSHOP)) {
+        msgbox("Were you after a Mint?", MSGBOX_YESNO)
+        if (var(VAR_RESULT) == YES) {
+            pokemart(DyecressTown_HerbShop_Mart2)
+        } else {
+            pokemart(DyecressTown_HerbShop_Mart)
+        }
+    } else {
+        pokemart(DyecressTown_HerbShop_Mart)
+    }
+    msgbox("Thanks for stopping by!")
+    release
+}
+
+mart DyecressTown_HerbShop_Mart {
+    ITEM_ENERGY_POWDER
+	ITEM_ENERGY_ROOT
+	ITEM_HEAL_POWDER
+	ITEM_REVIVAL_HERB
+    ITEM_POWER_HERB
+    ITEM_MIRROR_HERB
+    ITEM_WHITE_HERB
+    ITEM_MENTAL_HERB
+}
+
+mart DyecressTown_HerbShop_Mart2 {
+    ITEM_LONELY_MINT
+    ITEM_ADAMANT_MINT
+    ITEM_NAUGHTY_MINT
+    ITEM_BRAVE_MINT
+    ITEM_BOLD_MINT
+    ITEM_IMPISH_MINT
+    ITEM_LAX_MINT
+    ITEM_RELAXED_MINT
+    ITEM_MODEST_MINT
+    ITEM_MILD_MINT
+    ITEM_RASH_MINT
+    ITEM_QUIET_MINT
+    ITEM_CALM_MINT
+    ITEM_GENTLE_MINT
+    ITEM_CAREFUL_MINT
+    ITEM_SASSY_MINT
+    ITEM_TIMID_MINT
+    ITEM_HASTY_MINT
+    ITEM_JOLLY_MINT
+    ITEM_NAIVE_MINT
+    ITEM_SERIOUS_MINT
+}
+
+script DyecressTown_HerbShop_OldWoman {
+    msgbox(format("It's nice having a furbished store for all our herbs."), MSGBOX_NPC)
+}
+
+script DyecressTown_HerbShop_Lass {
+    msgbox(format("Dyecress has the best selection of herbs!"), MSGBOX_NPC)
+}
+
+//TODO make it ITEM_RICH_MULCH from volcano, and ITEM_GRACIDEA from jungle
+
+script DyecressTown_HerbShop_QuestGuy {
+    lock
+    if (var(VAR_DYECRESS_HERB_SHOP_QUEST) == 0) {
+        msgbox(DyecressTown_HerbShop_QuestGuy_Text)
+        setvar(VAR_DYECRESS_HERB_SHOP_QUEST, 1)
+        msgbox("Say, you're a travelling trainer right?\nCould you lend us a hand here?\p", MSGBOX_YESNO)
+        if (var(VAR_RESULT) == YES) {
+            goto(DyecressTown_HerbShop_QuestGuy2)
+        } else {
+            msgbox("Ah, I understand.\nYou must be busy, my apologies.")
+        }
+
+    } elif (var(VAR_DYECRESS_HERB_SHOP_QUEST) == 1) {
+       msgbox(format("Have you decided to help us out?"), MSGBOX_YESNO)
+       if (var(VAR_RESULT) == YES) {
+            goto(DyecressTown_HerbShop_QuestGuy2)
+        } else {
+            msgbox("Very well, I only hope we can\nmake progress by ourselves.")
+        }
+
+    } elif (var(VAR_DYECRESS_HERB_SHOP_QUEST) == 2) {
+        checkitem(ITEM_RICH_MULCH)
+        if (var(VAR_RESULT)) {setvar(VAR_TEMP_A, TRUE)}
+        checkitem(ITEM_GRACIDEA)
+        if (var(VAR_RESULT)) {setvar(VAR_TEMP_B, TRUE)}
+
+        // shut up, don't judge me
+        if (var(VAR_TEMP_A) && var(VAR_TEMP_B)) {
+            goto(DyecressTown_HerbShop_QuestGuy3)
+        } elif (var(VAR_TEMP_A) && !var(VAR_TEMP_B)) {
+            msgbox("You'll be able to find the flower\nsomewhere in the jungles to the south.")
+        } elif (!var(VAR_TEMP_A) && var(VAR_TEMP_B)) {
+            msgbox("The fertile soil can be found around\nthe base of the volcano to the east.")
+        } else {
+            msgbox("The fertile soil can be found around\nthe base of the volcano to the east,\land you'll be able to find the flower\lsomewhere in the jungles to the south.")
+        }
+    
+    } elif (var(VAR_DYECRESS_HERB_SHOP_QUEST) == 3) {
+        msgbox("Thank you for all your help!", MSGBOX_NPC)
+    }
+}
+
+script DyecressTown_HerbShop_QuestGuy2 {
+    setvar(VAR_DYECRESS_HERB_SHOP_QUEST, 2)
+    msgbox(DyecressTown_HerbShop_QuestGuy_Text2)
+    release
+}
+
+script DyecressTown_HerbShop_QuestGuy3 {
+    setvar(VAR_DYECRESS_HERB_SHOP_QUEST, 3)
+    msgbox(DyecressTown_HerbShop_QuestGuy_Text3)
+    getobjectxy(OBJ_EVENT_ID_PLAYER, CURRENT_POSITION, VAR_TEMP_1, VAR_TEMP_2)
+    if (
+        (var(VAR_TEMP_1) == 0 && var(VAR_TEMP_2) == 5) ||
+        (var(VAR_TEMP_1) == 1 && var(VAR_TEMP_2) == 4) ||
+        (var(VAR_TEMP_1) == 1 && var(VAR_TEMP_2) == 6)
+    ) {
+        applymovement(4, moves(walk_right*4 walk_down*2))
+    } else {
+        applymovement(4, moves(walk_down walk_right*4 walk_down))
+    }
+    waitmovement(0)
+    removeobject(4)
+    delay(60)
+    playfanfare(MUS_OBTAIN_BERRY)
+    waitfanfare
+    delay(30)
+    playse(SE_EXIT)
+    addobject(4)
+    setobjectxy(4, 5, 7)
+    waitse
+    if (
+        (var(VAR_TEMP_1) == 0 && var(VAR_TEMP_2) == 5) ||
+        (var(VAR_TEMP_1) == 1 && var(VAR_TEMP_2) == 4) ||
+        (var(VAR_TEMP_1) == 1 && var(VAR_TEMP_2) == 6)
+    ) {
+        applymovement(4, moves( walk_up*2 walk_left*4))
+    } else {
+        applymovement(4, moves(walk_up walk_left*4 walk_up))
+    }
+    waitmovement(0)
+    applymovement(4, moves(face_player))
+    waitmovement(0)
+    msgbox("Success!\nWe will now be able to stock Mints!")
+    release
+}
+
+text DyecressTown_HerbShop_QuestGuy_Text {
+    "I'm from Libra Institute, we've been\nworking with the owners of the Herb Shop.\p"
+    "We're hoping that we can create some\nnew special herbs together,\lbut we have hit a rut in development.\p"
+}
+
+text DyecressTown_HerbShop_QuestGuy_Text2 {
+    "Fantastic! Thank you for offering to\nlend us a hand, I'm sure it\lwill be worth your while!\p"
+    "I believe we're close, we just need 2\nmore things to get the results\lwe're looking for.\p"
+    "Firstly, I've heard that the soil near\nthe volcano in the east is very fertile.\p"
+    "If you could grab some for us in your\ntravels, it'd be greatly appreciated.\p"
+    "Also, apparently there is a special type\nof flower that grows in the jungles to\lthe south of here.\p"
+    "We believe that it holds the key to\nfinalising our research.\p"
+    "If you could retrieve even just a\nsingle flower that would be perfect.\p"
+    "I wish you the best of luck,\nand thank you again!"
+}
+
+text DyecressTown_HerbShop_QuestGuy_Text3 {
+    "Wow! You've got them both!\nThank you very much!\p"
+    "I'm sure we'll definitely be able to\nmake some progress on the Mints now!\p"
+    "I'll get our scientists to have a look!"
+}

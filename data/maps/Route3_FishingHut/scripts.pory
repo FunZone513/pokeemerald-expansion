@@ -1,19 +1,19 @@
 mapscripts Route3_FishingHut_MapScripts {}
 
 script Route3_FishingHut_Fisherman {
-    lockall
+    lock
     msgbox("...\phuh?")
     faceplayer
     if (!flag(FLAG_RECEIVED_OLD_ROD)) { 
         msgbox(FishermanGive)
         giveitem(ITEM_OLD_ROD)
         setflag(FLAG_RECEIVED_OLD_ROD)
-        msgbox(format("Now if you don't mind, I'm going back to my tea."))
+        msgbox(format("Now if you don't mind, I'm going back to my tea."), MSGBOX_NPC)
     } else {
-        msgbox(format("I already gave you an old rod. Go give it a try."))
+        msgbox(format("I already gave you an old rod. Go give it a try."), MSGBOX_NPC)
     }
     applymovement(1, moves(face_left))
-    releaseall
+    release
 }
 
 text FishermanGive {
@@ -26,7 +26,5 @@ text FishermanGive {
 }
 
 script Route3_FishingHut_Doorway {
-    lockall
-    msgbox(format("I wonder what's back there..."))
-    releaseall
+    msgbox(format("I wonder what's back there..."), MSGBOX_SIGN)
 }

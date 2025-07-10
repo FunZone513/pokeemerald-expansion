@@ -16,9 +16,7 @@ script SpringwoodCity_PokemonCenter_Nurse {
 }
 
 script SpringwoodCity_PokemonCenter_Girl {
-    lockall
     msgbox(SpringwoodCity_PokemonCenter_Girl_Text, MSGBOX_NPC)
-    releaseall
 }
 
 text SpringwoodCity_PokemonCenter_Girl_Text {
@@ -28,9 +26,7 @@ text SpringwoodCity_PokemonCenter_Girl_Text {
 }
 
 script SpringwoodCity_PokemonCenter_Boy {
-    lockall
     msgbox(SpringwoodCity_PokemonCenter_Boy_Text, MSGBOX_NPC)
-    releaseall
 }
 
 text SpringwoodCity_PokemonCenter_Boy_Text {
@@ -41,13 +37,9 @@ text SpringwoodCity_PokemonCenter_Boy_Text {
 }
 
 script SpringwoodCity_PokemonCenter_Woman {
-    lockall
     msgbox("Woman voice woman voice\nwoman voice!", MSGBOX_NPC)
-    releaseall
 }
 
 script SpringwoodCity_PokemonCenter_Man {
-    lockall
     msgbox("I come here nearly every day.\nI just like the vibe.", MSGBOX_NPC)
-    releaseall
 }

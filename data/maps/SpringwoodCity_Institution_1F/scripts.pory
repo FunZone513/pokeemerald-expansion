@@ -1,0 +1,101 @@
+mapscripts SpringwoodCity_Institution_1F_MapScripts {}
+
+script SpringwoodCity_Institution_1F_Director {
+    lockall
+    switch(var(VAR_DYECRESS_MYSTERY_STATE)) {
+        case 2:
+            msgbox(SpringwoodCity_Institution_1F_Director_Text, MSGBOX_NPC)
+            setvar(VAR_DYECRESS_MYSTERY_STATE, 3)
+            break
+        
+        case 3:
+            msgbox(format("I've sent some of my guys over to Dyecress Town to help out Spenser with his deciphering of the old texts. I hope they learn something fruitful from it!"), MSGBOX_NPC)
+            break
+
+        default:
+        msgbox(format("We're collecting data from Labs all over the region."), MSGBOX_NPC)
+    }
+    releaseall
+}
+
+text SpringwoodCity_Institution_1F_Director_Text {
+    "Yes? Can I help you?\p"
+    "...\p"
+    "Oh! You're from Dyecress!\nHow wonderful it is to hear that\nOld Man Spenser is finally letting us\linvestigate the town's history.\p"
+    "It's been a dark spot in our knowledge\nbase for quite some time now.\p"
+    "We always hear about the rich history\nof the town, yet we're never allowed to\llearn any of it, it's really a shame.\p"
+    "I'll dispatch some of our researchers\nright away!\p"
+    "They'll make sure to help out with any of\nSpenser's qualms, and I'll make sure they\ldon't make a mess of the town."
+}
+
+script SpringwoodCity_Institution_1F_Scientist1 {
+    lockall
+    msgbox(format("These readings are a little... off..."))
+    releaseall
+}
+
+script SpringwoodCity_Institution_1F_Scientist2 {
+    lockall
+    msgbox(format("I'm trying to determine what it is about evolutionary stones that causes Pokemon to evolve."), MSGBOX_NPC)
+    releaseall
+}
+
+script SpringwoodCity_Institution_1F_Scientist3 {
+    lockall
+    msgbox(format("Our research here is more geared towards potential commercialisation and the greater impact of discoveries."), MSGBOX_NPC)
+    releaseall
+}
+
+script SpringwoodCity_Institution_1F_Scientist4 {
+    lockall
+    msgbox(format("We can learn a lot about our future by looking at our past, but at the same time, we can change our future to however we want it today."), MSGBOX_NPC)
+    releaseall
+}
+
+script SpringwoodCity_Institution_1F_Display {
+    lockall
+    msgbox(format("There seems to be a stone of some kind behind the glass."))
+    releaseall
+}
+
+script SpringwoodCity_Institution_1F_Display2 {
+    lockall
+    msgbox(format("It's a strangely red rock."))
+    releaseall
+}
+
+script SpringwoodCity_Institution_1F_Display3 {
+    lockall
+    msgbox(format("It appears to be a fossil of some kind."))
+    releaseall
+}
+
+script SpringwoodCity_Institution_1F_Display4 {
+    lockall
+    msgbox(format("Kind of looks like a feather imprinted on a stone."))
+    releaseall
+}
+
+script SpringwoodCity_Institution_1F_Display5 {
+    lockall
+    msgbox(format("Looks like some sort of ancient relic."))
+    releaseall
+}
+
+script SpringwoodCity_Institution_1F_Display6 {
+    lockall
+    msgbox(format("The display shows off a sample of ash."))
+    releaseall
+}
+
+script SpringwoodCity_Institution_1F_Display7 {
+    lockall
+    msgbox(format("Someone's left sock."))
+    releaseall
+}
+
+script SpringwoodCity_Institution_1F_Table {
+    lockall
+    msgbox(format("The diagrams are too complex to understand."))
+    releaseall
+}

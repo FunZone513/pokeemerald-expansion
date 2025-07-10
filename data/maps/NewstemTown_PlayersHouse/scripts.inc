@@ -95,35 +95,39 @@ NewstemTown_PlayersHouse_Mum_8:
 # 59 "data/maps/NewstemTown_PlayersHouse/scripts.pory"
 Intro_Mum_WalkToPlayer:
 # 60 "data/maps/NewstemTown_PlayersHouse/scripts.pory"
-	walk_right
+	walk_up
 # 60 "data/maps/NewstemTown_PlayersHouse/scripts.pory"
-	walk_right
-# 60 "data/maps/NewstemTown_PlayersHouse/scripts.pory"
-	walk_right
-# 61 "data/maps/NewstemTown_PlayersHouse/scripts.pory"
 	walk_up
 # 61 "data/maps/NewstemTown_PlayersHouse/scripts.pory"
-	walk_up
+	walk_right
+# 61 "data/maps/NewstemTown_PlayersHouse/scripts.pory"
+	walk_right
+# 61 "data/maps/NewstemTown_PlayersHouse/scripts.pory"
+	walk_right
+# 62 "data/maps/NewstemTown_PlayersHouse/scripts.pory"
+	face_up
 	step_end
 
-# 64 "data/maps/NewstemTown_PlayersHouse/scripts.pory"
+# 65 "data/maps/NewstemTown_PlayersHouse/scripts.pory"
 Intro_Mum_WalkBackToChair:
-# 65 "data/maps/NewstemTown_PlayersHouse/scripts.pory"
+# 66 "data/maps/NewstemTown_PlayersHouse/scripts.pory"
+	walk_left
+# 66 "data/maps/NewstemTown_PlayersHouse/scripts.pory"
+	walk_left
+# 66 "data/maps/NewstemTown_PlayersHouse/scripts.pory"
+	walk_left
+# 67 "data/maps/NewstemTown_PlayersHouse/scripts.pory"
 	walk_down
-# 65 "data/maps/NewstemTown_PlayersHouse/scripts.pory"
+# 67 "data/maps/NewstemTown_PlayersHouse/scripts.pory"
 	walk_down
-# 66 "data/maps/NewstemTown_PlayersHouse/scripts.pory"
-	walk_left
-# 66 "data/maps/NewstemTown_PlayersHouse/scripts.pory"
-	walk_left
-# 66 "data/maps/NewstemTown_PlayersHouse/scripts.pory"
-	walk_left
+# 68 "data/maps/NewstemTown_PlayersHouse/scripts.pory"
+	face_left
 	step_end
 
 # 19 "data/maps/NewstemTown_PlayersHouse/scripts.pory"
 NewstemTown_PlayersHouse_Intro_Movement_0:
 # 19 "data/maps/NewstemTown_PlayersHouse/scripts.pory"
-	face_right
+	face_up
 	step_end
 
 NewstemTown_PlayersHouse_Intro_Text_0:
@@ -154,5 +158,5 @@ Mum_Intro::
 # 7 "data/maps/NewstemTown_PlayersHouse/scripts.pory"
 	.string "I heard that the Professor finally\ngot some Pokemon together.\p"
 	.string "You should go and pick one up, then you\ncan start on your Pokemon adventure!\p"
-	.string "Oh right, make sure to grab all\nyour things out of the box upstairs!\p"
+	.string "Oh right, don't forget to check the\njournal on your desk!\p"
 	.string "Have fun!$"

@@ -14,6 +14,17 @@ script SpringwoodCity_Gym_Reset {
     setmetatile(7, 6, METATILE_MauvilleGym_GreenBeamH4_On, TRUE)
 }
 
+script SpringwoodCity_Gym_CheckPlayerPos {
+    getobjectxy(OBJ_EVENT_ID_PLAYER, CURRENT_POSITION, VAR_TEMP_A, VAR_TEMP_B)
+    if (var(VAR_TEMP_A) == 3 && var(VAR_TEMP_B) == 15) { 
+        call(SpringwoodCity_Gym_PressSwitch1) 
+    } elif ( var(VAR_TEMP_A) == 2 && var(VAR_TEMP_B) == 10 ) {
+        call(SpringwoodCity_Gym_PressSwitch2)
+    } elif ( var(VAR_TEMP_A) == 10 && var(VAR_TEMP_B) == 7 ) {
+        call(SpringwoodCity_Gym_PressSwitch3)
+    }
+}
+
 script SpringwoodCity_Gym_PressSwitch1 {
     if (!var(VAR_TEMP_1)) {
         playse(SE_UNLOCK)
@@ -53,17 +64,22 @@ script SpringwoodCity_Gym_CheckState {
 
 script Springwood_Gym_Guide {
     lockall
-    if (flag(FLAG_TEMP_1)) {  
-        msgbox(Springwood_Gym_Guide_Text_Intro)
+    if (!flag(FLAG_BADGE01_GET)) { 
+        if (flag(FLAG_TEMP_1)) {  
+            msgbox(Springwood_Gym_Guide_Text_Intro)
+        }
+        msgbox(Springwood_Gym_Guide_Text, MSGBOX_NPC)
+    } else {
+        msgbox(format("Wow! You really showed your stuff! Defeating Martin is no easy task, but you definitely earned your Springwood Badge!"), MSGBOX_NPC)
     }
-    msgbox(Springwood_Gym_Guide_Text, MSGBOX_NPC)
     releaseall
 }
 
 text Springwood_Gym_Guide_Text_Intro {
     "A new face!\nI'm the guide here at Springwood Gym.\p"
     "My job is to make sure the challengers\nknow what it is they are up against.\p"
-    "Each Gym is assigned a guide to help\nout newcomers to the Gym Challenge."
+    "Each Gym is assigned a guide to help\nout newcomers to the Gym Challenge.\p"
+    "Also, make sure to check the\nRecommended Level on each Gym's statues."
 }
 
 text Springwood_Gym_Guide_Text {
@@ -72,9 +88,8 @@ text Springwood_Gym_Guide_Text {
 }
 
 script SpringwoodCity_Gym_Martin {
-    lockall
     trainerbattle_single(
-        TRAINER_GYM_LEADER_MARTIN,
+        GYM_LEADER_MARTIN,
         SpringwoodCity_Gym_Martin_Text_Intro,
         SpringwoodCity_Gym_Martin_Text_Defeated,
         SpringwoodCity_Gym_Martin_Defeated,
@@ -89,8 +104,8 @@ script SpringwoodCity_Gym_Martin_Defeated {
 	waitmessage
 	call(Common_EventScript_PlayGymBadgeFanfare)
     msgbox(SpringwoodCity_Gym_Martin_Badge, MSGBOX_DEFAULT)
-	setflag(FLAG_DEFEATED_RUSTBORO_GYM)
 	setflag(FLAG_BADGE01_GET)
+    call(Generic_UPDATE_LEVELCAP)
     releaseall
 }
 
@@ -104,16 +119,60 @@ text SpringwoodCity_Gym_Martin_Text_Intro {
 text SpringwoodCity_Gym_Martin_Text_Defeated {
     "Outstanding.\p"
     "Even after all my training you still\nfound a way to best me at my own game.\p"
-    "I wouldn't have it any other way,\nI hope you continue to make good progress\ltogether with your Pokemon."
+    "I wouldn't have it any other way,\nI hope you continue to make good\lprogress with your Pokemon."
 }
 
 text SpringwoodCity_Gym_Martin_PostBattle {
     "Grass and Bug types, as well as\nPokemon that have an ability related to\lcutting are able to cut down trees.\p"
-    "Make sure to eep an eye out for any\ncool Pokemon for our next battle!\p"
+    "Make sure to keep an eye out for any\ncool Pokemon for our next battle!\p"
     "I'm excited to see just how much\nstronger your team can get!"
 }
 
 text SpringwoodCity_Gym_Martin_Badge {
     "Having the Springwood Badge means\nthat your Pokemon are able to cut down\lsmall trees that may block your path.\p"
     "Grass and Bug types, as well as any\nPokemon that have an ability related to\lcutting are able to help you."
+}
+
+script SpringwoodGym_Trainer1 {
+    trainerbattle_single(
+        SPRINGWOOD_GYM_TRAINER1,
+        "Martin only lets us use Pokemon from\nnearby routes, let's see how your Pokemon\lcompare to ours.",
+        "You've certainly picked the good ones...",
+        SpringwoodCity_Gym_CheckPlayerPos
+    )
+    msgbox("I just started here, so I haven't got\nthe skill of the other trainers yet.", MSGBOX_AUTOCLOSE)
+    end
+}
+
+script SpringwoodGym_Trainer2 {
+    trainerbattle_single(
+        SPRINGWOOD_GYM_TRAINER2, 
+        "There's not very many elegant Pokemon\nto be found around here.",
+        "At least theres a certain elegance to\nbe found in defeat.",
+        SpringwoodCity_Gym_CheckPlayerPos
+    )
+    msgbox("While your looks may not be elegant,\nyour battle skill certainly is.", MSGBOX_AUTOCLOSE)
+    end
+}
+
+script SpringwoodGym_Trainer3 {
+    trainerbattle_single(
+        SPRINGWOOD_GYM_TRAINER3,
+        "I TRAIN EXCLUSIVELY IN\nDRIPSTONE CAVE!",
+        "I'D BETTER GET BACK ON THE GRIND!",
+        SpringwoodCity_Gym_CheckPlayerPos
+    )
+    msgbox("My therapist tells me I need to calm\ndown, but training Pokemon gets me HYPE!", MSGBOX_AUTOCLOSE)
+    end
+}
+
+script SpringwoodGym_Trainer4 {
+    trainerbattle_single(
+        SPRINGWOOD_GYM_TRAINER4,
+        "Bug types are great for having strong\nPokemon at low levels.",
+        "...maybe they could do with a few more\nlevels...",
+        SpringwoodCity_Gym_CheckPlayerPos
+    )
+    msgbox("Maybe I can re-use this net to catch\nmyself a girlfriend...", MSGBOX_AUTOCLOSE)
+    end
 }

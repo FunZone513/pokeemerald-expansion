@@ -28,60 +28,44 @@ SpringwoodCity_PokemonCenter_Nurse::
 
 SpringwoodCity_PokemonCenter_Girl::
 # 19 "data/maps/SpringwoodCity_PokeCenter/scripts.pory"
-	lockall
-# 20 "data/maps/SpringwoodCity_PokeCenter/scripts.pory"
 	msgbox SpringwoodCity_PokemonCenter_Girl_Text, MSGBOX_NPC
-# 21 "data/maps/SpringwoodCity_PokeCenter/scripts.pory"
-	releaseall
 	return
 
 
 SpringwoodCity_PokemonCenter_Boy::
-# 31 "data/maps/SpringwoodCity_PokeCenter/scripts.pory"
-	lockall
-# 32 "data/maps/SpringwoodCity_PokeCenter/scripts.pory"
+# 29 "data/maps/SpringwoodCity_PokeCenter/scripts.pory"
 	msgbox SpringwoodCity_PokemonCenter_Boy_Text, MSGBOX_NPC
-# 33 "data/maps/SpringwoodCity_PokeCenter/scripts.pory"
-	releaseall
 	return
 
 
 SpringwoodCity_PokemonCenter_Woman::
-# 44 "data/maps/SpringwoodCity_PokeCenter/scripts.pory"
-	lockall
-# 45 "data/maps/SpringwoodCity_PokeCenter/scripts.pory"
+# 40 "data/maps/SpringwoodCity_PokeCenter/scripts.pory"
 	msgbox SpringwoodCity_PokemonCenter_Woman_Text_0, MSGBOX_NPC
-# 46 "data/maps/SpringwoodCity_PokeCenter/scripts.pory"
-	releaseall
 	return
 
 
 SpringwoodCity_PokemonCenter_Man::
-# 50 "data/maps/SpringwoodCity_PokeCenter/scripts.pory"
-	lockall
-# 51 "data/maps/SpringwoodCity_PokeCenter/scripts.pory"
+# 44 "data/maps/SpringwoodCity_PokeCenter/scripts.pory"
 	msgbox SpringwoodCity_PokemonCenter_Man_Text_0, MSGBOX_NPC
-# 52 "data/maps/SpringwoodCity_PokeCenter/scripts.pory"
-	releaseall
 	return
 
 
 SpringwoodCity_PokemonCenter_Woman_Text_0:
-# 45 "data/maps/SpringwoodCity_PokeCenter/scripts.pory"
+# 40 "data/maps/SpringwoodCity_PokeCenter/scripts.pory"
 	.string "Woman voice woman voice\nwoman voice!$"
 
 SpringwoodCity_PokemonCenter_Man_Text_0:
-# 51 "data/maps/SpringwoodCity_PokeCenter/scripts.pory"
+# 44 "data/maps/SpringwoodCity_PokeCenter/scripts.pory"
 	.string "I come here nearly every day.\nI just like the vibe.$"
 
 SpringwoodCity_PokemonCenter_Girl_Text::
-# 24 "data/maps/SpringwoodCity_PokeCenter/scripts.pory"
+# 22 "data/maps/SpringwoodCity_PokeCenter/scripts.pory"
 	.string "I was going to go and play in the\nQuiet Grove like I normally do, but I\l"
 	.string "heard that there's a big scary Pokemon\lblocking people from getting in.\p"
 	.string "I guess I'll just have to wait until\nGym Leader Martin makes it safe.$"
 
 SpringwoodCity_PokemonCenter_Boy_Text::
-# 36 "data/maps/SpringwoodCity_PokeCenter/scripts.pory"
+# 32 "data/maps/SpringwoodCity_PokeCenter/scripts.pory"
 	.string "Gym Leader Martin is really cool!\p"
 	.string "He only uses Pokemon he found in the\nRoutes next to the city.\p"
 	.string "He said that he does it so that he can\nprove that strength comes from how you\l"

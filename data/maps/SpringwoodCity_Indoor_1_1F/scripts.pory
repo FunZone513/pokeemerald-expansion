@@ -15,6 +15,7 @@ script SpringwoodCity_Indoor_1_1F_LittleBoy {
 script SpringwoodCity_Indoor_1_1F_LittleBoy2 {
     lockall
     msgbox(format("We like it here, the Beauloafs give us heaps of food!"), MSGBOX_NPC)
+    
     releaseall
 }
 

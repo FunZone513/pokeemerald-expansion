@@ -6,7 +6,7 @@ script SpringwoodCity_Indoor_2_Man {
         msgbox("Thank you for helping us reconnect.", MSGBOX_NPC)
     } elif (flag(FLAG_TEMP_2)) {
         msgbox(SpringwoodCity_Indoor_2_Man_Text2, MSGBOX_NPC)
-        giveitem(ITEM_TM27)
+        giveitem(ITEM_TM_RETURN)
         setflag(FLAG_RECEIVED_TM_RETURN)
     } else {
         msgbox(SpringwoodCity_Indoor_2_Man_Text, MSGBOX_NPC)
@@ -34,13 +34,14 @@ text SpringwoodCity_Indoor_2_Man_Text2 {
 script SpringwoodCity_Indoor_2_Gardevoir {
     lockall
     playmoncry(SPECIES_GARDEVOIR, CRY_MODE_NORMAL)
-    getseenmon(SPECIES_GARDEVOIR)
-    if (var(VAR_RESULT) == NO) { setseenmon(SPECIES_GARDEVOIR) }
+    setseenmon(SPECIES_GARDEVOIR)
     
+    msgbox("...", MSGBOX_NPC)
+    waitmoncry
     if (flag(FLAG_TEMP_1) && !flag(FLAG_RECEIVED_TM_RETURN)) {
-        msgbox("...\p...please tell him I wish for nothing more\nthan to stay by his side.", MSGBOX_NPC)
+        msgbox("...please tell him I simply wish to\nstay by his side.", MSGBOX_NPC)
         setflag(FLAG_TEMP_2)
-    } else { msgbox("...", MSGBOX_NPC) }
+    }
     waitmoncry
     releaseall
 }

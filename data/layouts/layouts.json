@@ -2417,7 +2417,7 @@
       "width": 58,
       "height": 26,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "0",
+      "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/UnusedOutdoorArea/border.bin",
       "blockdata_filepath": "data/layouts/UnusedOutdoorArea/map.bin"
     },
@@ -4424,7 +4424,7 @@
     {
       "id": "LAYOUT_ROUTE2",
       "name": "Route2_Layout",
-      "width": 27,
+      "width": 33,
       "height": 40,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
@@ -4484,8 +4484,8 @@
     {
       "id": "LAYOUT_ROUTE5",
       "name": "Route5_Layout",
-      "width": 60,
-      "height": 30,
+      "width": 70,
+      "height": 40,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/Route5/border.bin",
@@ -4574,7 +4574,7 @@
     {
       "id": "LAYOUT_ROUTE4",
       "name": "Route4_Layout",
-      "width": 30,
+      "width": 40,
       "height": 34,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
@@ -4585,7 +4585,7 @@
       "id": "LAYOUT_ROUTE6",
       "name": "Route6_Layout",
       "width": 50,
-      "height": 94,
+      "height": 104,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Fortree",
       "border_filepath": "data/layouts/Route6/border.bin",
@@ -4670,6 +4670,286 @@
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/QuietGrove/border.bin",
       "blockdata_filepath": "data/layouts/QuietGrove/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE7",
+      "name": "Route7_Layout",
+      "width": 60,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Route7/border.bin",
+      "blockdata_filepath": "data/layouts/Route7/map.bin"
+    },
+    {
+      "id": "LAYOUT_SPRING_WOODS",
+      "name": "SpringWoods_Layout",
+      "width": 40,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/SpringWoods/border.bin",
+      "blockdata_filepath": "data/layouts/SpringWoods/map.bin"
+    },
+    {
+      "id": "LAYOUT_SPRING_WOODS_INNER",
+      "name": "SpringWoodsInner_Layout",
+      "width": 24,
+      "height": 32,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/SpringWoodsInner/border.bin",
+      "blockdata_filepath": "data/layouts/SpringWoodsInner/map.bin"
+    },
+    {
+      "id": "LAYOUT_SPRING_HOLLOW",
+      "name": "SpringHollow_Layout",
+      "width": 30,
+      "height": 18,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/SpringHollow/border.bin",
+      "blockdata_filepath": "data/layouts/SpringHollow/map.bin"
+    },
+    {
+      "id": "LAYOUT_OCHRE_VALE",
+      "name": "OchreVale_Layout",
+      "width": 40,
+      "height": 50,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fallarbor",
+      "border_filepath": "data/layouts/OchreVale/border.bin",
+      "blockdata_filepath": "data/layouts/OchreVale/map.bin"
+    },
+    {
+      "id": "LAYOUT_OCHRE_MINE_ENTRANCE",
+      "name": "OchreMineEntrance_Layout",
+      "width": 26,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fallarbor",
+      "border_filepath": "data/layouts/OchreMineEntrance/border.bin",
+      "blockdata_filepath": "data/layouts/OchreMineEntrance/map.bin"
+    },
+    {
+      "id": "LAYOUT_OCHRE_VALE_POKE_CENTRE",
+      "name": "OchreVale_PokeCentre_Layout",
+      "width": 14,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/OchreVale_PokeCentre/border.bin",
+      "blockdata_filepath": "data/layouts/OchreVale_PokeCentre/map.bin"
+    },
+    {
+      "id": "LAYOUT_OCHRE_VALE_POKE_MART",
+      "name": "OchreVale_PokeMart_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Shop",
+      "border_filepath": "data/layouts/OchreVale_PokeMart/border.bin",
+      "blockdata_filepath": "data/layouts/OchreVale_PokeMart/map.bin"
+    },
+    {
+      "id": "LAYOUT_OCHRE_VALE_INDOOR_HOUSE1",
+      "name": "OchreVale_Indoor_House1_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/OchreVale_Indoor_House1/border.bin",
+      "blockdata_filepath": "data/layouts/OchreVale_Indoor_House1/map.bin"
+    },
+    {
+      "id": "LAYOUT_OCHRE_VALE_GYM",
+      "name": "OchreVale_Gym_Layout",
+      "width": 16,
+      "height": 31,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_RustboroGym",
+      "border_filepath": "data/layouts/OchreVale_Gym/border.bin",
+      "blockdata_filepath": "data/layouts/OchreVale_Gym/map.bin"
+    },
+    {
+      "id": "LAYOUT_DYECRESS_TOWN",
+      "name": "DyecressTown_Layout",
+      "width": 34,
+      "height": 42,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_EverGrande",
+      "border_filepath": "data/layouts/DyecressTown/border.bin",
+      "blockdata_filepath": "data/layouts/DyecressTown/map.bin"
+    },
+    {
+      "id": "LAYOUT_DYECRESS_TOWN_POKE_CENTRE",
+      "name": "DyecressTown_PokeCentre_Layout",
+      "width": 14,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/DyecressTown_PokeCentre/border.bin",
+      "blockdata_filepath": "data/layouts/DyecressTown_PokeCentre/map.bin"
+    },
+    {
+      "id": "LAYOUT_DYECRESS_TOWN_INDOOR1",
+      "name": "DyecressTown_Indoor1_Layout",
+      "width": 12,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/DyecressTown_Indoor1/border.bin",
+      "blockdata_filepath": "data/layouts/DyecressTown_Indoor1/map.bin"
+    },
+    {
+      "id": "LAYOUT_DYECRESS_INDOOR2",
+      "name": "Dyecress_Indoor2_Layout",
+      "width": 10,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/Dyecress_Indoor2/border.bin",
+      "blockdata_filepath": "data/layouts/Dyecress_Indoor2/map.bin"
+    },
+    {
+      "id": "LAYOUT_DYECRESS_TOWN_INDOOR2",
+      "name": "DyecressTown_Indoor2_Layout",
+      "width": 10,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/DyecressTown_Indoor2/border.bin",
+      "blockdata_filepath": "data/layouts/DyecressTown_Indoor2/map.bin"
+    },
+    {
+      "id": "LAYOUT_SPRINGWOOD_CITY_INSTITUTION_1F",
+      "name": "SpringwoodCity_Institution_1F_Layout",
+      "width": 25,
+      "height": 16,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/SpringwoodCity_Institution_1F/border.bin",
+      "blockdata_filepath": "data/layouts/SpringwoodCity_Institution_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_OCHRE_VALE_MINE",
+      "name": "OchreValeMine_Layout",
+      "width": 40,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/OchreValeMine/border.bin",
+      "blockdata_filepath": "data/layouts/OchreValeMine/map.bin"
+    },
+    {
+      "id": "LAYOUT_OCHRE_VALE_INDOOR_2",
+      "name": "OchreVale_Indoor_2_Layout",
+      "width": 10,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/OchreVale_Indoor_2/border.bin",
+      "blockdata_filepath": "data/layouts/OchreVale_Indoor_2/map.bin"
+    },
+    {
+      "id": "LAYOUT_OCHRE_VALE_INDOOR_3",
+      "name": "OchreVale_Indoor_3_Layout",
+      "width": 10,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/OchreVale_Indoor_3/border.bin",
+      "blockdata_filepath": "data/layouts/OchreVale_Indoor_3/map.bin"
+    },
+    {
+      "id": "LAYOUT_OCHRE_VALE_LAB",
+      "name": "OchreVale_Lab_Layout",
+      "width": 16,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/OchreVale_Lab/border.bin",
+      "blockdata_filepath": "data/layouts/OchreVale_Lab/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE8",
+      "name": "Route8_Layout",
+      "width": 68,
+      "height": 28,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Route8/border.bin",
+      "blockdata_filepath": "data/layouts/Route8/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE9",
+      "name": "Route9_Layout",
+      "width": 90,
+      "height": 44,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Dewford",
+      "border_filepath": "data/layouts/Route9/border.bin",
+      "blockdata_filepath": "data/layouts/Route9/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE9_HOUSE",
+      "name": "Route9_House_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/Route9_House/border.bin",
+      "blockdata_filepath": "data/layouts/Route9_House/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE10",
+      "name": "Route10_Layout",
+      "width": 60,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lavaridge",
+      "border_filepath": "data/layouts/Route10/border.bin",
+      "blockdata_filepath": "data/layouts/Route10/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE10_RESORT_HOUSE",
+      "name": "Route10_ResortHouse_Layout",
+      "width": 15,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/Route10_ResortHouse/border.bin",
+      "blockdata_filepath": "data/layouts/Route10_ResortHouse/map.bin"
+    },
+    {
+      "id": "LAYOUT_SCORCHED_CHAMBERS",
+      "name": "ScorchedChambers_Layout",
+      "width": 60,
+      "height": 60,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/ScorchedChambers/border.bin",
+      "blockdata_filepath": "data/layouts/ScorchedChambers/map.bin"
+    },
+    {
+      "id": "LAYOUT_DRIPSTONE_CHANNEL",
+      "name": "DripstoneChannel_Layout",
+      "width": 42,
+      "height": 16,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_MeteorFalls",
+      "border_filepath": "data/layouts/DripstoneChannel/border.bin",
+      "blockdata_filepath": "data/layouts/DripstoneChannel/map.bin"
+    },
+    {
+      "id": "LAYOUT_DYECRESS_TOWN_HERB_SHOP",
+      "name": "DyecressTown_HerbShop_Layout",
+      "width": 12,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Shop",
+      "border_filepath": "data/layouts/DyecressTown_HerbShop/border.bin",
+      "blockdata_filepath": "data/layouts/DyecressTown_HerbShop/map.bin"
     }
   ]
 }

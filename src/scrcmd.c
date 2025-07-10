@@ -3146,11 +3146,17 @@ void Script_EndTrainerCanSeeIf(struct ScriptContext *ctx)
 
 //=======================================
 
+void GetInteractedPokemon(void) {
+    u32 pokemonObjID = (gSpecialVar_LastTalked - 1); // get the map object number
+    u32 speciesIndex = gMapHeader.events->objectEvents[pokemonObjID].trainerRange_berryTreeId; // grab the species from sight range    
+    gSpecialVar_0x8004 = speciesIndex; // put the SPECIES_PKMN value into VAR_0x8004
+}
+
 bool8 CheckPartyCon(u16 value, u8 condition) {
     u8 i;
     u16 species;
     struct Pokemon *pokemon;
-    gSpecialVar_Result = FALSE;
+    gSpecialVar_Result = PARTY_SIZE;
 
     for (i = 0; i < PARTY_SIZE; i++)
     {
@@ -3180,7 +3186,6 @@ bool8 CheckPartyCon(u16 value, u8 condition) {
         }     
     
     }
-    gSpecialVar_Result = PARTY_SIZE;
     return FALSE;
 }
 
@@ -3197,23 +3202,51 @@ bool8 IsAbilityInParty(struct ScriptContext *ctx)
 bool8 CanUseFieldMove(struct ScriptContext *ctx)
 {
     u16 moveID = ScriptReadHalfword(ctx);
-    
-    switch(moveID) {
-        case MOVE_CUT:
-            if (CheckPartyCon(TYPE_GRASS, 0)) { return TRUE; }
-            if (CheckPartyCon(TYPE_BUG, 0)) { return TRUE; }
-            if (CheckPartyCon(ABILITY_HYPER_CUTTER, 1)) { return TRUE; }
-            break;
-        
-        case MOVE_ROCK_SMASH:
-            if (CheckPartyCon(TYPE_FIGHTING, 0)) { return TRUE; }
-            if (CheckPartyCon(TYPE_ROCK, 0)) { return TRUE; }
-            if (CheckPartyCon(TYPE_GROUND, 0)) { return TRUE; }
-        
-        case MOVE_STRENGTH:
-            if (CheckPartyCon(TYPE_FIGHTING, 0)) { return TRUE; }
-            if (CheckPartyCon(TYPE_GROUND, 0)) { return TRUE; }
-            if (CheckPartyCon(ABILITY_PURE_POWER, 1)) { return TRUE; }
+
+    u8 i;
+    u16 species;
+    struct Pokemon *pokemon;
+    gSpecialVar_Result = PARTY_SIZE;
+
+    for (i = 0; i < PARTY_SIZE; i++)
+    {
+        pokemon = &gPlayerParty[i];
+        if (GetMonData(pokemon, MON_DATA_SANITY_HAS_SPECIES) && !GetMonData(pokemon, MON_DATA_IS_EGG)) {
+            species = GetMonData(pokemon, MON_DATA_SPECIES);
+
+            switch(moveID) {
+                case MOVE_CUT:
+                    if ((gSpeciesInfo[species].types[0] == TYPE_GRASS || gSpeciesInfo[species].types[1] == TYPE_GRASS)  
+                    || (gSpeciesInfo[species].types[0] == TYPE_BUG || gSpeciesInfo[species].types[1] == TYPE_BUG)
+                    || (GetMonAbility(pokemon) == ABILITY_HYPER_CUTTER)) {
+                        gSpecialVar_Result = i;
+                        gSpecialVar_0x8004 = species;
+                        return TRUE;
+                    }
+                    break;
+                
+                case MOVE_ROCK_SMASH:
+                    if ((gSpeciesInfo[species].types[0] == TYPE_FIGHTING || gSpeciesInfo[species].types[1] == TYPE_FIGHTING) 
+                    || (gSpeciesInfo[species].types[0] == TYPE_ROCK || gSpeciesInfo[species].types[1] == TYPE_ROCK)
+                    || (GetMonAbility(pokemon) == ABILITY_ROCK_HEAD || GetMonAbility(pokemon) == ABILITY_IRON_FIST)) {
+                        gSpecialVar_Result = i;
+                        gSpecialVar_0x8004 = species;
+                        return TRUE;
+                    }
+                    break;
+                
+                case MOVE_SURF:
+                    if (gSpeciesInfo[species].types[0] == TYPE_WATER || gSpeciesInfo[species].types[1] == TYPE_WATER) {
+                        gSpecialVar_Result = i;
+                        gSpecialVar_0x8004 = species;
+                        return TRUE;
+                    }
+                    break;
+                
+                default:
+                    break;
+            }
+        }
     }
 
     return FALSE;

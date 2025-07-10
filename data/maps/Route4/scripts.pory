@@ -1,19 +1,123 @@
-mapscripts Route4_MapScripts {}
+mapscripts Route4_MapScripts {
+    MAP_SCRIPT_ON_LOAD: Route4_OnLoad
+}
+
+script Route4_OnLoad {
+    if (var(VAR_EVELYNN_STATE) != 1) { // hide eve and scientist
+        setflag(FLAG_TEMP_A)
+        setflag(FLAG_TEMP_B)
+    } elif (var(VAR_EVELYNN_STATE) == 1 && var(VAR_LITTLEROOT_INTRO_STATE) == 5) {
+        setflag(FLAG_TEMP_B) // just hide eve
+    }
+
+    call(Route4_LedgeBlocker)
+}
+
+script Route4_LedgeBlocker {
+    if (var(VAR_DYECRESS_MYSTERY_STATE) <= 1) {
+        setmetatile(12, 25, METATILE_General_Ledge_East, TRUE)
+        setmetatile(12, 26, METATILE_Petalburg_Disabled_Ledge_East, TRUE)
+        setmetatile(12, 27, METATILE_General_Ledge_East, TRUE)
+        setflag(FLAG_TEMP_1)
+    } else {
+        setflag(FLAG_TEMP_2)
+    }
+}
+
+script Route4_LedgeBreaker {
+    lock
+    msgbox("I'M SICK OF THIS LEDGE!\nI'M GONNA BREAK IT DOWN!!", MSGBOX_NPC)
+    applymovement(2, moves(face_left))
+    waitmovement(2)
+    release
+}
+
+script Route4_LedgeBreaker2 {
+    msgbox(format("I often visit my grandmother in Dyecress Town, and the ledges always made the way difficult."), MSGBOX_NPC)
+}
 
 script Route4_Sign_Researcher_Lab {
-    lockall
     msgbox("Welcome to the wonderful world of\nPokemon Science!", MSGBOX_SIGN)
-    releaseall
 }
 
 script Route4_Sign_Researcher_Lab_Garden {
-    lockall
     msgbox(Route4_Sign_Researcher_Lab_Garden_Text, MSGBOX_SIGN)
-    releaseall
 }
 
 text Route4_Sign_Researcher_Lab_Garden_Text {
     "Remember to clean off your shoes\nbefore you go back into the Lab,\l"
     "and don't overfeed the water Pokemon!\p"
     "We keep having to call in Nurse Joy\nbecause they get so fat!"
+}
+
+script Route4_SchoolKid {
+    trainerbattle_single(
+        TRAINER_ROUTE4_SCHOOLKID, 
+        format("Ah! You scared me!"),
+        format("You came out of nowhere...")  
+    )
+    msgbox(format("After being stuck in the lab all day with my Dad, I like to come out here and appreciate being in nature."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route4_Evelynn {
+    lockall
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
+    waitmovement(0)
+    getobjectxy(OBJ_EVENT_ID_PLAYER, CURRENT_POSITION, VAR_TEMP_1, VAR_TEMP_2)
+    if (var(VAR_TEMP_1) == 23) { applymovement(OBJ_EVENT_ID_PLAYER, moves(delay_16 walk_right)) }
+    waitmovement(0)
+    special(SpawnCameraObject)
+    applymovement(OBJ_EVENT_ID_CAMERA, moves(walk_right walk_diag_southeast))
+    msgbox("Look, I don't know if I can help you.")
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_CAMERA, moves(walk_up))
+    waitmovement(0)
+    msgbox("But you've seen what they're doing,\nyou can't expect me to believe you\lhaven't even tried looking into it.")
+    applymovement(OBJ_EVENT_ID_CAMERA, moves(walk_down))
+    waitmovement(0)
+    msgbox("It's not that simple...")
+    applymovement(5, moves(face_left))
+    msgbox("Wait, who is that?")
+    applymovement(OBJ_EVENT_ID_CAMERA, moves(walk_diag_northwest))
+    playse(SE_PIN)
+    applymovement(4, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    applymovement(4, moves(face_left))
+    waitmovement(0)
+    applymovement(4, Common_Movement_Delay48)
+	waitmovement(0)
+    msgbox("Aren't you the kid I saw on Route 2?\nWhat's your business here?\p...\p...what?")
+    applymovement(4, moves(face_down))
+    waitmovement(0)
+    msgbox("Did you catch any of that?")
+    msgbox("Huh?")
+    applymovement(5, moves(face_up))
+    waitmovement(0)
+    msgbox("Oh yeah, they said they were\nrunning an errand trying to help\lcalm down the Parasect.")
+    msgbox("...")
+    applymovement(4, moves(face_left delay_16*4 face_down delay_16*3 face_left))
+    waitmovement(0)
+    delay(60)
+    msgbox("...Right, anyway, you had better not\ntell anyone you saw me here.")
+    applymovement(4, moves(walk_left))
+    waitmovement(0)
+    playse(SE_WALL_HIT)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up lock_facing_direction walk_down unlock_facing_direction))
+    applymovement(5, moves(face_left))
+    applymovement(4, moves(walk_left walk_up*2 walk_left))
+    waitmovement(0)
+    playse(SE_EXIT)
+    removeobject(4)
+    delay(60)
+    msgbox("Oh, I suppose I should get going too.")
+    applymovement(5, moves(walk_up walk_left*2 walk_up*2 walk_left))
+    waitmovement(0)
+    playse(SE_EXIT)
+    removeobject(5)
+    setvar(VAR_EVELYNN_STATE, 2)
+    applymovement(OBJ_EVENT_ID_CAMERA, moves(walk_diag_southwest))
+    waitmovement(0)
+    special(RemoveCameraObject)
+    releaseall
 }

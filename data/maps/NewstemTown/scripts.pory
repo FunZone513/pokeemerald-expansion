@@ -28,19 +28,13 @@ script NewstemTown_CheckStarter {
 }
 
 script NewstemTown_Boy {
-    lockall
     msgbox(format("I want to go in for a swim, but Mum said that there's something in the water that could take me..."), MSGBOX_NPC)
-    releaseall
 }
 
 script NewstemTown_Athlete {
-    lockall
     msgbox(format("Nice Running Shoes! They look brand new!"), MSGBOX_NPC)
-    releaseall
 }
 
 script NewstemTown_Boy2 {
-    lockall
     msgbox(format("I was told to go out and get some sun, but I just wanna play on my gameboy."), MSGBOX_NPC)
-    releaseall
 }

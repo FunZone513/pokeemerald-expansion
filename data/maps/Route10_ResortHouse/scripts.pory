@@ -1,0 +1,39 @@
+mapscripts Route10_ResortHouse_MapScripts {}
+
+script Route10_ResortHouse_Owner {
+    msgbox("That blasted Team Magma has taken over\nthe lava chambers below here.\pI don't know what they're after,\nbut they're not letting anyone in.", MSGBOX_NPC)
+}
+
+script Route10_ResortHouse_Receptionist {
+    applymovement(1, moves(face_down))
+    msgbox(Route10_ResortHouse_Receptionist_Text, MSGBOX_SIGN)
+}
+
+text Route10_ResortHouse_Receptionist_Text {
+    "Hello and Welcome to the\nSoothing Sands Resort!\p"
+    "We're currently fully booked,\nbut we should have an opening in...\p"
+    "About 3 Months!\p"
+    "Would you like to make a reservation?"
+}
+
+script Route10_ResortHouse_Receptionist_NPC {
+    msgbox("Huh?\nYou're not supposed to be back here.", MSGBOX_NPC)
+}
+
+script Route10_ResortHouse_Scientist {
+    msgbox("I'm here to ensure the sand\nquality is as high as possible.", MSGBOX_NPC)
+}
+
+script Route10_ResortHouse_OldMan {
+    msgbox(format("It's nice to rest in the chairs after the long walk to get here."), MSGBOX_NPC)
+}
+
+script Route10_ResortHouse_Display1 {
+    msgbox(format("It's an oddly shaped rock, and the glass is warm to the touch."), MSGBOX_SIGN)
+}
+script Route10_ResortHouse_Display2 {
+    msgbox(format("A small pile of sand is prominently displayed in the fancy case."), MSGBOX_SIGN)
+}
+script Route10_ResortHouse_Display3 {
+    msgbox(format("...it's either really small, or they forgot to put something in."), MSGBOX_SIGN)
+}

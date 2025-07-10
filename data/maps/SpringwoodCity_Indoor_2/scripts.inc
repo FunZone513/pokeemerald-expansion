@@ -27,7 +27,7 @@ SpringwoodCity_Indoor_2_Man_3:
 # 8 "data/maps/SpringwoodCity_Indoor_2/scripts.pory"
 	msgbox SpringwoodCity_Indoor_2_Man_Text2, MSGBOX_NPC
 # 9 "data/maps/SpringwoodCity_Indoor_2/scripts.pory"
-	giveitem ITEM_TM27
+	giveitem ITEM_TM_RETURN
 # 10 "data/maps/SpringwoodCity_Indoor_2/scripts.pory"
 	setflag FLAG_RECEIVED_TM_RETURN
 	goto SpringwoodCity_Indoor_2_Man_1
@@ -39,39 +39,31 @@ SpringwoodCity_Indoor_2_Gardevoir::
 # 36 "data/maps/SpringwoodCity_Indoor_2/scripts.pory"
 	playmoncry SPECIES_GARDEVOIR, CRY_MODE_NORMAL
 # 37 "data/maps/SpringwoodCity_Indoor_2/scripts.pory"
-	getseenmon SPECIES_GARDEVOIR
-# 38 "data/maps/SpringwoodCity_Indoor_2/scripts.pory"
-	compare VAR_RESULT, NO
-	goto_if_eq SpringwoodCity_Indoor_2_Gardevoir_2
-SpringwoodCity_Indoor_2_Gardevoir_1:
+	setseenmon SPECIES_GARDEVOIR
+# 39 "data/maps/SpringwoodCity_Indoor_2/scripts.pory"
+	msgbox SpringwoodCity_Indoor_2_Gardevoir_Text_0, MSGBOX_NPC
 # 40 "data/maps/SpringwoodCity_Indoor_2/scripts.pory"
-	goto_if_set FLAG_TEMP_1, SpringwoodCity_Indoor_2_Gardevoir_7
-SpringwoodCity_Indoor_2_Gardevoir_6:
-# 43 "data/maps/SpringwoodCity_Indoor_2/scripts.pory"
-	msgbox SpringwoodCity_Indoor_2_Gardevoir_Text_1, MSGBOX_NPC
-SpringwoodCity_Indoor_2_Gardevoir_4:
-# 44 "data/maps/SpringwoodCity_Indoor_2/scripts.pory"
 	waitmoncry
+# 41 "data/maps/SpringwoodCity_Indoor_2/scripts.pory"
+	goto_if_set FLAG_TEMP_1, SpringwoodCity_Indoor_2_Gardevoir_3
+SpringwoodCity_Indoor_2_Gardevoir_1:
 # 45 "data/maps/SpringwoodCity_Indoor_2/scripts.pory"
+	waitmoncry
+# 46 "data/maps/SpringwoodCity_Indoor_2/scripts.pory"
 	releaseall
 	return
 
 SpringwoodCity_Indoor_2_Gardevoir_2:
-# 38 "data/maps/SpringwoodCity_Indoor_2/scripts.pory"
-	setseenmon SPECIES_GARDEVOIR
+# 42 "data/maps/SpringwoodCity_Indoor_2/scripts.pory"
+	msgbox SpringwoodCity_Indoor_2_Gardevoir_Text_1, MSGBOX_NPC
+# 43 "data/maps/SpringwoodCity_Indoor_2/scripts.pory"
+	setflag FLAG_TEMP_2
 	goto SpringwoodCity_Indoor_2_Gardevoir_1
 
-SpringwoodCity_Indoor_2_Gardevoir_5:
+SpringwoodCity_Indoor_2_Gardevoir_3:
 # 41 "data/maps/SpringwoodCity_Indoor_2/scripts.pory"
-	msgbox SpringwoodCity_Indoor_2_Gardevoir_Text_0, MSGBOX_NPC
-# 42 "data/maps/SpringwoodCity_Indoor_2/scripts.pory"
-	setflag FLAG_TEMP_2
-	goto SpringwoodCity_Indoor_2_Gardevoir_4
-
-SpringwoodCity_Indoor_2_Gardevoir_7:
-# 40 "data/maps/SpringwoodCity_Indoor_2/scripts.pory"
-	goto_if_unset FLAG_RECEIVED_TM_RETURN, SpringwoodCity_Indoor_2_Gardevoir_5
-	goto SpringwoodCity_Indoor_2_Gardevoir_6
+	goto_if_unset FLAG_RECEIVED_TM_RETURN, SpringwoodCity_Indoor_2_Gardevoir_2
+	goto SpringwoodCity_Indoor_2_Gardevoir_1
 
 
 SpringwoodCity_Indoor_2_Man_Text_0:
@@ -79,12 +71,12 @@ SpringwoodCity_Indoor_2_Man_Text_0:
 	.string "Thank you for helping us reconnect.$"
 
 SpringwoodCity_Indoor_2_Gardevoir_Text_0:
-# 41 "data/maps/SpringwoodCity_Indoor_2/scripts.pory"
-	.string "...\p...please tell him I wish for nothing more\nthan to stay by his side.$"
+# 39 "data/maps/SpringwoodCity_Indoor_2/scripts.pory"
+	.string "...$"
 
 SpringwoodCity_Indoor_2_Gardevoir_Text_1:
-# 43 "data/maps/SpringwoodCity_Indoor_2/scripts.pory"
-	.string "...$"
+# 42 "data/maps/SpringwoodCity_Indoor_2/scripts.pory"
+	.string "...please tell him I simply wish to\nstay by his side.$"
 
 SpringwoodCity_Indoor_2_Man_Text::
 # 18 "data/maps/SpringwoodCity_Indoor_2/scripts.pory"

@@ -73,6 +73,10 @@
 #define NATURE_QUIRKY   24 // Neutral
 #define NUM_NATURES     25
 
+#define AMOUNT_NATURE_CHANGE 15
+#define AMOUNT_NATURE_INCREASE AMOUNT_NATURE_CHANGE
+#define AMOUNT_NATURE_DECREASE AMOUNT_NATURE_CHANGE
+
 // Pokémon Stats
 #define STAT_HP      0
 #define STAT_ATK     1
@@ -93,7 +97,7 @@
 #define MAX_STAT_STAGE    12
 
 // Shiny odds
-#define SHINY_ODDS 8 // Actual probability is SHINY_ODDS/65536
+#define SHINY_ODDS 64 // Actual probability is SHINY_ODDS/65536 | DEFAULT: 8
 
 // Ribbon IDs used by TV and Pokénav
 #define CHAMPION_RIBBON       0
@@ -210,11 +214,11 @@
 #define MAX_SHEEN       255
 #define MAX_CONDITION   255
 
-#define MAX_PER_STAT_IVS 31
-#define MAX_IV_MASK 31
+#define MAX_PER_STAT_IVS 0 //31 
+#define MAX_IV_MASK 0 //31
 #define USE_RANDOM_IVS (MAX_PER_STAT_IVS + 1)
-#define MAX_PER_STAT_EVS ((P_EV_CAP >= GEN_6) ? 252 : 255)
-#define MAX_TOTAL_EVS 510
+#define MAX_PER_STAT_EVS 0 //((P_EV_CAP >= GEN_6) ? 252 : 255)
+#define MAX_TOTAL_EVS 0 //510
 #define EV_ITEM_RAISE_LIMIT ((I_VITAMIN_EV_CAP >= GEN_8) ? MAX_PER_STAT_EVS : 100)
 
 // Move category defines.

@@ -1,0 +1,17 @@
+mapscripts OchreMineEntrance_MapScripts {}
+
+script OchreMineEntrance_Hiker {
+    lockall
+    msgbox(format("I used to work in the mine, but ever since the nerds showed up I've all but lost my job."), MSGBOX_NPC)
+    releaseall
+}
+
+script OchreMineEntrance_MagmaGrunt {
+    trainerbattle_single(
+        TRAINER_OCHRE_VALE_MINE_ENTRANCE_MAGMA_GRUNT, 
+        format("Hey! What are you looking at?"),
+        format("I didn't really want to battle you, but I'm contractually obligated to.")  
+    )
+    msgbox(format("I was told to come here to stop the researchers from doing whatever it is that they're doing, but I'm not really up to it. I know most of these guys..."), MSGBOX_AUTOCLOSE)
+    end
+}

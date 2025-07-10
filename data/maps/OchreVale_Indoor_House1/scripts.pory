@@ -1,0 +1,13 @@
+mapscripts OchreVale_Indoor_House1_MapScripts {}
+
+script OchreVale_Indoor_House1_OldMan {
+    lockall
+    msgbox(format("My son is helping out the scientists working on the quarry research, so I'm helping by looking after my grandson."), MSGBOX_NPC)
+    releaseall
+}
+
+script OchreVale_Indoor_House1_LittleBoy {
+    lockall
+    msgbox(format("I heard theres something in the dirt in that big hole!"), MSGBOX_NPC)
+    releaseall
+}

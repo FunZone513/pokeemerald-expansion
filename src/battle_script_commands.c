@@ -5088,7 +5088,7 @@ static void Cmd_getexp(void)
                 calculatedExp /= 7;
 
             if (B_TRAINER_EXP_MULTIPLIER <= GEN_7 && gBattleTypeFlags & BATTLE_TYPE_TRAINER)
-                calculatedExp = (calculatedExp * 150) / 100;
+                calculatedExp = (calculatedExp * 200) / 100;
 
             if (B_SPLIT_EXP < GEN_6)
             {
@@ -17016,8 +17016,8 @@ void ApplyExperienceMultipliers(s32 *expAmount, u8 expGetterMonId, u8 faintedBat
         u8 faintedLevel = gBattleMons[faintedBattler].level;
         u8 expGetterLevel = GetMonData(&gPlayerParty[expGetterMonId], MON_DATA_LEVEL);
 
-        value *= sExperienceScalingFactors[(faintedLevel * 2) + 10];
-        value /= sExperienceScalingFactors[faintedLevel + expGetterLevel + 10];
+        value *= sExperienceScalingFactors[(faintedLevel * 2) + 12];
+        value /= sExperienceScalingFactors[faintedLevel + expGetterLevel + 3];
 
         *expAmount = value + 1;
     }

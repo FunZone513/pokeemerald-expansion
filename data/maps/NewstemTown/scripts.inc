@@ -55,31 +55,19 @@ NewstemTown_CheckStarter_2:
 
 NewstemTown_Boy::
 # 31 "data/maps/NewstemTown/scripts.pory"
-	lockall
-# 32 "data/maps/NewstemTown/scripts.pory"
 	msgbox NewstemTown_Boy_Text_0, MSGBOX_NPC
-# 33 "data/maps/NewstemTown/scripts.pory"
-	releaseall
 	return
 
 
 NewstemTown_Athlete::
-# 37 "data/maps/NewstemTown/scripts.pory"
-	lockall
-# 38 "data/maps/NewstemTown/scripts.pory"
+# 35 "data/maps/NewstemTown/scripts.pory"
 	msgbox NewstemTown_Athlete_Text_0, MSGBOX_NPC
-# 39 "data/maps/NewstemTown/scripts.pory"
-	releaseall
 	return
 
 
 NewstemTown_Boy2::
-# 43 "data/maps/NewstemTown/scripts.pory"
-	lockall
-# 44 "data/maps/NewstemTown/scripts.pory"
+# 39 "data/maps/NewstemTown/scripts.pory"
 	msgbox NewstemTown_Boy2_Text_0, MSGBOX_NPC
-# 45 "data/maps/NewstemTown/scripts.pory"
-	releaseall
 	return
 
 
@@ -108,17 +96,17 @@ NewstemTown_CheckStarter_Text_0:
 	.string "You haven't picked up a Pokemon yet!$"
 
 NewstemTown_Boy_Text_0:
-# 32 "data/maps/NewstemTown/scripts.pory"
+# 31 "data/maps/NewstemTown/scripts.pory"
 	.string "I want to go in for a swim, but Mum said\n"
 	.string "that there's something in the water\l"
 	.string "that could take me...$"
 
 NewstemTown_Athlete_Text_0:
-# 38 "data/maps/NewstemTown/scripts.pory"
+# 35 "data/maps/NewstemTown/scripts.pory"
 	.string "Nice Running Shoes! They look brand\n"
 	.string "new!$"
 
 NewstemTown_Boy2_Text_0:
-# 44 "data/maps/NewstemTown/scripts.pory"
+# 39 "data/maps/NewstemTown/scripts.pory"
 	.string "I was told to go out and get some sun,\n"
 	.string "but I just wanna play on my gameboy.$"
