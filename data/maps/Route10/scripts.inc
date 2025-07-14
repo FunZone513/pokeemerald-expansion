@@ -135,66 +135,72 @@ Route10_MagmaGrunt_2:
 	goto Route10_MagmaGrunt_1
 
 
-Route10_Hiker::
+Route10_MagmaGrunt2::
 # 91 "data/maps/Route10/scripts.pory"
+	msgbox Route10_MagmaGrunt2_Text_0, MSGBOX_NPC
+	return
+
+
+Route10_Hiker::
+# 95 "data/maps/Route10/scripts.pory"
 	trainerbattle_single TRAINER_ROUTE10_HIKER, Route10_Hiker_Text_0, Route10_Hiker_Text_1
-# 96 "data/maps/Route10/scripts.pory"
+# 100 "data/maps/Route10/scripts.pory"
 	msgbox Route10_Hiker_Text_2, MSGBOX_AUTOCLOSE
 	end
 
 
 Route10_Youngster::
-# 101 "data/maps/Route10/scripts.pory"
+# 105 "data/maps/Route10/scripts.pory"
 	trainerbattle_single TRAINER_ROUTE10_YOUNGSTER, Route10_Youngster_Text_0, Route10_Youngster_Text_1
-# 106 "data/maps/Route10/scripts.pory"
+# 110 "data/maps/Route10/scripts.pory"
 	msgbox Route10_Youngster_Text_2, MSGBOX_AUTOCLOSE
 	end
 
 
 Route10_RemoveBlocker::
-# 111 "data/maps/Route10/scripts.pory"
+# 115 "data/maps/Route10/scripts.pory"
 	setvar VAR_TEMP_A, 1
 	return
 
 
 Route10_Guard::
-# 115 "data/maps/Route10/scripts.pory"
+# 119 "data/maps/Route10/scripts.pory"
 	msgbox Route10_Guard_Text_0, MSGBOX_NPC
 	return
 
 
 Route10_ResortBlocker::
-# 119 "data/maps/Route10/scripts.pory"
-	lockall
-# 120 "data/maps/Route10/scripts.pory"
-	playse SE_PIN
-# 121 "data/maps/Route10/scripts.pory"
-	waitmovement 0
-# 122 "data/maps/Route10/scripts.pory"
-	applymovement 18, Common_Movement_ExclamationMark
 # 123 "data/maps/Route10/scripts.pory"
-	waitmovement 0
+	lockall
 # 124 "data/maps/Route10/scripts.pory"
-	applymovement 18, Route10_ResortBlocker_Movement_0
+	playse SE_PIN
 # 125 "data/maps/Route10/scripts.pory"
-	message Route10_ResortBlocker_Text_0
+	waitmovement 0
 # 126 "data/maps/Route10/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Route10_ResortBlocker_Movement_1
+	applymovement 18, Common_Movement_ExclamationMark
 # 127 "data/maps/Route10/scripts.pory"
 	waitmovement 0
 # 128 "data/maps/Route10/scripts.pory"
-	applymovement 18, Common_Movement_Delay48
+	applymovement 18, Route10_ResortBlocker_Movement_0
 # 129 "data/maps/Route10/scripts.pory"
-	waitmovement 0
+	message Route10_ResortBlocker_Text_0
 # 130 "data/maps/Route10/scripts.pory"
-	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, Route10_ResortBlocker_Movement_1
 # 131 "data/maps/Route10/scripts.pory"
-	msgbox Route10_ResortBlocker_Text_1
+	waitmovement 0
 # 132 "data/maps/Route10/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Route10_MagmaGrunt_Movement_0
+	applymovement 18, Common_Movement_Delay48
 # 133 "data/maps/Route10/scripts.pory"
 	waitmovement 0
 # 134 "data/maps/Route10/scripts.pory"
+	closemessage
+# 135 "data/maps/Route10/scripts.pory"
+	msgbox Route10_ResortBlocker_Text_1
+# 136 "data/maps/Route10/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Route10_MagmaGrunt_Movement_0
+# 137 "data/maps/Route10/scripts.pory"
+	waitmovement 0
+# 138 "data/maps/Route10/scripts.pory"
 	releaseall
 	return
 
@@ -211,17 +217,17 @@ Route10_MagmaGrunt_Movement_1:
 	face_player
 	step_end
 
-# 124 "data/maps/Route10/scripts.pory"
+# 128 "data/maps/Route10/scripts.pory"
 Route10_ResortBlocker_Movement_0:
-# 124 "data/maps/Route10/scripts.pory"
+# 128 "data/maps/Route10/scripts.pory"
 	face_left
 	step_end
 
-# 126 "data/maps/Route10/scripts.pory"
+# 130 "data/maps/Route10/scripts.pory"
 Route10_ResortBlocker_Movement_1:
-# 126 "data/maps/Route10/scripts.pory"
+# 130 "data/maps/Route10/scripts.pory"
 	walk_up
-# 126 "data/maps/Route10/scripts.pory"
+# 130 "data/maps/Route10/scripts.pory"
 	face_right
 	step_end
 
@@ -286,43 +292,47 @@ Route10_MagmaGrunt_Text_2:
 	.string "Darn, if only I wasn't under contract to\n"
 	.string "battle people.$"
 
+Route10_MagmaGrunt2_Text_0:
+# 91 "data/maps/Route10/scripts.pory"
+	.string "We were told to set up a barricade\nhere to stop people going through.\pHuh? Why?\pI dunno man,\nI'm not paid enough to care.$"
+
 Route10_Hiker_Text_0:
-# 93 "data/maps/Route10/scripts.pory"
+# 97 "data/maps/Route10/scripts.pory"
 	.string "There sure are a lot of old people\n"
 	.string "around here.$"
 
 Route10_Hiker_Text_1:
-# 94 "data/maps/Route10/scripts.pory"
+# 98 "data/maps/Route10/scripts.pory"
 	.string "I'm not that old yet right?$"
 
 Route10_Hiker_Text_2:
-# 96 "data/maps/Route10/scripts.pory"
+# 100 "data/maps/Route10/scripts.pory"
 	.string "The resort here is really popular with\n"
 	.string "the elderly folks.$"
 
 Route10_Youngster_Text_0:
-# 103 "data/maps/Route10/scripts.pory"
+# 107 "data/maps/Route10/scripts.pory"
 	.string "Aha! You can give me something to do!$"
 
 Route10_Youngster_Text_1:
-# 104 "data/maps/Route10/scripts.pory"
+# 108 "data/maps/Route10/scripts.pory"
 	.string "Aw man, losing is no fun...$"
 
 Route10_Youngster_Text_2:
-# 106 "data/maps/Route10/scripts.pory"
+# 110 "data/maps/Route10/scripts.pory"
 	.string "My Grandma is at the resort, but there's\n"
 	.string "nothing for me to do here.$"
 
 Route10_Guard_Text_0:
-# 115 "data/maps/Route10/scripts.pory"
+# 119 "data/maps/Route10/scripts.pory"
 	.string "I'm here to stop people who\ndon't have a booking.\pAnyone who enters from here\nhas to go through me.$"
 
 Route10_ResortBlocker_Text_0:
-# 125 "data/maps/Route10/scripts.pory"
+# 129 "data/maps/Route10/scripts.pory"
 	.string "Hey!$"
 
 Route10_ResortBlocker_Text_1:
-# 131 "data/maps/Route10/scripts.pory"
+# 135 "data/maps/Route10/scripts.pory"
 	.string "Sorry, but you don't have a booking,\nso you're not allowed to go in.$"
 
 Route10_ResortOwner_Text::

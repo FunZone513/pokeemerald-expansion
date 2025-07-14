@@ -454,6 +454,7 @@ gStdScripts_End::
 	.include "data/maps/AlteringCave/scripts.inc"
 	.include "data/maps/MeteorFalls_StevensCave/scripts.inc"
 	.include "data/scripts/shared_secret_base.inc"
+	.include "data/scripts/general_scripts.inc"
 	.include "data/maps/BattleColosseum_2P/scripts.inc"
 	.include "data/maps/TradeCenter/scripts.inc"
 	.include "data/maps/RecordCorner/scripts.inc"
@@ -1262,3 +1263,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/DripstoneChannel/scripts.inc"
 
 	.include "data/maps/DyecressTown_HerbShop/scripts.inc"
+
+	.include "data/maps/WebbedThicket/scripts.inc"

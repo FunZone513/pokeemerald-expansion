@@ -718,6 +718,10 @@
 #define METATILE_SecretBase_YellowBrick_Bottom          0x22E
 #define METATILE_SecretBase_YellowBrick_Top             0x226
 
+// gTileset_SecretBaseShrub
+#define METATILE_SecretBaseShrub_Debris        0x22B
+#define METATILE_SecretBaseShrub_ThicketBrush  0x214
+
 // gTileset_Shop
 #define METATILE_Shop_Door_Elevator   0x285
 #define METATILE_Shop_Laptop1_Flash   0x258

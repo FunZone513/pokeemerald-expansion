@@ -1496,7 +1496,6 @@ Level: 22
 Golbat
 Level: 23
 
-
 === TRAINER_SCORCHED_CHAMBERS_MAGMA_ADMIN ===
 Name: Terrance
 Class: Magma Admin
@@ -1527,6 +1526,106 @@ Ability: Flame Body
 - Heat Wave
 - Smog
 
+=== TRAINER_ROUTE6_PICNICKER ===
+Name: Nadia
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Girl
+AI: Basic Trainer
+
+Minccino
+Level: 18
+
+Shellos-East
+Level: 18
+
+=== TRAINER_ROUTE6_BUG_CATCHER ===
+Name: Barney
+Class: Bug Catcher
+Pic: Bug Catcher
+Gender: Male
+Music: Male
+AI: Basic Trainer
+
+Paras
+Level: 19
+
+Nincada
+Level: 19
+
+=== TRAINER_ROUTE6_PSYCHIC ===  
+Name: EDWARD
+Class: Psychic
+Pic: Psychic M
+Gender: Male
+Music: Intense
+AI: Basic Trainer
+
+Solosis
+Level: 18
+
+Kirlia
+Level: 20
+
+=== TRAINER_ROUTE6_BUG_MANIAC === 
+Name: Edwardo
+Class: Bug Maniac
+Pic: Bug Maniac
+Gender: Male
+Music: Male
+AI: Basic Trainer
+
+Shedinja
+Level: 24
+
+=== TRAINER_ROUTE6_NINJA_BOY ===
+Name: Yorushi
+Class: Ninja Boy
+Pic: Ninja Boy
+Gender: Male
+Music: Suspicious
+AI: Smart Trainer
+
+Tyrogue
+Level: 18
+
+Dustox
+Level: 18
+
+=== TRAINER_ROUTE6_BIRD_KEEPER ===
+Name: Albero
+Class: Bird Keeper
+Pic: Bird Keeper
+Gender: Male
+Music: Cool
+AI: Basic Trainer
+
+Pelipper
+Level: 26
+Ability: Drizzle
+
+Noctowl
+Level: 26
+
+Murkrow
+Level: 26
+
+=== TRAINER_ROUTE6_BEAUTY ===
+Name: Rosanne
+Class: Beauty
+Pic: Beauty
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer
+
+Azumarill
+Ability: Huge Power
+Level: 28
+
+Roserade
+Level: 28
 
 /* ------ !! KEEP AT THE BOTTOM !! ------ */
 === RIVAL_EVELYNN_1 ===
@@ -1566,6 +1665,10 @@ Jolly Nature
 - Bite 
 - Sucker Punch  
 - Fairy Wind
+
+
+
+
 
 
 

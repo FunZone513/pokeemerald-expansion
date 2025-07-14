@@ -4950,6 +4950,16 @@
       "secondary_tileset": "gTileset_Shop",
       "border_filepath": "data/layouts/DyecressTown_HerbShop/border.bin",
       "blockdata_filepath": "data/layouts/DyecressTown_HerbShop/map.bin"
+    },
+    {
+      "id": "LAYOUT_WEBBED_THICKET",
+      "name": "WebbedThicket_Layout",
+      "width": 21,
+      "height": 12,
+      "primary_tileset": "gTileset_SecretBase",
+      "secondary_tileset": "gTileset_SecretBaseShrub",
+      "border_filepath": "data/layouts/WebbedThicket/border.bin",
+      "blockdata_filepath": "data/layouts/WebbedThicket/map.bin"
     }
   ]
 }

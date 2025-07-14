@@ -81,54 +81,6 @@ script NewstemTown_PlayersHouse_Bedroom_PC {
     call(LittlerootTown_BrendansHouse_2F_EventScript_CheckPlayersPC)
 }
 
-// Goes through and updates the level cap based on milestone
-script Generic_UPDATE_LEVELCAP {
-    setvar(VAR_CURRENT_LEVEL_CAP, 15)
-
-    if (flag(FLAG_BADGE01_GET)) {
-        addvar(VAR_CURRENT_LEVEL_CAP, 7) // 22
-    }
-
-    if (flag(FLAG_BADGE02_GET)) {
-        addvar(VAR_CURRENT_LEVEL_CAP, 78) // 100
-    }
-
-    return
-}
-
-script Generic_GYM_LEVEL_GUIDE {
-    lockall
-    if (var(VAR_CURRENT_LEVEL_CAP) != 100) {
-        buffernumberstring(STR_VAR_1, VAR_CURRENT_LEVEL_CAP)
-        msgbox("Recommended Level:\n{STR_VAR_1}", MSGBOX_SIGN)
-    } else {
-        call(Generic_UPDATE_LEVELCAP)
-        buffernumberstring(STR_VAR_1, VAR_CURRENT_LEVEL_CAP)
-        msgbox("Recommended Level:\n{STR_VAR_1}", MSGBOX_SIGN)
-        setvar(VAR_CURRENT_LEVEL_CAP, 100)
-    }
-    releaseall
-}
-
-script Generic_POKEMON_INTERACT {
-    lockall
-    callnative(GetInteractedPokemon)
-    if (flag(FLAG_SYS_POKEDEX_GET)) {setseenmon(VAR_0x8004)}
-    playmoncry(VAR_0x8004, CRY_MODE_NORMAL)
-    
-    random(5)
-    switch(var(VAR_RESULT)) {
-        case 0: msgbox("?", MSGBOX_NPC)
-        case 1: msgbox("?", MSGBOX_NPC)
-        case 2: msgbox("!", MSGBOX_NPC)
-        case 3: msgbox("...", MSGBOX_NPC)
-        case 4: msgbox("!?", MSGBOX_NPC)
-        default: msgbox("?", MSGBOX_NPC)
-    }    
-    waitmoncry
-    releaseall
-}
-
 //script NewstemTown_DEBUG {
 //    lockall
 //    givemon(SPECIES_TURTWIG, 1)

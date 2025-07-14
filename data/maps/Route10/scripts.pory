@@ -87,6 +87,10 @@ script Route10_MagmaGrunt {
     releaseall
 }
 
+script Route10_MagmaGrunt2 {
+    msgbox("We were told to set up a barricade\nhere to stop people going through.\pHuh? Why?\pI dunno man,\nI'm not paid enough to care.", MSGBOX_NPC)
+}
+
 script Route10_Hiker {
     trainerbattle_single(
         TRAINER_ROUTE10_HIKER, 

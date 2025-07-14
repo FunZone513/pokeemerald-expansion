@@ -85,7 +85,9 @@
 #define MB_WESTWARD_CURRENT 0x51
 #define MB_NORTHWARD_CURRENT 0x52
 #define MB_SOUTHWARD_CURRENT 0x53
-#define MB_UNUSED_54 0x54
+
+//MARK: custom
+#define MB_THICKET_BRUSH 0x54
 #define MB_UNUSED_55 0x55
 #define MB_UNUSED_56 0x56
 #define MB_UNUSED_57 0x57
@@ -97,6 +99,8 @@
 #define MB_UNUSED_5D 0x5D
 #define MB_UNUSED_5E 0x5E
 #define MB_UNUSED_5F 0x5F
+
+
 #define MB_NON_ANIMATED_DOOR 0x60
 #define MB_LADDER 0x61
 #define MB_EAST_ARROW_WARP 0x62

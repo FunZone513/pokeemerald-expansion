@@ -70,7 +70,8 @@
     "OchreMineEntrance",
     "OchreValeMine",
     "ScorchedChambers",
-    "DripstoneChannel"
+    "DripstoneChannel",
+    "WebbedThicket"
   ],
   "gMapGroup_Indoor_Routes": [
     "Route3_FishingHut",

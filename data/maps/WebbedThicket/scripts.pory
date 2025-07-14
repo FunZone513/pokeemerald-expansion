@@ -1,0 +1,65 @@
+mapscripts WebbedThicket_MapScripts {
+    MAP_SCRIPT_ON_LOAD: WebbedThicket_OnLoad
+}
+
+script WebbedThicket_OnLoad {
+    random(3)
+    if (var(VAR_RESULT) > 0) { 
+        setmetatile(2, 1, METATILE_SecretBase_Ground, FALSE) 
+    }
+
+    random(3)
+    if (var(VAR_RESULT) > 0) { 
+        setmetatile(14, 1, METATILE_SecretBase_Ground, FALSE) 
+    }
+
+    random(3)
+    if (var(VAR_RESULT) > 0) { 
+        setmetatile(19, 1, METATILE_SecretBase_Ground, FALSE) 
+    }
+
+    random(3)
+    if (var(VAR_RESULT) > 0) { 
+        setmetatile(8, 2, METATILE_SecretBase_Ground, FALSE) 
+    }
+
+    random(3)
+    if (var(VAR_RESULT) > 0) { 
+        setmetatile(3, 4, METATILE_SecretBase_Ground, FALSE) 
+    }
+
+    random(3)
+    if (var(VAR_RESULT) > 0) { 
+        setmetatile(11, 4, METATILE_SecretBase_Ground, FALSE) 
+    }
+
+    random(3)
+    if (var(VAR_RESULT) > 0) { 
+        setmetatile(18, 4, METATILE_SecretBase_Ground, FALSE) 
+    }
+
+    random(3)
+    if (var(VAR_RESULT) > 0) { 
+        setmetatile(7, 8, METATILE_SecretBase_Ground, FALSE) 
+    }
+
+    random(3)
+    if (var(VAR_RESULT) > 0) { 
+        setmetatile(15, 8, METATILE_SecretBase_Ground, FALSE) 
+    }
+
+    random(3)
+    if (var(VAR_RESULT) > 0) { 
+        setmetatile(3, 9, METATILE_SecretBase_Ground, FALSE) 
+    }
+
+    // theres a brush where the item spawns
+    if (!flag(FLAG_ITEM_WEBBED_THICKET)) {
+        setmetatile(19, 10, METATILE_SecretBase_Ground, FALSE)
+    } else {
+        random(3)
+        if (var(VAR_RESULT) > 0) { 
+            setmetatile(19, 10, METATILE_SecretBase_Ground, FALSE) 
+        }
+    }
+}

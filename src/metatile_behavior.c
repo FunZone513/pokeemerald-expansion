@@ -1541,3 +1541,14 @@ bool8 MetatileBehavior_IsRockStairs(u8 metatileBehavior)
     else
         return FALSE;
 }
+
+// MARK: custom
+
+
+bool8 MetatileBehavior_IsThicketBrush(u8 metatileBehavior)
+{
+    if (metatileBehavior == MB_THICKET_BRUSH)
+        return TRUE;
+    else
+        return FALSE;
+}

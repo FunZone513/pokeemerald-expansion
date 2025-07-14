@@ -1,0 +1,176 @@
+//MARK: Level Cap
+script Generic_UPDATE_LEVELCAP {
+    setvar(VAR_CURRENT_LEVEL_CAP, 15)
+
+    if (flag(FLAG_BADGE01_GET)) {
+        addvar(VAR_CURRENT_LEVEL_CAP, 7) // 22
+    }
+
+    if (flag(FLAG_BADGE02_GET)) {
+        addvar(VAR_CURRENT_LEVEL_CAP, 78) // 100
+    }
+
+    return
+}
+
+script Generic_GYM_LEVEL_GUIDE {
+    lockall
+    if (var(VAR_CURRENT_LEVEL_CAP) != 100) {
+        buffernumberstring(STR_VAR_1, VAR_CURRENT_LEVEL_CAP)
+        msgbox("Recommended Level:\n{STR_VAR_1}", MSGBOX_SIGN)
+    } else {
+        call(Generic_UPDATE_LEVELCAP)
+        buffernumberstring(STR_VAR_1, VAR_CURRENT_LEVEL_CAP)
+        msgbox("Recommended Level:\n{STR_VAR_1}", MSGBOX_SIGN)
+        setvar(VAR_CURRENT_LEVEL_CAP, 100)
+    }
+    releaseall
+}
+
+//MARK: Generic PKMN
+script Generic_POKEMON_INTERACT {
+    lockall
+    applymovement(VAR_LAST_TALKED, moves(face_player))
+    waitmovement(0)
+    callnative(GetInteractedPokemon)
+    if (flag(FLAG_SYS_POKEDEX_GET)) {setseenmon(VAR_0x8004)}
+    playmoncry(VAR_0x8004, CRY_MODE_NORMAL)
+    
+    random(5)
+    switch(var(VAR_RESULT)) {
+        case 0: message("?")
+        case 1: message("?")
+        case 2: message("!")
+        case 3: message("...")
+        case 4: message("!?")
+        default: message("?")
+    }
+    waitmessage
+    waitmoncry
+    waitbuttonpress
+    releaseall
+}
+
+//MARK: Thicket Brush
+script ThicketBrushInteract {    
+    lockall
+    call(ThicketBrushInteract_ClearTile)
+
+    // 10% item; 20% nothing; 20% wild double; 50% wild single
+    random(10)
+    if (var(VAR_RESULT) < 1) {
+        call(ThicketBrushInteract_GetItem)
+        if (checkitemspace(VAR_TEMP_0)) {
+            additem(VAR_TEMP_0)
+            playfanfare(MUS_OBTAIN_BERRY)
+            message("You found an item!")
+            waitmessage
+            waitfanfare
+            waitbuttonpress
+        }
+
+    } elif (var(VAR_RESULT) >= 1 && var(VAR_RESULT) < 3) {
+        call(ThicketBrushInteract_Nothing)
+
+    } elif (var(VAR_RESULT) >= 3 && var(VAR_RESULT) < 5) {
+        call(ThicketBrushInteract_GetPokemon)
+        createmon(1, 0, VAR_TEMP_0, VAR_TEMP_1)
+        call(ThicketBrushInteract_GetPokemon)
+        createmon(1, 1, VAR_TEMP_0, VAR_TEMP_1)
+        setwilddoubleflag
+        call(ThicketBrush_WildEncounter)
+        
+    } else {
+        call(ThicketBrushInteract_GetPokemon)
+        createmon(1, 0, VAR_TEMP_0, VAR_TEMP_1)
+        call(ThicketBrush_WildEncounter)
+    }
+    release
+}
+
+script ThicketBrushInteract_Nothing {
+    msgbox("You didn't find anything...", MSGBOX_SIGN)
+    return
+}
+
+script ThicketBrush_WildEncounter {
+    playse(SE_PIN)
+    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    message("You were attacked!")
+    waitmessage
+    waitbuttonpress
+    dowildbattle
+}
+
+script ThicketBrushInteract_GetPokemon {
+    random(100)
+    if (var(VAR_RESULT) < 4) { // 0-3 4%
+        random(10)
+        copyvar(VAR_TEMP_1, VAR_RESULT)
+        addvar(VAR_TEMP_1, 13)
+        setvar(VAR_TEMP_0, SPECIES_LARVESTA)
+    } elif (var(VAR_RESULT) >= 4 && var(VAR_RESULT) < 37) { // 4 - 36 33%
+        random(10)
+        copyvar(VAR_TEMP_1, VAR_RESULT)
+        addvar(VAR_TEMP_1, 13)
+        setvar(VAR_TEMP_0, SPECIES_SPINARAK)
+    } elif (var(VAR_RESULT) >= 37 && var(VAR_RESULT) < 70) { // 37 - 69 33%
+        random(10)
+        copyvar(VAR_TEMP_1, VAR_RESULT)
+        addvar(VAR_TEMP_1, 13)
+        setvar(VAR_TEMP_0, SPECIES_JOLTIK)
+    } elif (var(VAR_RESULT) >= 70 && var(VAR_RESULT) < 85) { // 70 - 84 15%
+        random(4)
+        copyvar(VAR_TEMP_1, VAR_RESULT)
+        addvar(VAR_TEMP_1, 24)
+        setvar(VAR_TEMP_0, SPECIES_ARIADOS)
+    } elif (var(VAR_RESULT) >= 85) { // 85 - 99 15%
+        random(4)
+        copyvar(VAR_TEMP_1, VAR_RESULT)
+        addvar(VAR_TEMP_1, 24)
+        setvar(VAR_TEMP_0, SPECIES_GALVANTULA)
+    }
+    return
+}
+
+script ThicketBrushInteract_GetItem {
+    random(10)
+    switch(var(VAR_RESULT)) {
+        case 1: setvar(VAR_TEMP_0, ITEM_TINY_MUSHROOM) break
+        case 2: setvar(VAR_TEMP_0, ITEM_BALM_MUSHROOM) break
+        case 3: setvar(VAR_TEMP_0, ITEM_BIG_MUSHROOM) break
+        case 4: setvar(VAR_TEMP_0, ITEM_POKE_BALL) break
+        case 5: setvar(VAR_TEMP_0, ITEM_TINY_MUSHROOM) break
+        case 6: setvar(VAR_TEMP_0, ITEM_TINY_MUSHROOM) break
+        case 7: setvar(VAR_TEMP_0, ITEM_BIG_MUSHROOM) break
+        case 8: setvar(VAR_TEMP_0, ITEM_POKE_BALL) break
+        case 9: setvar(VAR_TEMP_0, ITEM_TINY_MUSHROOM) break
+        default: setvar(VAR_TEMP_0, ITEM_RARE_CANDY) break
+    }
+    return
+}
+
+script ThicketBrushInteract_ClearTile {
+    playse(SE_FU_ZAKU)
+    getobjectfacingdirection(OBJ_EVENT_ID_PLAYER, VAR_TEMP_C)
+    getobjectxy(OBJ_EVENT_ID_PLAYER, CURRENT_POSITION, VAR_TEMP_A, VAR_TEMP_B)
+    switch(var(VAR_TEMP_C)) {
+        case DIR_NORTH:
+            subvar(VAR_TEMP_B, 1)
+            break
+        case DIR_SOUTH: 
+            addvar(VAR_TEMP_B, 1)
+            break
+        case DIR_EAST: 
+            addvar(VAR_TEMP_A, 1)
+            break
+        case DIR_WEST: 
+            subvar(VAR_TEMP_A, 1)
+            break
+    }
+    setmetatile(VAR_TEMP_A, VAR_TEMP_B, METATILE_SecretBaseShrub_Debris, FALSE) // METATILE_SecretBase_Ground
+    special(DrawWholeMapView)
+    waitse
+    return
+}

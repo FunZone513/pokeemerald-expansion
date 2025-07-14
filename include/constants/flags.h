@@ -51,7 +51,7 @@
 #define FLAG_UPGRADE_HERBSHOP           0x24 //TODO make a quest or something?
 #define FLAG_CLEARED_SCORCHED_CHAMBERS  0x25
 #define FLAG_SCORCHED_CHAMBERS_BRIDGE_SEEN    0x26
-#define FLAG_UNUSED_0x027    0x27 // Unused Flag
+#define FLAG_CLEARED_ROUTE6    0x27
 #define FLAG_UNUSED_0x028    0x28 // Unused Flag
 #define FLAG_UNUSED_0x029    0x29 // Unused Flag
 #define FLAG_UNUSED_0x02A    0x2A // Unused Flag
@@ -1112,7 +1112,7 @@
 #define FLAG_ITEM_SCORCHED_CHAMBERS_2                               0x408
 #define FLAG_ITEM_ROUTE_2_1                                         0x409
 #define FLAG_ITEM_ROUTE_4                                           0x40A
-#define FLAG_ITEM_ROUTE_127_CARBOS                                  0x40B
+#define FLAG_ITEM_WEBBED_THICKET                                    0x40B
 #define FLAG_ITEM_ROUTE_132_RARE_CANDY                              0x40C
 #define FLAG_ITEM_ROUTE_133_BIG_PEARL                               0x40D
 #define FLAG_ITEM_ROUTE_133_STAR_PIECE                              0x40E

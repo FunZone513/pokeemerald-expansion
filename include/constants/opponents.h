@@ -86,11 +86,18 @@
 #define TRAINER_SCORCHED_CHAMBERS_MAGMA_GRUNT6 74
 #define TRAINER_SCORCHED_CHAMBERS_MAGMA_GRUNT7 75
 #define TRAINER_SCORCHED_CHAMBERS_MAGMA_ADMIN  76
+#define TRAINER_ROUTE6_PICNICKER    77
+#define TRAINER_ROUTE6_BUG_CATCHER  78
+#define TRAINER_ROUTE6_PSYCHIC      79
+#define TRAINER_ROUTE6_BUG_MANIAC   80
+#define TRAINER_ROUTE6_NINJA_BOY    81
+#define TRAINER_ROUTE6_BIRD_KEEPER  82
+#define TRAINER_ROUTE6_BEAUTY       83
 
 // I'm just gonna keep these grouped together at the bottom by adding to them :)
-#define RIVAL_EVELYNN_1                   77
+#define RIVAL_EVELYNN_1                   84
 
-#define TRAINERS_COUNT                      78
+#define TRAINERS_COUNT                      85
 
 #define MAX_TRAINERS_COUNT                  864
 #define TRAINER_PARTNER(partner)           (MAX_TRAINERS_COUNT + partner)

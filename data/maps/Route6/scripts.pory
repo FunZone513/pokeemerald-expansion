@@ -1,4 +1,12 @@
-mapscripts Route6_MapScripts {}
+mapscripts Route6_MapScripts {
+    MAP_SCRIPT_ON_LOAD: Route6_OnLoad
+}
+
+script Route6_OnLoad {
+    if (!flag(FLAG_CLEARED_ROUTE6)) {
+        setflag(FLAG_TEMP_A)
+    }
+}
 
 script Route6_Camper {
     msgbox(format("We found this guy wandering around on the path. It's dangerous for him to leave the route area so we're keeping an eye on him."), MSGBOX_NPC)
@@ -15,5 +23,75 @@ script Route6_Hiker {
         format("Well that could've gone better.")  
     )
     msgbox(format("Dyecress Town is just up ahead, the air there is really nice."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route6_Picnicker {
+    trainerbattle_single(
+        TRAINER_ROUTE6_PICNICKER, 
+        format(""),
+        format("")  
+    )
+    msgbox(format(""), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route6_BugCatcher {
+    trainerbattle_single(
+        TRAINER_ROUTE6_BUG_CATCHER, 
+        format(""),
+        format("")  
+    )
+    msgbox(format(""), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route6_Psychic {
+    trainerbattle_single(
+        TRAINER_ROUTE6_PSYCHIC, 
+        format(""),
+        format("")  
+    )
+    msgbox(format(""), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route6_BugManiac {
+    trainerbattle_single(
+        TRAINER_ROUTE6_BUG_MANIAC, 
+        format(""),
+        format("")  
+    )
+    msgbox(format(""), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route6_NinjaBoy {
+    trainerbattle_single(
+        TRAINER_ROUTE6_NINJA_BOY, 
+        format(""),
+        format("")  
+    )
+    msgbox(format(""), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route6_BirdKeeper {
+    trainerbattle_single(
+        TRAINER_ROUTE6_BIRD_KEEPER, 
+        format(""),
+        format("")  
+    )
+    msgbox(format(""), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route6_Beauty {
+    trainerbattle_single(
+        TRAINER_ROUTE6_BEAUTY, 
+        format(""),
+        format("")  
+    )
+    msgbox(format(""), MSGBOX_AUTOCLOSE)
     end
 }
